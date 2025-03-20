@@ -1,2 +1,2 @@
 # Ignorar arquivos de backuo de aplicativos
-./e-commerce/diagramas/*.bak
+e-commerce/diagramas/*.bak
