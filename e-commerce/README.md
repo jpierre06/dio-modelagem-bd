@@ -143,6 +143,12 @@
 ![Modelo Lógico](docs/modelo_logico.png)
 
 <br>
+
+## Para acessar um modelo lógico estendido com detalhes de informações de tipo de dados, Unique Key, Foreign Key, etc, clicar no link abaixo
+
+➡️ [Acessar o Modelo Lógico Estendido](docs/modelo_logico_estendido.html)
+
+<br>
 <br>
 
 # Modelo Físico (Comando SQL)
