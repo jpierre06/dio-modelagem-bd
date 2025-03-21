@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <project name="modelo_logico" database="MySql" id="MySql-a47" >
-	<schema name="modelo_logico" >
-		<table name="tb_cliente" prior="tb" >
+	<schema name="curso_ecommerce" >
+		<table name="tb_cliente" spec="" >
 			<column name="codigo_cliente" type="INT" jt="4" mandatory="y" unsigned="y" >
-				<identity><![CDATA[AUTO_INCREMENT ]]></identity>
+				<identity><![CDATA[AUTO_INCREMENT]]></identity>
 			</column>
 			<column name="email" type="VARCHAR" length="100" jt="12" />
 			<column name="ddd" type="VARCHAR" length="3" jt="12" />
 			<column name="telefone" type="VARCHAR" length="9" jt="12" />
-			<column name="codigo_endereco" type="INT" jt="4" mandatory="y" />
+			<column name="codigo_endereco" type="INT" jt="4" mandatory="y" unsigned="y" />
 			<index name="pk_tb_cliente" unique="PRIMARY_KEY" >
 				<column name="codigo_cliente" />
 			</index>
 			<index name="unq_tb_cliente" unique="UNIQUE_KEY" >
 				<column name="codigo_endereco" />
 			</index>
-			<options><![CDATA[engine=InnoDB]]></options>
+			<options><![CDATA[ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci]]></options>
 		</table>
-		<table name="tb_cliente_pessoa_fisica" prior="tb_clie" >
-			<column name="codigo_cliente" type="INT" jt="4" mandatory="y" />
+		<table name="tb_cliente_pessoa_fisica" spec="" >
+			<column name="codigo_cliente" type="INT" jt="4" mandatory="y" unsigned="y" />
 			<column name="cpf" type="VARCHAR" length="9" jt="12" mandatory="y" />
 			<column name="nome" type="VARCHAR" length="120" jt="12" mandatory="y" />
 			<index name="pk_tb_cliente_pessoa_fisica" unique="PRIMARY_KEY" >
@@ -27,15 +27,15 @@
 			<index name="unq_tb_cliente_pessoa_fisica" unique="UNIQUE_KEY" >
 				<column name="cpf" />
 			</index>
-			<fk name="fk_tb_cliente_pessoa_fisica_tb_cliente" to_schema="modelo_logico" to_table="tb_cliente" update_action="restrict" >
+			<fk name="fk_tb_cliente_pessoa_fisica_tb_cliente" to_schema="curso_ecommerce" to_table="tb_cliente" update_action="restrict" options="" >
 				<fk_column name="codigo_cliente" pk="codigo_cliente" />
 			</fk>
-			<options><![CDATA[engine=InnoDB]]></options>
+			<options><![CDATA[ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci]]></options>
 		</table>
-		<table name="tb_cliente_pessoa_juridica" prior="tbl" >
-			<column name="codigo_cliente" type="INT" jt="4" mandatory="y" />
-			<column name="codigo_pessoa_juridica" type="INT" jt="4" mandatory="y" />
-			<column name="codigo_tipo_pj" type="INT" jt="4" mandatory="y" />
+		<table name="tb_cliente_pessoa_juridica" spec="" >
+			<column name="codigo_cliente" type="INT" jt="4" mandatory="y" unsigned="y" />
+			<column name="codigo_pessoa_juridica" type="INT" jt="4" mandatory="y" unsigned="y" />
+			<column name="codigo_tipo_pj" type="INT" jt="4" mandatory="y" unsigned="y" />
 			<index name="pk_tb_cliente_pessoa_juridica" unique="PRIMARY_KEY" >
 				<column name="codigo_cliente" />
 			</index>
@@ -45,64 +45,70 @@
 			<index name="unq_tb_cliente_pessoa_juridica_0" unique="UNIQUE_KEY" >
 				<column name="codigo_tipo_pj" />
 			</index>
-			<fk name="fk_tb_cliente_pessoa_juridica_tb_cliente" to_schema="modelo_logico" to_table="tb_cliente" >
+			<fk name="fk_tb_cliente_pessoa_juridica_tb_cliente" to_schema="curso_ecommerce" to_table="tb_cliente" options="" >
 				<fk_column name="codigo_cliente" pk="codigo_cliente" />
 			</fk>
-			<fk name="fk_tb_cliente_pessoa_juridica_tb_pessoa_juridica" to_schema="modelo_logico" to_table="tb_pessoa_juridica" update_action="restrict" >
+			<fk name="fk_tb_cliente_pessoa_juridica_tb_pessoa_juridica" to_schema="curso_ecommerce" to_table="tb_pessoa_juridica" update_action="restrict" options="" >
 				<fk_column name="codigo_pessoa_juridica" pk="codigo_pessoa_juridica" />
 			</fk>
-			<fk name="fk_tb_cliente_pessoa_juridica_tb_tipo_pessoa_juridica" to_schema="modelo_logico" to_table="tb_tipo_pessoa_juridica" >
+			<fk name="fk_tb_cliente_pessoa_juridica_tb_tipo_pessoa_juridica" to_schema="curso_ecommerce" to_table="tb_tipo_pessoa_juridica" options="" >
 				<fk_column name="codigo_tipo_pj" pk="codigo_tipo_pj" />
 			</fk>
-			<options><![CDATA[engine=InnoDB]]></options>
+			<options><![CDATA[ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci]]></options>
 		</table>
-		<table name="tb_compra" prior="tb_cmpra" >
+		<table name="tb_compra" spec="" >
 			<column name="codigo_compra" type="INT" jt="4" mandatory="y" unsigned="y" >
-				<identity><![CDATA[AUTO_INCREMENT ]]></identity>
+				<identity><![CDATA[AUTO_INCREMENT]]></identity>
 			</column>
-			<column name="valor_total_compra" type="DECIMAL" length="0" decimal="2" jt="3" mandatory="y" />
+			<column name="valor_total_compra" type="DECIMAL" length="9" decimal="2" jt="3" mandatory="y" />
 			<column name="data_pagamento_compra" type="DATETIME" jt="93" mandatory="y" />
 			<index name="pk_tb_compra" unique="PRIMARY_KEY" >
 				<column name="codigo_compra" />
 			</index>
-			<options><![CDATA[engine=InnoDB]]></options>
+			<options><![CDATA[ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci]]></options>
 		</table>
-		<table name="tb_departamento" prior="tbl" >
+		<table name="tb_departamento" spec="" >
 			<column name="codigo_departamento" type="INT" jt="4" mandatory="y" unsigned="y" >
-				<identity><![CDATA[AUTO_INCREMENT ]]></identity>
+				<identity><![CDATA[AUTO_INCREMENT]]></identity>
 			</column>
 			<column name="descricao_departamento" type="VARCHAR" length="50" jt="12" />
 			<index name="pk_tb_departamento" unique="PRIMARY_KEY" >
 				<column name="codigo_departamento" />
 			</index>
-			<options><![CDATA[engine=InnoDB]]></options>
+			<options><![CDATA[ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci]]></options>
 		</table>
-		<table name="tb_detalhamento_pedido" prior="tb_detalha_pedido" >
-			<column name="codigo_pedido" type="INT" jt="4" mandatory="y" />
-			<column name="codigo_vendedor" type="INT" jt="4" mandatory="y" />
-			<column name="codigo_produto" type="INT" jt="4" mandatory="y" />
+		<table name="tb_detalhamento_pedido" spec="" >
+			<column name="codigo_pedido" type="INT" jt="4" mandatory="y" unsigned="y" />
+			<column name="codigo_vendedor" type="INT" jt="4" mandatory="y" unsigned="y" />
+			<column name="codigo_produto" type="INT" jt="4" mandatory="y" unsigned="y" />
 			<column name="quantidade_produto" type="INT" jt="4" mandatory="y" unsigned="y" />
-			<column name="preco_venda" type="DECIMAL" length="0" decimal="2" jt="3" mandatory="y" unsigned="y" />
-			<column name="valor_desconto" type="DECIMAL" length="0" decimal="2" jt="3" mandatory="y" />
-			<index name="pk_tb_detalha_pedido" unique="PRIMARY_KEY" >
+			<column name="preco_venda" type="DECIMAL" length="6" decimal="2" jt="3" mandatory="y" />
+			<column name="valor_desconto" type="DECIMAL" length="6" decimal="2" jt="3" mandatory="y" />
+			<index name="pk_tb_detalhamento_pedido" unique="PRIMARY_KEY" >
 				<column name="codigo_pedido" />
 				<column name="codigo_vendedor" />
 				<column name="codigo_produto" />
 			</index>
-			<fk name="fk_tb_detalhamento_pedido_tb_pedido" to_schema="modelo_logico" to_table="tb_pedido" update_action="restrict" >
+			<index name="fk_tb_detalhamento_pedido_tb_produto" unique="NORMAL" >
+				<column name="codigo_produto" />
+			</index>
+			<index name="fk_tb_detalhamento_pedido_tb_vendedor_produto" unique="NORMAL" >
+				<column name="codigo_vendedor" />
+			</index>
+			<fk name="fk_tb_detalhamento_pedido_tb_pedido" to_schema="curso_ecommerce" to_table="tb_pedido" update_action="restrict" options="" >
 				<fk_column name="codigo_pedido" pk="codigo_pedido" />
 			</fk>
-			<fk name="fk_tb_detalhamento_pedido_tb_produto" to_schema="modelo_logico" to_table="tb_produto" update_action="restrict" >
+			<fk name="fk_tb_detalhamento_pedido_tb_produto" to_schema="curso_ecommerce" to_table="tb_produto" update_action="restrict" options="" >
 				<fk_column name="codigo_produto" pk="codigo_produto" />
 			</fk>
-			<fk name="fk_tb_detalhamento_pedido_tb_vendedor_produto" to_schema="modelo_logico" to_table="tb_vendedor_produto" update_action="restrict" >
+			<fk name="fk_tb_detalhamento_pedido_tb_vendedor_produto" to_schema="curso_ecommerce" to_table="tb_vendedor_produto" update_action="restrict" options="" >
 				<fk_column name="codigo_vendedor" pk="codigo_vendedor" />
 			</fk>
-			<options><![CDATA[engine=InnoDB]]></options>
+			<options><![CDATA[ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci]]></options>
 		</table>
-		<table name="tb_endereco" prior="tbl" >
+		<table name="tb_endereco" spec="" >
 			<column name="codigo_endereco" type="INT" jt="4" mandatory="y" unsigned="y" >
-				<identity><![CDATA[AUTO_INCREMENT ]]></identity>
+				<identity><![CDATA[AUTO_INCREMENT]]></identity>
 			</column>
 			<column name="logradouro" type="VARCHAR" length="125" jt="12" mandatory="y" />
 			<column name="numero" type="VARCHAR" length="10" jt="12" />
@@ -114,35 +120,24 @@
 			<index name="pk_tb_endereco" unique="PRIMARY_KEY" >
 				<column name="codigo_endereco" />
 			</index>
-			<fk name="fk_tb_endereco_tb_cliente" to_schema="modelo_logico" to_table="tb_cliente" update_action="restrict" >
+			<fk name="fk_tb_endereco_tb_cliente" to_schema="curso_ecommerce" to_table="tb_cliente" update_action="restrict" options="" >
 				<fk_column name="codigo_endereco" pk="codigo_endereco" />
 			</fk>
-			<fk name="fk_tb_endereco_tb_vendedor" to_schema="modelo_logico" to_table="tb_vendedor" update_action="restrict" >
+			<fk name="fk_tb_endereco_tb_fornecedor" to_schema="curso_ecommerce" to_table="tb_fornecedor" update_action="restrict" options="" >
 				<fk_column name="codigo_endereco" pk="codigo_endereco" />
 			</fk>
-			<fk name="fk_tb_endereco_tb_fornecedor" to_schema="modelo_logico" to_table="tb_fornecedor" update_action="restrict" >
+			<fk name="fk_tb_endereco_tb_vendedor" to_schema="curso_ecommerce" to_table="tb_vendedor" update_action="restrict" options="" >
 				<fk_column name="codigo_endereco" pk="codigo_endereco" />
 			</fk>
-			<options><![CDATA[engine=InnoDB]]></options>
+			<options><![CDATA[ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci]]></options>
 		</table>
-		<table name="tb_estoque" prior="tbl" >
-			<column name="codigo_produto" type="INT" jt="4" mandatory="y" />
-			<column name="codigo_vendedor" type="INT" jt="4" mandatory="y" />
-			<column name="preco_custo" type="DECIMAL" length="0" decimal="4" jt="3" mandatory="y" unsigned="y" />
-			<column name="quantidade" type="INT" jt="4" mandatory="y" unsigned="y" />
-			<index name="pk_tb_estoque" unique="PRIMARY_KEY" >
-				<column name="codigo_produto" />
-				<column name="codigo_vendedor" />
-			</index>
-			<options><![CDATA[engine=InnoDB]]></options>
-		</table>
-		<table name="tb_fornecedor" prior="tbl" >
+		<table name="tb_fornecedor" spec="" >
 			<column name="codigo_fornecedor" type="INT" jt="4" mandatory="y" unsigned="y" >
-				<identity><![CDATA[AUTO_INCREMENT ]]></identity>
+				<identity><![CDATA[AUTO_INCREMENT]]></identity>
 			</column>
-			<column name="codigo_pessoa_juridica" type="INT" jt="4" mandatory="y" />
-			<column name="codigo_tipo_pj" type="INT" jt="4" mandatory="y" />
-			<column name="codigo_endereco" type="INT" jt="4" mandatory="y" />
+			<column name="codigo_pessoa_juridica" type="INT" jt="4" mandatory="y" unsigned="y" />
+			<column name="codigo_tipo_pj" type="INT" jt="4" mandatory="y" unsigned="y" />
+			<column name="codigo_endereco" type="INT" jt="4" mandatory="y" unsigned="y" />
 			<column name="prazo_pagamento" type="INT" jt="4" mandatory="y" unsigned="y" />
 			<index name="pk_tb_fornecedor" unique="PRIMARY_KEY" >
 				<column name="codigo_fornecedor" />
@@ -156,57 +151,66 @@
 			<index name="unq_tb_fornecedor_1" unique="UNIQUE_KEY" >
 				<column name="codigo_tipo_pj" />
 			</index>
-			<fk name="fk_tb_fornecedor_tb_pessoa_juridica" to_schema="modelo_logico" to_table="tb_pessoa_juridica" >
+			<fk name="fk_tb_fornecedor_tb_pessoa_juridica" to_schema="curso_ecommerce" to_table="tb_pessoa_juridica" options="" >
 				<fk_column name="codigo_pessoa_juridica" pk="codigo_pessoa_juridica" />
 			</fk>
-			<fk name="fk_tb_fornecedor_tb_tipo_pessoa_juridica" to_schema="modelo_logico" to_table="tb_tipo_pessoa_juridica" update_action="restrict" >
+			<fk name="fk_tb_fornecedor_tb_tipo_pessoa_juridica" to_schema="curso_ecommerce" to_table="tb_tipo_pessoa_juridica" update_action="restrict" options="" >
 				<fk_column name="codigo_tipo_pj" pk="codigo_tipo_pj" />
 			</fk>
-			<options><![CDATA[engine=InnoDB]]></options>
+			<options><![CDATA[ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci]]></options>
 		</table>
-		<table name="tb_fornecedor_produto" prior="tbl" >
-			<column name="codigo_fornecedor" type="INT" jt="4" mandatory="y" />
-			<column name="codigo_produto" type="INT" jt="4" mandatory="y" />
-			<column name="preco_custo" type="DECIMAL" length="0" decimal="4" jt="3" mandatory="y" />
+		<table name="tb_fornecedor_produto" spec="" >
+			<column name="codigo_fornecedor" type="INT" jt="4" mandatory="y" unsigned="y" />
+			<column name="codigo_produto" type="INT" jt="4" mandatory="y" unsigned="y" />
+			<column name="preco_custo" type="DECIMAL" length="6" decimal="4" jt="3" mandatory="y" />
 			<index name="pk_tb_fornecedor_produto" unique="PRIMARY_KEY" >
 				<column name="codigo_fornecedor" />
 				<column name="codigo_produto" />
 			</index>
-			<fk name="fk_tb_fornecedor_produto_tb_produto" to_schema="modelo_logico" to_table="tb_produto" >
-				<fk_column name="codigo_produto" pk="codigo_produto" />
-			</fk>
-			<fk name="fk_tb_fornecedor_produto_tb_fornecedor" to_schema="modelo_logico" to_table="tb_fornecedor" >
+			<index name="fk_tb_fornecedor_produto_tb_produto" unique="NORMAL" >
+				<column name="codigo_produto" />
+			</index>
+			<fk name="fk_tb_fornecedor_produto_tb_fornecedor" to_schema="curso_ecommerce" to_table="tb_fornecedor" options="" >
 				<fk_column name="codigo_fornecedor" pk="codigo_fornecedor" />
 			</fk>
-			<options><![CDATA[engine=InnoDB]]></options>
+			<fk name="fk_tb_fornecedor_produto_tb_produto" to_schema="curso_ecommerce" to_table="tb_produto" options="" >
+				<fk_column name="codigo_produto" pk="codigo_produto" />
+			</fk>
+			<options><![CDATA[ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci]]></options>
 		</table>
-		<table name="tb_pedido" prior="tbl" >
+		<table name="tb_pedido" spec="" >
 			<column name="codigo_pedido" type="INT" jt="4" mandatory="y" unsigned="y" >
-				<identity><![CDATA[AUTO_INCREMENT ]]></identity>
+				<identity><![CDATA[AUTO_INCREMENT]]></identity>
 			</column>
 			<column name="status_pedido" type="INT" jt="4" mandatory="y" />
 			<column name="data_pedido" type="DATETIME" jt="93" mandatory="y" />
 			<column name="data_devolucao" type="DATETIME" jt="93" mandatory="y" />
-			<column name="valor_total_produtos" prior="valor_total_produto" type="DECIMAL" length="0" decimal="4" jt="3" mandatory="y" unsigned="y" />
-			<column name="valor_frete" type="DECIMAL" length="0" decimal="2" jt="3" mandatory="y" unsigned="y" />
-			<column name="desconto_pedido" type="DECIMAL" length="0" decimal="2" jt="3" mandatory="y" unsigned="y" />
-			<column name="valor_total_pedido" type="DECIMAL" length="0" decimal="2" jt="3" mandatory="y" unsigned="y" />
-			<column name="codigo_cliente" type="INT" jt="4" mandatory="y" />
-			<column name="codigo_compra" type="INT" jt="4" mandatory="y" />
+			<column name="valor_total_produtos" type="DECIMAL" length="6" decimal="4" jt="3" mandatory="y" />
+			<column name="valor_frete" type="DECIMAL" length="6" decimal="2" jt="3" mandatory="y" />
+			<column name="desconto_pedido" type="DECIMAL" length="6" decimal="2" jt="3" mandatory="y" />
+			<column name="valor_total_pedido" type="DECIMAL" length="6" decimal="2" jt="3" mandatory="y" />
+			<column name="codigo_cliente" type="INT" jt="4" mandatory="y" unsigned="y" />
+			<column name="codigo_compra" type="INT" jt="4" mandatory="y" unsigned="y" />
 			<index name="pk_tb_pedido" unique="PRIMARY_KEY" >
 				<column name="codigo_pedido" />
 			</index>
-			<fk name="fk_tb_pedido_tb_cliente" to_schema="modelo_logico" to_table="tb_cliente" update_action="restrict" >
+			<index name="fk_tb_pedido_tb_cliente" unique="NORMAL" >
+				<column name="codigo_cliente" />
+			</index>
+			<index name="fk_tb_pedido_tb_compra" unique="NORMAL" >
+				<column name="codigo_compra" />
+			</index>
+			<fk name="fk_tb_pedido_tb_cliente" to_schema="curso_ecommerce" to_table="tb_cliente" update_action="restrict" options="" >
 				<fk_column name="codigo_cliente" pk="codigo_cliente" />
 			</fk>
-			<fk name="fk_tb_pedido_tb_compra" to_schema="modelo_logico" to_table="tb_compra" update_action="restrict" >
+			<fk name="fk_tb_pedido_tb_compra" to_schema="curso_ecommerce" to_table="tb_compra" update_action="restrict" options="" >
 				<fk_column name="codigo_compra" pk="codigo_compra" />
 			</fk>
-			<options><![CDATA[engine=InnoDB]]></options>
+			<options><![CDATA[ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci]]></options>
 		</table>
-		<table name="tb_pessoa_juridica" prior="tb_pessoa_juridi" >
+		<table name="tb_pessoa_juridica" spec="" >
 			<column name="codigo_pessoa_juridica" type="INT" jt="4" mandatory="y" unsigned="y" >
-				<identity><![CDATA[AUTO_INCREMENT ]]></identity>
+				<identity><![CDATA[AUTO_INCREMENT]]></identity>
 			</column>
 			<column name="razao_social" type="VARCHAR" length="100" jt="12" mandatory="y" />
 			<column name="nome_fantasia" type="VARCHAR" length="100" jt="12" mandatory="y" />
@@ -214,11 +218,11 @@
 			<index name="pk_tb_pessoa_juridica" unique="PRIMARY_KEY" >
 				<column name="codigo_pessoa_juridica" />
 			</index>
-			<options><![CDATA[engine=InnoDB]]></options>
+			<options><![CDATA[ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci]]></options>
 		</table>
-		<table name="tb_produto" prior="tb_prod" >
+		<table name="tb_produto" spec="" >
 			<column name="codigo_produto" type="INT" jt="4" mandatory="y" unsigned="y" >
-				<identity><![CDATA[AUTO_INCREMENT ]]></identity>
+				<identity><![CDATA[AUTO_INCREMENT]]></identity>
 			</column>
 			<column name="descricao" type="VARCHAR" length="50" jt="12" mandatory="y" />
 			<column name="data_cadastro" type="DATE" jt="91" mandatory="y" />
@@ -226,28 +230,31 @@
 			<index name="pk_tb_produto" unique="PRIMARY_KEY" >
 				<column name="codigo_produto" />
 			</index>
-			<fk name="fk_tb_produto_tb_departamento" to_schema="modelo_logico" to_table="tb_departamento" update_action="restrict" >
+			<index name="fk_tb_produto_tb_departamento" unique="NORMAL" >
+				<column name="codigo_departamento" />
+			</index>
+			<fk name="fk_tb_produto_tb_departamento" to_schema="curso_ecommerce" to_table="tb_departamento" update_action="restrict" options="" >
 				<fk_column name="codigo_departamento" pk="codigo_departamento" />
 			</fk>
-			<options><![CDATA[engine=InnoDB]]></options>
+			<options><![CDATA[ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci]]></options>
 		</table>
-		<table name="tb_tipo_pessoa_juridica" prior="tb_tipo_pessoa" >
+		<table name="tb_tipo_pessoa_juridica" spec="" >
 			<column name="codigo_tipo_pj" type="INT" jt="4" mandatory="y" unsigned="y" >
-				<identity><![CDATA[AUTO_INCREMENT ]]></identity>
+				<identity><![CDATA[AUTO_INCREMENT]]></identity>
 			</column>
 			<column name="descricao_tipo_pj" type="VARCHAR" length="30" jt="12" mandatory="y" />
 			<index name="pk_tb_tipo_pessoa_juridica" unique="PRIMARY_KEY" >
 				<column name="codigo_tipo_pj" />
 			</index>
-			<options><![CDATA[engine=InnoDB]]></options>
+			<options><![CDATA[ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci]]></options>
 		</table>
-		<table name="tb_vendedor" prior="tb" >
+		<table name="tb_vendedor" spec="" >
 			<column name="codigo_vendedor" type="INT" jt="4" mandatory="y" unsigned="y" >
-				<identity><![CDATA[AUTO_INCREMENT ]]></identity>
+				<identity><![CDATA[AUTO_INCREMENT]]></identity>
 			</column>
-			<column name="codigo_pessoa_juridica" type="INT" jt="4" mandatory="y" />
-			<column name="codigo_tipo_pj" type="INT" jt="4" mandatory="y" />
-			<column name="codigo_endereco" type="INT" jt="4" mandatory="y" />
+			<column name="codigo_pessoa_juridica" type="INT" jt="4" mandatory="y" unsigned="y" />
+			<column name="codigo_tipo_pj" type="INT" jt="4" mandatory="y" unsigned="y" />
+			<column name="codigo_endereco" type="INT" jt="4" mandatory="y" unsigned="y" />
 			<index name="pk_tb_vendedor" unique="PRIMARY_KEY" >
 				<column name="codigo_vendedor" />
 			</index>
@@ -260,20 +267,20 @@
 			<index name="unq_tb_vendedor_1" unique="UNIQUE_KEY" >
 				<column name="codigo_tipo_pj" />
 			</index>
-			<fk name="fk_tb_vendedor_tb_pessoa_juridica" to_schema="modelo_logico" to_table="tb_pessoa_juridica" update_action="restrict" >
+			<fk name="fk_tb_vendedor_tb_pessoa_juridica" to_schema="curso_ecommerce" to_table="tb_pessoa_juridica" update_action="restrict" options="" >
 				<fk_column name="codigo_pessoa_juridica" pk="codigo_pessoa_juridica" />
 			</fk>
-			<fk name="fk_tb_vendedor_tb_tipo_pessoa_juridica" to_schema="modelo_logico" to_table="tb_tipo_pessoa_juridica" >
+			<fk name="fk_tb_vendedor_tb_tipo_pessoa_juridica" to_schema="curso_ecommerce" to_table="tb_tipo_pessoa_juridica" options="" >
 				<fk_column name="codigo_tipo_pj" pk="codigo_tipo_pj" />
 			</fk>
-			<options><![CDATA[engine=InnoDB]]></options>
+			<options><![CDATA[ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci]]></options>
 		</table>
-		<table name="tb_vendedor_produto" prior="tb" >
-			<column name="codigo_vendedor" type="INT" jt="4" mandatory="y" />
-			<column name="codigo_produto" type="INT" jt="4" mandatory="y" />
-			<column name="preco_venda" type="DECIMAL" length="0" decimal="2" jt="3" mandatory="y" unsigned="y" />
-			<column name="perc_desconto" type="DECIMAL" length="0" decimal="4" jt="3" mandatory="y" />
-			<column name="preco_custo" type="DECIMAL" length="0" decimal="4" jt="3" mandatory="y" unsigned="y" />
+		<table name="tb_vendedor_produto" spec="" >
+			<column name="codigo_vendedor" type="INT" jt="4" mandatory="y" unsigned="y" />
+			<column name="codigo_produto" type="INT" jt="4" mandatory="y" unsigned="y" />
+			<column name="preco_venda" type="DECIMAL" length="6" decimal="2" jt="3" mandatory="y" />
+			<column name="perc_desconto" type="DECIMAL" length="4" decimal="4" jt="3" mandatory="y" />
+			<column name="preco_custo" type="DECIMAL" length="6" decimal="4" jt="3" mandatory="y" />
 			<column name="quantidade" type="INT" jt="4" mandatory="y" unsigned="y" />
 			<index name="pk_tb_vendedor_produto" unique="PRIMARY_KEY" >
 				<column name="codigo_vendedor" />
@@ -282,33 +289,36 @@
 			<index name="unq_tb_vendedor_produto_codigo_vendedor" unique="UNIQUE_KEY" >
 				<column name="codigo_vendedor" />
 			</index>
-			<fk name="fk_tb_vendedor_produto_tb_vendedor" to_schema="modelo_logico" to_table="tb_vendedor" update_action="restrict" >
-				<fk_column name="codigo_vendedor" pk="codigo_vendedor" />
-			</fk>
-			<fk name="fk_tb_vendedor_produto_tb_produto" to_schema="modelo_logico" to_table="tb_produto" >
+			<index name="fk_tb_vendedor_produto_tb_produto" unique="NORMAL" >
+				<column name="codigo_produto" />
+			</index>
+			<fk name="fk_tb_vendedor_produto_tb_produto" to_schema="curso_ecommerce" to_table="tb_produto" options="" >
 				<fk_column name="codigo_produto" pk="codigo_produto" />
 			</fk>
-			<options><![CDATA[engine=InnoDB]]></options>
+			<fk name="fk_tb_vendedor_produto_tb_vendedor" to_schema="curso_ecommerce" to_table="tb_vendedor" update_action="restrict" options="" >
+				<fk_column name="codigo_vendedor" pk="codigo_vendedor" />
+			</fk>
+			<options><![CDATA[ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci]]></options>
 		</table>
 	</schema>
 	<layout name="Default Diagram" id="Diagram-1d63" show_relation="columns" >
 		<comment><![CDATA[Modelo Lógico Estendido]]></comment>
-		<entity schema="modelo_logico" name="tb_cliente" color="C1D8EE" x="672" y="832" />
-		<entity schema="modelo_logico" name="tb_cliente_pessoa_fisica" color="C1D8EE" x="576" y="1056" />
-		<entity schema="modelo_logico" name="tb_cliente_pessoa_juridica" color="C1D8EE" x="768" y="1056" />
-		<entity schema="modelo_logico" name="tb_compra" color="C1D8EE" x="1344" y="912" />
-		<entity schema="modelo_logico" name="tb_departamento" color="C1D8EE" x="656" y="176" />
-		<entity schema="modelo_logico" name="tb_detalhamento_pedido" color="C1D8EE" x="1328" y="736" />
-		<entity schema="modelo_logico" name="tb_endereco" color="C1D8EE" x="400" y="752" />
-		<entity schema="modelo_logico" name="tb_fornecedor" color="C1D8EE" x="1216" y="432" />
-		<entity schema="modelo_logico" name="tb_fornecedor_produto" color="EEE3C3" x="928" y="448" />
-		<entity schema="modelo_logico" name="tb_pedido" color="C1D8EE" x="1040" y="752" />
-		<entity schema="modelo_logico" name="tb_pessoa_juridica" color="C1D8EE" x="1376" y="192" />
-		<entity schema="modelo_logico" name="tb_produto" color="C1D8EE" x="672" y="448" />
-		<entity schema="modelo_logico" name="tb_tipo_pessoa_juridica" color="C1D8EE" x="1040" y="176" />
-		<entity schema="modelo_logico" name="tb_vendedor" color="C1D8EE" x="48" y="448" />
-		<entity schema="modelo_logico" name="tb_vendedor_produto" color="C1D8EE" x="368" y="432" />
-		<callout x="688" y="48" pointer="Round" >
+		<entity schema="curso_ecommerce" name="tb_cliente" color="3986C1" x="336" y="608" />
+		<entity schema="curso_ecommerce" name="tb_cliente_pessoa_fisica" color="3986C1" x="176" y="832" />
+		<entity schema="curso_ecommerce" name="tb_cliente_pessoa_juridica" color="3986C1" x="480" y="832" />
+		<entity schema="curso_ecommerce" name="tb_compra" color="3986C1" x="1008" y="864" />
+		<entity schema="curso_ecommerce" name="tb_departamento" color="3986C1" x="560" y="160" />
+		<entity schema="curso_ecommerce" name="tb_detalhamento_pedido" color="3986C1" x="1024" y="624" />
+		<entity schema="curso_ecommerce" name="tb_endereco" color="3986C1" x="80" y="544" />
+		<entity schema="curso_ecommerce" name="tb_fornecedor" color="3986C1" x="1136" y="320" />
+		<entity schema="curso_ecommerce" name="tb_fornecedor_produto" color="3986C1" x="896" y="304" />
+		<entity schema="curso_ecommerce" name="tb_pedido" color="3986C1" x="768" y="608" />
+		<entity schema="curso_ecommerce" name="tb_pessoa_juridica" color="3986C1" x="1296" y="128" />
+		<entity schema="curso_ecommerce" name="tb_produto" color="3986C1" x="592" y="304" />
+		<entity schema="curso_ecommerce" name="tb_tipo_pessoa_juridica" color="3986C1" x="1024" y="128" />
+		<entity schema="curso_ecommerce" name="tb_vendedor" color="3986C1" x="48" y="304" />
+		<entity schema="curso_ecommerce" name="tb_vendedor_produto" color="3986C1" x="336" y="304" />
+		<callout x="464" y="48" pointer="Round" >
 			<comment><![CDATA[Diagrama de Modelo Relacional
 Base de dados do e-commerce]]></comment>
 		</callout>
