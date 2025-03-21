@@ -13,7 +13,7 @@ jps.data.analise@gmail.com</Autores>
 <Alinhamento_h Valor="60"/>
 <Zoom Valor="125"/>
 <Fonte Estilo="1" Nome="Arial" Tamanho="12"/>
-<Localizacao Left="835" Top="727"/>
+<Localizacao Left="60" Top="727"/>
 <Realce Valor="false"/>
 </InfoDiagrama>
 <Entidade ID="2">
@@ -892,11 +892,9 @@ jps.data.analise@gmail.com</Autores>
 <Largura Valor="1"/>
 <Ligacoes PontaA="197" PontaB="196"/>
 <Pontos>
-<Ponto Left="422" Top="808"/>
+<Ponto Left="423" Top="808"/>
 <Ponto Left="413" Top="808"/>
-<Ponto Left="413" Top="882"/>
-<Ponto Left="413" Top="882"/>
-<Ponto Left="413" Top="948"/>
+<Ponto Left="413" Top="949"/>
 </Pontos>
 </Ligacao>
 <Atributo ID="199">
@@ -929,11 +927,9 @@ jps.data.analise@gmail.com</Autores>
 <Largura Valor="1"/>
 <Ligacoes PontaA="199" PontaB="196"/>
 <Pontos>
-<Ponto Left="437" Top="827"/>
+<Ponto Left="438" Top="827"/>
 <Ponto Left="428" Top="827"/>
-<Ponto Left="428" Top="891"/>
-<Ponto Left="428" Top="891"/>
-<Ponto Left="428" Top="948"/>
+<Ponto Left="428" Top="949"/>
 </Pontos>
 </Ligacao>
 <Atributo ID="201">
@@ -966,11 +962,9 @@ jps.data.analise@gmail.com</Autores>
 <Largura Valor="1"/>
 <Ligacoes PontaA="201" PontaB="196"/>
 <Pontos>
-<Ponto Left="452" Top="846"/>
+<Ponto Left="453" Top="846"/>
 <Ponto Left="443" Top="846"/>
-<Ponto Left="443" Top="901"/>
-<Ponto Left="443" Top="901"/>
-<Ponto Left="443" Top="948"/>
+<Ponto Left="443" Top="949"/>
 </Pontos>
 </Ligacao>
 <Atributo ID="203">
@@ -1003,11 +997,9 @@ jps.data.analise@gmail.com</Autores>
 <Largura Valor="1"/>
 <Ligacoes PontaA="203" PontaB="196"/>
 <Pontos>
-<Ponto Left="467" Top="865"/>
+<Ponto Left="468" Top="865"/>
 <Ponto Left="458" Top="865"/>
-<Ponto Left="458" Top="910"/>
-<Ponto Left="458" Top="910"/>
-<Ponto Left="458" Top="948"/>
+<Ponto Left="458" Top="949"/>
 </Pontos>
 </Ligacao>
 <Atributo ID="205">
@@ -1040,11 +1032,9 @@ jps.data.analise@gmail.com</Autores>
 <Largura Valor="1"/>
 <Ligacoes PontaA="205" PontaB="196"/>
 <Pontos>
-<Ponto Left="482" Top="884"/>
+<Ponto Left="483" Top="884"/>
 <Ponto Left="473" Top="884"/>
-<Ponto Left="473" Top="920"/>
-<Ponto Left="473" Top="920"/>
-<Ponto Left="473" Top="948"/>
+<Ponto Left="473" Top="949"/>
 </Pontos>
 </Ligacao>
 <Atributo ID="207">
@@ -1077,11 +1067,9 @@ jps.data.analise@gmail.com</Autores>
 <Largura Valor="1"/>
 <Ligacoes PontaA="207" PontaB="196"/>
 <Pontos>
-<Ponto Left="497" Top="903"/>
+<Ponto Left="498" Top="903"/>
 <Ponto Left="488" Top="903"/>
-<Ponto Left="488" Top="929"/>
-<Ponto Left="488" Top="929"/>
-<Ponto Left="488" Top="948"/>
+<Ponto Left="488" Top="949"/>
 </Pontos>
 </Ligacao>
 <Atributo ID="209">
@@ -1114,11 +1102,9 @@ jps.data.analise@gmail.com</Autores>
 <Largura Valor="1"/>
 <Ligacoes PontaA="209" PontaB="196"/>
 <Pontos>
-<Ponto Left="512" Top="922"/>
+<Ponto Left="513" Top="922"/>
 <Ponto Left="503" Top="922"/>
-<Ponto Left="503" Top="939"/>
-<Ponto Left="503" Top="939"/>
-<Ponto Left="503" Top="948"/>
+<Ponto Left="503" Top="949"/>
 </Pontos>
 </Ligacao>
 <Atributo ID="211">
@@ -1151,7 +1137,7 @@ jps.data.analise@gmail.com</Autores>
 <Largura Valor="1"/>
 <Ligacoes PontaA="211" PontaB="196"/>
 <Pontos>
-<Ponto Left="554" Top="981"/>
+<Ponto Left="555" Top="981"/>
 <Ponto Left="535" Top="981"/>
 <Ponto Left="535" Top="981"/>
 <Ponto Left="515" Top="981"/>
@@ -1208,16 +1194,16 @@ jps.data.analise@gmail.com</Autores>
 <SetaAberta Valor="true"/>
 <SetaLargura Valor="10"/>
 <Inteligente Valor="true"/>
-<Largura Valor="1"/>
+<Largura Valor="2"/>
 <Ligacoes PontaA="196" PontaB="222"/>
 <Pontos>
-<Ponto Left="394" Top="981"/>
+<Ponto Left="395" Top="981"/>
 <Ponto Left="356" Top="981"/>
 <Ponto Left="356" Top="864"/>
 <Ponto Left="317" Top="864"/>
 </Pontos>
 <Cardinalidade ID="229">
-<Bounds Height="15" Left="356" Top="968" Width="34"/>
+<Bounds Height="15" Left="357" Top="968" Width="34"/>
 <DisablePainted Valor="false"/>
 <Texto>Cardinalidade_8</Texto>
 <Observacao/>
@@ -1499,7 +1485,7 @@ jps.data.analise@gmail.com</Autores>
 <Especializacao ID="267">
 <Bounds Height="32" Left="362" Top="1272" Width="40"/>
 <DisablePainted Valor="false"/>
-<Texto>Especialização_1</Texto>
+<Texto>EspecializaÃ§Ã£o_1</Texto>
 <Observacao/>
 <Dicionario/>
 <Fonte Estilo="1" Nome="Arial" Tamanho="12"/>
@@ -2526,14 +2512,14 @@ jps.data.analise@gmail.com</Autores>
 <Texto ID="490">
 <Bounds Height="89" Left="1961" Top="1062" Width="150"/>
 <DisablePainted Valor="false"/>
-<Texto>Tipo de Pessoa Jurídica permite apenas três valores
+<Texto>Tipo de Pessoa JurÃ­dica permite apenas trÃªs valores
 1 - Fornecedor
 2 - Vendedor
 3 - Cliente</Texto>
 <Observacao/>
 <Fonte Estilo="1" Nome="Arial" Tamanho="12"/>
 <Ancorado Valor="false"/>
-<Titulo>Tipo de Pessoa Jurídica</Titulo>
+<Titulo>Tipo de Pessoa JurÃ­dica</Titulo>
 <PaintTitulo Valor="false"/>
 <Alinhamento Valor="0"/>
 <CentrarVertical Valor="false"/>
@@ -2597,7 +2583,7 @@ jps.data.analise@gmail.com</Autores>
 <Especializacao ID="506">
 <Bounds Height="32" Left="1805" Top="657" Width="40"/>
 <DisablePainted Valor="false"/>
-<Texto>Especialização_2</Texto>
+<Texto>EspecializaÃ§Ã£o_2</Texto>
 <Observacao/>
 <Dicionario/>
 <Fonte Estilo="1" Nome="Arial" Tamanho="12"/>
@@ -3233,7 +3219,7 @@ jps.data.analise@gmail.com</Autores>
 <Observacao/>
 <Fonte Estilo="1" Nome="Arial" Tamanho="12"/>
 <Ancorado Valor="false"/>
-<Titulo>Observação_1</Titulo>
+<Titulo>ObservaÃ§Ã£o_1</Titulo>
 <PaintTitulo Valor="false"/>
 <Alinhamento Valor="0"/>
 <CentrarVertical Valor="false"/>
