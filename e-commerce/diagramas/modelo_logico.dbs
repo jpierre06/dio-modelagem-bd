@@ -19,7 +19,7 @@
 		</table>
 		<table name="tb_cliente_pessoa_fisica" spec="" >
 			<column name="codigo_cliente" type="INT" jt="4" mandatory="y" unsigned="y" />
-			<column name="cpf" type="VARCHAR" length="9" jt="12" mandatory="y" />
+			<column name="cpf" type="CHAR" length="11" jt="1" mandatory="y" />
 			<column name="nome" type="VARCHAR" length="120" jt="12" mandatory="y" />
 			<index name="pk_tb_cliente_pessoa_fisica" unique="PRIMARY_KEY" >
 				<column name="codigo_cliente" />
@@ -42,7 +42,7 @@
 			<index name="unq_tb_cliente_pessoa_juridica" unique="UNIQUE_KEY" >
 				<column name="codigo_pessoa_juridica" />
 			</index>
-			<index name="unq_tb_cliente_pessoa_juridica_0" unique="UNIQUE_KEY" >
+			<index name="fk_tb_cliente_pessoa_juridica_tb_tipo_pessoa_juridica" unique="NORMAL" >
 				<column name="codigo_tipo_pj" />
 			</index>
 			<fk name="fk_tb_cliente_pessoa_juridica_tb_cliente" to_schema="curso_ecommerce" to_table="tb_cliente" options="" >
@@ -51,7 +51,7 @@
 			<fk name="fk_tb_cliente_pessoa_juridica_tb_pessoa_juridica" to_schema="curso_ecommerce" to_table="tb_pessoa_juridica" update_action="restrict" options="" >
 				<fk_column name="codigo_pessoa_juridica" pk="codigo_pessoa_juridica" />
 			</fk>
-			<fk name="fk_tb_cliente_pessoa_juridica_tb_tipo_pessoa_juridica" to_schema="curso_ecommerce" to_table="tb_tipo_pessoa_juridica" options="" >
+			<fk name="fk_tb_cliente_pessoa_juridica_tb_tipo_pessoa_juridica" to_schema="curso_ecommerce" to_table="tb_tipo_pessoa_juridica" >
 				<fk_column name="codigo_tipo_pj" pk="codigo_tipo_pj" />
 			</fk>
 			<options><![CDATA[ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci]]></options>
@@ -148,13 +148,13 @@
 			<index name="unq_tb_fornecedor_0" unique="UNIQUE_KEY" >
 				<column name="codigo_endereco" />
 			</index>
-			<index name="unq_tb_fornecedor_1" unique="UNIQUE_KEY" >
+			<index name="fk_tb_fornecedor_tb_tipo_pessoa_juridica" unique="NORMAL" >
 				<column name="codigo_tipo_pj" />
 			</index>
 			<fk name="fk_tb_fornecedor_tb_pessoa_juridica" to_schema="curso_ecommerce" to_table="tb_pessoa_juridica" options="" >
 				<fk_column name="codigo_pessoa_juridica" pk="codigo_pessoa_juridica" />
 			</fk>
-			<fk name="fk_tb_fornecedor_tb_tipo_pessoa_juridica" to_schema="curso_ecommerce" to_table="tb_tipo_pessoa_juridica" update_action="restrict" options="" >
+			<fk name="fk_tb_fornecedor_tb_tipo_pessoa_juridica" to_schema="curso_ecommerce" to_table="tb_tipo_pessoa_juridica" >
 				<fk_column name="codigo_tipo_pj" pk="codigo_tipo_pj" />
 			</fk>
 			<options><![CDATA[ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci]]></options>
@@ -214,7 +214,7 @@
 			</column>
 			<column name="razao_social" type="VARCHAR" length="100" jt="12" mandatory="y" />
 			<column name="nome_fantasia" type="VARCHAR" length="100" jt="12" mandatory="y" />
-			<column name="cnpj" type="VARCHAR" length="14" jt="12" mandatory="y" />
+			<column name="cnpj" type="CHAR" length="14" jt="1" mandatory="y" />
 			<index name="pk_tb_pessoa_juridica" unique="PRIMARY_KEY" >
 				<column name="codigo_pessoa_juridica" />
 			</index>
@@ -264,13 +264,13 @@
 			<index name="unq_tb_vendedor_0" unique="UNIQUE_KEY" >
 				<column name="codigo_endereco" />
 			</index>
-			<index name="unq_tb_vendedor_1" unique="UNIQUE_KEY" >
+			<index name="fk_tb_vendedor_tb_tipo_pessoa_juridica" unique="NORMAL" >
 				<column name="codigo_tipo_pj" />
 			</index>
 			<fk name="fk_tb_vendedor_tb_pessoa_juridica" to_schema="curso_ecommerce" to_table="tb_pessoa_juridica" update_action="restrict" options="" >
 				<fk_column name="codigo_pessoa_juridica" pk="codigo_pessoa_juridica" />
 			</fk>
-			<fk name="fk_tb_vendedor_tb_tipo_pessoa_juridica" to_schema="curso_ecommerce" to_table="tb_tipo_pessoa_juridica" options="" >
+			<fk name="fk_tb_vendedor_tb_tipo_pessoa_juridica" to_schema="curso_ecommerce" to_table="tb_tipo_pessoa_juridica" >
 				<fk_column name="codigo_tipo_pj" pk="codigo_tipo_pj" />
 			</fk>
 			<options><![CDATA[ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci]]></options>

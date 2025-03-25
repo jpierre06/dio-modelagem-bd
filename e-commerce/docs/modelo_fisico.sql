@@ -76,10 +76,11 @@ CREATE  TABLE curso_ecommerce.tb_vendedor (
 	codigo_endereco      INT UNSIGNED   NOT NULL   ,
 	CONSTRAINT unq_tb_vendedor UNIQUE ( codigo_pessoa_juridica ) ,
 	CONSTRAINT unq_tb_vendedor_0 UNIQUE ( codigo_endereco ) ,
-	CONSTRAINT unq_tb_vendedor_1 UNIQUE ( codigo_tipo_pj ) ,
 	CONSTRAINT fk_tb_vendedor_tb_pessoa_juridica FOREIGN KEY ( codigo_pessoa_juridica ) REFERENCES curso_ecommerce.tb_pessoa_juridica( codigo_pessoa_juridica ) ON DELETE NO ACTION ON UPDATE RESTRICT,
 	CONSTRAINT fk_tb_vendedor_tb_tipo_pessoa_juridica FOREIGN KEY ( codigo_tipo_pj ) REFERENCES curso_ecommerce.tb_tipo_pessoa_juridica( codigo_tipo_pj ) ON DELETE NO ACTION ON UPDATE NO ACTION
  ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE INDEX fk_tb_vendedor_tb_tipo_pessoa_juridica ON curso_ecommerce.tb_vendedor ( codigo_tipo_pj );
 
 CREATE  TABLE curso_ecommerce.tb_vendedor_produto ( 
 	codigo_vendedor      INT UNSIGNED   NOT NULL   ,
@@ -101,11 +102,12 @@ CREATE  TABLE curso_ecommerce.tb_cliente_pessoa_juridica (
 	codigo_pessoa_juridica INT UNSIGNED   NOT NULL   ,
 	codigo_tipo_pj       INT UNSIGNED   NOT NULL   ,
 	CONSTRAINT unq_tb_cliente_pessoa_juridica UNIQUE ( codigo_pessoa_juridica ) ,
-	CONSTRAINT unq_tb_cliente_pessoa_juridica_0 UNIQUE ( codigo_tipo_pj ) ,
 	CONSTRAINT fk_tb_cliente_pessoa_juridica_tb_cliente FOREIGN KEY ( codigo_cliente ) REFERENCES curso_ecommerce.tb_cliente( codigo_cliente ) ON DELETE NO ACTION ON UPDATE NO ACTION,
 	CONSTRAINT fk_tb_cliente_pessoa_juridica_tb_pessoa_juridica FOREIGN KEY ( codigo_pessoa_juridica ) REFERENCES curso_ecommerce.tb_pessoa_juridica( codigo_pessoa_juridica ) ON DELETE NO ACTION ON UPDATE RESTRICT,
 	CONSTRAINT fk_tb_cliente_pessoa_juridica_tb_tipo_pessoa_juridica FOREIGN KEY ( codigo_tipo_pj ) REFERENCES curso_ecommerce.tb_tipo_pessoa_juridica( codigo_tipo_pj ) ON DELETE NO ACTION ON UPDATE NO ACTION
  ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE INDEX fk_tb_cliente_pessoa_juridica_tb_tipo_pessoa_juridica ON curso_ecommerce.tb_cliente_pessoa_juridica ( codigo_tipo_pj );
 
 CREATE  TABLE curso_ecommerce.tb_detalhamento_pedido ( 
 	codigo_pedido        INT UNSIGNED   NOT NULL   ,
@@ -132,10 +134,11 @@ CREATE  TABLE curso_ecommerce.tb_fornecedor (
 	prazo_pagamento      INT UNSIGNED   NOT NULL   ,
 	CONSTRAINT unq_tb_fornecedor UNIQUE ( codigo_pessoa_juridica ) ,
 	CONSTRAINT unq_tb_fornecedor_0 UNIQUE ( codigo_endereco ) ,
-	CONSTRAINT unq_tb_fornecedor_1 UNIQUE ( codigo_tipo_pj ) ,
 	CONSTRAINT fk_tb_fornecedor_tb_pessoa_juridica FOREIGN KEY ( codigo_pessoa_juridica ) REFERENCES curso_ecommerce.tb_pessoa_juridica( codigo_pessoa_juridica ) ON DELETE NO ACTION ON UPDATE NO ACTION,
-	CONSTRAINT fk_tb_fornecedor_tb_tipo_pessoa_juridica FOREIGN KEY ( codigo_tipo_pj ) REFERENCES curso_ecommerce.tb_tipo_pessoa_juridica( codigo_tipo_pj ) ON DELETE NO ACTION ON UPDATE RESTRICT
+	CONSTRAINT fk_tb_fornecedor_tb_tipo_pessoa_juridica FOREIGN KEY ( codigo_tipo_pj ) REFERENCES curso_ecommerce.tb_tipo_pessoa_juridica( codigo_tipo_pj ) ON DELETE NO ACTION ON UPDATE NO ACTION
  ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE INDEX fk_tb_fornecedor_tb_tipo_pessoa_juridica ON curso_ecommerce.tb_fornecedor ( codigo_tipo_pj );
 
 CREATE  TABLE curso_ecommerce.tb_fornecedor_produto ( 
 	codigo_fornecedor    INT UNSIGNED   NOT NULL   ,
@@ -162,3 +165,4 @@ CREATE  TABLE curso_ecommerce.tb_endereco (
 	CONSTRAINT fk_tb_endereco_tb_vendedor FOREIGN KEY ( codigo_endereco ) REFERENCES curso_ecommerce.tb_vendedor( codigo_endereco ) ON DELETE NO ACTION ON UPDATE RESTRICT
  ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
+ 

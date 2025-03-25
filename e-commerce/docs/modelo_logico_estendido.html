@@ -315,7 +315,7 @@ input::placeholder {
 Zoom with CTRL+whell mouse button, pan by dragging the diagram with the right-mouse button</title></use>
   <use x='20' y='40' xlink:href='#logo'><title>DbSchema Database Designer </title></use>  <text x='20' y='30' class='legendTitle' >Modelo Lógico Estendido</text> 
   <text x='57' y='47' class='legendSubTitle'><tspan>Read schema comments as mouse-over tooltips</tspan></text>
-  <a xlink:href='https://dbschema.com'><text x='57' y='61' class='legendSubTitle'><tspan>DbSchema.com © 2025-03-21 Wise Coders<title>DbSchema is an universal database designer.
+  <a xlink:href='https://dbschema.com'><text x='57' y='61' class='legendSubTitle'><tspan>DbSchema.com © 2025-03-25 Wise Coders<title>DbSchema is an universal database designer.
 DbSchema has a free Community Edition.</title></tspan></text></a> 
 </g>
 
@@ -349,7 +349,7 @@ tb_cliente_pessoa_juridica ref tb_pessoa_juridica ( codigo_pessoa_juridica )</ti
 	<title>&#x1F517;  Foreign Key fk_tb_cliente_pessoa_juridica_tb_tipo_pessoa_juridica
 tb_cliente_pessoa_juridica ref tb_tipo_pessoa_juridica ( codigo_tipo_pj )</title>
 </path>
-<path transform='translate(8,0)' marker-start='url(#One)' marker-end='url(#One)'    d='M 528,816L 528,136Q 528,128 536,128L 1008,128' ><title>&#x1F517;  Foreign Key fk_tb_cliente_pessoa_juridica_tb_tipo_pessoa_juridica
+<path transform='translate(8,0)' marker-start='url(#OneMore)' marker-end='url(#One)'    d='M 528,816L 528,136Q 528,128 536,128L 1008,128' ><title>&#x1F517;  Foreign Key fk_tb_cliente_pessoa_juridica_tb_tipo_pessoa_juridica
 tb_cliente_pessoa_juridica ref tb_tipo_pessoa_juridica ( codigo_tipo_pj )</title></path>
 <text x='531' y='814' transform='rotate(270 531,814)' class='relName'>codigo&#95;tipo&#95;pj</text>
 <!-- == Fk 'tb_detalhamento_pedido_fk_tb_detalhamento_pedido_tb_pedido' == -->
@@ -413,7 +413,7 @@ tb_fornecedor ref tb_pessoa_juridica ( codigo_pessoa_juridica )</title></path>
 	<title>&#x1F517;  Foreign Key fk_tb_fornecedor_tb_tipo_pessoa_juridica
 tb_fornecedor ref tb_tipo_pessoa_juridica ( codigo_tipo_pj )</title>
 </path>
-<path transform='translate(8,0)' marker-start='url(#One)' marker-end='url(#One)'    d='M 1152,304L 1152,208' ><title>&#x1F517;  Foreign Key fk_tb_fornecedor_tb_tipo_pessoa_juridica
+<path transform='translate(8,0)' marker-start='url(#OneMore)' marker-end='url(#One)'    d='M 1152,304L 1152,208' ><title>&#x1F517;  Foreign Key fk_tb_fornecedor_tb_tipo_pessoa_juridica
 tb_fornecedor ref tb_tipo_pessoa_juridica ( codigo_tipo_pj )</title></path>
 <text x='1155' y='302' transform='rotate(270 1155,302)' class='relName'>codigo&#95;tipo&#95;pj</text>
 <!-- == Fk 'tb_fornecedor_produto_fk_tb_fornecedor_produto_tb_fornecedor' == -->
@@ -469,7 +469,7 @@ tb_vendedor ref tb_pessoa_juridica ( codigo_pessoa_juridica )</title></path>
 	<title>&#x1F517;  Foreign Key fk_tb_vendedor_tb_tipo_pessoa_juridica
 tb_vendedor ref tb_tipo_pessoa_juridica ( codigo_tipo_pj )</title>
 </path>
-<path transform='translate(8,0)' marker-start='url(#One)' marker-end='url(#One)'    d='M 192,288L 192,88Q 192,80 200,80L 1032,80Q 1040,80 1040,88L 1040,112' ><title>&#x1F517;  Foreign Key fk_tb_vendedor_tb_tipo_pessoa_juridica
+<path transform='translate(8,0)' marker-start='url(#OneMore)' marker-end='url(#One)'    d='M 192,288L 192,88Q 192,80 200,80L 1032,80Q 1040,80 1040,88L 1040,112' ><title>&#x1F517;  Foreign Key fk_tb_vendedor_tb_tipo_pessoa_juridica
 tb_vendedor ref tb_tipo_pessoa_juridica ( codigo_tipo_pj )</title></path>
 <text x='195' y='286' transform='rotate(270 195,286)' class='relName'>codigo&#95;tipo&#95;pj</text>
 <!-- == Fk 'tb_vendedor_produto_fk_tb_vendedor_produto_tb_produto' == -->
@@ -522,8 +522,8 @@ Referred by tb_pedido ( codigo_cliente ) </title></a>
  &#8599; tb_cliente_pessoa_fisica( codigo_cliente )</title></a>
 <a xlink:href='#curso_ecommerce.tb_cliente_pessoa_fisica.codigo_cliente'><use x='324' y='860' xlink:href='#fk'/><title>&#x1F517;  References tb_cliente ( codigo_cliente ) </title></a>
   <use x='178' y='877' xlink:href='#nn'/><use x='178' y='876' xlink:href='#unq'><title>&#x1F50D;  Unq unq_tb_cliente_pessoa_fisica ( cpf ) </title></use><a xlink:href='#curso_ecommerce.tb_cliente_pessoa_fisica.cpf'><text id='curso&#95;ecommerce&#46;tb&#95;cliente&#95;pessoa&#95;fisica&#46;cpf' x='195' y='887'>cpf</text><title>&#10697;  cpf
-     * varchar(9)</title></a>
-<text x='333' y='884' text-anchor='end' class='colType'>t</text>  <use x='178' y='893' xlink:href='#nn'/><a xlink:href='#curso_ecommerce.tb_cliente_pessoa_fisica.nome'><text id='curso&#95;ecommerce&#46;tb&#95;cliente&#95;pessoa&#95;fisica&#46;nome' x='195' y='903'>nome</text><title>&#10697;  nome
+     * char(11)</title></a>
+<text x='333' y='884' text-anchor='end' class='colType'>c</text>  <use x='178' y='893' xlink:href='#nn'/><a xlink:href='#curso_ecommerce.tb_cliente_pessoa_fisica.nome'><text id='curso&#95;ecommerce&#46;tb&#95;cliente&#95;pessoa&#95;fisica&#46;nome' x='195' y='903'>nome</text><title>&#10697;  nome
      * varchar(120)</title></a>
 <text x='333' y='900' text-anchor='end' class='colType'>t</text>
 <!-- == Table 'tb_cliente_pessoa_juridica' == -->
@@ -539,7 +539,7 @@ Referred by tb_pedido ( codigo_cliente ) </title></a>
      * int
  &#8599; tb_cliente_pessoa_juridica( codigo_pessoa_juridica )</title></a>
 <a xlink:href='#curso_ecommerce.tb_cliente_pessoa_juridica.codigo_pessoa_juridica'><use x='644' y='876' xlink:href='#fk'/><title>&#x1F517;  References tb_pessoa_juridica ( codigo_pessoa_juridica ) </title></a>
-  <use x='482' y='893' xlink:href='#nn'/><use x='482' y='892' xlink:href='#unq'><title>&#x1F50D;  Unq unq_tb_cliente_pessoa_juridica_0 ( codigo_tipo_pj ) </title></use><a xlink:href='#curso_ecommerce.tb_cliente_pessoa_juridica.codigo_tipo_pj'><text id='curso&#95;ecommerce&#46;tb&#95;cliente&#95;pessoa&#95;juridica&#46;codigo&#95;tipo&#95;pj' x='499' y='903' onmouseover="hghl(['tb_cliente_pessoa_juridica_fk_tb_cliente_pessoa_juridica_tb_tipo_pessoa_juridica','curso_ecommerce.tb_tipo_pessoa_juridica.codigo_tipo_pj'])" onmouseout="uhghl(['tb_cliente_pessoa_juridica_fk_tb_cliente_pessoa_juridica_tb_tipo_pessoa_juridica','curso_ecommerce.tb_tipo_pessoa_juridica.codigo_tipo_pj'])">codigo&#95;tipo&#95;pj</text><title>&#10697;  codigo_tipo_pj
+  <use x='482' y='893' xlink:href='#nn'/><use x='482' y='892' xlink:href='#idx'><title>&#x1F50D;  fk_tb_cliente_pessoa_juridica_tb_tipo_pessoa_juridica ( codigo_tipo_pj ) </title></use><a xlink:href='#curso_ecommerce.tb_cliente_pessoa_juridica.codigo_tipo_pj'><text id='curso&#95;ecommerce&#46;tb&#95;cliente&#95;pessoa&#95;juridica&#46;codigo&#95;tipo&#95;pj' x='499' y='903' onmouseover="hghl(['tb_cliente_pessoa_juridica_fk_tb_cliente_pessoa_juridica_tb_tipo_pessoa_juridica','curso_ecommerce.tb_tipo_pessoa_juridica.codigo_tipo_pj'])" onmouseout="uhghl(['tb_cliente_pessoa_juridica_fk_tb_cliente_pessoa_juridica_tb_tipo_pessoa_juridica','curso_ecommerce.tb_tipo_pessoa_juridica.codigo_tipo_pj'])">codigo&#95;tipo&#95;pj</text><title>&#10697;  codigo_tipo_pj
      * int
  &#8599; tb_cliente_pessoa_juridica( codigo_tipo_pj )</title></a>
 <a xlink:href='#curso_ecommerce.tb_cliente_pessoa_juridica.codigo_tipo_pj'><use x='644' y='892' xlink:href='#fk'/><title>&#x1F517;  References tb_tipo_pessoa_juridica ( codigo_tipo_pj ) </title></a>
@@ -635,7 +635,7 @@ References tb_vendedor ( codigo_endereco ) </title></a>
      * int
  &#8599; tb_fornecedor( codigo_pessoa_juridica )</title></a>
 <a xlink:href='#curso_ecommerce.tb_fornecedor.codigo_pessoa_juridica'><use x='1300' y='364' xlink:href='#fk'/><title>&#x1F517;  References tb_pessoa_juridica ( codigo_pessoa_juridica ) </title></a>
-  <use x='1138' y='381' xlink:href='#nn'/><use x='1138' y='380' xlink:href='#unq'><title>&#x1F50D;  Unq unq_tb_fornecedor_1 ( codigo_tipo_pj ) </title></use><a xlink:href='#curso_ecommerce.tb_fornecedor.codigo_tipo_pj'><text id='curso&#95;ecommerce&#46;tb&#95;fornecedor&#46;codigo&#95;tipo&#95;pj' x='1155' y='391' onmouseover="hghl(['tb_fornecedor_fk_tb_fornecedor_tb_tipo_pessoa_juridica','curso_ecommerce.tb_tipo_pessoa_juridica.codigo_tipo_pj'])" onmouseout="uhghl(['tb_fornecedor_fk_tb_fornecedor_tb_tipo_pessoa_juridica','curso_ecommerce.tb_tipo_pessoa_juridica.codigo_tipo_pj'])">codigo&#95;tipo&#95;pj</text><title>&#10697;  codigo_tipo_pj
+  <use x='1138' y='381' xlink:href='#nn'/><use x='1138' y='380' xlink:href='#idx'><title>&#x1F50D;  fk_tb_fornecedor_tb_tipo_pessoa_juridica ( codigo_tipo_pj ) </title></use><a xlink:href='#curso_ecommerce.tb_fornecedor.codigo_tipo_pj'><text id='curso&#95;ecommerce&#46;tb&#95;fornecedor&#46;codigo&#95;tipo&#95;pj' x='1155' y='391' onmouseover="hghl(['tb_fornecedor_fk_tb_fornecedor_tb_tipo_pessoa_juridica','curso_ecommerce.tb_tipo_pessoa_juridica.codigo_tipo_pj'])" onmouseout="uhghl(['tb_fornecedor_fk_tb_fornecedor_tb_tipo_pessoa_juridica','curso_ecommerce.tb_tipo_pessoa_juridica.codigo_tipo_pj'])">codigo&#95;tipo&#95;pj</text><title>&#10697;  codigo_tipo_pj
      * int
  &#8599; tb_fornecedor( codigo_tipo_pj )</title></a>
 <a xlink:href='#curso_ecommerce.tb_fornecedor.codigo_tipo_pj'><use x='1300' y='380' xlink:href='#fk'/><title>&#x1F517;  References tb_tipo_pessoa_juridica ( codigo_tipo_pj ) </title></a>
@@ -712,8 +712,8 @@ Referred by tb_vendedor ( codigo_pessoa_juridica ) </title></a>
 <text x='1469' y='180' text-anchor='end' class='colType'>t</text>  <use x='1298' y='189' xlink:href='#nn'/><a xlink:href='#curso_ecommerce.tb_pessoa_juridica.nome_fantasia'><text id='curso&#95;ecommerce&#46;tb&#95;pessoa&#95;juridica&#46;nome&#95;fantasia' x='1315' y='199'>nome&#95;fantasia</text><title>&#10697;  nome_fantasia
      * varchar(100)</title></a>
 <text x='1469' y='196' text-anchor='end' class='colType'>t</text>  <use x='1298' y='205' xlink:href='#nn'/><a xlink:href='#curso_ecommerce.tb_pessoa_juridica.cnpj'><text id='curso&#95;ecommerce&#46;tb&#95;pessoa&#95;juridica&#46;cnpj' x='1315' y='215'>cnpj</text><title>&#10697;  cnpj
-     * varchar(14)</title></a>
-<text x='1469' y='212' text-anchor='end' class='colType'>t</text>
+     * char(14)</title></a>
+<text x='1469' y='212' text-anchor='end' class='colType'>c</text>
 <!-- == Table 'tb_produto' == -->
 <rect id='depict_curso&#95;ecommerce&#46;tb&#95;produto' class='entity' style='stroke:#A6B1BB' x='592' y='296' width='176' height='112' rx='8' ry='8' />
 <rect x='592' y='296' width='176' height='28' rx='8' ry='8' style='stroke-width:0;fill:url(#tbg_3986C1)'/>
@@ -765,7 +765,7 @@ Referred by tb_vendedor ( codigo_tipo_pj ) </title></a>
      * int
  &#8599; tb_vendedor( codigo_pessoa_juridica )</title></a>
 <a xlink:href='#curso_ecommerce.tb_vendedor.codigo_pessoa_juridica'><use x='212' y='348' xlink:href='#fk'/><title>&#x1F517;  References tb_pessoa_juridica ( codigo_pessoa_juridica ) </title></a>
-  <use x='50' y='365' xlink:href='#nn'/><use x='50' y='364' xlink:href='#unq'><title>&#x1F50D;  Unq unq_tb_vendedor_1 ( codigo_tipo_pj ) </title></use><a xlink:href='#curso_ecommerce.tb_vendedor.codigo_tipo_pj'><text id='curso&#95;ecommerce&#46;tb&#95;vendedor&#46;codigo&#95;tipo&#95;pj' x='67' y='375' onmouseover="hghl(['tb_vendedor_fk_tb_vendedor_tb_tipo_pessoa_juridica','curso_ecommerce.tb_tipo_pessoa_juridica.codigo_tipo_pj'])" onmouseout="uhghl(['tb_vendedor_fk_tb_vendedor_tb_tipo_pessoa_juridica','curso_ecommerce.tb_tipo_pessoa_juridica.codigo_tipo_pj'])">codigo&#95;tipo&#95;pj</text><title>&#10697;  codigo_tipo_pj
+  <use x='50' y='365' xlink:href='#nn'/><use x='50' y='364' xlink:href='#idx'><title>&#x1F50D;  fk_tb_vendedor_tb_tipo_pessoa_juridica ( codigo_tipo_pj ) </title></use><a xlink:href='#curso_ecommerce.tb_vendedor.codigo_tipo_pj'><text id='curso&#95;ecommerce&#46;tb&#95;vendedor&#46;codigo&#95;tipo&#95;pj' x='67' y='375' onmouseover="hghl(['tb_vendedor_fk_tb_vendedor_tb_tipo_pessoa_juridica','curso_ecommerce.tb_tipo_pessoa_juridica.codigo_tipo_pj'])" onmouseout="uhghl(['tb_vendedor_fk_tb_vendedor_tb_tipo_pessoa_juridica','curso_ecommerce.tb_tipo_pessoa_juridica.codigo_tipo_pj'])">codigo&#95;tipo&#95;pj</text><title>&#10697;  codigo_tipo_pj
      * int
  &#8599; tb_vendedor( codigo_tipo_pj )</title></a>
 <a xlink:href='#curso_ecommerce.tb_vendedor.codigo_tipo_pj'><use x='212' y='364' xlink:href='#fk'/><title>&#x1F517;  References tb_tipo_pessoa_juridica ( codigo_tipo_pj ) </title></a>
@@ -999,7 +999,7 @@ function searchSVG( searchValue) {
 	<tr>
 		<td><span class='text-danger'>*</span><svg width='14' height='14'><use xlink:href='#unq'/></svg></td>
 		<td><a name='curso_ecommerce.tb_cliente_pessoa_fisica.cpf'>cpf</a></td>
-		<td class='dataType'> VARCHAR&#40;9&#41;  </td>
+		<td class='dataType'> CHAR&#40;11&#41;  </td>
 	</tr>
 	<tr>
 		<td><span class='text-danger'>*</span></td>
@@ -1041,7 +1041,7 @@ function searchSVG( searchValue) {
 		<td class='dataType'> INT UNSIGNED  </td>
 	</tr>
 	<tr>
-		<td><span class='text-danger'>*</span><svg width='14' height='14'><use xlink:href='#unq'/></svg><svg width='14' height='14'><use xlink:href='#fk'/></svg></td>
+		<td><span class='text-danger'>*</span><svg width='14' height='14'><use xlink:href='#idx'/></svg><svg width='14' height='14'><use xlink:href='#fk'/></svg></td>
 		<td><a name='curso_ecommerce.tb_cliente_pessoa_juridica.codigo_tipo_pj'>codigo&#95;tipo&#95;pj</a></td>
 		<td class='dataType'> INT UNSIGNED  </td>
 	</tr>
@@ -1052,8 +1052,8 @@ function searchSVG( searchValue) {
 	<tr>		<td><svg width='14' height='14'><use xlink:href='#unq'/></svg></td><td>unq&#95;tb&#95;cliente&#95;pessoa&#95;juridica</td>
 		<td>Unique Key ON codigo&#95;pessoa&#95;juridica</td>
 	</tr>
-	<tr>		<td><svg width='14' height='14'><use xlink:href='#unq'/></svg></td><td>unq&#95;tb&#95;cliente&#95;pessoa&#95;juridica&#95;0</td>
-		<td>Unique Key ON codigo&#95;tipo&#95;pj</td>
+	<tr>		<td><svg width='14' height='14'><use xlink:href='#idx'/></svg></td><td>fk&#95;tb&#95;cliente&#95;pessoa&#95;juridica&#95;tb&#95;tipo&#95;pessoa&#95;juridica</td>
+		<td>Index ON codigo&#95;tipo&#95;pj</td>
 	</tr>
 <tr><th colspan='3'>Foreign Key</th></tr>
 	<tr>
@@ -1292,7 +1292,7 @@ function searchSVG( searchValue) {
 		<td class='dataType'> INT UNSIGNED  </td>
 	</tr>
 	<tr>
-		<td><span class='text-danger'>*</span><svg width='14' height='14'><use xlink:href='#unq'/></svg><svg width='14' height='14'><use xlink:href='#fk'/></svg></td>
+		<td><span class='text-danger'>*</span><svg width='14' height='14'><use xlink:href='#idx'/></svg><svg width='14' height='14'><use xlink:href='#fk'/></svg></td>
 		<td><a name='curso_ecommerce.tb_fornecedor.codigo_tipo_pj'>codigo&#95;tipo&#95;pj</a></td>
 		<td class='dataType'> INT UNSIGNED  </td>
 	</tr>
@@ -1316,8 +1316,8 @@ function searchSVG( searchValue) {
 	<tr>		<td><svg width='14' height='14'><use xlink:href='#unq'/></svg></td><td>unq&#95;tb&#95;fornecedor&#95;0</td>
 		<td>Unique Key ON codigo&#95;endereco</td>
 	</tr>
-	<tr>		<td><svg width='14' height='14'><use xlink:href='#unq'/></svg></td><td>unq&#95;tb&#95;fornecedor&#95;1</td>
-		<td>Unique Key ON codigo&#95;tipo&#95;pj</td>
+	<tr>		<td><svg width='14' height='14'><use xlink:href='#idx'/></svg></td><td>fk&#95;tb&#95;fornecedor&#95;tb&#95;tipo&#95;pessoa&#95;juridica</td>
+		<td>Index ON codigo&#95;tipo&#95;pj</td>
 	</tr>
 <tr><th colspan='3'>Foreign Key</th></tr>
 	<tr>
@@ -1496,7 +1496,7 @@ function searchSVG( searchValue) {
 	<tr>
 		<td><span class='text-danger'>*</span></td>
 		<td><a name='curso_ecommerce.tb_pessoa_juridica.cnpj'>cnpj</a></td>
-		<td class='dataType'> VARCHAR&#40;14&#41;  </td>
+		<td class='dataType'> CHAR&#40;14&#41;  </td>
 	</tr>
 <tr><th colspan='3'>Indexes</th></tr>
 	<tr>		<td><svg width='14' height='14'><use xlink:href='#pk'/></svg></td><td>pk&#95;tb&#95;pessoa&#95;juridica</td>
@@ -1634,7 +1634,7 @@ function searchSVG( searchValue) {
 		<td class='dataType'> INT UNSIGNED  </td>
 	</tr>
 	<tr>
-		<td><span class='text-danger'>*</span><svg width='14' height='14'><use xlink:href='#unq'/></svg><svg width='14' height='14'><use xlink:href='#fk'/></svg></td>
+		<td><span class='text-danger'>*</span><svg width='14' height='14'><use xlink:href='#idx'/></svg><svg width='14' height='14'><use xlink:href='#fk'/></svg></td>
 		<td><a name='curso_ecommerce.tb_vendedor.codigo_tipo_pj'>codigo&#95;tipo&#95;pj</a></td>
 		<td class='dataType'> INT UNSIGNED  </td>
 	</tr>
@@ -1653,8 +1653,8 @@ function searchSVG( searchValue) {
 	<tr>		<td><svg width='14' height='14'><use xlink:href='#unq'/></svg></td><td>unq&#95;tb&#95;vendedor&#95;0</td>
 		<td>Unique Key ON codigo&#95;endereco</td>
 	</tr>
-	<tr>		<td><svg width='14' height='14'><use xlink:href='#unq'/></svg></td><td>unq&#95;tb&#95;vendedor&#95;1</td>
-		<td>Unique Key ON codigo&#95;tipo&#95;pj</td>
+	<tr>		<td><svg width='14' height='14'><use xlink:href='#idx'/></svg></td><td>fk&#95;tb&#95;vendedor&#95;tb&#95;tipo&#95;pessoa&#95;juridica</td>
+		<td>Index ON codigo&#95;tipo&#95;pj</td>
 	</tr>
 <tr><th colspan='3'>Foreign Key</th></tr>
 	<tr>
