@@ -11,7 +11,7 @@ CREATE  TABLE curso_ecommerce.tb_cliente (
 
 CREATE  TABLE curso_ecommerce.tb_cliente_pessoa_fisica ( 
 	codigo_cliente       INT UNSIGNED   NOT NULL   PRIMARY KEY,
-	cpf                  CHAR(11)    NOT NULL   ,
+	cpf                  VARCHAR(9)    NOT NULL   ,
 	nome                 VARCHAR(120)    NOT NULL   ,
 	CONSTRAINT unq_tb_cliente_pessoa_fisica UNIQUE ( cpf ) ,
 	CONSTRAINT fk_tb_cliente_pessoa_fisica_tb_cliente FOREIGN KEY ( codigo_cliente ) REFERENCES curso_ecommerce.tb_cliente( codigo_cliente ) ON DELETE NO ACTION ON UPDATE RESTRICT
@@ -51,7 +51,7 @@ CREATE  TABLE curso_ecommerce.tb_pessoa_juridica (
 	codigo_pessoa_juridica INT UNSIGNED   NOT NULL AUTO_INCREMENT  PRIMARY KEY,
 	razao_social         VARCHAR(100)    NOT NULL   ,
 	nome_fantasia        VARCHAR(100)    NOT NULL   ,
-	cnpj                 CHAR(14)    NOT NULL   
+	cnpj                 VARCHAR(14)    NOT NULL   
  ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 CREATE  TABLE curso_ecommerce.tb_produto ( 
@@ -165,3 +165,4 @@ CREATE  TABLE curso_ecommerce.tb_endereco (
 	CONSTRAINT fk_tb_endereco_tb_vendedor FOREIGN KEY ( codigo_endereco ) REFERENCES curso_ecommerce.tb_vendedor( codigo_endereco ) ON DELETE NO ACTION ON UPDATE RESTRICT
  ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
+ 
