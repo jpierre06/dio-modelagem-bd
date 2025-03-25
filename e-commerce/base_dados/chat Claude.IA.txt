@@ -1,0 +1,120 @@
+* Eu preciso popular minha base de dados com dados ficticios para realizar testes, porém, esse dados devem ter coerência com as tabelas criadas. Os dados devem ser criado em formato csv para facilitar load nas tabelas. O nome do arquivo csv será igual ao nome da tabela.
+
+
+Por favor, aguarde enviar os comandos SQL com as especificações de criação da tabela.
+
+
+* Criar de 200 registros em csv para a tabela tb_cliente
+
+'''
+CREATE  TABLE curso_ecommerce.tb_cliente ( 
+	codigo_cliente       INT UNSIGNED   NOT NULL AUTO_INCREMENT  PRIMARY KEY,
+	email                VARCHAR(100)       ,
+	ddd                  VARCHAR(3)       ,
+	telefone             VARCHAR(9)       ,
+	codigo_endereco      INT UNSIGNED   NOT NULL   ,
+	CONSTRAINT unq_tb_cliente UNIQUE ( codigo_endereco ) 
+ );
+'''
+
+
+* Agora preciso que seja criado de 200 registros em csv para a tabela especificada:
+
+Verificar os seguintes pontos:
+
+1 - o campo codigo_cliente deve coincidir com a tabela tb_cliente gerada para fazer o relacionamento ;
+2 - o campo nome deve ser coerente com o campo email gerado anteriormente;
+3 - o campo cpj deve ter 11 caracteres numericos. Caso seja gerado valor com menos de 11 caracteres numericos, preencher com "zeros" a esquerda;
+
+'''
+CREATE  TABLE curso_ecommerce.tb_cliente_pessoa_fisica ( 
+	codigo_cliente       INT UNSIGNED   NOT NULL   PRIMARY KEY,
+	cpf                  VARCHAR(9)    NOT NULL   ,
+	nome                 VARCHAR(120)    NOT NULL   ,
+	CONSTRAINT unq_tb_cliente_pessoa_fisica UNIQUE ( cpf ) ,
+	CONSTRAINT fk_tb_cliente_pessoa_fisica_tb_cliente FOREIGN KEY ( codigo_cliente ) REFERENCES curso_ecommerce.tb_cliente( codigo_cliente ) ON DELETE NO ACTION ON UPDATE RESTRICT
+ ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+'''
+
+
+* Agora preciso que seja criado de 100 registros em csv para a tabela tb_pessoa_juridica:
+
+Verificar os seguintes pontos:
+
+1 - o campo cnpj deve ter 14 caracteres numericos. Caso seja gerado valor com menos de 14 caracteres numericos, preencher com "zeros" a esquerda;
+
+
+'''
+CREATE  TABLE curso_ecommerce.tb_pessoa_juridica ( 
+	codigo_pessoa_juridica INT UNSIGNED   NOT NULL AUTO_INCREMENT  PRIMARY KEY,
+	razao_social         VARCHAR(100)    NOT NULL   ,
+	nome_fantasia        VARCHAR(100)    NOT NULL   ,
+	cnpj                 VARCHAR(14)    NOT NULL   
+ ) ;
+'''
+
+
+* Preciso que sejam criadas dois arquivos com 100 registros em csv para as tabelas tb_cliente e tb_cliente_pessoa_juridica:
+
+Verificar os seguintes pontos:
+
+1 - A tabela tb_cliente_pessoa_juridica se relaciona com a tabela tb_pessoa_juridica criada anteriormente;
+
+2 - o campo codigo_tipo_pj na tb_cliente_pessoa_juridica deve ter sempre valor 3;
+
+3 - A tabela tb_cliente se relaciona com a tabela tb_cliente_pessoa_juridica criada nesse chat;
+
+# especificação da tabela tb_cliente_pessoa_juridica
+'''
+CREATE  TABLE curso_ecommerce.tb_cliente_pessoa_juridica ( 
+	codigo_cliente       INT UNSIGNED   NOT NULL   PRIMARY KEY,
+	codigo_pessoa_juridica INT UNSIGNED   NOT NULL   ,
+	codigo_tipo_pj       INT UNSIGNED   NOT NULL   ,
+	CONSTRAINT unq_tb_cliente_pessoa_juridica UNIQUE ( codigo_pessoa_juridica ) ,
+	CONSTRAINT unq_tb_cliente_pessoa_juridica_0 UNIQUE ( codigo_tipo_pj ) ,
+	CONSTRAINT fk_tb_cliente_pessoa_juridica_tb_cliente FOREIGN KEY ( codigo_cliente ) REFERENCES curso_ecommerce.tb_cliente( codigo_cliente ) ON DELETE NO ACTION ON UPDATE NO ACTION,
+	CONSTRAINT fk_tb_cliente_pessoa_juridica_tb_pessoa_juridica FOREIGN KEY ( codigo_pessoa_juridica ) REFERENCES curso_ecommerce.tb_pessoa_juridica( codigo_pessoa_juridica ) ON DELETE NO ACTION ON UPDATE RESTRICT,
+	CONSTRAINT fk_tb_cliente_pessoa_juridica_tb_tipo_pessoa_juridica FOREIGN KEY ( codigo_tipo_pj ) REFERENCES curso_ecommerce.tb_tipo_pessoa_juridica( codigo_tipo_pj ) ON DELETE NO ACTION ON UPDATE NO ACTION
+ ) ;
+'''
+
+
+# especificação da tabela tb_cliente
+'''
+CREATE  TABLE curso_ecommerce.tb_cliente ( 
+	codigo_cliente       INT UNSIGNED   NOT NULL AUTO_INCREMENT  PRIMARY KEY,
+	email                VARCHAR(100)       ,
+	ddd                  VARCHAR(3)       ,
+	telefone             VARCHAR(9)       ,
+	codigo_endereco      INT UNSIGNED   NOT NULL   ,
+	CONSTRAINT unq_tb_cliente UNIQUE ( codigo_endereco ) 
+ ) ;
+'''
+
+
+
+* Preciso que seja criado um arquivo com 300 registros em csv para a tabela tb_endereco:
+
+Verificar os seguintes pontos:
+
+1 - Os 200 primeiros registros devem ser relacionados com o primeiro arquivo tb_cliente criado e que está relacionado com pessoa física;
+
+2 - Os demais 100 registros (do 201 ao 300) devem ser relacionados com o segundo arquivo tb_cliente criado e que está relacionado com pessoa jurídica;
+
+
+# especificação da tabela tb_endereco
+'''
+CREATE  TABLE curso_ecommerce.tb_endereco ( 
+	codigo_endereco      INT UNSIGNED   NOT NULL AUTO_INCREMENT  PRIMARY KEY,
+	logradouro           VARCHAR(125)    NOT NULL   ,
+	numero               VARCHAR(10)       ,
+	complemento          VARCHAR(100)       ,
+	bairro               VARCHAR(100)    NOT NULL   ,
+	cidade               VARCHAR(100)    NOT NULL   ,
+	estado               VARCHAR(35)    NOT NULL   ,
+	cep                  VARCHAR(8)    NOT NULL   ,
+	CONSTRAINT fk_tb_endereco_tb_cliente FOREIGN KEY ( codigo_endereco ) REFERENCES curso_ecommerce.tb_cliente( codigo_endereco ) ,
+	CONSTRAINT fk_tb_endereco_tb_fornecedor FOREIGN KEY ( codigo_endereco ) REFERENCES curso_ecommerce.tb_fornecedor( codigo_endereco ) ,
+	CONSTRAINT fk_tb_endereco_tb_vendedor FOREIGN KEY ( codigo_endereco ) REFERENCES curso_ecommerce.tb_vendedor( codigo_endereco ) 
+ ) ;
+ '''

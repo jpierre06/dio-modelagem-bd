@@ -1,0 +1,101 @@
+codigo_pessoa_juridica,razao_social,nome_fantasia,cnpj
+1,Silva & Associados Ltda,Silva Consultoria,12345678901234
+2,Santos Comércio de Alimentos S.A.,Supermercado Santos,23456789012345
+3,Oliveira Tecnologia Ltda,OliveiraTech,34567890123456
+4,Ferreira Indústria e Comércio Ltda,Indústrias Ferreira,45678901234567
+5,Costa Soluções Financeiras S.A.,Costa Finanças,56789012345678
+6,Almeida Construções Ltda,Almeida Construtora,67890123456789
+7,Lima Equipamentos Médicos Ltda,Lima Medical,78901234567890
+8,Martins Serviços Automotivos S.A.,Auto Martins,89012345678901
+9,Rodrigues Telecomunicações Ltda,Rodrigues Telecom,90123456789012
+10,Gomes Transportes e Logística S.A.,Transportadora Gomes,01234567890123
+11,Pereira Distribuidora de Alimentos Ltda,Distribuidora Pereira,10234567890123
+12,Souza Materiais de Construção S.A.,Souza Materiais,20345678901234
+13,Fernandes Imobiliária Ltda,Imóveis Fernandes,30456789012345
+14,Cardoso Software e Serviços Ltda,Cardoso IT Solutions,40567890123456
+15,Ribeiro Hotelaria S.A.,Hotéis Ribeiro,50678901234567
+16,Barbosa Eventos e Promoções Ltda,Barbosa Eventos,60789012345678
+17,Nascimento Farmacêutica Ltda,Farmácias Nascimento,70890123456789
+18,Campos Comunicação Visual Ltda,Campos Design,80901234567890
+19,Vieira Agropecuária S.A.,Agro Vieira,90012345678901
+20,Moreira Energia Sustentável Ltda,Moreira Energia,00123456789012
+21,Freitas Contabilidade e Assessoria Ltda,Contábil Freitas,10234567890124
+22,Andrade Segurança e Vigilância S.A.,Segurança Andrade,20345678901235
+23,Mendes Decoração e Design Ltda,Decorações Mendes,30456789012346
+24,Castro Equipamentos Industriais Ltda,Castro Industrial,40567890123457
+25,Carvalho Papel e Celulose S.A.,Papelaria Carvalho,50678901234568
+26,Duarte Engenharia Ltda,Engenharia Duarte,60789012345679
+27,Teixeira Consultoria Empresarial Ltda,Teixeira Consultores,70890123456780
+28,Rocha Móveis e Decorações S.A.,Móveis Rocha,80901234567891
+29,Correia Laboratório de Análises Ltda,Laboratório Correia,90012345678902
+30,Barros Máquinas e Ferramentas Ltda,Ferramentas Barros,00123456789013
+31,Santos Corretora de Seguros S.A.,Seguros Santos,10234567890125
+32,Pinto Advocacia Empresarial Ltda,Advocacia Pinto,20345678901236
+33,Marques Produtos Alimentícios Ltda,Alimentos Marques,30456789012347
+34,Cunha Importação e Exportação S.A.,Cunha Comex,40567890123458
+35,Melo Serviços Gráficos Ltda,Gráfica Melo,50678901234569
+36,Dias Desenvolvimento de Software Ltda,Dias Software,60789012345670
+37,Farias Soluções Ambientais S.A.,EcoFarias,70890123456781
+38,Machado Comércio Eletrônico Ltda,E-commerce Machado,80901234567892
+39,Lopes Artigos Esportivos Ltda,Esporte Lopes,90012345678903
+40,Xavier Serviços de Saúde S.A.,Clínica Xavier,00123456789014
+41,Borges Consultoria Jurídica Ltda,Jurídico Borges,00000000000015
+42,Viana Automação Industrial Ltda,Automação Viana,00000000000016
+43,Soares Comunicação e Marketing S.A.,Soares Marketing,00000000000017
+44,Peixoto Educação Profissional Ltda,Instituto Peixoto,00000000000018
+45,Silva Metais e Mineração Ltda,Mineradora Silva,00000000000019
+46,Oliveira Produtos Veterinários S.A.,Vet Oliveira,00000000000020
+47,Ferreira Recursos Humanos Ltda,RH Ferreira,00000000000021
+48,Costa Equipamentos Eletrônicos Ltda,Costa Eletrônicos,00000000000022
+49,Almeida Representações Comerciais S.A.,Representações Almeida,00000000000023
+50,Lima Serviços de Limpeza Ltda,Clean Lima,00000000000024
+51,Martins Indústria Têxtil Ltda,Têxtil Martins,00000000000025
+52,Rodrigues Serviços Funerários S.A.,Funerária Rodrigues,00000000000026
+53,Gomes Infraestrutura e Urbanismo Ltda,Urbanismo Gomes,00000000000027
+54,Pereira Reciclagem Industrial Ltda,Reciclagem Pereira,00000000000028
+55,Souza Soluções em TI S.A.,TI Souza,00000000000029
+56,Fernandes Produtos Químicos Ltda,Química Fernandes,00000000000030
+57,Cardoso Artigos para Festas Ltda,Festas Cardoso,00000000000031
+58,Ribeiro Beneficiamento de Couro S.A.,Couro Ribeiro,00000000000032
+59,Barbosa Comércio de Combustíveis Ltda,Posto Barbosa,00000000000033
+60,Nascimento Artigos para o Lar Ltda,Casa Nascimento,00000000000034
+61,Campos Serviços de Entrega Rápida S.A.,Express Campos,00000000000035
+62,Vieira Instalações Elétricas Ltda,Elétrica Vieira,00000000000036
+63,Moreira Desenvolvimento Web Ltda,Web Moreira,00000000000037
+64,Freitas Reflorestamento e Madeira S.A.,Madeireira Freitas,00000000000038
+65,Andrade Treinamento Corporativo Ltda,Andrade Treinamentos,00000000000039
+66,Mendes Fabricação de Móveis Planejados Ltda,Planejados Mendes,00000000000040
+67,Castro Equipamentos de Segurança S.A.,Segurança Castro,00000000000041
+68,Carvalho Consultoria em Gestão Ltda,Gestão Carvalho,00000000000042
+69,Duarte Produtos Naturais Ltda,Naturais Duarte,00000000000043
+70,Teixeira Embalagens Industriais S.A.,Embalagens Teixeira,00000000000044
+71,Rocha Comércio de Ferragens Ltda,Ferragens Rocha,00000000000045
+72,Correia Serviços Odontológicos Ltda,Odonto Correia,00000000000046
+73,Barros Distribuidora de Bebidas S.A.,Distribuidora Barros,00000000000047
+74,Santos Equipamentos Agrícolas Ltda,Agro Santos,00000000000048
+75,Pinto Locação de Veículos Ltda,Locadora Pinto,00000000000049
+76,Marques Confecções e Calçados S.A.,Confecções Marques,00000000000050
+77,Cunha Comércio de Informática Ltda,Informática Cunha,00000000000051
+78,Melo Assistência Técnica Ltda,Assistência Melo,00000000000052
+79,Dias Serviços Financeiros S.A.,Financeira Dias,00000000000053
+80,Farias Produtos de Beleza Ltda,Beleza Farias,00000000000054
+81,Machado Estúdio Fotográfico Ltda,Foto Machado,00000000000055
+82,Lopes Comércio de Vidros S.A.,Vidraçaria Lopes,00000000000056
+83,Xavier Equipamentos de Refrigeração Ltda,Refrigeração Xavier,00000000000057
+84,Borges Agência de Turismo Ltda,Turismo Borges,00000000000058
+85,Viana Instalações Hidráulicas S.A.,Hidráulica Viana,00000000000059
+86,Soares Comércio de Pneus Ltda,Pneus Soares,00000000000060
+87,Peixoto Consultoria Ambiental Ltda,Ambiental Peixoto,00000000000061
+88,Silva Produtos Hospitalares S.A.,Hospitalar Silva,00000000000062
+89,Oliveira Serviços de Jardinagem Ltda,Jardim Oliveira,00000000000063
+90,Ferreira Artigos Religiosos Ltda,Religiosos Ferreira,00000000000064
+91,Costa Serviços de Buffet S.A.,Buffet Costa,00000000000065
+92,Almeida Sistemas de Segurança Ltda,Segurança Almeida,00000000000066
+93,Lima Tecnologia da Informação Ltda,TI Lima,00000000000067
+94,Martins Serviços Contábeis S.A.,Contabilidade Martins,00000000000068
+95,Rodrigues Comercialização de Aço Ltda,Aço Rodrigues,00000000000069
+96,Gomes Comunicação Digital Ltda,Digital Gomes,00000000000070
+97,Pereira Comércio de Tintas S.A.,Tintas Pereira,00000000000071
+98,Souza Alimentos Orgânicos Ltda,Orgânicos Souza,00000000000072
+99,Fernandes Análises de Sistemas Ltda,Sistemas Fernandes,00000000000073
+100,Cardoso Engenharia Civil S.A.,Engenharia Cardoso,00000000000074
