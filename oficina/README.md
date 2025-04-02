@@ -58,3 +58,37 @@
 
 > Uma OS pode ter vários tipo de peça e uma peça pode estar presente em mais de uma OS
 
+<br>
+<br>
+
+# Considerações de atributos derivados
+
+<br>
+
+## Entidade Ordem de serviço
+
+> Embora o atributo valor_total_pecas na Entidade Ordem-Servico possa ser derivado dos atributos quantidade e valor_peca_os, da relação  entre as Entidaes Ordem-Servico e Detalhamento-Peca, no modelo lógico foi mantido como campo gravado
+
+<br>
+
+## Entidade Ordem de serviço
+
+> Embora o atributo valor_total_servicos na Entidade Ordem-Servico possa ser derivado dos atributos quantidade e valor_servico_os, da relação  entre as Entidaes Ordem-Servico e Detalhamento-Servico, no modelo lógico foi mantido como campo gravado
+
+<br>
+<br>
+
+
+# Modelo Conceitual (Diagrama Entidade Relacionamento)
+
+> O modelo conceitual foi desenvolvido através do aplicativo brModelo
+
+> Caso tenha interesse em usar o diagramam criado pelo aplicativo brModelo, o mesmo pode ser encontrado em "./diagramas/modelo_conceitual.xml"
+
+<br>
+
+## Digrama do modelo conceitual 
+
+![Modelo Conceitual](docs/modelo_conceitual.png)
+
+<br>
