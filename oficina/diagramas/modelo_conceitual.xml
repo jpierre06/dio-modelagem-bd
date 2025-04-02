@@ -10,7 +10,7 @@
 <Alinhamento_h Valor="60"/>
 <Zoom Valor="100"/>
 <Fonte Estilo="1" Nome="Arial" Tamanho="12"/>
-<Localizacao Left="0" Top="158"/>
+<Localizacao Left="12" Top="738"/>
 <Realce Valor="false"/>
 </InfoDiagrama>
 <Texto ID="4">
@@ -3010,10 +3010,8 @@
 <Largura Valor="1"/>
 <Ligacoes PontaA="326" PontaB="325"/>
 <Pontos>
-<Ponto Left="846" Top="971"/>
+<Ponto Left="847" Top="971"/>
 <Ponto Left="837" Top="971"/>
-<Ponto Left="837" Top="1054"/>
-<Ponto Left="837" Top="1054"/>
 <Ponto Left="837" Top="1130"/>
 </Pontos>
 </Ligacao>
@@ -3047,10 +3045,8 @@
 <Largura Valor="1"/>
 <Ligacoes PontaA="328" PontaB="325"/>
 <Pontos>
-<Ponto Left="860" Top="990"/>
+<Ponto Left="861" Top="990"/>
 <Ponto Left="851" Top="990"/>
-<Ponto Left="851" Top="1064"/>
-<Ponto Left="851" Top="1064"/>
 <Ponto Left="851" Top="1130"/>
 </Pontos>
 </Ligacao>
@@ -3084,10 +3080,8 @@
 <Largura Valor="1"/>
 <Ligacoes PontaA="330" PontaB="325"/>
 <Pontos>
-<Ponto Left="874" Top="1009"/>
+<Ponto Left="875" Top="1009"/>
 <Ponto Left="865" Top="1009"/>
-<Ponto Left="865" Top="1073"/>
-<Ponto Left="865" Top="1073"/>
 <Ponto Left="865" Top="1130"/>
 </Pontos>
 </Ligacao>
@@ -3121,17 +3115,15 @@
 <Largura Valor="1"/>
 <Ligacoes PontaA="332" PontaB="325"/>
 <Pontos>
-<Ponto Left="888" Top="1028"/>
+<Ponto Left="889" Top="1028"/>
 <Ponto Left="879" Top="1028"/>
-<Ponto Left="879" Top="1083"/>
-<Ponto Left="879" Top="1083"/>
 <Ponto Left="879" Top="1130"/>
 </Pontos>
 </Ligacao>
 <Atributo ID="346">
-<Bounds Height="14" Left="906" Top="1043" Width="117"/>
+<Bounds Height="14" Left="906" Top="1043" Width="124"/>
 <DisablePainted Valor="false"/>
-<Texto>total_valor_peca</Texto>
+<Texto>total_valor_pecas</Texto>
 <Observacao/>
 <Dicionario/>
 <Fonte Estilo="1" Nome="Arial" Tamanho="12"/>
@@ -3166,9 +3158,9 @@
 </Pontos>
 </Ligacao>
 <Atributo ID="348">
-<Bounds Height="14" Left="920" Top="1062" Width="131"/>
+<Bounds Height="14" Left="920" Top="1062" Width="138"/>
 <DisablePainted Valor="false"/>
-<Texto>total_valor_servico</Texto>
+<Texto>total_valor_servicos</Texto>
 <Observacao/>
 <Dicionario/>
 <Fonte Estilo="1" Nome="Arial" Tamanho="12"/>
@@ -3232,10 +3224,8 @@
 <Largura Valor="1"/>
 <Ligacoes PontaA="350" PontaB="325"/>
 <Pontos>
-<Ponto Left="930" Top="1085"/>
+<Ponto Left="931" Top="1085"/>
 <Ponto Left="921" Top="1085"/>
-<Ponto Left="921" Top="1111"/>
-<Ponto Left="921" Top="1111"/>
 <Ponto Left="921" Top="1130"/>
 </Pontos>
 </Ligacao>
@@ -3269,7 +3259,7 @@
 <Largura Valor="1"/>
 <Ligacoes PontaA="371" PontaB="325"/>
 <Pontos>
-<Ponto Left="944" Top="1104"/>
+<Ponto Left="945" Top="1104"/>
 <Ponto Left="935" Top="1104"/>
 <Ponto Left="935" Top="1130"/>
 </Pontos>
@@ -3423,10 +3413,8 @@
 <Largura Valor="1"/>
 <Ligacoes PontaA="400" PontaB="325"/>
 <Pontos>
-<Ponto Left="839" Top="952"/>
+<Ponto Left="840" Top="952"/>
 <Ponto Left="830" Top="952"/>
-<Ponto Left="830" Top="1045"/>
-<Ponto Left="830" Top="1045"/>
 <Ponto Left="830" Top="1130"/>
 </Pontos>
 </Ligacao>
