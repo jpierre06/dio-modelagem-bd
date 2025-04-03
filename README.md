@@ -4,7 +4,7 @@
 
 > Para a modelagem da atividade de e-commerce click no link abaixo
 
-[e-coomerce](e-commerce/README.md)
+[e-commerce](e-commerce/README.md)
 
 
 > Para a modelagem da atividade de oficina click no link abaixo
