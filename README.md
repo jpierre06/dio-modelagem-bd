@@ -10,14 +10,14 @@
 
 [e-commerce](e-commerce/README.md)
 
-> Para acessar diretamente o modelo conceitual de click aqui
+> Para acessar diretamente o modelo conceitual click aqui ->
 [Modelo Conceitual](e-commerce/Modelo_conceitual.md)
 
-> Para acessar diretamente o modelo lógico de click aqui
+> Para acessar diretamente o modelo lógico click aqui ->
 [Modelo Lógico](e-commerce/Modelo_logico.md)
 
 
-> Para acessar diretamente o modelo físico de click aqui
+> Para acessar diretamente o modelo físico click aqui ->
 [Modelo Físico](e-commerce/Modelo_fisico.md)
 
 
@@ -30,4 +30,4 @@
 
 > Para a modelagem da atividade de oficina click no link abaixo
 
-[oficina](oficina/README.md)
+[Oficina](oficina/README.md)
