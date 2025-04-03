@@ -1,3 +1,14 @@
+# Modelo Físico (Comando SQL)
+
+> A geração dos comandos SQL que permitem a criação das tabelas no SGBD MySQL foi realizada através do aplicativo dbSchema
+
+> Caso tenha interesse no arquivo SQL criado pelo aplicativo dbSchema, o mesmo pode ser encontrado em "./diagramas/modelo_fisico.sql"
+
+<br>
+
+## Comandos SQL
+
+ ```sql
 CREATE SCHEMA curso_ecommerce;
 
 CREATE  TABLE curso_ecommerce.tb_cliente ( 
@@ -165,4 +176,8 @@ CREATE  TABLE curso_ecommerce.tb_endereco (
 	CONSTRAINT fk_tb_endereco_tb_vendedor FOREIGN KEY ( codigo_endereco ) REFERENCES curso_ecommerce.tb_vendedor( codigo_endereco ) ON DELETE NO ACTION ON UPDATE RESTRICT
  ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
+```
  
+[Retornar README principal](../README.md)
+
+[Retornar README e-commerce](README.md)
