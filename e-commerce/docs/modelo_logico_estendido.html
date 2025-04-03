@@ -40,7 +40,7 @@ a { color: #3177c2; }
 <a name='layout1' style='position:sticky; top:0;'/><h4>Default Diagram</h4>
 <input type='text' placeholder='Highlight in Diagram' oninput='searchSVG(this.value)' class='text-start my-2'/>
 <div class='svgContainer'>
-<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'   width='1539' height='1136' viewBox='0 0 1539 1136' >
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'   width='1539' height='1155' viewBox='0 0 1539 1155' >
   <script type='text/ecmascript'>
   <![CDATA[
   function hghl(el) { for ( var i in el ){ var elem = document.getElementById(el[i]); if ( elem != null ) elem.setAttribute('class','highlight');  }  }
@@ -288,7 +288,7 @@ a { color: #3177c2; }
 
 <!-- == Shape Colors == -->
 <!-- == Desktop == -->
-<rect x='0' y='0' width='1539' height='1136' rx='9' ry='9' style='fill:url(#layoutBgA); stroke:#444444; stroke-width:.7px; cursor:move;' />
+<rect x='0' y='0' width='1539' height='1155' rx='9' ry='9' style='fill:url(#layoutBgA); stroke:#444444; stroke-width:.7px; cursor:move;' />
 
 <!-- == Legend == -->
 <g transform='translate(10,10)'>
@@ -342,6 +342,14 @@ tb_cliente_pessoa_juridica ref tb_tipo_pessoa_juridica ( codigo_tipo_pj )</title
 <path transform='translate(9,0)' marker-start='url(#OneMore)' marker-end='url(#One)'    d='M 551,817L 551,275Q 551,266 560,266L 1035,266Q 1045,266 1045,256L 1045,228' ><title>&#x1F517;  Foreign Key fk_tb_cliente_pessoa_juridica_tb_tipo_pessoa_juridica
 tb_cliente_pessoa_juridica ref tb_tipo_pessoa_juridica ( codigo_tipo_pj )</title></path>
 <text x='554' y='814' transform='rotate(270 554,814)' class='relName'>codigo&#95;tipo&#95;pj</text>
+<!-- == Fk 'tb_compra_fk_tb_compra_tb_cliente' == -->
+<path id='tb_compra_fk_tb_compra_tb_cliente'  onmouseover="hghl(['tb_compra_fk_tb_compra_tb_cliente','curso_ecommerce.tb_compra.codigo_cliente','curso_ecommerce.tb_cliente.codigo_cliente'])" onmouseout="uhghl(['tb_compra_fk_tb_compra_tb_cliente','curso_ecommerce.tb_compra.codigo_cliente','curso_ecommerce.tb_cliente.codigo_cliente'])" transform='translate(9,0)' class='unhighlight' d='M 988,855L 693,855Q 684,855 684,845L 684,731Q 684,722 674,722L 494,722' >
+	<title>&#x1F517;  Foreign Key fk_tb_compra_tb_cliente
+tb_compra ref tb_cliente ( codigo_cliente )</title>
+</path>
+<path transform='translate(9,0)' marker-start='url(#OneMore)' marker-end='url(#One)'    d='M 988,855L 693,855Q 684,855 684,845L 684,731Q 684,722 674,722L 494,722' ><title>&#x1F517;  Foreign Key fk_tb_compra_tb_cliente
+tb_compra ref tb_cliente ( codigo_cliente )</title></path>
+<text x='915' y='849' transform='rotate(0 915,849)' class='relName'>codigo&#95;cliente</text>
 <!-- == Fk 'tb_detalhamento_pedido_fk_tb_detalhamento_pedido_tb_pedido' == -->
 <path id='tb_detalhamento_pedido_fk_tb_detalhamento_pedido_tb_pedido'  onmouseover="hghl(['tb_detalhamento_pedido_fk_tb_detalhamento_pedido_tb_pedido','curso_ecommerce.tb_detalhamento_pedido.codigo_pedido','curso_ecommerce.tb_pedido.codigo_pedido'])" onmouseout="uhghl(['tb_detalhamento_pedido_fk_tb_detalhamento_pedido_tb_pedido','curso_ecommerce.tb_detalhamento_pedido.codigo_pedido','curso_ecommerce.tb_pedido.codigo_pedido'])" transform='translate(9,0)' class='unhighlight' d='M 1007,627L 931,627' >
 	<title>&#x1F517;  Foreign Key fk_tb_detalhamento_pedido_tb_pedido
@@ -398,14 +406,6 @@ tb_fornecedor_produto ref tb_produto ( codigo_produto )</title>
 <path transform='translate(9,0)' marker-start='url(#OneMore)' marker-end='url(#One)'    d='M 874,323L 779,323' ><title>&#x1F517;  Foreign Key fk_tb_fornecedor_produto_tb_produto
 tb_fornecedor_produto ref tb_produto ( codigo_produto )</title></path>
 <text x='792' y='317' transform='rotate(0 792,317)' class='relName'>codigo&#95;produto</text>
-<!-- == Fk 'tb_pedido_fk_tb_pedido_tb_cliente' == -->
-<path id='tb_pedido_fk_tb_pedido_tb_cliente'  onmouseover="hghl(['tb_pedido_fk_tb_pedido_tb_cliente','curso_ecommerce.tb_pedido.codigo_cliente','curso_ecommerce.tb_cliente.codigo_cliente'])" onmouseout="uhghl(['tb_pedido_fk_tb_pedido_tb_cliente','curso_ecommerce.tb_pedido.codigo_cliente','curso_ecommerce.tb_cliente.codigo_cliente'])" transform='translate(9,0)' class='unhighlight' d='M 741,627L 494,627' >
-	<title>&#x1F517;  Foreign Key fk_tb_pedido_tb_cliente
-tb_pedido ref tb_cliente ( codigo_cliente )</title>
-</path>
-<path transform='translate(9,0)' marker-start='url(#OneMore)' marker-end='url(#One)'    d='M 741,627L 494,627' ><title>&#x1F517;  Foreign Key fk_tb_pedido_tb_cliente
-tb_pedido ref tb_cliente ( codigo_cliente )</title></path>
-<text x='668' y='621' transform='rotate(0 668,621)' class='relName'>codigo&#95;cliente</text>
 <!-- == Fk 'tb_pedido_fk_tb_pedido_tb_compra' == -->
 <path id='tb_pedido_fk_tb_pedido_tb_compra'  onmouseover="hghl(['tb_pedido_fk_tb_pedido_tb_compra','curso_ecommerce.tb_pedido.codigo_compra','curso_ecommerce.tb_compra.codigo_compra'])" onmouseout="uhghl(['tb_pedido_fk_tb_pedido_tb_compra','curso_ecommerce.tb_pedido.codigo_compra','curso_ecommerce.tb_compra.codigo_compra'])" transform='translate(9,0)' class='unhighlight' d='M 931,817L 1016,817Q 1026,817 1026,826L 1026,836' >
 	<title>&#x1F517;  Foreign Key fk_tb_pedido_tb_compra
@@ -463,18 +463,18 @@ tb_vendedor_produto ref tb_vendedor ( codigo_vendedor )</title>
 tb_vendedor_produto ref tb_vendedor ( codigo_vendedor )</title></path>
 <text x='233' y='336' transform='rotate(0 233,336)' class='relName'>codigo&#95;vendedor</text>
 <!-- == Table 'tb_cliente' == -->
-<rect id='depict_curso&#95;ecommerce&#46;tb&#95;cliente' class='entity' style='stroke:none;' x='342' y='599' width='152' height='152' rx='4' ry='4' />
-<path d='M 342 632 L 342 603 Q 342 599 346 599 L 490 599 Q 494 599 494 603 L 494 632 L342 632 ' style='fill:url(#tbg_3986C1);stroke:none;' />
-<rect class='entity' x='342' y='599' width='152' height='152' rx='4' ry='4' style='fill:none;stroke:#2C3135'/>
+<rect id='depict_curso&#95;ecommerce&#46;tb&#95;cliente' class='entity' style='stroke:#F9FAFC' x='342' y='599' width='152' height='152' rx='4' ry='4' />
+<rect x='342' y='599' width='152' height='8' rx='4' ry='4' style='stroke-width:0;fill:#1B5A8C'/>
+<rect x='342' y='603' width='152' height='29' style='stroke-width:0;fill:#272D33'/>
 <a xlink:href='#curso_ecommerce.tb_cliente'><text id='depict&#45;curso&#95;ecommerce&#46;tb&#95;cliente' x='387' y='620' class='tableHeader' style='fill:#B5D5EE;'>tb&#95;cliente</text><title>Table curso_ecommerce.tb_cliente</title></a>
-  <use x='343' y='642' xlink:href='#nn'/><use x='344' y='641' xlink:href='#pk'><title>&#x1F511;  Pk pk_tb_cliente ( codigo_cliente ) </title></use><a xlink:href='#curso_ecommerce.tb_cliente.codigo_cliente'><text id='curso&#95;ecommerce&#46;tb&#95;cliente&#46;codigo&#95;cliente' x='364' y='654' onmouseover="hghl(['tb_cliente_pessoa_fisica_fk_tb_cliente_pessoa_fisica_tb_cliente','curso_ecommerce.tb_cliente_pessoa_fisica.codigo_cliente','tb_cliente_pessoa_juridica_fk_tb_cliente_pessoa_juridica_tb_cliente','curso_ecommerce.tb_cliente_pessoa_juridica.codigo_cliente','tb_pedido_fk_tb_pedido_tb_cliente','curso_ecommerce.tb_pedido.codigo_cliente'])" onmouseout="uhghl(['tb_cliente_pessoa_fisica_fk_tb_cliente_pessoa_fisica_tb_cliente','curso_ecommerce.tb_cliente_pessoa_fisica.codigo_cliente','tb_cliente_pessoa_juridica_fk_tb_cliente_pessoa_juridica_tb_cliente','curso_ecommerce.tb_cliente_pessoa_juridica.codigo_cliente','tb_pedido_fk_tb_pedido_tb_cliente','curso_ecommerce.tb_pedido.codigo_cliente'])" class='colPk'>codigo&#95;cliente</text><title>&#10697;  codigo_cliente
+  <use x='343' y='642' xlink:href='#nn'/><use x='344' y='641' xlink:href='#pk'><title>&#x1F511;  Pk pk_tb_cliente ( codigo_cliente ) </title></use><a xlink:href='#curso_ecommerce.tb_cliente.codigo_cliente'><text id='curso&#95;ecommerce&#46;tb&#95;cliente&#46;codigo&#95;cliente' x='364' y='654' onmouseover="hghl(['tb_cliente_pessoa_fisica_fk_tb_cliente_pessoa_fisica_tb_cliente','curso_ecommerce.tb_cliente_pessoa_fisica.codigo_cliente','tb_cliente_pessoa_juridica_fk_tb_cliente_pessoa_juridica_tb_cliente','curso_ecommerce.tb_cliente_pessoa_juridica.codigo_cliente','tb_compra_fk_tb_compra_tb_cliente','curso_ecommerce.tb_compra.codigo_cliente'])" onmouseout="uhghl(['tb_cliente_pessoa_fisica_fk_tb_cliente_pessoa_fisica_tb_cliente','curso_ecommerce.tb_cliente_pessoa_fisica.codigo_cliente','tb_cliente_pessoa_juridica_fk_tb_cliente_pessoa_juridica_tb_cliente','curso_ecommerce.tb_cliente_pessoa_juridica.codigo_cliente','tb_compra_fk_tb_compra_tb_cliente','curso_ecommerce.tb_compra.codigo_cliente'])" class='colPk'>codigo&#95;cliente</text><title>&#10697;  codigo_cliente
      * int
  &#8601; tb_cliente_pessoa_fisica( codigo_cliente )
  &#8601; tb_cliente_pessoa_juridica( codigo_cliente )
- &#8601; tb_pedido( codigo_cliente )</title></a>
+ &#8601; tb_compra( codigo_cliente )</title></a>
 <a xlink:href='#curso_ecommerce.tb_cliente.codigo_cliente'><use x='480' y='641' xlink:href='#ref'/><title>&#x1F517;  Referred by tb_cliente_pessoa_fisica ( codigo_cliente ) 
 Referred by tb_cliente_pessoa_juridica ( codigo_cliente ) 
-Referred by tb_pedido ( codigo_cliente ) </title></a>
+Referred by tb_compra ( codigo_cliente ) </title></a>
   <a xlink:href='#curso_ecommerce.tb_cliente.email'><text id='curso&#95;ecommerce&#46;tb&#95;cliente&#46;email' x='364' y='673'>email</text><title>&#10697;  email
      varchar(100)</title></a>
 <text x='491' y='669' text-anchor='end' class='colType'>t</text>  <a xlink:href='#curso_ecommerce.tb_cliente.ddd'><text id='curso&#95;ecommerce&#46;tb&#95;cliente&#46;ddd' x='364' y='692'>ddd</text><title>&#10697;  ddd
@@ -487,9 +487,9 @@ Referred by tb_pedido ( codigo_cliente ) </title></a>
 <a xlink:href='#curso_ecommerce.tb_cliente.codigo_endereco'><use x='480' y='717' xlink:href='#fk'/><title>&#x1F517;  References tb_endereco ( codigo_endereco ) </title></a>
 
 <!-- == Table 'tb_cliente_pessoa_fisica' == -->
-<rect id='depict_curso&#95;ecommerce&#46;tb&#95;cliente&#95;pessoa&#95;fisica' class='entity' style='stroke:none;' x='171' y='827' width='171' height='114' rx='4' ry='4' />
-<path d='M 171 860 L 171 831 Q 171 827 175 827 L 338 827 Q 342 827 342 831 L 342 860 L171 860 ' style='fill:url(#tbg_3986C1);stroke:none;' />
-<rect class='entity' x='171' y='827' width='171' height='114' rx='4' ry='4' style='fill:none;stroke:#2C3135'/>
+<rect id='depict_curso&#95;ecommerce&#46;tb&#95;cliente&#95;pessoa&#95;fisica' class='entity' style='stroke:#F9FAFC' x='171' y='827' width='171' height='114' rx='4' ry='4' />
+<rect x='171' y='827' width='171' height='8' rx='4' ry='4' style='stroke-width:0;fill:#1B5A8C'/>
+<rect x='171' y='831' width='171' height='29' style='stroke-width:0;fill:#272D33'/>
 <a xlink:href='#curso_ecommerce.tb_cliente_pessoa_fisica'><text id='depict&#45;curso&#95;ecommerce&#46;tb&#95;cliente&#95;pessoa&#95;fisica' x='186' y='848' class='tableHeader' style='fill:#B5D5EE;'>tb&#95;cliente&#95;pessoa&#95;fisica</text><title>Table curso_ecommerce.tb_cliente_pessoa_fisica</title></a>
   <use x='172' y='870' xlink:href='#nn'/><use x='173' y='869' xlink:href='#pk'><title>&#x1F511;  Pk pk_tb_cliente_pessoa_fisica ( codigo_cliente ) </title></use><a xlink:href='#curso_ecommerce.tb_cliente_pessoa_fisica.codigo_cliente'><text id='curso&#95;ecommerce&#46;tb&#95;cliente&#95;pessoa&#95;fisica&#46;codigo&#95;cliente' x='193' y='882' onmouseover="hghl(['tb_cliente_pessoa_fisica_fk_tb_cliente_pessoa_fisica_tb_cliente','curso_ecommerce.tb_cliente.codigo_cliente'])" onmouseout="uhghl(['tb_cliente_pessoa_fisica_fk_tb_cliente_pessoa_fisica_tb_cliente','curso_ecommerce.tb_cliente.codigo_cliente'])" class='colPk'>codigo&#95;cliente</text><title>&#10697;  codigo_cliente
      * int
@@ -501,9 +501,9 @@ Referred by tb_pedido ( codigo_cliente ) </title></a>
      * varchar(120)</title></a>
 <text x='339' y='916' text-anchor='end' class='colType'>t</text>
 <!-- == Table 'tb_cliente_pessoa_juridica' == -->
-<rect id='depict_curso&#95;ecommerce&#46;tb&#95;cliente&#95;pessoa&#95;juridica' class='entity' style='stroke:none;' x='475' y='827' width='190' height='114' rx='4' ry='4' />
-<path d='M 475 860 L 475 831 Q 475 827 479 827 L 661 827 Q 665 827 665 831 L 665 860 L475 860 ' style='fill:url(#tbg_3986C1);stroke:none;' />
-<rect class='entity' x='475' y='827' width='190' height='114' rx='4' ry='4' style='fill:none;stroke:#2C3135'/>
+<rect id='depict_curso&#95;ecommerce&#46;tb&#95;cliente&#95;pessoa&#95;juridica' class='entity' style='stroke:#F9FAFC' x='475' y='827' width='190' height='114' rx='4' ry='4' />
+<rect x='475' y='827' width='190' height='8' rx='4' ry='4' style='stroke-width:0;fill:#1B5A8C'/>
+<rect x='475' y='831' width='190' height='29' style='stroke-width:0;fill:#272D33'/>
 <a xlink:href='#curso_ecommerce.tb_cliente_pessoa_juridica'><text id='depict&#45;curso&#95;ecommerce&#46;tb&#95;cliente&#95;pessoa&#95;juridica' x='493' y='848' class='tableHeader' style='fill:#B5D5EE;'>tb&#95;cliente&#95;pessoa&#95;juridica</text><title>Table curso_ecommerce.tb_cliente_pessoa_juridica</title></a>
   <use x='476' y='870' xlink:href='#nn'/><use x='477' y='869' xlink:href='#pk'><title>&#x1F511;  Pk pk_tb_cliente_pessoa_juridica ( codigo_cliente ) </title></use><a xlink:href='#curso_ecommerce.tb_cliente_pessoa_juridica.codigo_cliente'><text id='curso&#95;ecommerce&#46;tb&#95;cliente&#95;pessoa&#95;juridica&#46;codigo&#95;cliente' x='497' y='882' onmouseover="hghl(['tb_cliente_pessoa_juridica_fk_tb_cliente_pessoa_juridica_tb_cliente','curso_ecommerce.tb_cliente.codigo_cliente'])" onmouseout="uhghl(['tb_cliente_pessoa_juridica_fk_tb_cliente_pessoa_juridica_tb_cliente','curso_ecommerce.tb_cliente.codigo_cliente'])" class='colPk'>codigo&#95;cliente</text><title>&#10697;  codigo_cliente
      * int
@@ -519,9 +519,9 @@ Referred by tb_pedido ( codigo_cliente ) </title></a>
 <a xlink:href='#curso_ecommerce.tb_cliente_pessoa_juridica.codigo_tipo_pj'><use x='651' y='907' xlink:href='#fk'/><title>&#x1F517;  References tb_tipo_pessoa_juridica ( codigo_tipo_pj ) </title></a>
 
 <!-- == Table 'tb_compra' == -->
-<rect id='depict_curso&#95;ecommerce&#46;tb&#95;compra' class='entity' style='stroke:none;' x='1007' y='846' width='209' height='114' rx='4' ry='4' />
-<path d='M 1007 879 L 1007 850 Q 1007 846 1011 846 L 1212 846 Q 1216 846 1216 850 L 1216 879 L1007 879 ' style='fill:url(#tbg_3986C1);stroke:none;' />
-<rect class='entity' x='1007' y='846' width='209' height='114' rx='4' ry='4' style='fill:none;stroke:#2C3135'/>
+<rect id='depict_curso&#95;ecommerce&#46;tb&#95;compra' class='entity' style='stroke:#F9FAFC' x='1007' y='846' width='209' height='133' rx='4' ry='4' />
+<rect x='1007' y='846' width='209' height='8' rx='4' ry='4' style='stroke-width:0;fill:#1B5A8C'/>
+<rect x='1007' y='850' width='209' height='29' style='stroke-width:0;fill:#272D33'/>
 <a xlink:href='#curso_ecommerce.tb_compra'><text id='depict&#45;curso&#95;ecommerce&#46;tb&#95;compra' x='1077' y='867' class='tableHeader' style='fill:#B5D5EE;'>tb&#95;compra</text><title>Table curso_ecommerce.tb_compra</title></a>
   <use x='1008' y='889' xlink:href='#nn'/><use x='1009' y='888' xlink:href='#pk'><title>&#x1F511;  Pk pk_tb_compra ( codigo_compra ) </title></use><a xlink:href='#curso_ecommerce.tb_compra.codigo_compra'><text id='curso&#95;ecommerce&#46;tb&#95;compra&#46;codigo&#95;compra' x='1029' y='901' onmouseover="hghl(['tb_pedido_fk_tb_pedido_tb_compra','curso_ecommerce.tb_pedido.codigo_compra'])" onmouseout="uhghl(['tb_pedido_fk_tb_pedido_tb_compra','curso_ecommerce.tb_pedido.codigo_compra'])" class='colPk'>codigo&#95;compra</text><title>&#10697;  codigo_compra
      * int
@@ -531,11 +531,15 @@ Referred by tb_pedido ( codigo_cliente ) </title></a>
      * decimal(11,2)</title></a>
 <text x='1213' y='916' text-anchor='end' class='colType'>&#35;</text>  <use x='1008' y='927' xlink:href='#nn'/><a xlink:href='#curso_ecommerce.tb_compra.data_pagamento_compra'><text id='curso&#95;ecommerce&#46;tb&#95;compra&#46;data&#95;pagamento&#95;compra' x='1029' y='939'>data&#95;pagamento&#95;compra</text><title>&#10697;  data_pagamento_compra
      * datetime</title></a>
-<text x='1213' y='935' text-anchor='end' class='colType'>d</text>
+<text x='1213' y='935' text-anchor='end' class='colType'>d</text>  <use x='1008' y='946' xlink:href='#nn'/><use x='1009' y='945' xlink:href='#idx'><title>&#x1F50D;  fk_tb_compra_tb_cliente ( codigo_cliente ) </title></use><a xlink:href='#curso_ecommerce.tb_compra.codigo_cliente'><text id='curso&#95;ecommerce&#46;tb&#95;compra&#46;codigo&#95;cliente' x='1029' y='958' onmouseover="hghl(['tb_compra_fk_tb_compra_tb_cliente','curso_ecommerce.tb_cliente.codigo_cliente'])" onmouseout="uhghl(['tb_compra_fk_tb_compra_tb_cliente','curso_ecommerce.tb_cliente.codigo_cliente'])">codigo&#95;cliente</text><title>&#10697;  codigo_cliente
+     * int
+ &#8599; tb_compra( codigo_cliente )</title></a>
+<a xlink:href='#curso_ecommerce.tb_compra.codigo_cliente'><use x='1202' y='945' xlink:href='#fk'/><title>&#x1F517;  References tb_cliente ( codigo_cliente ) </title></a>
+
 <!-- == Table 'tb_departamento' == -->
-<rect id='depict_curso&#95;ecommerce&#46;tb&#95;departamento' class='entity' style='stroke:none;' x='551' y='143' width='190' height='95' rx='4' ry='4' />
-<path d='M 551 176 L 551 147 Q 551 143 555 143 L 737 143 Q 741 143 741 147 L 741 176 L551 176 ' style='fill:url(#tbg_3986C1);stroke:none;' />
-<rect class='entity' x='551' y='143' width='190' height='95' rx='4' ry='4' style='fill:none;stroke:#2C3135'/>
+<rect id='depict_curso&#95;ecommerce&#46;tb&#95;departamento' class='entity' style='stroke:#F9FAFC' x='551' y='143' width='190' height='95' rx='4' ry='4' />
+<rect x='551' y='143' width='190' height='8' rx='4' ry='4' style='stroke-width:0;fill:#1B5A8C'/>
+<rect x='551' y='147' width='190' height='29' style='stroke-width:0;fill:#272D33'/>
 <a xlink:href='#curso_ecommerce.tb_departamento'><text id='depict&#45;curso&#95;ecommerce&#46;tb&#95;departamento' x='593' y='164' class='tableHeader' style='fill:#B5D5EE;'>tb&#95;departamento</text><title>Table curso_ecommerce.tb_departamento</title></a>
   <use x='552' y='186' xlink:href='#nn'/><use x='553' y='185' xlink:href='#pk'><title>&#x1F511;  Pk pk_tb_departamento ( codigo_departamento ) </title></use><a xlink:href='#curso_ecommerce.tb_departamento.codigo_departamento'><text id='curso&#95;ecommerce&#46;tb&#95;departamento&#46;codigo&#95;departamento' x='573' y='198' onmouseover="hghl(['tb_produto_fk_tb_produto_tb_departamento','curso_ecommerce.tb_produto.codigo_departamento'])" onmouseout="uhghl(['tb_produto_fk_tb_produto_tb_departamento','curso_ecommerce.tb_produto.codigo_departamento'])" class='colPk'>codigo&#95;departamento</text><title>&#10697;  codigo_departamento
      * int
@@ -545,9 +549,9 @@ Referred by tb_pedido ( codigo_cliente ) </title></a>
      varchar(50)</title></a>
 <text x='738' y='213' text-anchor='end' class='colType'>t</text>
 <!-- == Table 'tb_detalhamento_pedido' == -->
-<rect id='depict_curso&#95;ecommerce&#46;tb&#95;detalhamento&#95;pedido' class='entity' style='stroke:none;' x='1026' y='618' width='171' height='171' rx='4' ry='4' />
-<path d='M 1026 651 L 1026 622 Q 1026 618 1030 618 L 1193 618 Q 1197 618 1197 622 L 1197 651 L1026 651 ' style='fill:url(#tbg_3986C1);stroke:none;' />
-<rect class='entity' x='1026' y='618' width='171' height='171' rx='4' ry='4' style='fill:none;stroke:#2C3135'/>
+<rect id='depict_curso&#95;ecommerce&#46;tb&#95;detalhamento&#95;pedido' class='entity' style='stroke:#F9FAFC' x='1026' y='618' width='171' height='171' rx='4' ry='4' />
+<rect x='1026' y='618' width='171' height='8' rx='4' ry='4' style='stroke-width:0;fill:#1B5A8C'/>
+<rect x='1026' y='622' width='171' height='29' style='stroke-width:0;fill:#272D33'/>
 <a xlink:href='#curso_ecommerce.tb_detalhamento_pedido'><text id='depict&#45;curso&#95;ecommerce&#46;tb&#95;detalhamento&#95;pedido' x='1036' y='639' class='tableHeader' style='fill:#B5D5EE;'>tb&#95;detalhamento&#95;pedido</text><title>Table curso_ecommerce.tb_detalhamento_pedido</title></a>
   <use x='1027' y='661' xlink:href='#nn'/><use x='1028' y='660' xlink:href='#pk'><title>&#x1F511;  Pk pk_tb_detalhamento_pedido ( codigo_pedido, codigo_vendedor, codigo_produto ) </title></use><a xlink:href='#curso_ecommerce.tb_detalhamento_pedido.codigo_pedido'><text id='curso&#95;ecommerce&#46;tb&#95;detalhamento&#95;pedido&#46;codigo&#95;pedido' x='1048' y='673' onmouseover="hghl(['tb_detalhamento_pedido_fk_tb_detalhamento_pedido_tb_pedido','curso_ecommerce.tb_pedido.codigo_pedido'])" onmouseout="uhghl(['tb_detalhamento_pedido_fk_tb_detalhamento_pedido_tb_pedido','curso_ecommerce.tb_pedido.codigo_pedido'])" class='colPk'>codigo&#95;pedido</text><title>&#10697;  codigo_pedido
      * int
@@ -569,9 +573,9 @@ Referred by tb_pedido ( codigo_cliente ) </title></a>
      * decimal(8,2)</title></a>
 <text x='1194' y='764' text-anchor='end' class='colType'>&#35;</text>
 <!-- == Table 'tb_endereco' == -->
-<rect id='depict_curso&#95;ecommerce&#46;tb&#95;endereco' class='entity' style='stroke:none;' x='76' y='542' width='152' height='209' rx='4' ry='4' />
-<path d='M 76 575 L 76 546 Q 76 542 80 542 L 224 542 Q 228 542 228 546 L 228 575 L76 575 ' style='fill:url(#tbg_3986C1);stroke:none;' />
-<rect class='entity' x='76' y='542' width='152' height='209' rx='4' ry='4' style='fill:none;stroke:#2C3135'/>
+<rect id='depict_curso&#95;ecommerce&#46;tb&#95;endereco' class='entity' style='stroke:#F9FAFC' x='76' y='542' width='152' height='209' rx='4' ry='4' />
+<rect x='76' y='542' width='152' height='8' rx='4' ry='4' style='stroke-width:0;fill:#1B5A8C'/>
+<rect x='76' y='546' width='152' height='29' style='stroke-width:0;fill:#272D33'/>
 <a xlink:href='#curso_ecommerce.tb_endereco'><text id='depict&#45;curso&#95;ecommerce&#46;tb&#95;endereco' x='113' y='563' class='tableHeader' style='fill:#B5D5EE;'>tb&#95;endereco</text><title>Table curso_ecommerce.tb_endereco</title></a>
   <use x='77' y='585' xlink:href='#nn'/><use x='78' y='584' xlink:href='#pk'><title>&#x1F511;  Pk pk_tb_endereco ( codigo_endereco ) </title></use><a xlink:href='#curso_ecommerce.tb_endereco.codigo_endereco'><text id='curso&#95;ecommerce&#46;tb&#95;endereco&#46;codigo&#95;endereco' x='98' y='597' onmouseover="hghl(['tb_cliente_fk_tb_cliente_tb_endereco','curso_ecommerce.tb_cliente.codigo_endereco','tb_vendedor_fk_tb_vendedor_tb_endereco','curso_ecommerce.tb_vendedor.codigo_endereco','tb_fornecedor_fk_tb_fornecedor_tb_endereco','curso_ecommerce.tb_fornecedor.codigo_endereco'])" onmouseout="uhghl(['tb_cliente_fk_tb_cliente_tb_endereco','curso_ecommerce.tb_cliente.codigo_endereco','tb_vendedor_fk_tb_vendedor_tb_endereco','curso_ecommerce.tb_vendedor.codigo_endereco','tb_fornecedor_fk_tb_fornecedor_tb_endereco','curso_ecommerce.tb_fornecedor.codigo_endereco'])" class='colPk'>codigo&#95;endereco</text><title>&#10697;  codigo_endereco
      * int
@@ -597,9 +601,9 @@ Referred by tb_fornecedor ( codigo_endereco ) </title></a>
      * varchar(8)</title></a>
 <text x='225' y='726' text-anchor='end' class='colType'>t</text>
 <!-- == Table 'tb_fornecedor' == -->
-<rect id='depict_curso&#95;ecommerce&#46;tb&#95;fornecedor' class='entity' style='stroke:none;' x='1140' y='314' width='190' height='152' rx='4' ry='4' />
-<path d='M 1140 347 L 1140 318 Q 1140 314 1144 314 L 1326 314 Q 1330 314 1330 318 L 1330 347 L1140 347 ' style='fill:url(#tbg_3986C1);stroke:none;' />
-<rect class='entity' x='1140' y='314' width='190' height='152' rx='4' ry='4' style='fill:none;stroke:#2C3135'/>
+<rect id='depict_curso&#95;ecommerce&#46;tb&#95;fornecedor' class='entity' style='stroke:#F9FAFC' x='1140' y='314' width='190' height='152' rx='4' ry='4' />
+<rect x='1140' y='314' width='190' height='8' rx='4' ry='4' style='stroke-width:0;fill:#1B5A8C'/>
+<rect x='1140' y='318' width='190' height='29' style='stroke-width:0;fill:#272D33'/>
 <a xlink:href='#curso_ecommerce.tb_fornecedor'><text id='depict&#45;curso&#95;ecommerce&#46;tb&#95;fornecedor' x='1191' y='335' class='tableHeader' style='fill:#B5D5EE;'>tb&#95;fornecedor</text><title>Table curso_ecommerce.tb_fornecedor</title></a>
   <use x='1141' y='357' xlink:href='#nn'/><use x='1142' y='356' xlink:href='#pk'><title>&#x1F511;  Pk pk_tb_fornecedor ( codigo_fornecedor ) </title></use><a xlink:href='#curso_ecommerce.tb_fornecedor.codigo_fornecedor'><text id='curso&#95;ecommerce&#46;tb&#95;fornecedor&#46;codigo&#95;fornecedor' x='1162' y='369' onmouseover="hghl(['tb_fornecedor_produto_fk_tb_fornecedor_produto_tb_fornecedor','curso_ecommerce.tb_fornecedor_produto.codigo_fornecedor'])" onmouseout="uhghl(['tb_fornecedor_produto_fk_tb_fornecedor_produto_tb_fornecedor','curso_ecommerce.tb_fornecedor_produto.codigo_fornecedor'])" class='colPk'>codigo&#95;fornecedor</text><title>&#10697;  codigo_fornecedor
      * int
@@ -621,9 +625,9 @@ Referred by tb_fornecedor ( codigo_endereco ) </title></a>
      * int</title></a>
 <text x='1327' y='441' text-anchor='end' class='colType'>&#35;</text>
 <!-- == Table 'tb_fornecedor_produto' == -->
-<rect id='depict_curso&#95;ecommerce&#46;tb&#95;fornecedor&#95;produto' class='entity' style='stroke:none;' x='893' y='295' width='171' height='114' rx='4' ry='4' />
-<path d='M 893 328 L 893 299 Q 893 295 897 295 L 1060 295 Q 1064 295 1064 299 L 1064 328 L893 328 ' style='fill:url(#tbg_3986C1);stroke:none;' />
-<rect class='entity' x='893' y='295' width='171' height='114' rx='4' ry='4' style='fill:none;stroke:#2C3135'/>
+<rect id='depict_curso&#95;ecommerce&#46;tb&#95;fornecedor&#95;produto' class='entity' style='stroke:#F9FAFC' x='893' y='295' width='171' height='114' rx='4' ry='4' />
+<rect x='893' y='295' width='171' height='8' rx='4' ry='4' style='stroke-width:0;fill:#1B5A8C'/>
+<rect x='893' y='299' width='171' height='29' style='stroke-width:0;fill:#272D33'/>
 <a xlink:href='#curso_ecommerce.tb_fornecedor_produto'><text id='depict&#45;curso&#95;ecommerce&#46;tb&#95;fornecedor&#95;produto' x='909' y='316' class='tableHeader' style='fill:#B5D5EE;'>tb&#95;fornecedor&#95;produto</text><title>Table curso_ecommerce.tb_fornecedor_produto</title></a>
   <use x='894' y='338' xlink:href='#nn'/><use x='895' y='337' xlink:href='#pk'><title>&#x1F511;  Pk pk_tb_fornecedor_produto ( codigo_fornecedor, codigo_produto ) </title></use><a xlink:href='#curso_ecommerce.tb_fornecedor_produto.codigo_fornecedor'><text id='curso&#95;ecommerce&#46;tb&#95;fornecedor&#95;produto&#46;codigo&#95;fornecedor' x='915' y='350' onmouseover="hghl(['tb_fornecedor_produto_fk_tb_fornecedor_produto_tb_fornecedor','curso_ecommerce.tb_fornecedor.codigo_fornecedor'])" onmouseout="uhghl(['tb_fornecedor_produto_fk_tb_fornecedor_produto_tb_fornecedor','curso_ecommerce.tb_fornecedor.codigo_fornecedor'])" class='colPk'>codigo&#95;fornecedor</text><title>&#10697;  codigo_fornecedor
      * int
@@ -637,9 +641,9 @@ Referred by tb_fornecedor ( codigo_endereco ) </title></a>
      * decimal(10,4)</title></a>
 <text x='1061' y='384' text-anchor='end' class='colType'>&#35;</text>
 <!-- == Table 'tb_pedido' == -->
-<rect id='depict_curso&#95;ecommerce&#46;tb&#95;pedido' class='entity' style='stroke:none;' x='760' y='599' width='171' height='247' rx='4' ry='4' />
-<path d='M 760 632 L 760 603 Q 760 599 764 599 L 927 599 Q 931 599 931 603 L 931 632 L760 632 ' style='fill:url(#tbg_3986C1);stroke:none;' />
-<rect class='entity' x='760' y='599' width='171' height='247' rx='4' ry='4' style='fill:none;stroke:#2C3135'/>
+<rect id='depict_curso&#95;ecommerce&#46;tb&#95;pedido' class='entity' style='stroke:#F9FAFC' x='760' y='599' width='171' height='228' rx='4' ry='4' />
+<rect x='760' y='599' width='171' height='8' rx='4' ry='4' style='stroke-width:0;fill:#1B5A8C'/>
+<rect x='760' y='603' width='171' height='29' style='stroke-width:0;fill:#272D33'/>
 <a xlink:href='#curso_ecommerce.tb_pedido'><text id='depict&#45;curso&#95;ecommerce&#46;tb&#95;pedido' x='813' y='620' class='tableHeader' style='fill:#B5D5EE;'>tb&#95;pedido</text><title>Table curso_ecommerce.tb_pedido</title></a>
   <use x='761' y='642' xlink:href='#nn'/><use x='762' y='641' xlink:href='#pk'><title>&#x1F511;  Pk pk_tb_pedido ( codigo_pedido ) </title></use><a xlink:href='#curso_ecommerce.tb_pedido.codigo_pedido'><text id='curso&#95;ecommerce&#46;tb&#95;pedido&#46;codigo&#95;pedido' x='782' y='654' onmouseover="hghl(['tb_detalhamento_pedido_fk_tb_detalhamento_pedido_tb_pedido','curso_ecommerce.tb_detalhamento_pedido.codigo_pedido'])" onmouseout="uhghl(['tb_detalhamento_pedido_fk_tb_detalhamento_pedido_tb_pedido','curso_ecommerce.tb_detalhamento_pedido.codigo_pedido'])" class='colPk'>codigo&#95;pedido</text><title>&#10697;  codigo_pedido
      * int
@@ -659,19 +663,15 @@ Referred by tb_fornecedor ( codigo_endereco ) </title></a>
      * decimal(8,2)</title></a>
 <text x='928' y='764' text-anchor='end' class='colType'>&#35;</text>  <use x='761' y='775' xlink:href='#nn'/><a xlink:href='#curso_ecommerce.tb_pedido.valor_total_pedido'><text id='curso&#95;ecommerce&#46;tb&#95;pedido&#46;valor&#95;total&#95;pedido' x='782' y='787'>valor&#95;total&#95;pedido</text><title>&#10697;  valor_total_pedido
      * decimal(8,2)</title></a>
-<text x='928' y='783' text-anchor='end' class='colType'>&#35;</text>  <use x='761' y='794' xlink:href='#nn'/><use x='762' y='793' xlink:href='#idx'><title>&#x1F50D;  fk_tb_pedido_tb_cliente ( codigo_cliente ) </title></use><a xlink:href='#curso_ecommerce.tb_pedido.codigo_cliente'><text id='curso&#95;ecommerce&#46;tb&#95;pedido&#46;codigo&#95;cliente' x='782' y='806' onmouseover="hghl(['tb_pedido_fk_tb_pedido_tb_cliente','curso_ecommerce.tb_cliente.codigo_cliente'])" onmouseout="uhghl(['tb_pedido_fk_tb_pedido_tb_cliente','curso_ecommerce.tb_cliente.codigo_cliente'])">codigo&#95;cliente</text><title>&#10697;  codigo_cliente
-     * int
- &#8599; tb_pedido( codigo_cliente )</title></a>
-<a xlink:href='#curso_ecommerce.tb_pedido.codigo_cliente'><use x='917' y='793' xlink:href='#fk'/><title>&#x1F517;  References tb_cliente ( codigo_cliente ) </title></a>
-  <use x='761' y='813' xlink:href='#nn'/><use x='762' y='812' xlink:href='#idx'><title>&#x1F50D;  fk_tb_pedido_tb_compra ( codigo_compra ) </title></use><a xlink:href='#curso_ecommerce.tb_pedido.codigo_compra'><text id='curso&#95;ecommerce&#46;tb&#95;pedido&#46;codigo&#95;compra' x='782' y='825' onmouseover="hghl(['tb_pedido_fk_tb_pedido_tb_compra','curso_ecommerce.tb_compra.codigo_compra'])" onmouseout="uhghl(['tb_pedido_fk_tb_pedido_tb_compra','curso_ecommerce.tb_compra.codigo_compra'])">codigo&#95;compra</text><title>&#10697;  codigo_compra
+<text x='928' y='783' text-anchor='end' class='colType'>&#35;</text>  <use x='761' y='794' xlink:href='#nn'/><use x='762' y='793' xlink:href='#idx'><title>&#x1F50D;  fk_tb_pedido_tb_compra ( codigo_compra ) </title></use><a xlink:href='#curso_ecommerce.tb_pedido.codigo_compra'><text id='curso&#95;ecommerce&#46;tb&#95;pedido&#46;codigo&#95;compra' x='782' y='806' onmouseover="hghl(['tb_pedido_fk_tb_pedido_tb_compra','curso_ecommerce.tb_compra.codigo_compra'])" onmouseout="uhghl(['tb_pedido_fk_tb_pedido_tb_compra','curso_ecommerce.tb_compra.codigo_compra'])">codigo&#95;compra</text><title>&#10697;  codigo_compra
      * int
  &#8599; tb_pedido( codigo_compra )</title></a>
-<a xlink:href='#curso_ecommerce.tb_pedido.codigo_compra'><use x='917' y='812' xlink:href='#fk'/><title>&#x1F517;  References tb_compra ( codigo_compra ) </title></a>
+<a xlink:href='#curso_ecommerce.tb_pedido.codigo_compra'><use x='917' y='793' xlink:href='#fk'/><title>&#x1F517;  References tb_compra ( codigo_compra ) </title></a>
 
 <!-- == Table 'tb_pessoa_juridica' == -->
-<rect id='depict_curso&#95;ecommerce&#46;tb&#95;pessoa&#95;juridica' class='entity' style='stroke:none;' x='1292' y='124' width='190' height='133' rx='4' ry='4' />
-<path d='M 1292 157 L 1292 128 Q 1292 124 1296 124 L 1478 124 Q 1482 124 1482 128 L 1482 157 L1292 157 ' style='fill:url(#tbg_3986C1);stroke:none;' />
-<rect class='entity' x='1292' y='124' width='190' height='133' rx='4' ry='4' style='fill:none;stroke:#2C3135'/>
+<rect id='depict_curso&#95;ecommerce&#46;tb&#95;pessoa&#95;juridica' class='entity' style='stroke:#F9FAFC' x='1292' y='124' width='190' height='133' rx='4' ry='4' />
+<rect x='1292' y='124' width='190' height='8' rx='4' ry='4' style='stroke-width:0;fill:#1B5A8C'/>
+<rect x='1292' y='128' width='190' height='29' style='stroke-width:0;fill:#272D33'/>
 <a xlink:href='#curso_ecommerce.tb_pessoa_juridica'><text id='depict&#45;curso&#95;ecommerce&#46;tb&#95;pessoa&#95;juridica' x='1331' y='145' class='tableHeader' style='fill:#B5D5EE;'>tb&#95;pessoa&#95;juridica</text><title>Table curso_ecommerce.tb_pessoa_juridica</title></a>
   <use x='1293' y='167' xlink:href='#nn'/><use x='1294' y='166' xlink:href='#pk'><title>&#x1F511;  Pk pk_tb_pessoa_juridica ( codigo_pessoa_juridica ) </title></use><a xlink:href='#curso_ecommerce.tb_pessoa_juridica.codigo_pessoa_juridica'><text id='curso&#95;ecommerce&#46;tb&#95;pessoa&#95;juridica&#46;codigo&#95;pessoa&#95;juridica' x='1314' y='179' onmouseover="hghl(['tb_cliente_pessoa_juridica_fk_tb_cliente_pessoa_juridica_tb_pessoa_juridica','curso_ecommerce.tb_cliente_pessoa_juridica.codigo_pessoa_juridica','tb_fornecedor_fk_tb_fornecedor_tb_pessoa_juridica','curso_ecommerce.tb_fornecedor.codigo_pessoa_juridica','tb_vendedor_fk_tb_vendedor_tb_pessoa_juridica','curso_ecommerce.tb_vendedor.codigo_pessoa_juridica'])" onmouseout="uhghl(['tb_cliente_pessoa_juridica_fk_tb_cliente_pessoa_juridica_tb_pessoa_juridica','curso_ecommerce.tb_cliente_pessoa_juridica.codigo_pessoa_juridica','tb_fornecedor_fk_tb_fornecedor_tb_pessoa_juridica','curso_ecommerce.tb_fornecedor.codigo_pessoa_juridica','tb_vendedor_fk_tb_vendedor_tb_pessoa_juridica','curso_ecommerce.tb_vendedor.codigo_pessoa_juridica'])" class='colPk'>codigo&#95;pessoa&#95;juridica</text><title>&#10697;  codigo_pessoa_juridica
      * int
@@ -689,9 +689,9 @@ Referred by tb_vendedor ( codigo_pessoa_juridica ) </title></a>
      * char(14)</title></a>
 <text x='1479' y='232' text-anchor='end' class='colType'>c</text>
 <!-- == Table 'tb_produto' == -->
-<rect id='depict_curso&#95;ecommerce&#46;tb&#95;produto' class='entity' style='stroke:none;' x='589' y='295' width='190' height='133' rx='4' ry='4' />
-<path d='M 589 328 L 589 299 Q 589 295 593 295 L 775 295 Q 779 295 779 299 L 779 328 L589 328 ' style='fill:url(#tbg_3986C1);stroke:none;' />
-<rect class='entity' x='589' y='295' width='190' height='133' rx='4' ry='4' style='fill:none;stroke:#2C3135'/>
+<rect id='depict_curso&#95;ecommerce&#46;tb&#95;produto' class='entity' style='stroke:#F9FAFC' x='589' y='295' width='190' height='133' rx='4' ry='4' />
+<rect x='589' y='295' width='190' height='8' rx='4' ry='4' style='stroke-width:0;fill:#1B5A8C'/>
+<rect x='589' y='299' width='190' height='29' style='stroke-width:0;fill:#272D33'/>
 <a xlink:href='#curso_ecommerce.tb_produto'><text id='depict&#45;curso&#95;ecommerce&#46;tb&#95;produto' x='648' y='316' class='tableHeader' style='fill:#B5D5EE;'>tb&#95;produto</text><title>Table curso_ecommerce.tb_produto</title></a>
   <use x='590' y='338' xlink:href='#nn'/><use x='591' y='337' xlink:href='#pk'><title>&#x1F511;  Pk pk_tb_produto ( codigo_produto ) </title></use><a xlink:href='#curso_ecommerce.tb_produto.codigo_produto'><text id='curso&#95;ecommerce&#46;tb&#95;produto&#46;codigo&#95;produto' x='611' y='350' onmouseover="hghl(['tb_fornecedor_produto_fk_tb_fornecedor_produto_tb_produto','curso_ecommerce.tb_fornecedor_produto.codigo_produto','tb_vendedor_produto_fk_tb_vendedor_produto_tb_produto','curso_ecommerce.tb_vendedor_produto.codigo_produto'])" onmouseout="uhghl(['tb_fornecedor_produto_fk_tb_fornecedor_produto_tb_produto','curso_ecommerce.tb_fornecedor_produto.codigo_produto','tb_vendedor_produto_fk_tb_vendedor_produto_tb_produto','curso_ecommerce.tb_vendedor_produto.codigo_produto'])" class='colPk'>codigo&#95;produto</text><title>&#10697;  codigo_produto
      * int
@@ -709,9 +709,9 @@ Referred by tb_vendedor_produto ( codigo_produto ) </title></a>
 <a xlink:href='#curso_ecommerce.tb_produto.codigo_departamento'><use x='765' y='394' xlink:href='#fk'/><title>&#x1F517;  References tb_departamento ( codigo_departamento ) </title></a>
 
 <!-- == Table 'tb_tipo_pessoa_juridica' == -->
-<rect id='depict_curso&#95;ecommerce&#46;tb&#95;tipo&#95;pessoa&#95;juridica' class='entity' style='stroke:none;' x='1026' y='124' width='171' height='95' rx='4' ry='4' />
-<path d='M 1026 157 L 1026 128 Q 1026 124 1030 124 L 1193 124 Q 1197 124 1197 128 L 1197 157 L1026 157 ' style='fill:url(#tbg_3986C1);stroke:none;' />
-<rect class='entity' x='1026' y='124' width='171' height='95' rx='4' ry='4' style='fill:none;stroke:#2C3135'/>
+<rect id='depict_curso&#95;ecommerce&#46;tb&#95;tipo&#95;pessoa&#95;juridica' class='entity' style='stroke:#F9FAFC' x='1026' y='124' width='171' height='95' rx='4' ry='4' />
+<rect x='1026' y='124' width='171' height='8' rx='4' ry='4' style='stroke-width:0;fill:#1B5A8C'/>
+<rect x='1026' y='128' width='171' height='29' style='stroke-width:0;fill:#272D33'/>
 <a xlink:href='#curso_ecommerce.tb_tipo_pessoa_juridica'><text id='depict&#45;curso&#95;ecommerce&#46;tb&#95;tipo&#95;pessoa&#95;juridica' x='1042' y='145' class='tableHeader' style='fill:#B5D5EE;'>tb&#95;tipo&#95;pessoa&#95;juridica</text><title>Table curso_ecommerce.tb_tipo_pessoa_juridica</title></a>
   <use x='1027' y='167' xlink:href='#nn'/><use x='1028' y='166' xlink:href='#pk'><title>&#x1F511;  Pk pk_tb_tipo_pessoa_juridica ( codigo_tipo_pj ) </title></use><a xlink:href='#curso_ecommerce.tb_tipo_pessoa_juridica.codigo_tipo_pj'><text id='curso&#95;ecommerce&#46;tb&#95;tipo&#95;pessoa&#95;juridica&#46;codigo&#95;tipo&#95;pj' x='1048' y='179' onmouseover="hghl(['tb_cliente_pessoa_juridica_fk_tb_cliente_pessoa_juridica_tb_tipo_pessoa_juridica','curso_ecommerce.tb_cliente_pessoa_juridica.codigo_tipo_pj','tb_fornecedor_fk_tb_fornecedor_tb_tipo_pessoa_juridica','curso_ecommerce.tb_fornecedor.codigo_tipo_pj','tb_vendedor_fk_tb_vendedor_tb_tipo_pessoa_juridica','curso_ecommerce.tb_vendedor.codigo_tipo_pj'])" onmouseout="uhghl(['tb_cliente_pessoa_juridica_fk_tb_cliente_pessoa_juridica_tb_tipo_pessoa_juridica','curso_ecommerce.tb_cliente_pessoa_juridica.codigo_tipo_pj','tb_fornecedor_fk_tb_fornecedor_tb_tipo_pessoa_juridica','curso_ecommerce.tb_fornecedor.codigo_tipo_pj','tb_vendedor_fk_tb_vendedor_tb_tipo_pessoa_juridica','curso_ecommerce.tb_vendedor.codigo_tipo_pj'])" class='colPk'>codigo&#95;tipo&#95;pj</text><title>&#10697;  codigo_tipo_pj
      * int
@@ -725,9 +725,9 @@ Referred by tb_vendedor ( codigo_tipo_pj ) </title></a>
      * varchar(30)</title></a>
 <text x='1194' y='194' text-anchor='end' class='colType'>t</text>
 <!-- == Table 'tb_vendedor' == -->
-<rect id='depict_curso&#95;ecommerce&#46;tb&#95;vendedor' class='entity' style='stroke:none;' x='57' y='295' width='190' height='133' rx='4' ry='4' />
-<path d='M 57 328 L 57 299 Q 57 295 61 295 L 243 295 Q 247 295 247 299 L 247 328 L57 328 ' style='fill:url(#tbg_3986C1);stroke:none;' />
-<rect class='entity' x='57' y='295' width='190' height='133' rx='4' ry='4' style='fill:none;stroke:#2C3135'/>
+<rect id='depict_curso&#95;ecommerce&#46;tb&#95;vendedor' class='entity' style='stroke:#F9FAFC' x='57' y='295' width='190' height='133' rx='4' ry='4' />
+<rect x='57' y='295' width='190' height='8' rx='4' ry='4' style='stroke-width:0;fill:#1B5A8C'/>
+<rect x='57' y='299' width='190' height='29' style='stroke-width:0;fill:#272D33'/>
 <a xlink:href='#curso_ecommerce.tb_vendedor'><text id='depict&#45;curso&#95;ecommerce&#46;tb&#95;vendedor' x='112' y='316' class='tableHeader' style='fill:#B5D5EE;'>tb&#95;vendedor</text><title>Table curso_ecommerce.tb_vendedor</title></a>
   <use x='58' y='338' xlink:href='#nn'/><use x='59' y='337' xlink:href='#pk'><title>&#x1F511;  Pk pk_tb_vendedor ( codigo_vendedor ) </title></use><a xlink:href='#curso_ecommerce.tb_vendedor.codigo_vendedor'><text id='curso&#95;ecommerce&#46;tb&#95;vendedor&#46;codigo&#95;vendedor' x='79' y='350' onmouseover="hghl(['tb_vendedor_produto_fk_tb_vendedor_produto_tb_vendedor','curso_ecommerce.tb_vendedor_produto.codigo_vendedor'])" onmouseout="uhghl(['tb_vendedor_produto_fk_tb_vendedor_produto_tb_vendedor','curso_ecommerce.tb_vendedor_produto.codigo_vendedor'])" class='colPk'>codigo&#95;vendedor</text><title>&#10697;  codigo_vendedor
      * int
@@ -747,9 +747,9 @@ Referred by tb_vendedor ( codigo_tipo_pj ) </title></a>
 <a xlink:href='#curso_ecommerce.tb_vendedor.codigo_endereco'><use x='233' y='394' xlink:href='#fk'/><title>&#x1F517;  References tb_endereco ( codigo_endereco ) </title></a>
 
 <!-- == Table 'tb_vendedor_produto' == -->
-<rect id='depict_curso&#95;ecommerce&#46;tb&#95;vendedor&#95;produto' class='entity' style='stroke:none;' x='342' y='295' width='152' height='171' rx='4' ry='4' />
-<path d='M 342 328 L 342 299 Q 342 295 346 295 L 490 295 Q 494 295 494 299 L 494 328 L342 328 ' style='fill:url(#tbg_3986C1);stroke:none;' />
-<rect class='entity' x='342' y='295' width='152' height='171' rx='4' ry='4' style='fill:none;stroke:#2C3135'/>
+<rect id='depict_curso&#95;ecommerce&#46;tb&#95;vendedor&#95;produto' class='entity' style='stroke:#F9FAFC' x='342' y='295' width='152' height='171' rx='4' ry='4' />
+<rect x='342' y='295' width='152' height='8' rx='4' ry='4' style='stroke-width:0;fill:#1B5A8C'/>
+<rect x='342' y='299' width='152' height='29' style='stroke-width:0;fill:#272D33'/>
 <a xlink:href='#curso_ecommerce.tb_vendedor_produto'><text id='depict&#45;curso&#95;ecommerce&#46;tb&#95;vendedor&#95;produto' x='352' y='316' class='tableHeader' style='fill:#B5D5EE;'>tb&#95;vendedor&#95;produto</text><title>Table curso_ecommerce.tb_vendedor_produto</title></a>
   <use x='343' y='338' xlink:href='#nn'/><use x='344' y='337' xlink:href='#pk'><title>&#x1F511;  Pk pk_tb_vendedor_produto ( codigo_vendedor, codigo_produto ) &#x1F511;  Pk unq_tb_vendedor_produto_codigo_vendedor ( codigo_vendedor, codigo_produto ) </title></use><a xlink:href='#curso_ecommerce.tb_vendedor_produto.codigo_vendedor'><text id='curso&#95;ecommerce&#46;tb&#95;vendedor&#95;produto&#46;codigo&#95;vendedor' x='364' y='350' onmouseover="hghl(['tb_vendedor_produto_fk_tb_vendedor_produto_tb_vendedor','curso_ecommerce.tb_vendedor.codigo_vendedor'])" onmouseout="uhghl(['tb_vendedor_produto_fk_tb_vendedor_produto_tb_vendedor','curso_ecommerce.tb_vendedor.codigo_vendedor'])" class='colPk'>codigo&#95;vendedor</text><title>&#10697;  codigo_vendedor
      * int
@@ -947,8 +947,8 @@ function searchSVG( searchValue) {
 		<td > codigo&#95;cliente &#8601; <a href='#curso&#95;ecommerce&#46;tb&#95;cliente&#95;pessoa&#95;juridica'  onclick="window.scrollTo(275, 836);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_curso_ecommerce.tb_cliente_pessoa_juridica').classList.add('palpable'); return false;">&#10063; tb&#95;cliente&#95;pessoa&#95;juridica</a> </td>
 	</tr>
 	<tr>
-		<td><svg width='14' height='14'><use xlink:href='#ref'/></svg></td><td>fk_tb_pedido_tb_cliente</td>
-		<td > codigo&#95;cliente &#8601; <a href='#curso&#95;ecommerce&#46;tb&#95;pedido'  onclick="window.scrollTo(560, 608);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_curso_ecommerce.tb_pedido').classList.add('palpable'); return false;">&#10063; tb&#95;pedido</a> </td>
+		<td><svg width='14' height='14'><use xlink:href='#ref'/></svg></td><td>fk_tb_compra_tb_cliente</td>
+		<td > codigo&#95;cliente &#8601; <a href='#curso&#95;ecommerce&#46;tb&#95;compra'  onclick="window.scrollTo(807, 855);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_curso_ecommerce.tb_compra').classList.add('palpable'); return false;">&#10063; tb&#95;compra</a> </td>
 	</tr>
 <tr><th colspan='3'>Options</th></tr>
 <tr><td colspan='3'>ENGINE&#61;InnoDB DEFAULT CHARSET&#61;utf8mb4 COLLATE&#61;utf8mb4&#95;0900&#95;ai&#95;ci</td></tr>
@@ -1066,9 +1066,22 @@ function searchSVG( searchValue) {
 		<td><a name='curso_ecommerce.tb_compra.data_pagamento_compra'>data&#95;pagamento&#95;compra</a></td>
 		<td class='dataType'> DATETIME  </td>
 	</tr>
+	<tr>
+		<td><span class='text-danger'>*</span><svg width='14' height='14'><use xlink:href='#idx'/></svg><svg width='14' height='14'><use xlink:href='#fk'/></svg></td>
+		<td><a name='curso_ecommerce.tb_compra.codigo_cliente'>codigo&#95;cliente</a></td>
+		<td class='dataType'> INT UNSIGNED  </td>
+	</tr>
 <tr><th colspan='3'>Indexes</th></tr>
 	<tr>		<td><svg width='14' height='14'><use xlink:href='#pk'/></svg></td><td>pk&#95;tb&#95;compra</td>
 		<td>Primary Key ON codigo&#95;compra</td>
+	</tr>
+	<tr>		<td><svg width='14' height='14'><use xlink:href='#idx'/></svg></td><td>fk&#95;tb&#95;compra&#95;tb&#95;cliente</td>
+		<td>Index ON codigo&#95;cliente</td>
+	</tr>
+<tr><th colspan='3'>Foreign Key</th></tr>
+	<tr>
+		<td><svg width='14' height='14'><use xlink:href='#fk'/></svg></td><td>fk_tb_compra_tb_cliente</td>
+		<td > codigo&#95;cliente &#8599; <a href='#curso&#95;ecommerce&#46;tb&#95;cliente'  onclick="window.scrollTo(142, 608);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_curso_ecommerce.tb_cliente').classList.add('palpable'); return false;">&#10063; tb&#95;cliente</a> </td>
 	</tr>
 <tr><th colspan='3'>Referring Foreign Key</th></tr>
 	<tr>
@@ -1437,11 +1450,6 @@ END</pre> </td>	</tr>
 	</tr>
 	<tr>
 		<td><span class='text-danger'>*</span><svg width='14' height='14'><use xlink:href='#idx'/></svg><svg width='14' height='14'><use xlink:href='#fk'/></svg></td>
-		<td><a name='curso_ecommerce.tb_pedido.codigo_cliente'>codigo&#95;cliente</a></td>
-		<td class='dataType'> INT UNSIGNED  </td>
-	</tr>
-	<tr>
-		<td><span class='text-danger'>*</span><svg width='14' height='14'><use xlink:href='#idx'/></svg><svg width='14' height='14'><use xlink:href='#fk'/></svg></td>
 		<td><a name='curso_ecommerce.tb_pedido.codigo_compra'>codigo&#95;compra</a></td>
 		<td class='dataType'> INT UNSIGNED  </td>
 	</tr>
@@ -1449,17 +1457,10 @@ END</pre> </td>	</tr>
 	<tr>		<td><svg width='14' height='14'><use xlink:href='#pk'/></svg></td><td>pk&#95;tb&#95;pedido</td>
 		<td>Primary Key ON codigo&#95;pedido</td>
 	</tr>
-	<tr>		<td><svg width='14' height='14'><use xlink:href='#idx'/></svg></td><td>fk&#95;tb&#95;pedido&#95;tb&#95;cliente</td>
-		<td>Index ON codigo&#95;cliente</td>
-	</tr>
 	<tr>		<td><svg width='14' height='14'><use xlink:href='#idx'/></svg></td><td>fk&#95;tb&#95;pedido&#95;tb&#95;compra</td>
 		<td>Index ON codigo&#95;compra</td>
 	</tr>
 <tr><th colspan='3'>Foreign Key</th></tr>
-	<tr>
-		<td><svg width='14' height='14'><use xlink:href='#fk'/></svg></td><td>fk_tb_pedido_tb_cliente</td>
-		<td > codigo&#95;cliente &#8599; <a href='#curso&#95;ecommerce&#46;tb&#95;cliente'  onclick="window.scrollTo(142, 608);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_curso_ecommerce.tb_cliente').classList.add('palpable'); return false;">&#10063; tb&#95;cliente</a> </td>
-	</tr>
 	<tr>
 		<td><svg width='14' height='14'><use xlink:href='#fk'/></svg></td><td>fk_tb_pedido_tb_compra</td>
 		<td > codigo&#95;compra &#8599; <a href='#curso&#95;ecommerce&#46;tb&#95;compra'  onclick="window.scrollTo(807, 855);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_curso_ecommerce.tb_compra').classList.add('palpable'); return false;">&#10063; tb&#95;compra</a> </td>

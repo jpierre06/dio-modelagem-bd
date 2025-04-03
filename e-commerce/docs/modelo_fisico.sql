@@ -1,11 +1,5 @@
 CREATE SCHEMA curso_ecommerce;
 
-CREATE  TABLE curso_ecommerce.tb_compra ( 
-	codigo_compra        INT UNSIGNED   NOT NULL AUTO_INCREMENT  PRIMARY KEY,
-	valor_total_compra   DECIMAL(11,2)    NOT NULL   ,
-	data_pagamento_compra DATETIME    NOT NULL   
- ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
 CREATE  TABLE curso_ecommerce.tb_departamento ( 
 	codigo_departamento  INT UNSIGNED   NOT NULL AUTO_INCREMENT  PRIMARY KEY,
 	descricao_departamento VARCHAR(50)       
@@ -103,6 +97,16 @@ CREATE  TABLE curso_ecommerce.tb_cliente_pessoa_juridica (
 
 CREATE INDEX fk_tb_cliente_pessoa_juridica_tb_tipo_pessoa_juridica ON curso_ecommerce.tb_cliente_pessoa_juridica ( codigo_tipo_pj );
 
+CREATE  TABLE curso_ecommerce.tb_compra ( 
+	codigo_compra        INT UNSIGNED   NOT NULL AUTO_INCREMENT  PRIMARY KEY,
+	valor_total_compra   DECIMAL(11,2)    NOT NULL   ,
+	data_pagamento_compra DATETIME    NOT NULL   ,
+	codigo_cliente       INT UNSIGNED   NOT NULL   ,
+	CONSTRAINT fk_tb_compra_tb_cliente FOREIGN KEY ( codigo_cliente ) REFERENCES curso_ecommerce.tb_cliente( codigo_cliente ) ON DELETE NO ACTION ON UPDATE NO ACTION
+ ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE INDEX fk_tb_compra_tb_cliente ON curso_ecommerce.tb_compra ( codigo_cliente );
+
 CREATE  TABLE curso_ecommerce.tb_fornecedor ( 
 	codigo_fornecedor    INT UNSIGNED   NOT NULL AUTO_INCREMENT  PRIMARY KEY,
 	codigo_pessoa_juridica INT UNSIGNED   NOT NULL   ,
@@ -138,13 +142,9 @@ CREATE  TABLE curso_ecommerce.tb_pedido (
 	valor_frete          DECIMAL(8,2)    NOT NULL   ,
 	desconto_pedido      DECIMAL(8,2)    NOT NULL   ,
 	valor_total_pedido   DECIMAL(8,2)    NOT NULL   ,
-	codigo_cliente       INT UNSIGNED   NOT NULL   ,
 	codigo_compra        INT UNSIGNED   NOT NULL   ,
-	CONSTRAINT fk_tb_pedido_tb_cliente FOREIGN KEY ( codigo_cliente ) REFERENCES curso_ecommerce.tb_cliente( codigo_cliente ) ON DELETE NO ACTION ON UPDATE RESTRICT,
 	CONSTRAINT fk_tb_pedido_tb_compra FOREIGN KEY ( codigo_compra ) REFERENCES curso_ecommerce.tb_compra( codigo_compra ) ON DELETE NO ACTION ON UPDATE RESTRICT
  ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
-CREATE INDEX fk_tb_pedido_tb_cliente ON curso_ecommerce.tb_pedido ( codigo_cliente );
 
 CREATE INDEX fk_tb_pedido_tb_compra ON curso_ecommerce.tb_pedido ( codigo_compra );
 
@@ -227,3 +227,4 @@ CREATE TRIGGER curso_ecommerce.trg_after_update_pedido AFTER UPDATE ON tb_pedido
     SET valor_total_compra = v_total_compra
     WHERE codigo_compra = NEW.codigo_compra;
 END;
+
