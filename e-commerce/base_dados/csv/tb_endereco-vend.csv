@@ -1,0 +1,51 @@
+codigo_endereco,logradouro,numero,complemento,bairro,cidade,estado,cep
+301,Rua das Flores,123,Sala 101,Centro,São Paulo,SP,01001000
+302,Avenida Brasil,456,Loja 10,Jardins,São Paulo,SP,01402000
+303,Rua dos Andradas,789,Galpão 3,Vila Mariana,São Paulo,SP,04007010
+304,Avenida Paulista,1000,Conjunto 501,Bela Vista,São Paulo,SP,01310100
+305,Rua Augusta,530,Loja 15,Consolação,São Paulo,SP,01304000
+306,Avenida Rebouças,985,2º Andar,Pinheiros,São Paulo,SP,05402100
+307,Rua Oscar Freire,879,Loja 22,Jardim Paulista,São Paulo,SP,01426001
+308,Avenida Brigadeiro Faria Lima,2170,Sala 304,Jardim Paulistano,São Paulo,SP,01452000
+309,Alameda Santos,1293,Sala 701,Cerqueira César,São Paulo,SP,01419001
+310,Rua da Consolação,1700,Bloco B,Consolação,São Paulo,SP,01301100
+311,Avenida Angélica,2200,Loja 05,Higienópolis,São Paulo,SP,01228200
+312,Rua Haddock Lobo,746,Loja Térrea,Cerqueira César,São Paulo,SP,01414000
+313,Rua 25 de Março,950,Box 32,Centro,São Paulo,SP,01021100
+314,Avenida Ibirapuera,1234,Loja 45,Moema,São Paulo,SP,04029200
+315,Rua Pamplona,1005,Sala 807,Jardim Paulista,São Paulo,SP,01405200
+316,Rua Direita,250,Loja 12,Centro,São Paulo,SP,01002010
+317,Avenida Santo Amaro,1500,Conjunto 15,Vila Nova Conceição,São Paulo,SP,04506000
+318,Avenida Sumaré,867,Sala 101,Perdizes,São Paulo,SP,05016090
+319,Rua Teodoro Sampaio,954,Loja 3,Pinheiros,São Paulo,SP,05406000
+320,Avenida Cidade Jardim,400,Conjunto 1021,Jardim Europa,São Paulo,SP,01454000
+321,Rua Barão de Itapetininga,88,Loja 15,República,São Paulo,SP,01042001
+322,Rua João Cachoeira,500,Loja 23,Itaim Bibi,São Paulo,SP,04535001
+323,Avenida Nove de Julho,3000,Sala 505,Jardim Paulista,São Paulo,SP,01406100
+324,Rua Bela Cintra,2000,Sala 1200,Consolação,São Paulo,SP,01415002
+325,Rua Domingos de Morais,1200,Loja 10,Vila Mariana,São Paulo,SP,04010100
+326,Avenida Engenheiro Luís Carlos Berrini,550,Sala 1802,Cidade Monções,São Paulo,SP,04571000
+327,Rua Frei Caneca,900,Loja 22,Consolação,São Paulo,SP,01307001
+328,Avenida Giovanni Gronchi,5411,Loja 105,Morumbi,São Paulo,SP,05724001
+329,Rua Voluntários da Pátria,2468,Loja 15,Santana,São Paulo,SP,02010800
+330,Rua Clodomiro Amazonas,249,Sala 608,Itaim Bibi,São Paulo,SP,04537010
+331,Rua Sete de Abril,235,Loja 10,República,São Paulo,SP,01044000
+332,Avenida Europa,158,Loja 12,Jardim Europa,São Paulo,SP,01449000
+333,Rua José Paulino,700,Loja 45,Bom Retiro,São Paulo,SP,01120000
+334,Avenida Higienópolis,618,Sala 201,Higienópolis,São Paulo,SP,01238001
+335,Rua Augusta,1500,Loja 30,Consolação,São Paulo,SP,01304001
+336,Avenida Ipiranga,200,Sala 810,República,São Paulo,SP,01046010
+337,Rua Cardeal Arcoverde,2899,Loja 12,Pinheiros,São Paulo,SP,05407001
+338,Avenida Moema,170,Loja 15,Moema,São Paulo,SP,04077020
+339,Rua Vergueiro,1211,Sala 305,Vila Mariana,São Paulo,SP,04101000
+340,Avenida das Nações Unidas,12901,Loja 2101,Brooklin,São Paulo,SP,04578910
+341,Rua Joaquim Floriano,466,Sala 1908,Itaim Bibi,São Paulo,SP,04534001
+342,Avenida Morumbi,8000,Loja 15,Morumbi,São Paulo,SP,05650002
+343,Rua Henrique Schaumann,270,Loja 23,Pinheiros,São Paulo,SP,05413010
+344,Avenida Indianópolis,3000,Loja 10,Planalto Paulista,São Paulo,SP,04062001
+345,Rua dos Pinheiros,498,Sala 105,Pinheiros,São Paulo,SP,05422001
+346,Avenida Juscelino Kubitschek,1900,Conjunto 221,Vila Nova Conceição,São Paulo,SP,04543011
+347,Rua Turiassu,390,Loja 25,Perdizes,São Paulo,SP,05005000
+348,Avenida Pompeia,1000,Loja 8,Pompeia,São Paulo,SP,05022001
+349,Rua Barra Funda,1067,Loja 2,Barra Funda,São Paulo,SP,01152000
+350,Avenida Presidente Wilson,1009,Sala 503,Mooca,São Paulo,SP,03107001

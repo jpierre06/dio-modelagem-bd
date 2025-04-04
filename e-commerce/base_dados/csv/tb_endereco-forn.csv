@@ -1,0 +1,21 @@
+codigo_endereco,logradouro,numero,complemento,bairro,cidade,estado,cep
+351,Avenida Brasil,1250,Sala 301,Centro,São Paulo,SP,01234567
+352,Rua das Flores,458,Bloco B,Jardim América,Rio de Janeiro,RJ,21098765
+353,Alameda Santos,789,Andar 5,Cerqueira César,Porto Alegre,RS,90543210
+354,Rua Coronel Oliveira,102,Galpão 3,Boa Vista,Belo Horizonte,MG,31256789
+355,Avenida Paulista,2500,Conjunto 1003,Bela Vista,Curitiba,PR,80345678
+356,Rua dos Ipês,365,,Jardim Botânico,Salvador,BA,40987654
+357,Avenida Getúlio Vargas,1127,Loja 12,Centro,Recife,PE,50123456
+358,Rua Barão do Rio Branco,555,Sala 210,Centro,Fortaleza,CE,60876543
+359,Travessa das Acácias,74,,Vila Nova,Manaus,AM,69012345
+360,Avenida Amazonas,936,Andar 2,Santa Efigênia,Goiânia,GO,74654321
+361,Rua 15 de Novembro,1050,Sala 505,Centro,Florianópolis,SC,88765432
+362,Avenida Afonso Pena,712,,Santa Efigênia,Campo Grande,MS,79012345
+363,Rua Dom Pedro II,246,Loja 10,São Cristóvão,Cuiabá,MT,78654321
+364,Avenida Presidente Vargas,2980,Galpão 5,Centro,Belém,PA,66123456
+365,Rua Duque de Caxias,831,,Centro,João Pessoa,PB,58012345
+366,Avenida Rio Branco,1475,Sala 102,Centro,Aracaju,SE,49087654
+367,Rua Tiradentes,390,Bloco C,Centro,Natal,RN,59012345
+368,Avenida Sete de Setembro,629,Conjunto 301,Centro,Maceió,AL,57654321
+369,Rua Marechal Deodoro,846,,Centro,Teresina,PI,64012345
+370,Avenida Dom Manuel,1198,Sala 15,Centro,Vitória,ES,29076543
