@@ -35,3 +35,6 @@
 
 > Para acessar diretamente o modelo conceitual, click aqui ->
 [Modelo Conceitual](oficina/Modelo_conceitual.md)
+
+> Para acessar diretamente o modelo lógico, click aqui ->
+[Modelo Lógico](oficina/Modelo_logico.md)

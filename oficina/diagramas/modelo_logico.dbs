@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="MySql" database="MySql" id="MySql-11e0" >
+	<schema name="curso_oficina" >
+		<table name="tb_cliente" prior="tbl" >
+			<column name="codigo_cliente" type="INT" jt="4" mandatory="y" unsigned="y" />
+			<column name="codigo_endereco" type="INT" jt="4" mandatory="y" unsigned="y" />
+			<column name="codigo_contato" type="INT" jt="4" mandatory="y" unsigned="y" />
+			<index name="pk_tb_cliente" unique="PRIMARY_KEY" >
+				<column name="codigo_cliente" />
+			</index>
+			<options><![CDATA[engine=InnoDB]]></options>
+		</table>
+		<table name="tb_pessoa_fisica" prior="tb_p" >
+			<column name="codigo_cliente" type="INT" jt="4" mandatory="y" unsigned="y" />
+			<column name="nome_cliente" type="VARCHAR" length="120" jt="12" mandatory="y" />
+			<column name="cpf" type="CHAR" length="11" jt="1" mandatory="y" />
+			<index name="pk_tb_pessoa_fisica" unique="PRIMARY_KEY" >
+				<column name="codigo_cliente" />
+			</index>
+			<options><![CDATA[engine=InnoDB]]></options>
+		</table>
+		<table name="tb_pessoa_juridica" prior="tb_pessoa" >
+			<column name="codigo_cliente" type="INT" jt="4" mandatory="y" unsigned="y" />
+			<column name="razao_social" type="VARCHAR" length="120" jt="12" mandatory="y" />
+			<column name="nome_fantasia" type="VARCHAR" length="120" jt="12" mandatory="y" />
+			<column name="prazo_pagamento" type="INT" jt="4" mandatory="y" unsigned="y" />
+			<column name="cnpj" type="CHAR" length="14" jt="1" mandatory="y" />
+			<index name="pk_tb_pessoa_juridica" unique="PRIMARY_KEY" >
+				<column name="codigo_cliente" />
+			</index>
+			<options><![CDATA[engine=InnoDB]]></options>
+		</table>
+	</schema>
+	<layout name="Main Diagram" id="Diagram-1f79" show_relation="columns" >
+		<entity schema="curso_oficina" name="tb_cliente" color="C1D8EE" x="209" y="209" />
+		<entity schema="curso_oficina" name="tb_pessoa_fisica" color="C1D8EE" x="57" y="418" />
+		<entity schema="curso_oficina" name="tb_pessoa_juridica" color="C1D8EE" x="418" y="418" />
+		<callout x="399" y="57" pointer="Round" >
+			<comment><![CDATA[Modelagem Lógica para atividade de banco de dados de Oficina]]></comment>
+		</callout>
+	</layout>
+</project>

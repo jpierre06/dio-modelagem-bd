@@ -6,7 +6,7 @@
 
 <br>
 
-## Digrama do modelo conceitual 
+## Digrama do modelo conceitual - Oficina
 
 ![Modelo Conceitual](docs/modelo_conceitual.png)
 
