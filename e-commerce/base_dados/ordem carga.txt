@@ -1,7 +1,0 @@
-tb_cliente-pf.csv ok
-tb_cliente_pessoa_fisica.csv ok
-tb_tipo_pessoa_juridica.csv ok
-tb_pessoa_juridica-cli.csv ok
-tb_cliente-pj.csv ok
-tb_cliente_pessoa_juridica.csv ok
-tb_endereco-cli.csv ok
