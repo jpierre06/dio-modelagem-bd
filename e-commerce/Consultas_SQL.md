@@ -199,7 +199,7 @@ SELECT
 	
 FROM 
 	vw_cliente_consolidado as cc
-	
+
 WHERE
 	cc.codigo_tipo_cliente = 2	
 ```
@@ -210,48 +210,87 @@ WHERE
 
 <br>
 
-### Nome consulta
+### Consulta TOP N Vendas por Cliente
+
+#### Para facilicar consultas e reutilização em outras consultas foi criado uma view
 
 ```sql
+CREATE VIEW IF NOT EXISTS vw_vendas_cliente as (
+	
+	SELECT 
+		cc.codigo_cliente
+		,cc.nome
+		,cc.codigo_tipo_cliente
+		,cc.tipo_cliente
+		,SUM(cpr.valor_total_compra) as valor_total_compra
+	FROM 
+		tb_compra as cpr
+		INNER JOIN vw_cliente_consolidado as cc on (cpr.codigo_cliente = cc.codigo_cliente)
+		
+	GROUP BY 1, 2, 3, 4	
+	
+	ORDER BY	
+		valor_total_compra DESC
+);
 ```
 
-<br>
 
-### Nome consulta
+#### TOP 10 de Vendas por Cliente
 
 ```sql
+SELECT 
+	vc.codigo_cliente
+	,vc.nome
+	,vc.tipo_cliente
+	,vc.valor_total_compra
+FROM vw_vendas_cliente	as vc
+
+LIMIT 10
 ```
 
-<br>
+#### Retorna da consulta
 
-### Nome consulta
+![](consultas/top_10_vendas_clientes.png)
+
+#### TOP 5 de Vendas por Cliente Pessoa Física
 
 ```sql
+SELECT 
+	vc.codigo_cliente
+	,vc.nome
+	,vc.tipo_cliente
+	,vc.valor_total_compra
+FROM vw_vendas_cliente	as vc
+
+WHERE vc.codigo_tipo_cliente = 1
+
+LIMIT 5	
 ```
 
-<br>
+#### Retorna da consulta
 
-### Nome consulta
+![](consultas/top_5_vendas_clientes-pf.png)
+
+#### TOP 5 de Vendas por Cliente Pessoa Jurídica
 
 ```sql
+SELECT 
+	vc.codigo_cliente
+	,vc.nome
+	,vc.tipo_cliente
+	,vc.valor_total_compra
+FROM vw_vendas_cliente	as vc
+
+WHERE vc.codigo_tipo_cliente = 2
+
+LIMIT 5	
 ```
 
-<br>
+#### Retorna da consulta
 
-### Nome consulta
+![](consultas/top_5_vendas_clientes-pj.png)
 
-```sql
-```
-
-<br>
-
-### Nome consulta
-
-```sql
-```
-
-<br>
-
+#### Obs.: No momento da consulta não foi identificado vendas para Pessoa Jurídica
 
 
 
