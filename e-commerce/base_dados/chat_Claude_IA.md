@@ -21,7 +21,7 @@ Nesse caso será necessário repetir a Entrada 1 para contextualizar o chat e se
 * Entrada 1
 
 ```
-Em anexo está a modelagem física de uma banco de dados criado para um curso.
+Em anexo está o arquivo modelo_fisico.sql com a modelagem física de uma banco de dados criado para um curso.
 
 Preciso popular as tabelas de acordo com as especificações do arquivo e algumas regras que informarei gradativamente.
 
@@ -135,6 +135,26 @@ Agora preciso que seja gerado dados para as seguintes tabelas com as respectivas
 6 - A tabela tb_fornecedor já está populada com codigo_fornecedor entre 1 e 20;
 ```
 
+<br>
+
+* Entrada 9
+
+```
+Agora preciso que seja gerado dados para as seguintes tabelas com as respectivas regras:
+
+Agora preciso que sejam gerados dados para as tabelas com as respectivas regras:
+
+1 - Gerar dados para a tabela tb_compra com 50 registros;
+2 - O campo codigo_cliente deve estar entre 1 e 300;
+3 - O campo valor_total_compra deve ser 0. Esse campo será atualizado posteriormente através de uma trigger;
+4 - Gerar dados para a tabela tb_pedido;
+5 - Uma compra pode ter um ou mais pedidos;
+6 - As colunas valor_total_produtos e valor_total_pedido deve ser 0. Esses campos serão atualizados posteriormente através de triggers;
+7 - Gerar dados para a tabela tb_detalhamento_pedido;
+8 - No mesmo pedido pode ter um ou mais produto desde que seja do mesmo vendedor;
+9 - Em média cada pedido deve ter 3 produtos;
+10 - Considerar o arquivo tb_vendedor_produto.csv para utilizar a relação vendedor e produto;
+```
 
 
 <br>
