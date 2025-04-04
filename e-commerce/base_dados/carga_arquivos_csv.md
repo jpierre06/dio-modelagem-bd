@@ -2,6 +2,9 @@
 
 ## Durante a carga de dados através de arquivos CSV os arquivos foram carregado na seguinte ordem:
 
+#### Obs.: Embora a ordem da carga possa variar de acordo com as restrições de relacionamento, essa foi a ordem testada.
+
+
 >tb_tipo_pessoa_juridica.csv
 <br>
 tb_departamento.csv
@@ -34,26 +37,23 @@ tb_fornecedor.csv
 
 
 
->tb_produto.csv ok
+>tb_produto.csv
 <br>
 tb_vendedor_produto.csv
+<br>
 tb_fornecedor_produto.csv
 
+
+
+>tb_compra.csv
+<br>
+tb_pedido.csv
+<br>
+tb_detalhamento_pedido.csv
+
 <br>
 <br>
 
 
-# Arquivos não gerados
-
-## Não foram gerado arquivos para as tabelas abaixo:
-
-* tb_compra
-* tb_pedido
-* tb_detalhamento_pedido
-
-### Para popular as respectivas tabelas utilizar arquivo SQL de carga ou incluir dados manualmente
-### A inclusão de dados deve ser realizada na ordem acima
-
-<br>
 
 [Retornar página Carga de Dados para Teste](../Base_dados.md)
