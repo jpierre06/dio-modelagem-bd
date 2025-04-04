@@ -1,4 +1,4 @@
-# A atividade faz parte do desafio do curso de refinamento do projeto de oficina
+# A atividade faz parte do desafio do curso de refinamento do projeto de Oficina
 
 <br>
 <br>

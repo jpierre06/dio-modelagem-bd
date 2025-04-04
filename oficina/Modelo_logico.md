@@ -1,4 +1,4 @@
-# Modelo Lógico (Diagrama Relacionamento)
+# Modelo Lógico (Diagrama Relacionamento) - Oficina
 
 > Apesar do aplicativo brModelo permita a geração de um Diagrama Relacional, foi utilizado o aplicativo dbSchema, pelo fato do mesmo permitir definir qual será a engine de banco de dados de destino facilitando a geração do modelo físico
 
