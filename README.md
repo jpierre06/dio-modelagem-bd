@@ -30,4 +30,8 @@
 ## Oficina
 
 
-> Para a modelagem da atividade de Oficina, click aqui -> [Oficina](oficina/README.md)
+> Para informações sobre a modelagem da atividade de Oficina, click aqui -> 
+[Oficina](oficina/README.md)
+
+> Para acessar diretamente o modelo conceitual, click aqui ->
+[Modelo Conceitual](oficina/Modelo_conceitual.md)
