@@ -30,6 +30,4 @@
 ## Oficina
 
 
-> Para a modelagem da atividade de oficina click no link abaixo
-
-[Oficina](oficina/README.md)
+> Para a modelagem da atividade de Oficina, click aqui -> [Oficina](oficina/README.md)
