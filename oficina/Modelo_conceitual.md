@@ -1,4 +1,4 @@
-# Modelo Conceitual (Diagrama Entidade Relacionamento)
+# Modelo Conceitual (Diagrama Entidade Relacionamento) - Oficina
 
 > O modelo conceitual de Oficina foi desenvolvido através do aplicativo brModelo
 

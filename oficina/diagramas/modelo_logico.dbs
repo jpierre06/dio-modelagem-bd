@@ -2,11 +2,261 @@
 <project name="MySql" database="MySql" id="MySql-11e0" >
 	<schema name="curso_oficina" >
 		<table name="tb_cliente" prior="tbl" >
-			<column name="codigo_cliente" type="INT" jt="4" mandatory="y" unsigned="y" />
+			<column name="codigo_cliente" type="INT" jt="4" mandatory="y" unsigned="y" >
+				<identity><![CDATA[AUTO_INCREMENT ]]></identity>
+			</column>
 			<column name="codigo_endereco" type="INT" jt="4" mandatory="y" unsigned="y" />
 			<column name="codigo_contato" type="INT" jt="4" mandatory="y" unsigned="y" />
 			<index name="pk_tb_cliente" unique="PRIMARY_KEY" >
 				<column name="codigo_cliente" />
+			</index>
+			<index name="unq_tb_cliente_codigo_endereco" unique="UNIQUE_KEY" >
+				<column name="codigo_endereco" />
+			</index>
+			<index name="unq_tb_cliente_codigo_contato" unique="UNIQUE_KEY" >
+				<column name="codigo_contato" />
+			</index>
+			<options><![CDATA[engine=InnoDB]]></options>
+		</table>
+		<table name="tb_contato" prior="tbl" >
+			<column name="codigo_contato" type="INT" jt="4" mandatory="y" unsigned="y" >
+				<identity><![CDATA[AUTO_INCREMENT ]]></identity>
+			</column>
+			<column name="email" type="VARCHAR" length="50" jt="12" />
+			<column name="ddd" type="CHAR" length="3" jt="1" mandatory="y" />
+			<column name="telefone" type="VARCHAR" length="9" jt="12" mandatory="y" />
+			<column name="eh_whatsapp" type="BOOLEAN" jt="16" mandatory="y" />
+			<index name="pk_tb_contato" unique="PRIMARY_KEY" >
+				<column name="codigo_contato" />
+			</index>
+			<fk name="fk_tb_contato_tb_cliente" to_schema="curso_oficina" to_table="tb_cliente" >
+				<fk_column name="codigo_contato" pk="codigo_contato" />
+			</fk>
+			<options><![CDATA[engine=InnoDB]]></options>
+		</table>
+		<table name="tb_cor" prior="tbcor" >
+			<column name="codigo_cor" type="INT" jt="4" mandatory="y" unsigned="y" >
+				<identity><![CDATA[AUTO_INCREMENT ]]></identity>
+			</column>
+			<column name="nome_cor" type="VARCHAR" length="30" jt="12" mandatory="y" />
+			<column name="data_cadastro" type="DATE" jt="91" mandatory="y" />
+			<index name="pk_tb_cor" unique="PRIMARY_KEY" >
+				<column name="codigo_cor" />
+			</index>
+			<options><![CDATA[engine=InnoDB]]></options>
+		</table>
+		<table name="tb_detalhamento_os_peca" prior="tb_detalhamento" >
+			<column name="codigo_os" prior="codigo_od" type="INT" jt="4" mandatory="y" unsigned="y" />
+			<column name="codigo_peca" type="INT" jt="4" mandatory="y" unsigned="y" />
+			<column name="quantidade" type="INT" jt="4" mandatory="y" unsigned="y" />
+			<column name="valor_peca_os" type="DECIMAL" length="8" decimal="2" jt="3" mandatory="y" unsigned="y" />
+			<index name="pk_tb_detalhamento_os_peca" unique="PRIMARY_KEY" >
+				<column name="codigo_os" />
+				<column name="codigo_peca" />
+			</index>
+			<fk name="fk_tb_detalhamento_os_peca_tb_peca" to_schema="curso_oficina" to_table="tb_peca" >
+				<fk_column name="codigo_peca" pk="codigo_peca" />
+			</fk>
+			<fk name="fk_tb_detalhamento_os_peca_tb_ordem_servico" to_schema="curso_oficina" to_table="tb_ordem_servico" >
+				<fk_column name="codigo_os" pk="codigo_os" />
+			</fk>
+			<options><![CDATA[engine=InnoDB]]></options>
+		</table>
+		<table name="tb_detalhamento_os_servico" prior="tb_detal" >
+			<column name="codigo_os" type="INT" jt="4" mandatory="y" unsigned="y" />
+			<column name="codigo_servico" type="INT" jt="4" mandatory="y" unsigned="y" />
+			<column name="quantidade" type="INT" jt="4" mandatory="y" unsigned="y" />
+			<column name="valor_servico_os" type="DECIMAL" length="8" decimal="2" jt="3" mandatory="y" unsigned="y" />
+			<index name="pk_tb_detalhamento_os_servico" unique="PRIMARY_KEY" >
+				<column name="codigo_os" />
+				<column name="codigo_servico" />
+			</index>
+			<fk name="fk_tb_detalhamento_os_servico_tb_ordem_servico" to_schema="curso_oficina" to_table="tb_ordem_servico" >
+				<fk_column name="codigo_os" pk="codigo_os" />
+			</fk>
+			<fk name="fk_tb_detalhamento_os_servico_tb_servico" to_schema="curso_oficina" to_table="tb_servico" >
+				<fk_column name="codigo_servico" pk="codigo_servico" />
+			</fk>
+			<options><![CDATA[engine=InnoDB]]></options>
+		</table>
+		<table name="tb_endereco" prior="tb_endere" >
+			<column name="codigo_endereco" type="INT" jt="4" mandatory="y" unsigned="y" >
+				<identity><![CDATA[AUTO_INCREMENT ]]></identity>
+			</column>
+			<column name="logradouro" type="VARCHAR" length="120" jt="12" mandatory="y" />
+			<column name="numero" type="VARCHAR" length="6" jt="12" />
+			<column name="complemento" type="VARCHAR" length="60" jt="12" />
+			<column name="cep" type="CHAR" length="8" jt="1" mandatory="y" />
+			<column name="bairro" type="VARCHAR" length="30" jt="12" mandatory="y" />
+			<column name="cidade" type="VARCHAR" length="50" jt="12" mandatory="y" />
+			<column name="estado" type="VARCHAR" length="30" jt="12" mandatory="y" />
+			<index name="pk_tb_endereco" unique="PRIMARY_KEY" >
+				<column name="codigo_endereco" />
+			</index>
+			<fk name="fk_tb_endereco_tb_cliente" to_schema="curso_oficina" to_table="tb_cliente" >
+				<fk_column name="codigo_endereco" pk="codigo_endereco" />
+			</fk>
+			<fk name="fk_tb_endereco_tb_mecanico" to_schema="curso_oficina" to_table="tb_mecanico" >
+				<fk_column name="codigo_endereco" pk="codigo_endereco" />
+			</fk>
+			<options><![CDATA[engine=InnoDB]]></options>
+		</table>
+		<table name="tb_equipe_atendimento" prior="tb_equipe_mecanico" >
+			<column name="codigo_equipe" type="INT" jt="4" mandatory="y" unsigned="y" >
+				<identity><![CDATA[AUTO_INCREMENT ]]></identity>
+			</column>
+			<column name="data_equipe" type="DATE" jt="91" mandatory="y" />
+			<column name="tb_descricao_equipe" type="VARCHAR" length="24" jt="12" mandatory="y" />
+			<index name="pk_tb_equipe_mecanico" unique="PRIMARY_KEY" >
+				<column name="codigo_equipe" />
+				<column name="data_equipe" />
+			</index>
+			<index name="unq_tb_equipe_atendimento_codigo_equipe" unique="UNIQUE_KEY" >
+				<column name="codigo_equipe" />
+			</index>
+			<options><![CDATA[engine=InnoDB]]></options>
+		</table>
+		<table name="tb_especialidade" prior="tbl" >
+			<column name="codigo_especialidade" type="INT" jt="4" mandatory="y" unsigned="y" >
+				<identity><![CDATA[AUTO_INCREMENT ]]></identity>
+			</column>
+			<column name="descricao_especialidade" type="VARCHAR" length="64" jt="12" mandatory="y" />
+			<index name="pk_tb_especialidade" unique="PRIMARY_KEY" >
+				<column name="codigo_especialidade" />
+			</index>
+			<options><![CDATA[engine=InnoDB]]></options>
+		</table>
+		<table name="tb_especialidade_mecanico" prior="tb_especialidade_meca" >
+			<column name="codigo_especialidade" type="INT" jt="4" mandatory="y" unsigned="y" />
+			<column name="codigo_mecanico" type="INT" jt="4" mandatory="y" unsigned="y" />
+			<column name="ano_especializacao" type="INT" jt="4" mandatory="y" unsigned="y" />
+			<index name="pk_tb_especialidade_mecanico" unique="PRIMARY_KEY" >
+				<column name="codigo_especialidade" />
+				<column name="codigo_mecanico" />
+			</index>
+			<fk name="fk_tb_especialidade_mecanico_tb_especialidade" to_schema="curso_oficina" to_table="tb_especialidade" >
+				<fk_column name="codigo_especialidade" pk="codigo_especialidade" />
+			</fk>
+			<fk name="fk_tb_especialidade_mecanico_tb_mecanico" to_schema="curso_oficina" to_table="tb_mecanico" >
+				<fk_column name="codigo_mecanico" pk="codigo_mecanico" />
+			</fk>
+			<options><![CDATA[engine=InnoDB]]></options>
+		</table>
+		<table name="tb_fabricante" prior="tbl" >
+			<column name="codigo_fabricante" type="INT" jt="4" mandatory="y" unsigned="y" >
+				<identity><![CDATA[AUTO_INCREMENT ]]></identity>
+			</column>
+			<column name="descricao_fabricante" type="VARCHAR" length="32" jt="12" mandatory="y" />
+			<index name="pk_tb_fabricante" unique="PRIMARY_KEY" >
+				<column name="codigo_fabricante" />
+			</index>
+			<options><![CDATA[engine=InnoDB]]></options>
+		</table>
+		<table name="tb_mecanico" prior="tbl" >
+			<column name="codigo_mecanico" type="INT" jt="4" mandatory="y" unsigned="y" >
+				<identity><![CDATA[AUTO_INCREMENT ]]></identity>
+			</column>
+			<column name="nome_mecanico" type="VARCHAR" length="64" jt="12" mandatory="y" />
+			<column name="codigo_endereco" type="INT" jt="4" mandatory="y" unsigned="y" />
+			<index name="pk_tb_mecanico" unique="PRIMARY_KEY" >
+				<column name="codigo_mecanico" />
+			</index>
+			<index name="unq_tb_mecanico_codigo_endereco" unique="UNIQUE_KEY" >
+				<column name="codigo_endereco" />
+			</index>
+			<options><![CDATA[engine=InnoDB]]></options>
+		</table>
+		<table name="tb_mecanico_equipe" prior="tbl" >
+			<column name="codigo_mecanico" type="INT" jt="4" mandatory="y" unsigned="y" />
+			<column name="codigo_equipe" type="INT" jt="4" mandatory="y" unsigned="y" />
+			<index name="pk_tb_mecanico_equipe" unique="PRIMARY_KEY" >
+				<column name="codigo_mecanico" />
+				<column name="codigo_equipe" />
+			</index>
+			<fk name="fk_tb_mecanico_equipe_tb_mecanico" to_schema="curso_oficina" to_table="tb_mecanico" >
+				<fk_column name="codigo_mecanico" pk="codigo_mecanico" />
+			</fk>
+			<fk name="fk_tb_mecanico_equipe_tb_equipe_atendimento" to_schema="curso_oficina" to_table="tb_equipe_atendimento" >
+				<fk_column name="codigo_equipe" pk="codigo_equipe" />
+			</fk>
+			<options><![CDATA[engine=InnoDB]]></options>
+		</table>
+		<table name="tb_modelo_peca" prior="tb_modelo" >
+			<column name="codigo_modelo" type="INT" jt="4" mandatory="y" unsigned="y" />
+			<column name="codigo_peca" type="INT" jt="4" mandatory="y" unsigned="y" />
+			<index name="pk_tb_modelo_peca" unique="PRIMARY_KEY" >
+				<column name="codigo_modelo" />
+				<column name="codigo_peca" />
+			</index>
+			<fk name="fk_tb_modelo_peca_tb_modelo_veiculo" to_schema="curso_oficina" to_table="tb_modelo_veiculo" >
+				<fk_column name="codigo_modelo" pk="codigo_modelo" />
+			</fk>
+			<fk name="fk_tb_modelo_peca_tb_peca" to_schema="curso_oficina" to_table="tb_peca" >
+				<fk_column name="codigo_peca" pk="codigo_peca" />
+			</fk>
+			<options><![CDATA[engine=InnoDB]]></options>
+		</table>
+		<table name="tb_modelo_veiculo" prior="tbl" >
+			<column name="codigo_modelo" type="INT" jt="4" mandatory="y" unsigned="y" >
+				<identity><![CDATA[AUTO_INCREMENT ]]></identity>
+			</column>
+			<column name="codigo_fabricante" type="INT" jt="4" mandatory="y" unsigned="y" />
+			<column name="descricao_modelo" type="VARCHAR" length="40" jt="12" mandatory="y" />
+			<column name="quantidade_portas" type="INT" jt="4" mandatory="y" unsigned="y" />
+			<column name="potencia_hp" prior="potencia" type="INT" jt="4" mandatory="y" unsigned="y" />
+			<column name="cilindradas_cc" prior="cilindradas_cm3" type="INT" jt="4" mandatory="y" unsigned="y" />
+			<column name="peso_kg" type="INT" jt="4" mandatory="y" unsigned="y" />
+			<index name="pk_tb_modelo_veiculo" unique="PRIMARY_KEY" >
+				<column name="codigo_modelo" />
+			</index>
+			<fk name="fk_tb_modelo_veiculo_tb_fabricante" to_schema="curso_oficina" to_table="tb_fabricante" >
+				<fk_column name="codigo_fabricante" pk="codigo_fabricante" />
+			</fk>
+			<options><![CDATA[engine=InnoDB]]></options>
+		</table>
+		<table name="tb_ordem_servico" prior="tbl" >
+			<column name="codigo_os" prior="codigo_od" type="INT" jt="4" mandatory="y" unsigned="y" >
+				<identity><![CDATA[AUTO_INCREMENT ]]></identity>
+			</column>
+			<column name="codigo_tipo_servico" type="INT" jt="4" mandatory="y" unsigned="y" />
+			<column name="codigo_veiculo" type="INT" jt="4" mandatory="y" unsigned="y" />
+			<column name="codigo_equipe" type="INT" jt="4" mandatory="y" unsigned="y" />
+			<column name="data_emissao" type="DATE" jt="91" mandatory="y" >
+				<defo><![CDATA[CURRENT_DATE]]></defo>
+			</column>
+			<column name="data_conclusao" type="DATE" jt="91" mandatory="y" />
+			<column name="status_os" type="INT" jt="4" mandatory="y" unsigned="y" />
+			<column name="total_valor_pecas" type="DECIMAL" length="8" decimal="2" jt="3" mandatory="y" unsigned="y" />
+			<column name="total_valor_servico" prior="valor_total_srevico" type="DECIMAL" length="8" decimal="2" jt="3" mandatory="y" unsigned="y" />
+			<column name="valor_desconto" type="DECIMAL" length="8" decimal="2" jt="3" mandatory="y" unsigned="y" />
+			<column name="total_valor_os" type="DECIMAL" length="8" decimal="2" jt="3" mandatory="y" unsigned="y" />
+			<index name="pk_tb_ordem_servico" unique="PRIMARY_KEY" >
+				<column name="codigo_os" />
+			</index>
+			<index name="unq_tb_ordem_servico_codigo_equipe" unique="UNIQUE_KEY" >
+				<column name="codigo_equipe" />
+			</index>
+			<fk name="fk_tb_ordem_servico_tb_tipo_servico" to_schema="curso_oficina" to_table="tb_tipo_servico" >
+				<fk_column name="codigo_tipo_servico" pk="codigo_tipo_servico" />
+			</fk>
+			<fk name="fk_tb_ordem_servico_tb_veiculo" to_schema="curso_oficina" to_table="tb_veiculo" >
+				<fk_column name="codigo_veiculo" pk="codigo_veiculo" />
+			</fk>
+			<fk name="fk_tb_ordem_servico_tb_equipe_atendimento" to_schema="curso_oficina" to_table="tb_equipe_atendimento" >
+				<fk_column name="codigo_equipe" pk="codigo_equipe" />
+			</fk>
+			<options><![CDATA[engine=InnoDB]]></options>
+		</table>
+		<table name="tb_peca" prior="tbl" >
+			<column name="codigo_peca" type="INT" jt="4" mandatory="y" unsigned="y" >
+				<identity><![CDATA[AUTO_INCREMENT ]]></identity>
+			</column>
+			<column name="descricao_peca" type="VARCHAR" length="64" jt="12" mandatory="y" />
+			<column name="valor_peca" type="DECIMAL" length="8" decimal="2" jt="3" mandatory="y" unsigned="y" />
+			<column name="custo_peca" type="DECIMAL" length="8" decimal="2" jt="3" mandatory="y" unsigned="y" />
+			<column name="garantia_dias" type="INT" jt="4" mandatory="y" unsigned="y" />
+			<index name="pk_tb_peca" unique="PRIMARY_KEY" >
+				<column name="codigo_peca" />
 			</index>
 			<options><![CDATA[engine=InnoDB]]></options>
 		</table>
@@ -17,6 +267,9 @@
 			<index name="pk_tb_pessoa_fisica" unique="PRIMARY_KEY" >
 				<column name="codigo_cliente" />
 			</index>
+			<fk name="fk_tb_pessoa_fisica_tb_cliente" to_schema="curso_oficina" to_table="tb_cliente" >
+				<fk_column name="codigo_cliente" pk="codigo_cliente" />
+			</fk>
 			<options><![CDATA[engine=InnoDB]]></options>
 		</table>
 		<table name="tb_pessoa_juridica" prior="tb_pessoa" >
@@ -28,14 +281,94 @@
 			<index name="pk_tb_pessoa_juridica" unique="PRIMARY_KEY" >
 				<column name="codigo_cliente" />
 			</index>
+			<fk name="fk_tb_pessoa_juridica_tb_cliente" to_schema="curso_oficina" to_table="tb_cliente" >
+				<fk_column name="codigo_cliente" pk="codigo_cliente" />
+			</fk>
+			<options><![CDATA[engine=InnoDB]]></options>
+		</table>
+		<table name="tb_servico" prior="tbl" >
+			<column name="codigo_servico" type="INT" jt="4" mandatory="y" unsigned="y" >
+				<identity><![CDATA[AUTO_INCREMENT ]]></identity>
+			</column>
+			<column name="descricao_servico" type="VARCHAR" length="32" jt="12" mandatory="y" />
+			<column name="valor_servico" type="DECIMAL" length="8" decimal="2" jt="3" mandatory="y" unsigned="y" />
+			<index name="pk_tb_servico" unique="PRIMARY_KEY" >
+				<column name="codigo_servico" />
+			</index>
+			<options><![CDATA[engine=InnoDB]]></options>
+		</table>
+		<table name="tb_tipo_servico" prior="tb_tipo_ser" >
+			<comment><![CDATA[Tipo de Serviços
+1 - Conserto
+2 - Revisão períodica na garantia
+3 - Revisão períodica fora da garantia]]></comment>
+			<column name="codigo_tipo_servico" type="INT" jt="4" mandatory="y" unsigned="y" >
+				<identity><![CDATA[AUTO_INCREMENT ]]></identity>
+			</column>
+			<column name="descricao_tipo_servico" type="VARCHAR" length="32" jt="12" mandatory="y" />
+			<index name="pk_tb_tipo_servico" unique="PRIMARY_KEY" >
+				<column name="codigo_tipo_servico" />
+			</index>
+			<options><![CDATA[engine=InnoDB]]></options>
+		</table>
+		<table name="tb_veiculo" prior="tbl" >
+			<column name="codigo_veiculo" type="INT" jt="4" mandatory="y" unsigned="y" >
+				<identity><![CDATA[AUTO_INCREMENT ]]></identity>
+			</column>
+			<column name="codigo_cliente" type="INT" jt="4" mandatory="y" unsigned="y" />
+			<column name="placa" type="CHAR" length="7" jt="1" mandatory="y" />
+			<column name="renavan" type="VARCHAR" length="20" jt="12" mandatory="y" />
+			<column name="codigo_modelo" type="INT" jt="4" mandatory="y" unsigned="y" />
+			<column name="codigo_cor" type="INT" jt="4" mandatory="y" unsigned="y" />
+			<column name="ano_fabricacao" type="INT" jt="4" mandatory="y" unsigned="y" />
+			<column name="ano_modelo" type="INT" jt="4" mandatory="y" unsigned="y" />
+			<index name="pk_tb_veiculo" unique="PRIMARY_KEY" >
+				<column name="codigo_cliente" />
+				<column name="placa" />
+			</index>
+			<index name="unq_tb_veiculo" unique="UNIQUE_KEY" >
+				<column name="codigo_veiculo" />
+				<column name="codigo_cliente" />
+			</index>
+			<index name="unq_tb_veiculo_codigo_veiculo" unique="UNIQUE_KEY" >
+				<column name="codigo_veiculo" />
+			</index>
+			<fk name="fk_tb_veiculo_tb_cor" to_schema="curso_oficina" to_table="tb_cor" >
+				<fk_column name="codigo_cor" pk="codigo_cor" />
+			</fk>
+			<fk name="fk_tb_veiculo_tb_cliente" to_schema="curso_oficina" to_table="tb_cliente" >
+				<fk_column name="codigo_cliente" pk="codigo_cliente" />
+			</fk>
+			<fk name="fk_tb_veiculo_tb_modelo_veiculo" to_schema="curso_oficina" to_table="tb_modelo_veiculo" >
+				<fk_column name="codigo_modelo" pk="codigo_modelo" />
+			</fk>
 			<options><![CDATA[engine=InnoDB]]></options>
 		</table>
 	</schema>
 	<layout name="Main Diagram" id="Diagram-1f79" show_relation="columns" >
-		<entity schema="curso_oficina" name="tb_cliente" color="C1D8EE" x="209" y="209" />
-		<entity schema="curso_oficina" name="tb_pessoa_fisica" color="C1D8EE" x="57" y="418" />
-		<entity schema="curso_oficina" name="tb_pessoa_juridica" color="C1D8EE" x="418" y="418" />
-		<callout x="399" y="57" pointer="Round" >
+		<comment><![CDATA[Diagrama Lógico - Oficina]]></comment>
+		<entity schema="curso_oficina" name="tb_cliente" color="C1D8EE" x="608" y="228" />
+		<entity schema="curso_oficina" name="tb_contato" color="C1D8EE" x="1121" y="475" />
+		<entity schema="curso_oficina" name="tb_cor" color="C1D8EE" x="57" y="228" />
+		<entity schema="curso_oficina" name="tb_detalhamento_os_peca" color="C1D8EE" x="779" y="874" />
+		<entity schema="curso_oficina" name="tb_detalhamento_os_servico" color="C1D8EE" x="931" y="1045" />
+		<entity schema="curso_oficina" name="tb_endereco" color="C1D8EE" x="1235" y="209" />
+		<entity schema="curso_oficina" name="tb_equipe_atendimento" color="C1D8EE" x="1653" y="988" />
+		<entity schema="curso_oficina" name="tb_especialidade" color="C1D8EE" x="1102" y="684" />
+		<entity schema="curso_oficina" name="tb_especialidade_mecanico" color="C1D8EE" x="1368" y="684" />
+		<entity schema="curso_oficina" name="tb_fabricante" color="C1D8EE" x="266" y="950" />
+		<entity schema="curso_oficina" name="tb_mecanico" color="C1D8EE" x="1634" y="684" />
+		<entity schema="curso_oficina" name="tb_mecanico_equipe" color="C1D8EE" x="1634" y="836" />
+		<entity schema="curso_oficina" name="tb_modelo_peca" color="C1D8EE" x="513" y="646" />
+		<entity schema="curso_oficina" name="tb_modelo_veiculo" color="C1D8EE" x="266" y="646" />
+		<entity schema="curso_oficina" name="tb_ordem_servico" color="C1D8EE" x="1216" y="988" />
+		<entity schema="curso_oficina" name="tb_peca" color="C1D8EE" x="760" y="646" />
+		<entity schema="curso_oficina" name="tb_pessoa_fisica" color="C1D8EE" x="551" y="399" />
+		<entity schema="curso_oficina" name="tb_pessoa_juridica" color="C1D8EE" x="779" y="399" />
+		<entity schema="curso_oficina" name="tb_servico" color="C1D8EE" x="646" y="1045" />
+		<entity schema="curso_oficina" name="tb_tipo_servico" color="C1D8EE" x="1197" y="836" />
+		<entity schema="curso_oficina" name="tb_veiculo" color="C1D8EE" x="266" y="228" />
+		<callout x="722" y="57" pointer="Round" >
 			<comment><![CDATA[Modelagem Lógica para atividade de banco de dados de Oficina]]></comment>
 		</callout>
 	</layout>
