@@ -1,8 +1,8 @@
-# Modelo Físico (Comando SQL)
+# Modelo Físico (Comando SQL) - e-commerce
 
 > A geração dos comandos SQL que permitem a criação das tabelas no SGBD MySQL foi realizada através do aplicativo dbSchema
 
-> Caso tenha interesse no arquivo SQL criado pelo aplicativo dbSchema, o mesmo pode ser encontrado em "./diagramas/modelo_fisico.sql"
+> Caso tenha interesse no arquivo SQL criado pelo aplicativo dbSchema, o mesmo pode ser encontrado em "/e-commerce/diagramas/modelo_fisico.sql"
 
 <br>
 
