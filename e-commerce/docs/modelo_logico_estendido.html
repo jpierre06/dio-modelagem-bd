@@ -846,6 +846,25 @@ Referred by tb_vendedor ( codigo_tipo_pj ) </title></a>
 <text x='586' y='1296' text-anchor='end' class='colType'>&#35;</text>  <a xlink:href='#curso_ecommerce.vw_total_vendas_vendedor_produto.total_venda_com_desconto'><text id='curso&#95;ecommerce&#46;vw&#95;total&#95;vendas&#95;vendedor&#95;produto&#46;total&#95;venda&#95;com&#95;desconto' x='364' y='1319'>total&#95;venda&#95;com&#95;desconto</text><title>&#10697;  total_venda_com_desconto
      decimal(41,2)</title></a>
 <text x='586' y='1315' text-anchor='end' class='colType'>&#35;</text>
+<!-- == Table 'vw_vendas_cliente' == -->
+<rect id='depict_curso&#95;ecommerce&#46;vw&#95;vendas&#95;cliente' class='entity' style='stroke:#F9FAFC' x='665' y='1378' width='171' height='152' rx='4' ry='4' />
+<rect x='665' y='1378' width='171' height='8' rx='4' ry='4' style='stroke-width:0;fill:#1B5A8C'/>
+<rect x='665' y='1382' width='171' height='29' style='stroke-width:0;fill:#272D33'/>
+<use x='817' y='1387' xlink:href='#view'/>
+<a xlink:href='#curso_ecommerce.vw_vendas_cliente'><text id='depict&#45;curso&#95;ecommerce&#46;vw&#95;vendas&#95;cliente' x='695' y='1399' class='tableHeader' style='fill:#B5D5EE;'>vw&#95;vendas&#95;cliente</text><title>View curso_ecommerce.vw_vendas_cliente
+ ⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+      VIEW</title></a>
+  <a xlink:href='#curso_ecommerce.vw_vendas_cliente.codigo_cliente'><text id='curso&#95;ecommerce&#46;vw&#95;vendas&#95;cliente&#46;codigo&#95;cliente' x='687' y='1433'>codigo&#95;cliente</text><title>&#10697;  codigo_cliente
+     int</title></a>
+<text x='833' y='1429' text-anchor='end' class='colType'>&#35;</text>  <a xlink:href='#curso_ecommerce.vw_vendas_cliente.nome'><text id='curso&#95;ecommerce&#46;vw&#95;vendas&#95;cliente&#46;nome' x='687' y='1452'>nome</text><title>&#10697;  nome
+     varchar(120)</title></a>
+<text x='833' y='1448' text-anchor='end' class='colType'>t</text>  <a xlink:href='#curso_ecommerce.vw_vendas_cliente.codigo_tipo_cliente'><text id='curso&#95;ecommerce&#46;vw&#95;vendas&#95;cliente&#46;codigo&#95;tipo&#95;cliente' x='687' y='1471'>codigo&#95;tipo&#95;cliente</text><title>&#10697;  codigo_tipo_cliente
+     int</title></a>
+<text x='833' y='1467' text-anchor='end' class='colType'>&#35;</text>  <a xlink:href='#curso_ecommerce.vw_vendas_cliente.tipo_cliente'><text id='curso&#95;ecommerce&#46;vw&#95;vendas&#95;cliente&#46;tipo&#95;cliente' x='687' y='1490'>tipo&#95;cliente</text><title>&#10697;  tipo_cliente
+     varchar(19)</title></a>
+<text x='833' y='1486' text-anchor='end' class='colType'>t</text>  <a xlink:href='#curso_ecommerce.vw_vendas_cliente.valor_total_compra'><text id='curso&#95;ecommerce&#46;vw&#95;vendas&#95;cliente&#46;valor&#95;total&#95;compra' x='687' y='1509'>valor&#95;total&#95;compra</text><title>&#10697;  valor_total_compra
+     decimal(33,2)</title></a>
+<text x='833' y='1505' text-anchor='end' class='colType'>&#35;</text>
 <!-- == Callout == -->
 <rect class='callout' x='456' y='76' width='209' height='56' rx='19' ry='19'  />
 <text x='484' y='76' class='callout'>
@@ -975,6 +994,7 @@ function searchSVG( searchValue) {
 <li><a href='#curso_ecommerce.vw_cliente_consolidado'/>vw_cliente_consolidado</a>
 <li><a href='#curso_ecommerce.vw_total_vendas_produto'/>vw_total_vendas_produto</a>
 <li><a href='#curso_ecommerce.vw_total_vendas_vendedor_produto'/>vw_total_vendas_vendedor_produto</a>
+<li><a href='#curso_ecommerce.vw_vendas_cliente'/>vw_vendas_cliente</a>
 </ul></ul>
 </div></div><br><br><br>
 <div class='card custom-card'><div class='card-body'><a name='curso_ecommerce' style='cursor:pointer;'><h5 class='card-title text-center'>Schema curso_ecommerce</h5></div></div>
@@ -2039,6 +2059,49 @@ END</pre> </td>	</tr>
 		<td>&nbsp;</td>
 		<td><a name='curso_ecommerce.vw_total_vendas_vendedor_produto.total_venda_com_desconto'>total&#95;venda&#95;com&#95;desconto</a></td>
 		<td class='dataType'> DECIMAL&#40;41&#44;2&#41;  </td>
+		<td> <br>Tags:  </td>
+	</tr>
+</tbody>
+</table></div></div>
+<br><br>
+<div class='card custom-card'><div class='card-body'><a name='curso_ecommerce.vw_vendas_cliente'  onclick="window.scrollTo(465, 1387);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_curso_ecommerce.vw_vendas_cliente').classList.add('palpable'); return false;" style='cursor:pointer;'><h5 class='text-center'>View vw_vendas_cliente</h5></a>
+<p class='text-muted'>VIEW<br>Tags: </p>
+<table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
+<thead>
+	<tr>
+		<th colspan='4'><a name='vw_vendas_cliente'>Query</a></th></tr>
+</thead>
+<tbody>
+	<tr><td colspan='4'><pre style='white-space: pre-wrap;word-wrap: break-word;'>CREATE VIEW &#36;&#123;nameWithSchemaName&#125; AS select &#96;curso&#95;ecommerce&#96;&#46;&#96;cc&#96;&#46;&#96;codigo&#95;cliente&#96; AS &#96;codigo&#95;cliente&#96;&#44;&#96;curso&#95;ecommerce&#96;&#46;&#96;cc&#96;&#46;&#96;nome&#96; AS &#96;nome&#96;&#44;&#96;curso&#95;ecommerce&#96;&#46;&#96;cc&#96;&#46;&#96;codigo&#95;tipo&#95;cliente&#96; AS &#96;codigo&#95;tipo&#95;cliente&#96;&#44;&#96;curso&#95;ecommerce&#96;&#46;&#96;cc&#96;&#46;&#96;tipo&#95;cliente&#96; AS &#96;tipo&#95;cliente&#96;&#44;sum&#40;&#96;cpr&#96;&#46;&#96;valor&#95;total&#95;compra&#96;&#41; AS &#96;valor&#95;total&#95;compra&#96; from &#40;&#96;curso&#95;ecommerce&#96;&#46;&#96;tb&#95;compra&#96; &#96;cpr&#96; join &#96;curso&#95;ecommerce&#96;&#46;&#96;vw&#95;cliente&#95;consolidado&#96; &#96;cc&#96; on&#40;&#40;&#96;cpr&#96;&#46;&#96;codigo&#95;cliente&#96; &#61; &#96;curso&#95;ecommerce&#96;&#46;&#96;cc&#96;&#46;&#96;codigo&#95;cliente&#96;&#41;&#41;&#41; group by &#96;curso&#95;ecommerce&#96;&#46;&#96;cc&#96;&#46;&#96;codigo&#95;cliente&#96;&#44;&#96;curso&#95;ecommerce&#96;&#46;&#96;cc&#96;&#46;&#96;nome&#96;&#44;&#96;curso&#95;ecommerce&#96;&#46;&#96;cc&#96;&#46;&#96;codigo&#95;tipo&#95;cliente&#96;&#44;&#96;curso&#95;ecommerce&#96;&#46;&#96;cc&#96;&#46;&#96;tipo&#95;cliente&#96; order by &#96;valor&#95;total&#95;compra&#96; desc</pre></td></tr>
+<tr><th style='width:5%'>Idx</th><th style='width:20%'>Column Name</th><th style='width:23%'>Data Type</th><th style='width:52%'>Description</th></tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td><a name='curso_ecommerce.vw_vendas_cliente.codigo_cliente'>codigo&#95;cliente</a></td>
+		<td class='dataType'> INT UNSIGNED  </td>
+		<td> <br>Tags:  </td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td><a name='curso_ecommerce.vw_vendas_cliente.nome'>nome</a></td>
+		<td class='dataType'> VARCHAR&#40;120&#41;  </td>
+		<td> <br>Tags:  </td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td><a name='curso_ecommerce.vw_vendas_cliente.codigo_tipo_cliente'>codigo&#95;tipo&#95;cliente</a></td>
+		<td class='dataType'> INT  </td>
+		<td> <br>Tags:  </td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td><a name='curso_ecommerce.vw_vendas_cliente.tipo_cliente'>tipo&#95;cliente</a></td>
+		<td class='dataType'> VARCHAR&#40;19&#41;  </td>
+		<td> <br>Tags:  </td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td><a name='curso_ecommerce.vw_vendas_cliente.valor_total_compra'>valor&#95;total&#95;compra</a></td>
+		<td class='dataType'> DECIMAL&#40;33&#44;2&#41;  </td>
 		<td> <br>Tags:  </td>
 	</tr>
 </tbody>
