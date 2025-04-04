@@ -1,4 +1,4 @@
-# Exemplos de consultas que podem ser realizadas na base de dados
+# Exemplos de consultas que podem ser realizadas na base de dados - e-commerce
 
 
 ### Verificar consistência de valores entre as tabelas compra e pedido  
