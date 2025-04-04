@@ -1,0 +1,201 @@
+codigo_produto,descricao,data_cadastro,codigo_departamento
+1,Smartphone Galaxy A54,2023-01-05,3
+2,Notebook Dell Inspiron 15,2023-01-07,2
+3,Smart TV 55" 4K Samsung,2023-01-08,1
+4,Mouse Bluetooth Logitech,2023-01-10,2
+5,Geladeira Frost Free Brastemp,2023-01-12,4
+6,Fone de Ouvido JBL Wireless,2023-01-15,1
+7,Tênis Nike Running,2023-01-18,7
+8,Console PlayStation 5,2023-01-20,1
+9,Micro-ondas 30L Electrolux,2023-01-22,4
+10,Livro Dom Casmurro,2023-01-25,9
+11,Sofá 3 Lugares Cinza,2023-01-27,5
+12,Cafeteira Elétrica Philco,2023-01-30,4
+13,Tablet Samsung Galaxy Tab,2023-02-02,3
+14,Mochila Nike,2023-02-05,7
+15,Jogo de Panelas Tramontina,2023-02-07,4
+16,Conjunto Mesa e Cadeiras,2023-02-10,5
+17,Monitor 24" LG,2023-02-12,2
+18,Bola Oficial Futebol,2023-02-15,7
+19,Secador de Cabelo Taiff,2023-02-18,4
+20,Boneca Barbie,2023-02-20,8
+21,Kindle Paperwhite,2023-02-22,1
+22,Camisa Polo,2023-02-25,10
+23,Ventilador de Mesa,2023-02-28,4
+24,Quebra-cabeça 1000 peças,2023-03-03,8
+25,Cadeira de Escritório,2023-03-05,5
+26,Caixa de Som Bluetooth JBL,2023-03-08,1
+27,Raquete de Tênis,2023-03-10,7
+28,Lâmpada Inteligente,2023-03-12,6
+29,Purificador de Água,2023-03-15,4
+30,Livro O Pequeno Príncipe,2023-03-18,9
+31,Teclado Mecânico,2023-03-20,2
+32,Fritadeira Air Fryer,2023-03-22,4
+33,Câmera Digital Canon,2023-03-25,1
+34,Vestido Estampado,2023-03-28,10
+35,Fone de Ouvido Bluetooth,2023-03-30,1
+36,Colchão Casal Ortopédico,2023-04-02,5
+37,Relógio de Parede,2023-04-05,6
+38,Smartphone Motorola G22,2023-04-08,3
+39,Bicicleta Aro 29,2023-04-10,7
+40,Bandeja Decorativa,2023-04-12,6
+41,Carregador Portátil,2023-04-15,3
+42,Patins Inline,2023-04-18,7
+43,Guarda-roupa 6 Portas,2023-04-20,5
+44,Livro Harry Potter,2023-04-22,9
+45,Liquidificador Philips,2023-04-25,4
+46,Caixa de Ferramentas,2023-04-28,5
+47,Jogo de Toalhas,2023-04-30,6
+48,Webcam HD,2023-05-03,2
+49,Mala de Viagem Grande,2023-05-05,10
+50,Aspirador de Pó Robô,2023-05-08,4
+51,Kit Teclado e Mouse Wireless,2023-05-10,2
+52,Jogo de Tabuleiro Banco Imobiliário,2023-05-12,8
+53,Jogo de Copos 6 Peças,2023-05-15,6
+54,Headset Gamer,2023-05-18,2
+55,Smart Watch Samsung,2023-05-20,3
+56,Churrasqueira Elétrica,2023-05-22,4
+57,Almofada Decorativa,2023-05-25,6
+58,Batedeira Planetária,2023-05-28,4
+59,Calça Jeans Masculina,2023-05-30,10
+60,HD Externo 1TB,2023-06-02,2
+61,Cadeira de Praia,2023-06-05,7
+62,Porta-retratos,2023-06-08,6
+63,Impressora Multifuncional,2023-06-10,2
+64,Patinete Infantil,2023-06-12,8
+65,Jaqueta Corta Vento,2023-06-15,10
+66,Aquecedor Elétrico,2023-06-18,4
+67,Cooktop 4 Bocas,2023-06-20,4
+68,SSD 480GB,2023-06-22,2
+69,Cobertor Casal,2023-06-25,6
+70,Varal de Chão,2023-06-28,6
+71,Filtro de Linha,2023-06-30,1
+72,Mochila Escolar,2023-07-03,9
+73,Par de Halteres 5kg,2023-07-05,7
+74,Sanduicheira Grill,2023-07-08,4
+75,Colcha de Cama Casal,2023-07-10,6
+76,Cartão de Memória 64GB,2023-07-12,3
+77,Bola de Basquete,2023-07-15,7
+78,Estante para Livros,2023-07-18,5
+79,Carregador de Celular,2023-07-20,3
+80,Pula Corda,2023-07-22,7
+81,Ferro de Passar Roupa,2023-07-25,4
+82,Sapateira,2023-07-28,5
+83,Pen Drive 32GB,2023-07-30,2
+84,Brinquedo Educativo Montessori,2023-08-02,8
+85,Protetor Solar FPS 50,2023-08-05,10
+86,Processador de Alimentos,2023-08-08,4
+87,Lençol Casal,2023-08-10,6
+88,Chaleira Elétrica,2023-08-12,4
+89,Mouse Pad Gamer,2023-08-15,2
+90,Chapéu de Praia,2023-08-18,10
+91,Cama Box Queen,2023-08-20,5
+92,Aparelho de Barbear,2023-08-22,10
+93,Mesa para Notebook,2023-08-25,5
+94,Carrinho de Controle Remoto,2023-08-28,8
+95,Prato Decorativo,2023-08-30,6
+96,Torneira Elétrica,2023-09-02,4
+97,Blusa Feminina,2023-09-05,10
+98,Óculos de Sol,2023-09-08,10
+99,Escova de Dentes Elétrica,2023-09-10,4
+100,Suporte para TV,2023-09-12,5
+101,Globo Terrestre,2023-09-15,9
+102,Lanterna Recarregável,2023-09-18,1
+103,Controle para Smart TV,2023-09-20,1
+104,Umidificador de Ar,2023-09-22,4
+105,Aparador de Grama,2023-09-25,5
+106,Meia Masculina,2023-09-28,10
+107,Conjunto de Ferramentas,2023-09-30,5
+108,Capa para Notebook,2023-10-03,2
+109,Balança de Cozinha Digital,2023-10-05,4
+110,Tênis Corrida Feminino,2023-10-08,7
+111,Organizador de Gavetas,2023-10-10,6
+112,Power Bank 10000mAh,2023-10-12,3
+113,Tapete para Sala,2023-10-15,6
+114,Faca de Cozinha Profissional,2023-10-18,4
+115,Mini Caixa de Som,2023-10-20,1
+116,Bermuda Masculina,2023-10-22,10
+117,Espremedor de Frutas,2023-10-25,4
+118,Luminária de Mesa,2023-10-28,6
+119,Relógio Despertador,2023-10-30,1
+120,Barraca de Camping,2023-11-02,7
+121,Travesseiro Ortopédico,2023-11-05,6
+122,Jogo de Video Game,2023-11-08,8
+123,Pendrive 64GB,2023-11-10,2
+124,Pipoqueira Elétrica,2023-11-12,4
+125,Fita LED,2023-11-15,6
+126,Bolsa Feminina,2023-11-18,10
+127,Escorredor de Louças,2023-11-20,4
+128,Amplificador Wi-Fi,2023-11-22,2
+129,Cooler para Notebook,2023-11-25,2
+130,Lixeira Inox,2023-11-28,6
+131,Cabo HDMI 2m,2023-11-30,1
+132,Chuveiro Elétrico,2023-12-03,4
+133,Jogo de Cama Queen,2023-12-05,6
+134,Cadeira de Alimentação Infantil,2023-12-08,8
+135,Mini Drone,2023-12-10,1
+136,Apoio para Pés,2023-12-12,5
+137,Balança Corporal Digital,2023-12-15,4
+138,Roteador Wi-Fi,2023-12-18,2
+139,Capa para Celular,2023-12-20,3
+140,Jogo de Facas Tramontina,2023-12-22,4
+141,Suporte para Notebook,2023-12-25,2
+142,Saco de Dormir,2023-12-28,7
+143,Shorts Esportivo,2023-12-30,7
+144,Jogo de Panelinhas Infantil,2024-01-02,8
+145,Massageador Elétrico,2024-01-05,4
+146,Jogo de Xícaras,2024-01-08,6
+147,Chapinha para Cabelo,2024-01-10,4
+148,Kit de Maquiagem,2024-01-12,10
+149,Caixa Organizadora,2024-01-15,6
+150,Copo Térmico,2024-01-18,6
+151,Trena Digital,2024-01-20,5
+152,Cadeirinha para Carro,2024-01-22,8
+153,Roupa de Cama Infantil,2024-01-25,6
+154,Quadro Decorativo,2024-01-28,6
+155,Mini Teclado Wireless,2024-01-30,2
+156,Cortador de Grama,2024-02-02,5
+157,Mangueira de Jardim,2024-02-05,5
+158,Kit de Limpeza para Notebook,2024-02-08,2
+159,Perfume Feminino,2024-02-10,10
+160,Micro System,2024-02-12,1
+161,Calculadora Científica,2024-02-15,9
+162,Apoio de Livro,2024-02-18,9
+163,Saboneteira,2024-02-20,6
+164,Cabo USB-C,2024-02-22,3
+165,Espelho de Parede,2024-02-25,6
+166,Mala de Mão,2024-02-28,10
+167,Dicionário Inglês-Português,2024-03-02,9
+168,Moedor de Café,2024-03-05,4
+169,Luvas de Boxe,2024-03-08,7
+170,Vaso Decorativo,2024-03-10,6
+171,Adaptador de Tomada Universal,2024-03-12,1
+172,Cinto Masculino,2024-03-15,10
+173,Maquina de Lavar 12kg,2024-03-18,4
+174,Bateria Portátil,2024-03-20,3
+175,Colete Salva-vidas,2024-03-22,7
+176,Encosto Lombar,2024-03-25,5
+177,Extintor de Incêndio,2024-03-28,5
+178,Cubo Mágico,2024-03-30,8
+179,Piscina Inflável,2024-04-02,7
+180,HUB USB,2024-04-05,2
+181,Bandeja para Café da Manhã,2024-04-08,6
+182,Tabuleiro de Xadrez,2024-04-10,8
+183,Projetor Multimídia,2024-04-12,1
+184,Aparelho de Som Automotivo,2024-04-15,1
+185,Telescópio Iniciante,2024-04-18,9
+186,Caneca Térmica,2024-04-20,6
+187,Adaptador Bluetooth,2024-04-22,1
+188,Termômetro Digital,2024-04-25,4
+189,Mochila a Prova D'água,2024-04-28,7
+190,Caixinha de Som à Prova D'água,2024-04-30,1
+191,Película de Vidro para Celular,2024-05-03,3
+192,Máquina de Costura,2024-05-05,4
+193,Agenda 2024,2024-05-08,9
+194,Relógio Masculino,2024-05-10,10
+195,Sombrinha,2024-05-12,10
+196,Kit Jardinagem,2024-05-15,5
+197,Pedra para Afiar Facas,2024-05-18,4
+198,Lupa de Leitura,2024-05-20,9
+199,Kit de Pintura Artística,2024-05-22,9
+200,Bastão de Selfie,2024-05-25,3

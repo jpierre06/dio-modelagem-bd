@@ -6,21 +6,23 @@
 
 ## E-commerce
 
-> Para informações sobre a modelagem da atividade de e-commerce click no link abaixo
-
+> Para informações sobre a modelagem da atividade de e-commerce, click aqui ->
 [e-commerce](e-commerce/README.md)
 
-> Para acessar diretamente o modelo conceitual click aqui ->
+> Para acessar diretamente o modelo conceitual, click aqui ->
 [Modelo Conceitual](e-commerce/Modelo_conceitual.md)
 
-> Para acessar diretamente o modelo lógico click aqui ->
+> Para acessar diretamente o modelo lógico, click aqui ->
 [Modelo Lógico](e-commerce/Modelo_logico.md)
 
-
-> Para acessar diretamente o modelo físico click aqui ->
+> Para acessar diretamente o modelo físico, click aqui ->
 [Modelo Físico](e-commerce/Modelo_fisico.md)
 
+> Para informações sobre carga de dados de teste, click aqui ->
+[Carga de Dados para Teste](e-commerce/Base_dados.md)
 
+> Para acessar documentação sobre consultas ao banco de dados, click aqui ->
+[Exemplos consultas](e-commerce/Consultas_SQL.md)
 
 
 <br>

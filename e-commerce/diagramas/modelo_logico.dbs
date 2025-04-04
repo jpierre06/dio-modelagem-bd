@@ -15,6 +15,9 @@
 			<index name="unq_tb_cliente" unique="UNIQUE_KEY" >
 				<column name="codigo_endereco" />
 			</index>
+			<fk name="fk_tb_cliente_tb_endereco" to_schema="curso_ecommerce" to_table="tb_endereco" >
+				<fk_column name="codigo_endereco" pk="codigo_endereco" />
+			</fk>
 			<options><![CDATA[ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci]]></options>
 		</table>
 		<table name="tb_cliente_pessoa_fisica" spec="" >
@@ -60,11 +63,18 @@
 			<column name="codigo_compra" type="INT" jt="4" mandatory="y" unsigned="y" >
 				<identity><![CDATA[AUTO_INCREMENT]]></identity>
 			</column>
-			<column name="valor_total_compra" type="DECIMAL" length="9" decimal="2" jt="3" mandatory="y" />
+			<column name="valor_total_compra" type="DECIMAL" length="11" decimal="2" jt="3" mandatory="y" />
 			<column name="data_pagamento_compra" type="DATETIME" jt="93" mandatory="y" />
+			<column name="codigo_cliente" type="INT" jt="4" mandatory="y" unsigned="y" />
 			<index name="pk_tb_compra" unique="PRIMARY_KEY" >
 				<column name="codigo_compra" />
 			</index>
+			<index name="fk_tb_compra_tb_cliente" unique="NORMAL" >
+				<column name="codigo_cliente" />
+			</index>
+			<fk name="fk_tb_compra_tb_cliente" to_schema="curso_ecommerce" to_table="tb_cliente" >
+				<fk_column name="codigo_cliente" pk="codigo_cliente" />
+			</fk>
 			<options><![CDATA[ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci]]></options>
 		</table>
 		<table name="tb_departamento" spec="" >
@@ -82,27 +92,23 @@
 			<column name="codigo_vendedor" type="INT" jt="4" mandatory="y" unsigned="y" />
 			<column name="codigo_produto" type="INT" jt="4" mandatory="y" unsigned="y" />
 			<column name="quantidade_produto" type="INT" jt="4" mandatory="y" unsigned="y" />
-			<column name="preco_venda" type="DECIMAL" length="6" decimal="2" jt="3" mandatory="y" />
-			<column name="valor_desconto" type="DECIMAL" length="6" decimal="2" jt="3" mandatory="y" />
+			<column name="preco_venda" type="DECIMAL" length="8" decimal="2" jt="3" mandatory="y" />
+			<column name="valor_desconto" type="DECIMAL" length="8" decimal="2" jt="3" mandatory="y" />
 			<index name="pk_tb_detalhamento_pedido" unique="PRIMARY_KEY" >
 				<column name="codigo_pedido" />
 				<column name="codigo_vendedor" />
 				<column name="codigo_produto" />
 			</index>
-			<index name="fk_tb_detalhamento_pedido_tb_produto" unique="NORMAL" >
-				<column name="codigo_produto" />
-			</index>
 			<index name="fk_tb_detalhamento_pedido_tb_vendedor_produto" unique="NORMAL" >
 				<column name="codigo_vendedor" />
+				<column name="codigo_produto" />
 			</index>
 			<fk name="fk_tb_detalhamento_pedido_tb_pedido" to_schema="curso_ecommerce" to_table="tb_pedido" update_action="restrict" options="" >
 				<fk_column name="codigo_pedido" pk="codigo_pedido" />
 			</fk>
-			<fk name="fk_tb_detalhamento_pedido_tb_produto" to_schema="curso_ecommerce" to_table="tb_produto" update_action="restrict" options="" >
-				<fk_column name="codigo_produto" pk="codigo_produto" />
-			</fk>
 			<fk name="fk_tb_detalhamento_pedido_tb_vendedor_produto" to_schema="curso_ecommerce" to_table="tb_vendedor_produto" update_action="restrict" options="" >
 				<fk_column name="codigo_vendedor" pk="codigo_vendedor" />
+				<fk_column name="codigo_produto" pk="codigo_produto" />
 			</fk>
 			<options><![CDATA[ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci]]></options>
 		</table>
@@ -120,15 +126,6 @@
 			<index name="pk_tb_endereco" unique="PRIMARY_KEY" >
 				<column name="codigo_endereco" />
 			</index>
-			<fk name="fk_tb_endereco_tb_cliente" to_schema="curso_ecommerce" to_table="tb_cliente" update_action="restrict" options="" >
-				<fk_column name="codigo_endereco" pk="codigo_endereco" />
-			</fk>
-			<fk name="fk_tb_endereco_tb_fornecedor" to_schema="curso_ecommerce" to_table="tb_fornecedor" update_action="restrict" options="" >
-				<fk_column name="codigo_endereco" pk="codigo_endereco" />
-			</fk>
-			<fk name="fk_tb_endereco_tb_vendedor" to_schema="curso_ecommerce" to_table="tb_vendedor" update_action="restrict" options="" >
-				<fk_column name="codigo_endereco" pk="codigo_endereco" />
-			</fk>
 			<options><![CDATA[ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci]]></options>
 		</table>
 		<table name="tb_fornecedor" spec="" >
@@ -157,12 +154,15 @@
 			<fk name="fk_tb_fornecedor_tb_tipo_pessoa_juridica" to_schema="curso_ecommerce" to_table="tb_tipo_pessoa_juridica" >
 				<fk_column name="codigo_tipo_pj" pk="codigo_tipo_pj" />
 			</fk>
+			<fk name="fk_tb_fornecedor_tb_endereco" to_schema="curso_ecommerce" to_table="tb_endereco" >
+				<fk_column name="codigo_endereco" pk="codigo_endereco" />
+			</fk>
 			<options><![CDATA[ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci]]></options>
 		</table>
 		<table name="tb_fornecedor_produto" spec="" >
 			<column name="codigo_fornecedor" type="INT" jt="4" mandatory="y" unsigned="y" />
 			<column name="codigo_produto" type="INT" jt="4" mandatory="y" unsigned="y" />
-			<column name="preco_custo" type="DECIMAL" length="6" decimal="4" jt="3" mandatory="y" />
+			<column name="preco_custo" type="DECIMAL" length="10" decimal="4" jt="3" mandatory="y" />
 			<index name="pk_tb_fornecedor_produto" unique="PRIMARY_KEY" >
 				<column name="codigo_fornecedor" />
 				<column name="codigo_produto" />
@@ -185,25 +185,18 @@
 			<column name="status_pedido" type="INT" jt="4" mandatory="y" />
 			<column name="data_pedido" type="DATETIME" jt="93" mandatory="y" />
 			<column name="data_devolucao" type="DATETIME" jt="93" mandatory="y" />
-			<column name="valor_total_produtos" type="DECIMAL" length="6" decimal="4" jt="3" mandatory="y" />
-			<column name="valor_frete" type="DECIMAL" length="6" decimal="2" jt="3" mandatory="y" />
-			<column name="desconto_pedido" type="DECIMAL" length="6" decimal="2" jt="3" mandatory="y" />
-			<column name="valor_total_pedido" type="DECIMAL" length="6" decimal="2" jt="3" mandatory="y" />
-			<column name="codigo_cliente" type="INT" jt="4" mandatory="y" unsigned="y" />
+			<column name="valor_total_produtos" type="DECIMAL" length="10" decimal="4" jt="3" mandatory="y" />
+			<column name="valor_frete" type="DECIMAL" length="8" decimal="2" jt="3" mandatory="y" />
+			<column name="desconto_pedido" type="DECIMAL" length="8" decimal="2" jt="3" mandatory="y" />
+			<column name="valor_total_pedido" type="DECIMAL" length="8" decimal="2" jt="3" mandatory="y" />
 			<column name="codigo_compra" type="INT" jt="4" mandatory="y" unsigned="y" />
 			<index name="pk_tb_pedido" unique="PRIMARY_KEY" >
 				<column name="codigo_pedido" />
 			</index>
-			<index name="fk_tb_pedido_tb_cliente" unique="NORMAL" >
-				<column name="codigo_cliente" />
-			</index>
 			<index name="fk_tb_pedido_tb_compra" unique="NORMAL" >
 				<column name="codigo_compra" />
 			</index>
-			<fk name="fk_tb_pedido_tb_cliente" to_schema="curso_ecommerce" to_table="tb_cliente" update_action="restrict" options="" >
-				<fk_column name="codigo_cliente" pk="codigo_cliente" />
-			</fk>
-			<fk name="fk_tb_pedido_tb_compra" to_schema="curso_ecommerce" to_table="tb_compra" update_action="restrict" options="" >
+			<fk name="fk_tb_pedido_tb_compra" to_schema="curso_ecommerce" to_table="tb_compra" update_action="restrict" >
 				<fk_column name="codigo_compra" pk="codigo_compra" />
 			</fk>
 			<options><![CDATA[ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci]]></options>
@@ -273,23 +266,27 @@
 			<fk name="fk_tb_vendedor_tb_tipo_pessoa_juridica" to_schema="curso_ecommerce" to_table="tb_tipo_pessoa_juridica" >
 				<fk_column name="codigo_tipo_pj" pk="codigo_tipo_pj" />
 			</fk>
+			<fk name="fk_tb_vendedor_tb_endereco" to_schema="curso_ecommerce" to_table="tb_endereco" >
+				<fk_column name="codigo_endereco" pk="codigo_endereco" />
+			</fk>
 			<options><![CDATA[ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci]]></options>
 		</table>
 		<table name="tb_vendedor_produto" spec="" >
 			<column name="codigo_vendedor" type="INT" jt="4" mandatory="y" unsigned="y" />
 			<column name="codigo_produto" type="INT" jt="4" mandatory="y" unsigned="y" />
-			<column name="preco_venda" type="DECIMAL" length="6" decimal="2" jt="3" mandatory="y" />
-			<column name="perc_desconto" type="DECIMAL" length="4" decimal="4" jt="3" mandatory="y" />
-			<column name="preco_custo" type="DECIMAL" length="6" decimal="4" jt="3" mandatory="y" />
+			<column name="preco_venda" type="DECIMAL" length="8" decimal="2" jt="3" mandatory="y" />
+			<column name="perc_desconto" type="DECIMAL" length="8" decimal="4" jt="3" mandatory="y" />
+			<column name="preco_custo" type="DECIMAL" length="10" decimal="4" jt="3" mandatory="y" />
 			<column name="quantidade" type="INT" jt="4" mandatory="y" unsigned="y" />
 			<index name="pk_tb_vendedor_produto" unique="PRIMARY_KEY" >
 				<column name="codigo_vendedor" />
 				<column name="codigo_produto" />
 			</index>
-			<index name="unq_tb_vendedor_produto_codigo_vendedor" unique="UNIQUE_KEY" >
-				<column name="codigo_vendedor" />
-			</index>
 			<index name="fk_tb_vendedor_produto_tb_produto" unique="NORMAL" >
+				<column name="codigo_produto" />
+			</index>
+			<index name="unq_tb_vendedor_produto_codigo_vendedor" unique="PRIMARY_KEY" >
+				<column name="codigo_vendedor" />
 				<column name="codigo_produto" />
 			</index>
 			<fk name="fk_tb_vendedor_produto_tb_produto" to_schema="curso_ecommerce" to_table="tb_produto" options="" >
@@ -300,27 +297,373 @@
 			</fk>
 			<options><![CDATA[ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci]]></options>
 		</table>
+		<view name="vw_cliente_consolidado" >
+			<comment><![CDATA[VIEW]]></comment>
+			<view_script><![CDATA[CREATE VIEW ${nameWithSchemaName} AS select `cli`.`codigo_cliente` AS `codigo_cliente`,ifnull(`pf`.`nome`,`tpj`.`nome_fantasia`) AS `nome`,(case when (`pf`.`nome` is not null) then 1 when (`tpj`.`nome_fantasia` is not null) then 2 else 0 end) AS `codigo_tipo_cliente`,(case when (`pf`.`nome` is not null) then 'Pessoa Física' when (`tpj`.`nome_fantasia` is not null) then 'Pessoa Jurídica' else 'Tipo não Identicado' end) AS `tipo_cliente`,`endr`.`codigo_endereco` AS `codigo_endereco`,`endr`.`logradouro` AS `logradouro`,`endr`.`numero` AS `numero`,`endr`.`complemento` AS `complemento`,`endr`.`bairro` AS `bairro`,`endr`.`cidade` AS `cidade`,`endr`.`estado` AS `estado`,`endr`.`cep` AS `cep` from ((((`curso_ecommerce`.`tb_cliente` `cli` left join `curso_ecommerce`.`tb_cliente_pessoa_fisica` `pf` on((`cli`.`codigo_cliente` = `pf`.`codigo_cliente`))) left join `curso_ecommerce`.`tb_cliente_pessoa_juridica` `pj` on((`cli`.`codigo_cliente` = `pj`.`codigo_cliente`))) left join `curso_ecommerce`.`tb_pessoa_juridica` `tpj` on((`pj`.`codigo_pessoa_juridica` = `tpj`.`codigo_pessoa_juridica`))) join `curso_ecommerce`.`tb_endereco` `endr` on((`cli`.`codigo_endereco` = `endr`.`codigo_endereco`)))]]></view_script>
+			<column name="codigo_cliente" type="INT" />
+			<column name="nome" type="VARCHAR" />
+			<column name="codigo_tipo_cliente" type="INT" />
+			<column name="tipo_cliente" type="VARCHAR" />
+			<column name="codigo_endereco" type="INT" />
+			<column name="logradouro" type="VARCHAR" />
+			<column name="numero" type="VARCHAR" />
+			<column name="complemento" type="VARCHAR" />
+			<column name="bairro" type="VARCHAR" />
+			<column name="cidade" type="VARCHAR" />
+			<column name="estado" type="VARCHAR" />
+			<column name="cep" type="VARCHAR" />
+		</view>
+		<view name="vw_total_vendas_produto" >
+			<comment><![CDATA[VIEW]]></comment>
+			<view_script><![CDATA[CREATE VIEW ${nameWithSchemaName} AS select `curso_ecommerce`.`vp`.`codigo_produto` AS `codigo_produto`,`curso_ecommerce`.`vp`.`descricao_produto` AS `descricao_produto`,sum(`curso_ecommerce`.`vp`.`total_venda_sem_desconto`) AS `total_venda_sem_desconto`,sum(`curso_ecommerce`.`vp`.`total_desconto`) AS `total_desconto`,sum(`curso_ecommerce`.`vp`.`total_venda_com_desconto`) AS `total_venda_com_desconto` from `curso_ecommerce`.`vw_total_vendas_vendedor_produto` `vp` group by `curso_ecommerce`.`vp`.`codigo_produto`,`curso_ecommerce`.`vp`.`descricao_produto`]]></view_script>
+			<column name="codigo_produto" type="INT" />
+			<column name="descricao_produto" type="VARCHAR" />
+			<column name="total_venda_sem_desconto" type="DECIMAL" />
+			<column name="total_desconto" type="DECIMAL" />
+			<column name="total_venda_com_desconto" type="DECIMAL" />
+		</view>
+		<view name="vw_total_vendas_vendedor_produto" >
+			<comment><![CDATA[VIEW]]></comment>
+			<view_script><![CDATA[CREATE VIEW ${nameWithSchemaName} AS select `dped`.`codigo_vendedor` AS `codigo_vendedor`,`vpj`.`nome_fantasia` AS `vendedor`,`dped`.`codigo_produto` AS `codigo_produto`,`prod`.`descricao` AS `descricao_produto`,sum((`dped`.`preco_venda` * `dped`.`quantidade_produto`)) AS `total_venda_sem_desconto`,sum(`dped`.`valor_desconto`) AS `total_desconto`,sum(((`dped`.`preco_venda` * `dped`.`quantidade_produto`) - `dped`.`valor_desconto`)) AS `total_venda_com_desconto` from (((`curso_ecommerce`.`tb_detalhamento_pedido` `dped` left join `curso_ecommerce`.`tb_vendedor` `vend` on((`dped`.`codigo_vendedor` = `vend`.`codigo_vendedor`))) left join `curso_ecommerce`.`tb_pessoa_juridica` `vpj` on((`vend`.`codigo_pessoa_juridica` = `vpj`.`codigo_pessoa_juridica`))) left join `curso_ecommerce`.`tb_produto` `prod` on((`dped`.`codigo_produto` = `prod`.`codigo_produto`))) group by `dped`.`codigo_vendedor`,`vpj`.`nome_fantasia`,`dped`.`codigo_produto`,`prod`.`descricao` order by `dped`.`codigo_vendedor`,`dped`.`codigo_produto`]]></view_script>
+			<column name="codigo_vendedor" type="INT" />
+			<column name="vendedor" type="VARCHAR" />
+			<column name="codigo_produto" type="INT" />
+			<column name="descricao_produto" type="VARCHAR" />
+			<column name="total_venda_sem_desconto" type="DECIMAL" />
+			<column name="total_desconto" type="DECIMAL" />
+			<column name="total_venda_com_desconto" type="DECIMAL" />
+		</view>
+		<trigger name="trg_after_insert_detalhamento_pedido" table="tb_detalhamento_pedido" id="Trigger-8ed" isSystem="false" >
+			<string><![CDATA[CREATE TRIGGER ${nameWithSchemaName} AFTER INSERT ON tb_detalhamento_pedido FOR EACH ROW BEGIN
+    DECLARE v_total_produtos DECIMAL(10,2);
+    
+    -- Calcula o valor total dos produtos para o pedido específico
+    SELECT SUM((quantidade_produto * preco_venda) - valor_desconto) 
+    INTO v_total_produtos
+    FROM tb_detalhamento_pedido
+    WHERE codigo_pedido = NEW.codigo_pedido;
+    -- Atualiza a coluna valor_total_produtos na tabela tb_pedido
+    UPDATE tb_pedido
+    SET valor_total_produtos = v_total_produtos
+    WHERE codigo_pedido = NEW.codigo_pedido;
+    -- Atualiza o valor_total_pedido com base no novo valor_total_produtos e valor_frete
+    UPDATE tb_pedido
+    SET valor_total_pedido = (valor_total_produtos - valor_frete - desconto_pedido)
+    WHERE codigo_pedido = NEW.codigo_pedido;
+    
+END]]></string>
+		</trigger>
+		<trigger name="trg_after_insert_pedido" table="tb_pedido" id="Trigger-338" isSystem="false" >
+			<string><![CDATA[CREATE TRIGGER ${nameWithSchemaName} AFTER INSERT ON tb_pedido FOR EACH ROW BEGIN
+    DECLARE v_total_compra DECIMAL(10,2);
+    
+    -- Calcula o valor total dos pedidos para a compra específica
+    SELECT SUM(valor_total_pedido) 
+    INTO v_total_compra
+    FROM tb_pedido
+    WHERE codigo_compra = NEW.codigo_compra;
+    -- Atualiza a coluna valor_total_compra na tabela tb_compra
+    UPDATE tb_compra
+    SET valor_total_compra = v_total_compra
+    WHERE codigo_compra = NEW.codigo_compra;
+END]]></string>
+		</trigger>
+		<trigger name="trg_after_update_detalhamento_pedido" table="tb_detalhamento_pedido" id="Trigger-263" isSystem="false" >
+			<string><![CDATA[CREATE TRIGGER ${nameWithSchemaName} AFTER UPDATE ON tb_detalhamento_pedido FOR EACH ROW BEGIN
+    DECLARE v_total_produtos DECIMAL(10,2);
+    
+    -- Calcula o valor total dos produtos para o pedido específico
+    SELECT SUM((quantidade_produto * preco_venda) - valor_desconto) 
+    INTO v_total_produtos
+    FROM tb_detalhamento_pedido
+    WHERE codigo_pedido = NEW.codigo_pedido;
+    -- Atualiza a coluna valor_total_produtos na tabela tb_pedido
+    UPDATE tb_pedido
+    SET valor_total_produtos = v_total_produtos
+    WHERE codigo_pedido = NEW.codigo_pedido;
+    -- Atualiza o valor_total_pedido com base no novo valor_total_produtos e valor_frete
+    UPDATE tb_pedido
+    SET valor_total_pedido = (valor_total_produtos - valor_frete - desconto_pedido)
+    WHERE codigo_pedido = NEW.codigo_pedido;
+    
+END]]></string>
+		</trigger>
+		<trigger name="trg_after_update_pedido" table="tb_pedido" id="Trigger-117e" isSystem="false" >
+			<string><![CDATA[CREATE TRIGGER ${nameWithSchemaName} AFTER UPDATE ON tb_pedido FOR EACH ROW BEGIN
+    DECLARE v_total_compra DECIMAL(10,2);
+    
+    -- Calcula o valor total dos pedidos para a compra específica
+    SELECT SUM(valor_total_pedido) 
+    INTO v_total_compra
+    FROM tb_pedido
+    WHERE codigo_compra = NEW.codigo_compra;
+    -- Atualiza a coluna valor_total_compra na tabela tb_compra
+    UPDATE tb_compra
+    SET valor_total_compra = v_total_compra
+    WHERE codigo_compra = NEW.codigo_compra;
+END]]></string>
+		</trigger>
 	</schema>
 	<layout name="Default Diagram" id="Diagram-1d63" show_relation="columns" >
 		<comment><![CDATA[Modelo Lógico Estendido]]></comment>
-		<entity schema="curso_ecommerce" name="tb_cliente" color="3986C1" x="336" y="608" />
-		<entity schema="curso_ecommerce" name="tb_cliente_pessoa_fisica" color="3986C1" x="176" y="832" />
-		<entity schema="curso_ecommerce" name="tb_cliente_pessoa_juridica" color="3986C1" x="480" y="832" />
-		<entity schema="curso_ecommerce" name="tb_compra" color="3986C1" x="1008" y="864" />
-		<entity schema="curso_ecommerce" name="tb_departamento" color="3986C1" x="560" y="160" />
-		<entity schema="curso_ecommerce" name="tb_detalhamento_pedido" color="3986C1" x="1024" y="624" />
-		<entity schema="curso_ecommerce" name="tb_endereco" color="3986C1" x="80" y="544" />
-		<entity schema="curso_ecommerce" name="tb_fornecedor" color="3986C1" x="1136" y="320" />
-		<entity schema="curso_ecommerce" name="tb_fornecedor_produto" color="3986C1" x="896" y="304" />
-		<entity schema="curso_ecommerce" name="tb_pedido" color="3986C1" x="768" y="608" />
-		<entity schema="curso_ecommerce" name="tb_pessoa_juridica" color="3986C1" x="1296" y="128" />
-		<entity schema="curso_ecommerce" name="tb_produto" color="3986C1" x="592" y="304" />
-		<entity schema="curso_ecommerce" name="tb_tipo_pessoa_juridica" color="3986C1" x="1024" y="128" />
-		<entity schema="curso_ecommerce" name="tb_vendedor" color="3986C1" x="48" y="304" />
-		<entity schema="curso_ecommerce" name="tb_vendedor_produto" color="3986C1" x="336" y="304" />
-		<callout x="464" y="48" pointer="Round" >
+		<entity schema="curso_ecommerce" name="tb_cliente" color="3986C1" x="342" y="646" />
+		<entity schema="curso_ecommerce" name="tb_cliente_pessoa_fisica" color="3986C1" x="171" y="874" />
+		<entity schema="curso_ecommerce" name="tb_cliente_pessoa_juridica" color="3986C1" x="475" y="874" />
+		<entity schema="curso_ecommerce" name="tb_compra" color="3986C1" x="1007" y="893" />
+		<entity schema="curso_ecommerce" name="tb_departamento" color="3986C1" x="551" y="190" />
+		<entity schema="curso_ecommerce" name="tb_detalhamento_pedido" color="3986C1" x="1026" y="665" />
+		<entity schema="curso_ecommerce" name="tb_endereco" color="3986C1" x="76" y="589" />
+		<entity schema="curso_ecommerce" name="tb_fornecedor" color="3986C1" x="1140" y="361" />
+		<entity schema="curso_ecommerce" name="tb_fornecedor_produto" color="3986C1" x="893" y="342" />
+		<entity schema="curso_ecommerce" name="tb_pedido" color="3986C1" x="760" y="646" />
+		<entity schema="curso_ecommerce" name="tb_pessoa_juridica" color="3986C1" x="1292" y="171" />
+		<entity schema="curso_ecommerce" name="tb_produto" color="3986C1" x="589" y="342" />
+		<entity schema="curso_ecommerce" name="tb_tipo_pessoa_juridica" color="3986C1" x="1026" y="171" />
+		<entity schema="curso_ecommerce" name="tb_vendedor" color="3986C1" x="57" y="342" />
+		<entity schema="curso_ecommerce" name="tb_vendedor_produto" color="3986C1" x="342" y="342" />
+		<entity schema="curso_ecommerce" name="vw_cliente_consolidado" color="3986C1" x="342" y="1368" />
+		<entity schema="curso_ecommerce" name="vw_total_vendas_produto" color="3986C1" x="665" y="1159" />
+		<entity schema="curso_ecommerce" name="vw_total_vendas_vendedor_produto" color="3986C1" x="342" y="1159" />
+		<callout x="456" y="95" pointer="Round" >
 			<comment><![CDATA[Diagrama de Modelo Relacional
 Base de dados do e-commerce]]></comment>
 		</callout>
+		<group name="Views" color="C4E0F9" >
+			<entity schema="curso_ecommerce" name="vw_total_vendas_vendedor_produto" />
+			<entity schema="curso_ecommerce" name="vw_total_vendas_produto" />
+			<entity schema="curso_ecommerce" name="vw_cliente_consolidado" />
+		</group>
+		<script name="SQL_Editor" id="Editor-2502" language="SQL" >
+			<string><![CDATA[CREATE SCHEMA curso_ecommerce;
+
+CREATE  TABLE curso_ecommerce.tb_compra ( 
+	codigo_compra        INT UNSIGNED   NOT NULL AUTO_INCREMENT  PRIMARY KEY,
+	valor_total_compra   DECIMAL(11,2)    NOT NULL   ,
+	data_pagamento_compra DATETIME    NOT NULL   
+ ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE  TABLE curso_ecommerce.tb_departamento ( 
+	codigo_departamento  INT UNSIGNED   NOT NULL AUTO_INCREMENT  PRIMARY KEY,
+	descricao_departamento VARCHAR(50)       
+ ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE  TABLE curso_ecommerce.tb_endereco ( 
+	codigo_endereco      INT UNSIGNED   NOT NULL AUTO_INCREMENT  PRIMARY KEY,
+	logradouro           VARCHAR(125)    NOT NULL   ,
+	numero               VARCHAR(10)       ,
+	complemento          VARCHAR(100)       ,
+	bairro               VARCHAR(100)    NOT NULL   ,
+	cidade               VARCHAR(100)    NOT NULL   ,
+	estado               VARCHAR(35)    NOT NULL   ,
+	cep                  VARCHAR(8)    NOT NULL   
+ ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE  TABLE curso_ecommerce.tb_pessoa_juridica ( 
+	codigo_pessoa_juridica INT UNSIGNED   NOT NULL AUTO_INCREMENT  PRIMARY KEY,
+	razao_social         VARCHAR(100)    NOT NULL   ,
+	nome_fantasia        VARCHAR(100)    NOT NULL   ,
+	cnpj                 CHAR(14)    NOT NULL   
+ ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE  TABLE curso_ecommerce.tb_produto ( 
+	codigo_produto       INT UNSIGNED   NOT NULL AUTO_INCREMENT  PRIMARY KEY,
+	descricao            VARCHAR(50)    NOT NULL   ,
+	data_cadastro        DATE    NOT NULL   ,
+	codigo_departamento  INT UNSIGNED   NOT NULL   ,
+	CONSTRAINT fk_tb_produto_tb_departamento FOREIGN KEY ( codigo_departamento ) REFERENCES curso_ecommerce.tb_departamento( codigo_departamento ) ON DELETE NO ACTION ON UPDATE RESTRICT
+ ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE INDEX fk_tb_produto_tb_departamento ON curso_ecommerce.tb_produto ( codigo_departamento );
+
+CREATE  TABLE curso_ecommerce.tb_tipo_pessoa_juridica ( 
+	codigo_tipo_pj       INT UNSIGNED   NOT NULL AUTO_INCREMENT  PRIMARY KEY,
+	descricao_tipo_pj    VARCHAR(30)    NOT NULL   
+ ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE  TABLE curso_ecommerce.tb_vendedor ( 
+	codigo_vendedor      INT UNSIGNED   NOT NULL AUTO_INCREMENT  PRIMARY KEY,
+	codigo_pessoa_juridica INT UNSIGNED   NOT NULL   ,
+	codigo_tipo_pj       INT UNSIGNED   NOT NULL   ,
+	codigo_endereco      INT UNSIGNED   NOT NULL   ,
+	CONSTRAINT unq_tb_vendedor UNIQUE ( codigo_pessoa_juridica ) ,
+	CONSTRAINT unq_tb_vendedor_0 UNIQUE ( codigo_endereco ) ,
+	CONSTRAINT fk_tb_vendedor_tb_pessoa_juridica FOREIGN KEY ( codigo_pessoa_juridica ) REFERENCES curso_ecommerce.tb_pessoa_juridica( codigo_pessoa_juridica ) ON DELETE NO ACTION ON UPDATE RESTRICT,
+	CONSTRAINT fk_tb_vendedor_tb_tipo_pessoa_juridica FOREIGN KEY ( codigo_tipo_pj ) REFERENCES curso_ecommerce.tb_tipo_pessoa_juridica( codigo_tipo_pj ) ON DELETE NO ACTION ON UPDATE NO ACTION,
+	CONSTRAINT fk_tb_vendedor_tb_endereco FOREIGN KEY ( codigo_endereco ) REFERENCES curso_ecommerce.tb_endereco( codigo_endereco ) ON DELETE NO ACTION ON UPDATE NO ACTION
+ ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE INDEX fk_tb_vendedor_tb_tipo_pessoa_juridica ON curso_ecommerce.tb_vendedor ( codigo_tipo_pj );
+
+CREATE  TABLE curso_ecommerce.tb_vendedor_produto ( 
+	codigo_vendedor      INT UNSIGNED   NOT NULL   ,
+	codigo_produto       INT UNSIGNED   NOT NULL   ,
+	preco_venda          DECIMAL(8,2)    NOT NULL   ,
+	perc_desconto        DECIMAL(8,4)    NOT NULL   ,
+	preco_custo          DECIMAL(10,4)    NOT NULL   ,
+	quantidade           INT UNSIGNED   NOT NULL   ,
+	CONSTRAINT pk_tb_vendedor_produto PRIMARY KEY ( codigo_vendedor, codigo_produto ),
+	CONSTRAINT unq_tb_vendedor_produto_codigo_vendedor PRIMARY KEY ( codigo_vendedor, codigo_produto ),
+	CONSTRAINT fk_tb_vendedor_produto_tb_produto FOREIGN KEY ( codigo_produto ) REFERENCES curso_ecommerce.tb_produto( codigo_produto ) ON DELETE NO ACTION ON UPDATE NO ACTION,
+	CONSTRAINT fk_tb_vendedor_produto_tb_vendedor FOREIGN KEY ( codigo_vendedor ) REFERENCES curso_ecommerce.tb_vendedor( codigo_vendedor ) ON DELETE NO ACTION ON UPDATE RESTRICT
+ ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE INDEX fk_tb_vendedor_produto_tb_produto ON curso_ecommerce.tb_vendedor_produto ( codigo_produto );
+
+CREATE  TABLE curso_ecommerce.tb_cliente ( 
+	codigo_cliente       INT UNSIGNED   NOT NULL AUTO_INCREMENT  PRIMARY KEY,
+	email                VARCHAR(100)       ,
+	ddd                  VARCHAR(3)       ,
+	telefone             VARCHAR(9)       ,
+	codigo_endereco      INT UNSIGNED   NOT NULL   ,
+	CONSTRAINT unq_tb_cliente UNIQUE ( codigo_endereco ) ,
+	CONSTRAINT fk_tb_cliente_tb_endereco FOREIGN KEY ( codigo_endereco ) REFERENCES curso_ecommerce.tb_endereco( codigo_endereco ) ON DELETE NO ACTION ON UPDATE NO ACTION
+ ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE  TABLE curso_ecommerce.tb_cliente_pessoa_fisica ( 
+	codigo_cliente       INT UNSIGNED   NOT NULL   PRIMARY KEY,
+	cpf                  CHAR(11)    NOT NULL   ,
+	nome                 VARCHAR(120)    NOT NULL   ,
+	CONSTRAINT unq_tb_cliente_pessoa_fisica UNIQUE ( cpf ) ,
+	CONSTRAINT fk_tb_cliente_pessoa_fisica_tb_cliente FOREIGN KEY ( codigo_cliente ) REFERENCES curso_ecommerce.tb_cliente( codigo_cliente ) ON DELETE NO ACTION ON UPDATE RESTRICT
+ ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE  TABLE curso_ecommerce.tb_cliente_pessoa_juridica ( 
+	codigo_cliente       INT UNSIGNED   NOT NULL   PRIMARY KEY,
+	codigo_pessoa_juridica INT UNSIGNED   NOT NULL   ,
+	codigo_tipo_pj       INT UNSIGNED   NOT NULL   ,
+	CONSTRAINT unq_tb_cliente_pessoa_juridica UNIQUE ( codigo_pessoa_juridica ) ,
+	CONSTRAINT fk_tb_cliente_pessoa_juridica_tb_cliente FOREIGN KEY ( codigo_cliente ) REFERENCES curso_ecommerce.tb_cliente( codigo_cliente ) ON DELETE NO ACTION ON UPDATE NO ACTION,
+	CONSTRAINT fk_tb_cliente_pessoa_juridica_tb_pessoa_juridica FOREIGN KEY ( codigo_pessoa_juridica ) REFERENCES curso_ecommerce.tb_pessoa_juridica( codigo_pessoa_juridica ) ON DELETE NO ACTION ON UPDATE RESTRICT,
+	CONSTRAINT fk_tb_cliente_pessoa_juridica_tb_tipo_pessoa_juridica FOREIGN KEY ( codigo_tipo_pj ) REFERENCES curso_ecommerce.tb_tipo_pessoa_juridica( codigo_tipo_pj ) ON DELETE NO ACTION ON UPDATE NO ACTION
+ ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE INDEX fk_tb_cliente_pessoa_juridica_tb_tipo_pessoa_juridica ON curso_ecommerce.tb_cliente_pessoa_juridica ( codigo_tipo_pj );
+
+CREATE  TABLE curso_ecommerce.tb_fornecedor ( 
+	codigo_fornecedor    INT UNSIGNED   NOT NULL AUTO_INCREMENT  PRIMARY KEY,
+	codigo_pessoa_juridica INT UNSIGNED   NOT NULL   ,
+	codigo_tipo_pj       INT UNSIGNED   NOT NULL   ,
+	codigo_endereco      INT UNSIGNED   NOT NULL   ,
+	prazo_pagamento      INT UNSIGNED   NOT NULL   ,
+	CONSTRAINT unq_tb_fornecedor UNIQUE ( codigo_pessoa_juridica ) ,
+	CONSTRAINT unq_tb_fornecedor_0 UNIQUE ( codigo_endereco ) ,
+	CONSTRAINT fk_tb_fornecedor_tb_pessoa_juridica FOREIGN KEY ( codigo_pessoa_juridica ) REFERENCES curso_ecommerce.tb_pessoa_juridica( codigo_pessoa_juridica ) ON DELETE NO ACTION ON UPDATE NO ACTION,
+	CONSTRAINT fk_tb_fornecedor_tb_tipo_pessoa_juridica FOREIGN KEY ( codigo_tipo_pj ) REFERENCES curso_ecommerce.tb_tipo_pessoa_juridica( codigo_tipo_pj ) ON DELETE NO ACTION ON UPDATE NO ACTION,
+	CONSTRAINT fk_tb_fornecedor_tb_endereco FOREIGN KEY ( codigo_endereco ) REFERENCES curso_ecommerce.tb_endereco( codigo_endereco ) ON DELETE NO ACTION ON UPDATE NO ACTION
+ ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE INDEX fk_tb_fornecedor_tb_tipo_pessoa_juridica ON curso_ecommerce.tb_fornecedor ( codigo_tipo_pj );
+
+CREATE  TABLE curso_ecommerce.tb_fornecedor_produto ( 
+	codigo_fornecedor    INT UNSIGNED   NOT NULL   ,
+	codigo_produto       INT UNSIGNED   NOT NULL   ,
+	preco_custo          DECIMAL(10,4)    NOT NULL   ,
+	CONSTRAINT pk_tb_fornecedor_produto PRIMARY KEY ( codigo_fornecedor, codigo_produto ),
+	CONSTRAINT fk_tb_fornecedor_produto_tb_fornecedor FOREIGN KEY ( codigo_fornecedor ) REFERENCES curso_ecommerce.tb_fornecedor( codigo_fornecedor ) ON DELETE NO ACTION ON UPDATE NO ACTION,
+	CONSTRAINT fk_tb_fornecedor_produto_tb_produto FOREIGN KEY ( codigo_produto ) REFERENCES curso_ecommerce.tb_produto( codigo_produto ) ON DELETE NO ACTION ON UPDATE NO ACTION
+ ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE INDEX fk_tb_fornecedor_produto_tb_produto ON curso_ecommerce.tb_fornecedor_produto ( codigo_produto );
+
+CREATE  TABLE curso_ecommerce.tb_pedido ( 
+	codigo_pedido        INT UNSIGNED   NOT NULL AUTO_INCREMENT  PRIMARY KEY,
+	status_pedido        INT    NOT NULL   ,
+	data_pedido          DATETIME    NOT NULL   ,
+	data_devolucao       DATETIME    NOT NULL   ,
+	valor_total_produtos DECIMAL(10,4)    NOT NULL   ,
+	valor_frete          DECIMAL(8,2)    NOT NULL   ,
+	desconto_pedido      DECIMAL(8,2)    NOT NULL   ,
+	valor_total_pedido   DECIMAL(8,2)    NOT NULL   ,
+	codigo_cliente       INT UNSIGNED   NOT NULL   ,
+	codigo_compra        INT UNSIGNED   NOT NULL   ,
+	CONSTRAINT fk_tb_pedido_tb_cliente FOREIGN KEY ( codigo_cliente ) REFERENCES curso_ecommerce.tb_cliente( codigo_cliente ) ON DELETE NO ACTION ON UPDATE RESTRICT,
+	CONSTRAINT fk_tb_pedido_tb_compra FOREIGN KEY ( codigo_compra ) REFERENCES curso_ecommerce.tb_compra( codigo_compra ) ON DELETE NO ACTION ON UPDATE RESTRICT
+ ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE INDEX fk_tb_pedido_tb_cliente ON curso_ecommerce.tb_pedido ( codigo_cliente );
+
+CREATE INDEX fk_tb_pedido_tb_compra ON curso_ecommerce.tb_pedido ( codigo_compra );
+
+CREATE  TABLE curso_ecommerce.tb_detalhamento_pedido ( 
+	codigo_pedido        INT UNSIGNED   NOT NULL   ,
+	codigo_vendedor      INT UNSIGNED   NOT NULL   ,
+	codigo_produto       INT UNSIGNED   NOT NULL   ,
+	quantidade_produto   INT UNSIGNED   NOT NULL   ,
+	preco_venda          DECIMAL(8,2)    NOT NULL   ,
+	valor_desconto       DECIMAL(8,2)    NOT NULL   ,
+	CONSTRAINT pk_tb_detalhamento_pedido PRIMARY KEY ( codigo_pedido, codigo_vendedor, codigo_produto ),
+	CONSTRAINT fk_tb_detalhamento_pedido_tb_pedido FOREIGN KEY ( codigo_pedido ) REFERENCES curso_ecommerce.tb_pedido( codigo_pedido ) ON DELETE NO ACTION ON UPDATE RESTRICT,
+	CONSTRAINT fk_tb_detalhamento_pedido_tb_vendedor_produto FOREIGN KEY ( codigo_vendedor, codigo_produto ) REFERENCES curso_ecommerce.tb_vendedor_produto( codigo_vendedor, codigo_produto ) ON DELETE NO ACTION ON UPDATE RESTRICT
+ ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE INDEX fk_tb_detalhamento_pedido_tb_vendedor_produto ON curso_ecommerce.tb_detalhamento_pedido ( codigo_vendedor, codigo_produto );
+
+CREATE TRIGGER curso_ecommerce.trg_after_insert_detalhamento_pedido AFTER INSERT ON tb_detalhamento_pedido FOR EACH ROW BEGIN
+    DECLARE v_total_produtos DECIMAL(10,2);
+    
+    -- Calcula o valor total dos produtos para o pedido específico
+    SELECT SUM((quantidade_produto * preco_venda) - valor_desconto) 
+    INTO v_total_produtos
+    FROM tb_detalhamento_pedido
+    WHERE codigo_pedido = NEW.codigo_pedido;
+    -- Atualiza a coluna valor_total_produtos na tabela tb_pedido
+    UPDATE tb_pedido
+    SET valor_total_produtos = v_total_produtos
+    WHERE codigo_pedido = NEW.codigo_pedido;
+    -- Atualiza o valor_total_pedido com base no novo valor_total_produtos e valor_frete
+    UPDATE tb_pedido
+    SET valor_total_pedido = (valor_total_produtos - valor_frete - desconto_pedido)
+    WHERE codigo_pedido = NEW.codigo_pedido;
+    
+END;
+
+CREATE TRIGGER curso_ecommerce.trg_after_insert_pedido AFTER INSERT ON tb_pedido FOR EACH ROW BEGIN
+    DECLARE v_total_compra DECIMAL(10,2);
+    
+    -- Calcula o valor total dos pedidos para a compra específica
+    SELECT SUM(valor_total_pedido) 
+    INTO v_total_compra
+    FROM tb_pedido
+    WHERE codigo_compra = NEW.codigo_compra;
+    -- Atualiza a coluna valor_total_compra na tabela tb_compra
+    UPDATE tb_compra
+    SET valor_total_compra = v_total_compra
+    WHERE codigo_compra = NEW.codigo_compra;
+END;
+
+CREATE TRIGGER curso_ecommerce.trg_after_update_detalhamento_pedido AFTER UPDATE ON tb_detalhamento_pedido FOR EACH ROW BEGIN
+    DECLARE v_total_produtos DECIMAL(10,2);
+    
+    -- Calcula o valor total dos produtos para o pedido específico
+    SELECT SUM((quantidade_produto * preco_venda) - valor_desconto) 
+    INTO v_total_produtos
+    FROM tb_detalhamento_pedido
+    WHERE codigo_pedido = NEW.codigo_pedido;
+    -- Atualiza a coluna valor_total_produtos na tabela tb_pedido
+    UPDATE tb_pedido
+    SET valor_total_produtos = v_total_produtos
+    WHERE codigo_pedido = NEW.codigo_pedido;
+    -- Atualiza o valor_total_pedido com base no novo valor_total_produtos e valor_frete
+    UPDATE tb_pedido
+    SET valor_total_pedido = (valor_total_produtos - valor_frete - desconto_pedido)
+    WHERE codigo_pedido = NEW.codigo_pedido;
+    
+END;
+
+CREATE TRIGGER curso_ecommerce.trg_after_update_pedido AFTER UPDATE ON tb_pedido FOR EACH ROW BEGIN
+    DECLARE v_total_compra DECIMAL(10,2);
+    
+    -- Calcula o valor total dos pedidos para a compra específica
+    SELECT SUM(valor_total_pedido) 
+    INTO v_total_compra
+    FROM tb_pedido
+    WHERE codigo_compra = NEW.codigo_compra;
+    -- Atualiza a coluna valor_total_compra na tabela tb_compra
+    UPDATE tb_compra
+    SET valor_total_compra = v_total_compra
+    WHERE codigo_compra = NEW.codigo_compra;
+END;
+]]></string>
+		</script>
 	</layout>
 </project>

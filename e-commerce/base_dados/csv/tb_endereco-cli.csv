@@ -1,0 +1,301 @@
+codigo_endereco,logradouro,numero,complemento,bairro,cidade,estado,cep
+1,Rua das Flores,123,Apto 101,Centro,São Paulo,SP,01001000
+2,Avenida Paulista,1500,Sala 203,Bela Vista,São Paulo,SP,01310200
+3,Rua Augusta,789,Bloco B,Consolação,São Paulo,SP,01305000
+4,Alameda Santos,456,Conj 45,Cerqueira César,São Paulo,SP,01419000
+5,Rua Oscar Freire,870,,Jardim Paulista,São Paulo,SP,01426000
+6,Avenida Rebouças,1234,Sala 501,Pinheiros,São Paulo,SP,05402000
+7,Rua Haddock Lobo,355,Apto 72,Cerqueira César,São Paulo,SP,01414000
+8,Avenida Brigadeiro Faria Lima,2170,,Jardim Paulistano,São Paulo,SP,01451000
+9,Rua Pamplona,1005,Conj 51,Jardim Paulista,São Paulo,SP,01405000
+10,Alameda Jaú,384,Apto 103,Jardim Paulista,São Paulo,SP,01420000
+11,Rua Bela Cintra,1200,Sala A,Consolação,São Paulo,SP,01415000
+12,Avenida Nove de Julho,3000,,Jardim Paulista,São Paulo,SP,01407000
+13,Rua da Consolação,2500,Andar 5,Consolação,São Paulo,SP,01301000
+14,Avenida Angélica,1800,Casa 2,Higienópolis,São Paulo,SP,01228000
+15,Rua Consolação,1690,Apto 42,Consolação,São Paulo,SP,01301000
+16,Avenida Ipiranga,800,,República,São Paulo,SP,01040000
+17,Rua Xavier de Toledo,120,Conj 1001,República,São Paulo,SP,01048000
+18,Rua 25 de Março,950,Loja 10,Centro,São Paulo,SP,01021000
+19,Avenida São João,1500,Sala 205,Centro,São Paulo,SP,01036000
+20,Rua dos Pinheiros,383,Casa Fundos,Pinheiros,São Paulo,SP,05422000
+21,Avenida Santo Amaro,1400,,Vila Nova Conceição,São Paulo,SP,04506000
+22,Rua Joaquim Floriano,466,Conj 1104,Itaim Bibi,São Paulo,SP,04534000
+23,Avenida Cidade Jardim,400,Sala 503,Jardim Europa,São Paulo,SP,01454000
+24,Rua Padre João Manuel,755,Apto 81,Cerqueira César,São Paulo,SP,01411000
+25,Avenida Europa,158,,Jardim Europa,São Paulo,SP,01449000
+26,Rua Amauri,300,Sala 702,Jardim Europa,São Paulo,SP,01448000
+27,Alameda Gabriel Monteiro da Silva,1356,Casa A,Jardim América,São Paulo,SP,01441000
+28,Rua Colômbia,420,,Jardim América,São Paulo,SP,01438000
+29,Avenida Brasil,731,Apto 104,Jardim América,São Paulo,SP,01431000
+30,Rua Augusta,2300,Conj 45,Jardim América,São Paulo,SP,01412000
+31,Avenida Atlântica,1500,Apto 1201,Copacabana,Rio de Janeiro,RJ,22021000
+32,Rua Visconde de Pirajá,550,Sala 302,Ipanema,Rio de Janeiro,RJ,22410000
+33,Avenida Vieira Souto,100,Apto 801,Ipanema,Rio de Janeiro,RJ,22420000
+34,Rua Barata Ribeiro,380,Bloco C,Copacabana,Rio de Janeiro,RJ,22040000
+35,Avenida Nossa Senhora de Copacabana,1200,,Copacabana,Rio de Janeiro,RJ,22070000
+36,Rua Tonelero,200,Apto 502,Copacabana,Rio de Janeiro,RJ,22030000
+37,Avenida Bartolomeu Mitre,450,Sala 305,Leblon,Rio de Janeiro,RJ,22431000
+38,Rua Dias Ferreira,200,,Leblon,Rio de Janeiro,RJ,22431000
+39,Avenida Epitácio Pessoa,2900,Apto 1001,Lagoa,Rio de Janeiro,RJ,22471000
+40,Rua Voluntários da Pátria,340,Casa 2,Botafogo,Rio de Janeiro,RJ,22270000
+41,Avenida Pasteur,150,Apto 504,Botafogo,Rio de Janeiro,RJ,22290000
+42,Rua São Clemente,200,,Botafogo,Rio de Janeiro,RJ,22260000
+43,Avenida Rio Branco,115,Sala 1005,Centro,Rio de Janeiro,RJ,20040000
+44,Rua do Ouvidor,50,Loja A,Centro,Rio de Janeiro,RJ,20040000
+45,Avenida Presidente Vargas,1000,Conj 1508,Centro,Rio de Janeiro,RJ,20071000
+46,Rua Senador Dantas,74,Sala 802,Centro,Rio de Janeiro,RJ,20031000
+47,Avenida Almirante Barroso,91,Andar 15,Centro,Rio de Janeiro,RJ,20031000
+48,Rua México,31,Conj 1201,Centro,Rio de Janeiro,RJ,20031000
+49,Avenida Lauro Sodré,445,,Botafogo,Rio de Janeiro,RJ,22290000
+50,Rua da Assembléia,10,Sala 4001,Centro,Rio de Janeiro,RJ,20011000
+51,Avenida das Américas,4666,Bloco 1,Barra da Tijuca,Rio de Janeiro,RJ,22640000
+52,Rua Ministro Viveiros de Castro,72,Apto 804,Copacabana,Rio de Janeiro,RJ,22021000
+53,Rua Sete de Setembro,93,Loja B,Centro,Rio de Janeiro,RJ,20050000
+54,Rua do Passeio,42,Sala 602,Centro,Rio de Janeiro,RJ,20021000
+55,Avenida Ataulfo de Paiva,1079,Conj 301,Leblon,Rio de Janeiro,RJ,22440000
+56,Rua da Quitanda,86,,Centro,Rio de Janeiro,RJ,20091000
+57,Avenida Rio Branco,156,Sala 3105,Centro,Rio de Janeiro,RJ,20040000
+58,Rua Pacheco Leão,724,Casa 3,Jardim Botânico,Rio de Janeiro,RJ,22460000
+59,Avenida Rodrigo Otávio,418,,Gávea,Rio de Janeiro,RJ,22450000
+60,Rua Barão da Torre,240,Apto 602,Ipanema,Rio de Janeiro,RJ,22411000
+61,Rua dos Andradas,29,Loja 3,Centro,Belo Horizonte,MG,30120000
+62,Avenida Afonso Pena,1500,Sala 1205,Centro,Belo Horizonte,MG,30130000
+63,Rua da Bahia,570,Conj 908,Centro,Belo Horizonte,MG,30160000
+64,Avenida Amazonas,311,,Centro,Belo Horizonte,MG,30180000
+65,Rua Rio de Janeiro,471,Sala 602,Centro,Belo Horizonte,MG,30160000
+66,Avenida do Contorno,2316,Apto 1001,Floresta,Belo Horizonte,MG,30110000
+67,Rua Sergipe,1167,Sala 202,Savassi,Belo Horizonte,MG,30130000
+68,Avenida Brasil,1438,,Santa Efigênia,Belo Horizonte,MG,30140000
+69,Rua Pernambuco,747,Conj 801,Savassi,Belo Horizonte,MG,30130000
+70,Avenida Getúlio Vargas,1300,Apto 502,Savassi,Belo Horizonte,MG,30112000
+71,Rua dos Timbiras,1532,Sala 405,Lourdes,Belo Horizonte,MG,30140000
+72,Avenida Nossa Senhora do Carmo,800,,Sion,Belo Horizonte,MG,30310000
+73,Rua Fernandes Tourinho,147,Sala 1201,Savassi,Belo Horizonte,MG,30112000
+74,Avenida Cristóvão Colombo,683,Apto 201,Funcionários,Belo Horizonte,MG,30140000
+75,Rua dos Inconfidentes,910,Conj 402,Savassi,Belo Horizonte,MG,30140000
+76,Avenida Álvares Cabral,344,,Lourdes,Belo Horizonte,MG,30170000
+77,Rua Alagoas,1314,Sala 802,Savassi,Belo Horizonte,MG,30130000
+78,Avenida Raja Gabaglia,2671,Conj 605,Estoril,Belo Horizonte,MG,30494000
+79,Rua Curitiba,1982,Apto 701,Lourdes,Belo Horizonte,MG,30170000
+80,Avenida Prudente de Morais,621,,Santo Antônio,Belo Horizonte,MG,30350000
+81,Rua Antônio de Albuquerque,377,Sala 1002,Funcionários,Belo Horizonte,MG,30112000
+82,Avenida Bandeirantes,330,,Mangabeiras,Belo Horizonte,MG,30315000
+83,Rua Marília de Dirceu,226,Apto 801,Lourdes,Belo Horizonte,MG,30170000
+84,Avenida Silva Lobo,1730,,Nova Granada,Belo Horizonte,MG,30460000
+85,Rua Gonçalves Dias,744,Sala 1501,Funcionários,Belo Horizonte,MG,30140000
+86,Avenida Professor Mário Werneck,2170,,Buritis,Belo Horizonte,MG,30575000
+87,Rua Martim de Carvalho,94,Apto 302,Santo Agostinho,Belo Horizonte,MG,30190000
+88,Avenida Bernardo Monteiro,1063,,Santa Efigênia,Belo Horizonte,MG,30150000
+89,Rua Ceará,1431,Sala 902,Funcionários,Belo Horizonte,MG,30150000
+90,Avenida Olegário Maciel,742,,Centro,Belo Horizonte,MG,30180000
+91,Rua Desembargador Jorge Fontana,408,Apto 1201,Belvedere,Belo Horizonte,MG,30320000
+92,Avenida Professor Alfredo Balena,189,Sala 702,Santa Efigênia,Belo Horizonte,MG,30130000
+93,Rua Professor Morais,32,Casa 3,Savassi,Belo Horizonte,MG,30150000
+94,Avenida do Contorno,5351,,Funcionários,Belo Horizonte,MG,30110000
+95,SQS 308 Bloco C,105,Apto 201,Asa Sul,Brasília,DF,70355000
+96,SQN 209 Bloco F,305,Apto 104,Asa Norte,Brasília,DF,70854000
+97,SQS 114 Bloco A,402,,Asa Sul,Brasília,DF,70377000
+98,SQN 104 Bloco J,304,Apto 301,Asa Norte,Brasília,DF,70733000
+99,SHIS QI 11 Conjunto 6,15,Casa 2,Lago Sul,Brasília,DF,71625000
+100,SHIS QL 8 Conjunto 1,23,,Lago Sul,Brasília,DF,71620000
+101,SHIN QI 7 Conjunto 11,5,Casa A,Lago Norte,Brasília,DF,71515000
+102,SHIN QL 2 Conjunto 2,12,,Lago Norte,Brasília,DF,71510000
+103,SGAS 915 Bloco A,45,Sala 220,Asa Sul,Brasília,DF,70390000
+104,SCRN 704/705 Bloco F,34,Loja 10,Asa Norte,Brasília,DF,70730000
+105,SHCN 307 Bloco B,23,Loja 15,Asa Norte,Brasília,DF,70746000
+106,SHCS 302 Bloco C,45,Sala 101,Asa Sul,Brasília,DF,70338000
+107,SEPN 507 Bloco D,45,Conj 101,Asa Norte,Brasília,DF,70740000
+108,SEPS 705/905 Bloco C,34,Sala 301,Asa Sul,Brasília,DF,70390000
+109,CLN 201 Bloco A,45,Loja 22,Asa Norte,Brasília,DF,70832000
+110,CLS 103 Bloco B,12,Loja 5,Asa Sul,Brasília,DF,70342000
+111,SCN Quadra 2 Bloco D,12,Sala 1210,Asa Norte,Brasília,DF,70712000
+112,SCS Quadra 8 Bloco B-50,23,Sala 442,Asa Sul,Brasília,DF,70333000
+113,St. de Habitações Individuais Sul QL 10,24,Conjunto 2,Lago Sul,Brasília,DF,71630000
+114,Avenida das Araucárias,78,Loja 23,Águas Claras,Brasília,DF,71936000
+115,Rua 36 Sul,45,Apto 1102,Águas Claras,Brasília,DF,71931000
+116,Rua 37 Norte,32,,Águas Claras,Brasília,DF,71919000
+117,SQSW 104 Bloco D,102,Apto 502,Sudoeste,Brasília,DF,70670000
+118,SQNW 108 Bloco H,34,Apto 201,Noroeste,Brasília,DF,70686000
+119,Avenida Central,23,Bloco 1025,Núcleo Bandeirante,Brasília,DF,71710000
+120,Quadra 1 Conjunto A,12,Casa 15,Sobradinho,Brasília,DF,73010000
+121,Avenida Recife,1500,Sala 305,Boa Viagem,Recife,PE,51030000
+122,Rua da Aurora,325,Apto 1002,Boa Vista,Recife,PE,50050000
+123,Avenida Conselheiro Aguiar,2100,,Boa Viagem,Recife,PE,51020000
+124,Rua do Bom Jesus,97,Loja A,Recife Antigo,Recife,PE,50030000
+125,Avenida Agamenon Magalhães,2615,Sala 1105,Boa Vista,Recife,PE,50050000
+126,Rua Padre Carapuceiro,350,Apto 1501,Boa Viagem,Recife,PE,51020000
+127,Avenida Conde da Boa Vista,921,Loja 12,Boa Vista,Recife,PE,50060000
+128,Rua Marquês de Abrantes,192,,Santo Amaro,Recife,PE,50100000
+129,Avenida Domingos Ferreira,1100,Sala 604,Boa Viagem,Recife,PE,51020000
+130,Rua das Ninfas,314,Apto 702,Boa Vista,Recife,PE,50070000
+131,Avenida República do Líbano,251,,Pina,Recife,PE,51110000
+132,Rua da Hora,695,Sala 501,Espinheiro,Recife,PE,52020000
+133,Avenida 17 de Agosto,2133,,Casa Forte,Recife,PE,52060000
+134,Rua José de Alencar,373,Apto 1202,Boa Viagem,Recife,PE,51021000
+135,Avenida Engenheiro Domingos Ferreira,2160,Sala 810,Boa Viagem,Recife,PE,51020000
+136,Rua Real da Torre,1000,,Madalena,Recife,PE,50610000
+137,Avenida Caxangá,3210,Loja 5,Iputinga,Recife,PE,50731000
+138,Rua Dona Maria César,170,Apto 901,Parnamirim,Recife,PE,52060000
+139,Avenida Manoel Borba,300,,Boa Vista,Recife,PE,50070000
+140,Rua Setúbal,913,Sala 303,Boa Viagem,Recife,PE,51030000
+141,Rua Tenente Silveira,94,Sala 402,Centro,Florianópolis,SC,88010000
+142,Avenida Beira Mar Norte,1234,Apto 1102,Centro,Florianópolis,SC,88020000
+143,Rua Almirante Lamego,785,,Centro,Florianópolis,SC,88015000
+144,Avenida Mauro Ramos,1450,Sala 301,Centro,Florianópolis,SC,88020000
+145,Rua Esteves Júnior,50,Apto 702,Centro,Florianópolis,SC,88015000
+146,Avenida Trompowsky,354,,Centro,Florianópolis,SC,88015000
+147,Rua Felipe Schmidt,315,Loja 22,Centro,Florianópolis,SC,88010000
+148,Avenida Hercílio Luz,639,Sala 401,Centro,Florianópolis,SC,88020000
+149,Rua João Pinto,102,Apto 801,Centro,Florianópolis,SC,88010000
+150,Avenida Paulo Fontes,1101,,Centro,Florianópolis,SC,88010000
+151,Rua Bocaiúva,227,Sala 505,Centro,Florianópolis,SC,88015000
+152,Avenida Rio Branco,404,Apto 1001,Centro,Florianópolis,SC,88015000
+153,Rua Conselheiro Mafra,656,,Centro,Florianópolis,SC,88010000
+154,Avenida Desembargador Vitor Lima,500,Bloco A,Trindade,Florianópolis,SC,88040000
+155,Rua Lauro Linhares,897,Sala 301,Trindade,Florianópolis,SC,88036000
+156,Avenida Madre Benvenuta,1389,,Santa Mônica,Florianópolis,SC,88035000
+157,Rua Deputado Antônio Edu Vieira,1234,Apto 502,Pantanal,Florianópolis,SC,88040000
+158,Avenida Beiramar,2500,,Agronômica,Florianópolis,SC,88025000
+159,Rodovia Admar Gonzaga,1500,Sala 205,Itacorubi,Florianópolis,SC,88034000
+160,Rua Delfino Conti,320,Bloco B,Trindade,Florianópolis,SC,88040000
+161,Avenida Engenheiro Max de Souza,1120,Apto 302,Coqueiros,Florianópolis,SC,88080000
+162,Rua João Paulo,1200,,João Paulo,Florianópolis,SC,88030000
+163,Avenida Osvaldo Rodrigues Cabral,1570,Sala 405,Centro,Florianópolis,SC,88015000
+164,Rua Jerônimo Coelho,280,Apto 901,Centro,Florianópolis,SC,88010000
+165,Avenida Jornalista Rubens de Arruda Ramos,2500,,Centro,Florianópolis,SC,88015000
+166,Rua dos Ilhéus,46,Sala 602,Centro,Florianópolis,SC,88010000
+167,Avenida Prefeito Osmar Cunha,183,Apto 1201,Centro,Florianópolis,SC,88015000
+168,Rua Nereu Ramos,19,,Centro,Florianópolis,SC,88015000
+169,Avenida Professor Othon Gama D'Eça,900,Sala 501,Centro,Florianópolis,SC,88015000
+170,Rua Presidente Coutinho,311,Apto 702,Centro,Florianópolis,SC,88015000
+171,Avenida Carlos Gomes,222,Sala 801,Auxiliadora,Porto Alegre,RS,90480000
+172,Rua 24 de Outubro,850,Apto 1201,Moinhos de Vento,Porto Alegre,RS,90510000
+173,Avenida Independência,1055,,Independência,Porto Alegre,RS,90035000
+174,Rua Mostardeiro,366,Sala 501,Moinhos de Vento,Porto Alegre,RS,90430000
+175,Avenida Protásio Alves,2854,Loja 5,Petrópolis,Porto Alegre,RS,90410000
+176,Rua Félix da Cunha,737,Apto 601,Moinhos de Vento,Porto Alegre,RS,90570000
+177,Avenida Cristóvão Colombo,2360,,Floresta,Porto Alegre,RS,90560000
+178,Rua Hilário Ribeiro,202,Sala 302,Moinhos de Vento,Porto Alegre,RS,90510000
+179,Avenida João Pessoa,1323,Apto 801,Farroupilha,Porto Alegre,RS,90040000
+180,Rua Coronel Bordini,895,,Auxiliadora,Porto Alegre,RS,90440000
+181,Avenida Plínio Brasil Milano,1000,Sala 401,Higienópolis,Porto Alegre,RS,90520000
+182,Rua Quintino Bocaiúva,467,Apto 901,Rio Branco,Porto Alegre,RS,90440000
+183,Avenida Osvaldo Aranha,1022,,Bom Fim,Porto Alegre,RS,90035000
+184,Rua Mariante,288,Sala 602,Rio Branco,Porto Alegre,RS,90430000
+185,Avenida Ipiranga,7200,,Partenon,Porto Alegre,RS,90610000
+186,Rua Ramiro Barcelos,1829,Apto 1101,Rio Branco,Porto Alegre,RS,90035000
+187,Avenida Venâncio Aires,93,,Cidade Baixa,Porto Alegre,RS,90040000
+188,Rua Lima e Silva,400,Sala 701,Cidade Baixa,Porto Alegre,RS,90050000
+189,Avenida José de Alencar,1042,,Menino Deus,Porto Alegre,RS,90880000
+190,Rua Padre Chagas,79,Loja 3,Moinhos de Vento,Porto Alegre,RS,90570000
+191,Avenida Assis Brasil,3940,,Passo d'Areia,Porto Alegre,RS,91010000
+192,Rua Dr. Timóteo,752,Apto 1001,Floresta,Porto Alegre,RS,90570000
+193,Avenida Loureiro da Silva,1500,,Cidade Baixa,Porto Alegre,RS,90010000
+194,Rua Santo Antônio,226,Sala 802,Independência,Porto Alegre,RS,90220000
+195,Avenida Borges de Medeiros,2105,Apto 1501,Praia de Belas,Porto Alegre,RS,90110000
+196,Avenida João Gualberto,1731,Sala 302,Juvevê,Curitiba,PR,80030000
+197,Rua Padre Anchieta,2050,Apto 803,Bigorrilho,Curitiba,PR,80730000
+198,Avenida República Argentina,1228,,Água Verde,Curitiba,PR,80620000
+199,Rua Marechal Deodoro,630,Sala 1505,Centro,Curitiba,PR,80010000
+200,Avenida Sete de Setembro,4214,Loja 2,Batel,Curitiba,PR,80240000
+201,Rua Comendador Araújo,323,Apto 1201,Centro,Curitiba,PR,80420000
+202,Avenida Visconde de Guarapuava,4473,,Batel,Curitiba,PR,80240000
+203,Rua Nunes Machado,100,Sala 701,Rebouças,Curitiba,PR,80250000
+204,Avenida Silva Jardim,567,Apto 901,Rebouças,Curitiba,PR,80230000
+205,Rua Mateus Leme,2631,,Centro Cívico,Curitiba,PR,80530000
+206,Avenida Manoel Ribas,5000,Casa 2,Santa Felicidade,Curitiba,PR,82400000
+207,Rua Desembargador Motta,1499,Sala 201,Batel,Curitiba,PR,80250000
+208,Avenida Cândido de Abreu,660,,Centro Cívico,Curitiba,PR,80530000
+209,Rua Padre Agostinho,2590,Apto 601,Bigorrilho,Curitiba,PR,80710000
+210,Avenida Iguaçu,2820,Sala 501,Água Verde,Curitiba,PR,80240000
+211,Rua Grã Nicco,113,,Mossunguê,Curitiba,PR,81200000
+212,Avenida Winston Churchill,2170,Loja 22,Capão Raso,Curitiba,PR,81150000
+213,Rua Brigadeiro Franco,1877,Apto 801,Centro,Curitiba,PR,80250000
+214,Avenida Presidente Kennedy,4121,,Água Verde,Curitiba,PR,80610000
+215,Rua Bispo Dom José,2495,Sala 302,Batel,Curitiba,PR,80440000
+216,Avenida Marechal Floriano Peixoto,5500,Loja 10,Hauer,Curitiba,PR,81610000
+217,Rua Chile,1678,Apto 1002,Rebouças,Curitiba,PR,80220000
+218,Avenida Iguaçu,3001,,Água Verde,Curitiba,PR,80240000
+219,Rua Coronel Dulcídio,216,Sala 901,Batel,Curitiba,PR,80420000
+220,Avenida Nossa Senhora de Nazaré,872,Apto 1102,Nazaré,Belém,PA,66035000
+221,Rua Municipalidade,985,Sala 401,Umarizal,Belém,PA,66050000
+222,Avenida Magalhães Barata,651,,São Brás,Belém,PA,66060000
+223,Rua dos Mundurucus,1613,Apto 901,Batista Campos,Belém,PA,66035000
+224,Avenida Gentil Bittencourt,1990,Sala 202,São Brás,Belém,PA,66040000
+225,Rua dos Pariquis,2999,,Cremação,Belém,PA,66040000
+226,Avenida Almirante Barroso,735,Apto 1502,Marco,Belém,PA,66093000
+227,Rua Boaventura da Silva,1844,Sala 601,Umarizal,Belém,PA,66060000
+228,Avenida Conselheiro Furtado,2391,,Cremação,Belém,PA,66040000
+229,Rua Domingos Marreiros,49,Apto 802,Umarizal,Belém,PA,66055000
+230,Travessa 9 de Janeiro,1001,Sala 301,São Brás,Belém,PA,66060000
+231,Travessa Quintino Bocaiúva,2151,,Nazaré,Belém,PA,66045000
+232,Avenida Alcindo Cacela,1421,Apto 1201,Umarizal,Belém,PA,66060000
+233,Travessa Djalma Dutra,946,Loja 3,Telégrafo,Belém,PA,66113000
+234,Avenida Paulista,1578,Andar 15,Bela Vista,São Paulo,SP,01310200
+235,Rua Augusta,2854,Sala 302,Consolação,São Paulo,SP,01412100
+236,Rua Oscar Freire,725,Loja 12,Jardins,São Paulo,SP,01426001
+237,Avenida Brigadeiro Faria Lima,3477,Torre Norte - 14º andar,Itaim Bibi,São Paulo,SP,04538133
+238,Avenida Engenheiro Luís Carlos Berrini,1500,Edifício Corporate - 5º andar,Brooklin,São Paulo,SP,04571000
+239,Avenida Rio Branco,156,Sala 1230,Centro,Rio de Janeiro,RJ,20040901
+240,Avenida das Américas,3434,Bloco 2 - Sala 502,Barra da Tijuca,Rio de Janeiro,RJ,22640102
+241,Avenida Atlântica,2872,Cobertura,Copacabana,Rio de Janeiro,RJ,22070000
+242,Rua Lauro Muller,116,Torre do Rio Sul - 35º andar,Botafogo,Rio de Janeiro,RJ,22290160
+243,Avenida Juscelino Kubitschek,1830,Torre 3 - 8º andar,Vila Nova Conceição,São Paulo,SP,04543900
+244,Rua Sete de Setembro,1051,Sobreloja,Centro,Porto Alegre,RS,90010191
+245,Avenida Carlos Gomes,222,Conjunto 701,Auxiliadora,Porto Alegre,RS,90480000
+246,Rua dos Andradas,875,10º andar,Centro Histórico,Porto Alegre,RS,90020004
+247,Avenida Cristiano Machado,1682,Loja 210,Cidade Nova,Belo Horizonte,MG,31170800
+248,Rua da Bahia,1765,Sala 1205,Lourdes,Belo Horizonte,MG,30160011
+249,Avenida do Contorno,5777,17º andar,Funcionários,Belo Horizonte,MG,30110035
+250,Avenida Raja Gabaglia,2671,Bloco B - Sala 503,Estoril,Belo Horizonte,MG,30350540
+251,Avenida Afonso Pena,1500,8º andar,Centro,Belo Horizonte,MG,30130921
+252,Rua Padre Eustáquio,1133,Conjunto 405,Carlos Prates,Belo Horizonte,MG,30720100
+253,Rua Professor Morais,726,,Savassi,Belo Horizonte,MG,30150370
+254,Avenida Presidente Vargas,2001,Sala 1801,Jardim América,Ribeirão Preto,SP,14020260
+255,Avenida Jornalista Roberto Marinho,85,Torre 2 - 9º andar,Cidade Monções,São Paulo,SP,04576010
+256,Rua Desembargador Motta,2200,Sala 516,Batel,Curitiba,PR,80420190
+257,Avenida Sete de Setembro,4698,15º andar,Batel,Curitiba,PR,80240000
+258,Avenida Iguaçu,2820,Sala 1110,Água Verde,Curitiba,PR,80240030
+259,Rua Quintino Bocaiúva,1257,Loja 02,Centro,Florianópolis,SC,88010005
+260,Avenida Beira Mar Norte,1992,Sala 801,Centro,Florianópolis,SC,88015400
+261,Rua Felipe Schmidt,775,6º andar,Centro,Florianópolis,SC,88010002
+262,Avenida Treze de Maio,1728,Sala 902,Fátima,Fortaleza,CE,60040531
+263,Avenida Dom Luís,500,15º andar,Aldeota,Fortaleza,CE,60160230
+264,Avenida Washington Soares,1321,Bloco C - Sala 10,Edson Queiroz,Fortaleza,CE,60811341
+265,Avenida Tancredo Neves,1632,Torre Norte - 10º andar,Caminho das Árvores,Salvador,BA,41820020
+266,Avenida Paralela,3500,Sala 1205,Trobogy,Salvador,BA,41820790
+267,Avenida Antônio Carlos Magalhães,2501,Edifício Profissional Center - 15º andar,Brotas,Salvador,BA,40280000
+268,Rua Padre Chagas,342,Conjunto 302,Moinhos de Vento,Porto Alegre,RS,90570080
+269,Avenida Jerônimo Monteiro,1000,Sala 705,Centro,Vitória,ES,29010935
+270,Avenida Nossa Senhora da Penha,1800,Ed. Corporate - 18º andar,Santa Luíza,Vitória,ES,29056250
+271,Avenida João Pinheiro,495,Sala 1103,Centro,Belo Horizonte,MG,30130180
+272,Rua Marques de São Vicente,225,Sala 902,Gávea,Rio de Janeiro,RJ,22451041
+273,Rua do Comércio,1924,Loja 12,Centro,Santos,SP,11010031
+274,Avenida Dom Pedro II,350,6º andar,Centro,João Pessoa,PB,58013420
+275,Avenida Agamenon Magalhães,2997,Empresarial Queiroz Galvão - 9º andar,Boa Vista,Recife,PE,50050290
+276,Rua Padre Anchieta,1846,Sala 505,Bigorrilho,Curitiba,PR,80730000
+277,Avenida Getúlio Vargas,1420,Sala 801,Funcionários,Belo Horizonte,MG,30112021
+278,Avenida Paulista,2300,Conjunto 56,Bela Vista,São Paulo,SP,01310300
+279,Rua José Paulino,717,Loja 35,Bom Retiro,São Paulo,SP,01120000
+280,Avenida Marechal Floriano,199,Sala 1001,Centro,Rio de Janeiro,RJ,20080005
+281,Rua Barão do Rio Branco,2234,Sala 1203,Centro,Curitiba,PR,80010180
+282,Avenida Júlio de Castilhos,44,9º andar,Centro Histórico,Porto Alegre,RS,90030130
+283,Rua Halfeld,651,Sala 201,Centro,Juiz de Fora,MG,36010000
+284,Avenida Alberto Andaló,3700,Sala 804,Centro,São José do Rio Preto,SP,15015000
+285,Avenida Coronel José Soares Marcondes,1200,Sala 15,Vila Maristela,Presidente Prudente,SP,19013200
+286,Rua XV de Novembro,1299,Conjunto 802,Centro,Curitiba,PR,80060000
+287,Avenida Governador José Malcher,937,Sala 1210,Nazaré,Belém,PA,66055260
+288,Avenida São Luís,50,10º andar,República,São Paulo,SP,01046926
+289,Rua Carlos Gomes,1610,Sala 116,Santo Antônio,Belo Horizonte,MG,30180180
+290,Rua Marechal Deodoro,630,Sala 2001,Centro,Curitiba,PR,80010010
+291,Avenida Visconde de Suassuna,495,Sala 1305,Boa Vista,Recife,PE,50050540
+292,Rua Cândido Mendes,802,Sobrado,Glória,Rio de Janeiro,RJ,20241220
+293,Avenida Bento Gonçalves,2215,Sala 310,Partenon,Porto Alegre,RS,90650001
+294,Rua Estados Unidos,2134,Sala 52,Jardim América,São Paulo,SP,01427002
+295,Avenida Nove de Julho,4877,Torre A - 15º andar,Jardim Paulista,São Paulo,SP,01407200
+296,Rua Voluntários da Pátria,89,Sala 602,Botafogo,Rio de Janeiro,RJ,22270000
+297,Avenida Professor Moraes Rego,1235,UFPE - Centro de Informática,Cidade Universitária,Recife,PE,50670901
+298,Avenida Amazonas,6745,Sala 1502,Gameleira,Belo Horizonte,MG,30510000
+299,Rua Fernandes Tourinho,735,Sala 701,Lourdes,Belo Horizonte,MG,30112000
+300,Avenida Presidente Vargas,435,Sala 1205,Centro,Rio de Janeiro,RJ,20071001
