@@ -5,7 +5,7 @@
 ## Existem duas formas de realizar de teste na base de dados
 
 * Utilizando arquivos CSV
-* Atrevés de comando SQL
+* Através de comando SQL
 
 
 ### Utilizando arquivos CSV
