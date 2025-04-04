@@ -297,6 +297,42 @@
 			</fk>
 			<options><![CDATA[ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci]]></options>
 		</table>
+		<view name="vw_cliente_consolidado" >
+			<comment><![CDATA[VIEW]]></comment>
+			<view_script><![CDATA[CREATE VIEW ${nameWithSchemaName} AS select `cli`.`codigo_cliente` AS `codigo_cliente`,ifnull(`pf`.`nome`,`tpj`.`nome_fantasia`) AS `nome`,(case when (`pf`.`nome` is not null) then 1 when (`tpj`.`nome_fantasia` is not null) then 2 else 0 end) AS `codigo_tipo_cliente`,(case when (`pf`.`nome` is not null) then 'Pessoa Física' when (`tpj`.`nome_fantasia` is not null) then 'Pessoa Jurídica' else 'Tipo não Identicado' end) AS `tipo_cliente`,`endr`.`codigo_endereco` AS `codigo_endereco`,`endr`.`logradouro` AS `logradouro`,`endr`.`numero` AS `numero`,`endr`.`complemento` AS `complemento`,`endr`.`bairro` AS `bairro`,`endr`.`cidade` AS `cidade`,`endr`.`estado` AS `estado`,`endr`.`cep` AS `cep` from ((((`curso_ecommerce`.`tb_cliente` `cli` left join `curso_ecommerce`.`tb_cliente_pessoa_fisica` `pf` on((`cli`.`codigo_cliente` = `pf`.`codigo_cliente`))) left join `curso_ecommerce`.`tb_cliente_pessoa_juridica` `pj` on((`cli`.`codigo_cliente` = `pj`.`codigo_cliente`))) left join `curso_ecommerce`.`tb_pessoa_juridica` `tpj` on((`pj`.`codigo_pessoa_juridica` = `tpj`.`codigo_pessoa_juridica`))) join `curso_ecommerce`.`tb_endereco` `endr` on((`cli`.`codigo_endereco` = `endr`.`codigo_endereco`)))]]></view_script>
+			<column name="codigo_cliente" type="INT" />
+			<column name="nome" type="VARCHAR" />
+			<column name="codigo_tipo_cliente" type="INT" />
+			<column name="tipo_cliente" type="VARCHAR" />
+			<column name="codigo_endereco" type="INT" />
+			<column name="logradouro" type="VARCHAR" />
+			<column name="numero" type="VARCHAR" />
+			<column name="complemento" type="VARCHAR" />
+			<column name="bairro" type="VARCHAR" />
+			<column name="cidade" type="VARCHAR" />
+			<column name="estado" type="VARCHAR" />
+			<column name="cep" type="VARCHAR" />
+		</view>
+		<view name="vw_total_vendas_produto" >
+			<comment><![CDATA[VIEW]]></comment>
+			<view_script><![CDATA[CREATE VIEW ${nameWithSchemaName} AS select `curso_ecommerce`.`vp`.`codigo_produto` AS `codigo_produto`,`curso_ecommerce`.`vp`.`descricao_produto` AS `descricao_produto`,sum(`curso_ecommerce`.`vp`.`total_venda_sem_desconto`) AS `total_venda_sem_desconto`,sum(`curso_ecommerce`.`vp`.`total_desconto`) AS `total_desconto`,sum(`curso_ecommerce`.`vp`.`total_venda_com_desconto`) AS `total_venda_com_desconto` from `curso_ecommerce`.`vw_total_vendas_vendedor_produto` `vp` group by `curso_ecommerce`.`vp`.`codigo_produto`,`curso_ecommerce`.`vp`.`descricao_produto`]]></view_script>
+			<column name="codigo_produto" type="INT" />
+			<column name="descricao_produto" type="VARCHAR" />
+			<column name="total_venda_sem_desconto" type="DECIMAL" />
+			<column name="total_desconto" type="DECIMAL" />
+			<column name="total_venda_com_desconto" type="DECIMAL" />
+		</view>
+		<view name="vw_total_vendas_vendedor_produto" >
+			<comment><![CDATA[VIEW]]></comment>
+			<view_script><![CDATA[CREATE VIEW ${nameWithSchemaName} AS select `dped`.`codigo_vendedor` AS `codigo_vendedor`,`vpj`.`nome_fantasia` AS `vendedor`,`dped`.`codigo_produto` AS `codigo_produto`,`prod`.`descricao` AS `descricao_produto`,sum((`dped`.`preco_venda` * `dped`.`quantidade_produto`)) AS `total_venda_sem_desconto`,sum(`dped`.`valor_desconto`) AS `total_desconto`,sum(((`dped`.`preco_venda` * `dped`.`quantidade_produto`) - `dped`.`valor_desconto`)) AS `total_venda_com_desconto` from (((`curso_ecommerce`.`tb_detalhamento_pedido` `dped` left join `curso_ecommerce`.`tb_vendedor` `vend` on((`dped`.`codigo_vendedor` = `vend`.`codigo_vendedor`))) left join `curso_ecommerce`.`tb_pessoa_juridica` `vpj` on((`vend`.`codigo_pessoa_juridica` = `vpj`.`codigo_pessoa_juridica`))) left join `curso_ecommerce`.`tb_produto` `prod` on((`dped`.`codigo_produto` = `prod`.`codigo_produto`))) group by `dped`.`codigo_vendedor`,`vpj`.`nome_fantasia`,`dped`.`codigo_produto`,`prod`.`descricao` order by `dped`.`codigo_vendedor`,`dped`.`codigo_produto`]]></view_script>
+			<column name="codigo_vendedor" type="INT" />
+			<column name="vendedor" type="VARCHAR" />
+			<column name="codigo_produto" type="INT" />
+			<column name="descricao_produto" type="VARCHAR" />
+			<column name="total_venda_sem_desconto" type="DECIMAL" />
+			<column name="total_desconto" type="DECIMAL" />
+			<column name="total_venda_com_desconto" type="DECIMAL" />
+		</view>
 		<trigger name="trg_after_insert_detalhamento_pedido" table="tb_detalhamento_pedido" id="Trigger-8ed" isSystem="false" >
 			<string><![CDATA[CREATE TRIGGER ${nameWithSchemaName} AFTER INSERT ON tb_detalhamento_pedido FOR EACH ROW BEGIN
     DECLARE v_total_produtos DECIMAL(10,2);
@@ -370,25 +406,33 @@ END]]></string>
 	</schema>
 	<layout name="Default Diagram" id="Diagram-1d63" show_relation="columns" >
 		<comment><![CDATA[Modelo Lógico Estendido]]></comment>
-		<entity schema="curso_ecommerce" name="tb_cliente" color="3986C1" x="342" y="608" />
-		<entity schema="curso_ecommerce" name="tb_cliente_pessoa_fisica" color="3986C1" x="171" y="836" />
-		<entity schema="curso_ecommerce" name="tb_cliente_pessoa_juridica" color="3986C1" x="475" y="836" />
-		<entity schema="curso_ecommerce" name="tb_compra" color="3986C1" x="1007" y="855" />
-		<entity schema="curso_ecommerce" name="tb_departamento" color="3986C1" x="551" y="152" />
-		<entity schema="curso_ecommerce" name="tb_detalhamento_pedido" color="3986C1" x="1026" y="627" />
-		<entity schema="curso_ecommerce" name="tb_endereco" color="3986C1" x="76" y="551" />
-		<entity schema="curso_ecommerce" name="tb_fornecedor" color="3986C1" x="1140" y="323" />
-		<entity schema="curso_ecommerce" name="tb_fornecedor_produto" color="3986C1" x="893" y="304" />
-		<entity schema="curso_ecommerce" name="tb_pedido" color="3986C1" x="760" y="608" />
-		<entity schema="curso_ecommerce" name="tb_pessoa_juridica" color="3986C1" x="1292" y="133" />
-		<entity schema="curso_ecommerce" name="tb_produto" color="3986C1" x="589" y="304" />
-		<entity schema="curso_ecommerce" name="tb_tipo_pessoa_juridica" color="3986C1" x="1026" y="133" />
-		<entity schema="curso_ecommerce" name="tb_vendedor" color="3986C1" x="57" y="304" />
-		<entity schema="curso_ecommerce" name="tb_vendedor_produto" color="3986C1" x="342" y="304" />
-		<callout x="456" y="57" pointer="Round" >
+		<entity schema="curso_ecommerce" name="tb_cliente" color="3986C1" x="342" y="646" />
+		<entity schema="curso_ecommerce" name="tb_cliente_pessoa_fisica" color="3986C1" x="171" y="874" />
+		<entity schema="curso_ecommerce" name="tb_cliente_pessoa_juridica" color="3986C1" x="475" y="874" />
+		<entity schema="curso_ecommerce" name="tb_compra" color="3986C1" x="1007" y="893" />
+		<entity schema="curso_ecommerce" name="tb_departamento" color="3986C1" x="551" y="190" />
+		<entity schema="curso_ecommerce" name="tb_detalhamento_pedido" color="3986C1" x="1026" y="665" />
+		<entity schema="curso_ecommerce" name="tb_endereco" color="3986C1" x="76" y="589" />
+		<entity schema="curso_ecommerce" name="tb_fornecedor" color="3986C1" x="1140" y="361" />
+		<entity schema="curso_ecommerce" name="tb_fornecedor_produto" color="3986C1" x="893" y="342" />
+		<entity schema="curso_ecommerce" name="tb_pedido" color="3986C1" x="760" y="646" />
+		<entity schema="curso_ecommerce" name="tb_pessoa_juridica" color="3986C1" x="1292" y="171" />
+		<entity schema="curso_ecommerce" name="tb_produto" color="3986C1" x="589" y="342" />
+		<entity schema="curso_ecommerce" name="tb_tipo_pessoa_juridica" color="3986C1" x="1026" y="171" />
+		<entity schema="curso_ecommerce" name="tb_vendedor" color="3986C1" x="57" y="342" />
+		<entity schema="curso_ecommerce" name="tb_vendedor_produto" color="3986C1" x="342" y="342" />
+		<entity schema="curso_ecommerce" name="vw_cliente_consolidado" color="3986C1" x="342" y="1368" />
+		<entity schema="curso_ecommerce" name="vw_total_vendas_produto" color="3986C1" x="665" y="1159" />
+		<entity schema="curso_ecommerce" name="vw_total_vendas_vendedor_produto" color="3986C1" x="342" y="1159" />
+		<callout x="456" y="95" pointer="Round" >
 			<comment><![CDATA[Diagrama de Modelo Relacional
 Base de dados do e-commerce]]></comment>
 		</callout>
+		<group name="Views" color="C4E0F9" >
+			<entity schema="curso_ecommerce" name="vw_total_vendas_vendedor_produto" />
+			<entity schema="curso_ecommerce" name="vw_total_vendas_produto" />
+			<entity schema="curso_ecommerce" name="vw_cliente_consolidado" />
+		</group>
 		<script name="SQL_Editor" id="Editor-2502" language="SQL" >
 			<string><![CDATA[CREATE SCHEMA curso_ecommerce;
 
