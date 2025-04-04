@@ -10,7 +10,7 @@
 <Alinhamento_h Valor="60"/>
 <Zoom Valor="125"/>
 <Fonte Estilo="1" Nome="Arial" Tamanho="12"/>
-<Localizacao Left="500" Top="1232"/>
+<Localizacao Left="500" Top="1178"/>
 <Realce Valor="false"/>
 </InfoDiagrama>
 <Texto ID="4">
@@ -2875,7 +2875,7 @@
 <AtributosOcultos Valor=""/>
 </Entidade>
 <Atributo ID="326">
-<Bounds Height="14" Left="1078" Top="964" Width="80"/>
+<Bounds Height="14" Left="1078" Top="945" Width="80"/>
 <DisablePainted Valor="false"/>
 <Texto>codigo_os</Texto>
 <Observacao/>
@@ -2904,13 +2904,13 @@
 <Largura Valor="1"/>
 <Ligacoes PontaA="326" PontaB="325"/>
 <Pontos>
-<Ponto Left="1075" Top="968"/>
-<Ponto Left="1065" Top="968"/>
+<Ponto Left="1075" Top="949"/>
+<Ponto Left="1065" Top="949"/>
 <Ponto Left="1065" Top="1146"/>
 </Pontos>
 </Ligacao>
 <Atributo ID="328">
-<Bounds Height="14" Left="1092" Top="1002" Width="99"/>
+<Bounds Height="14" Left="1092" Top="983" Width="99"/>
 <DisablePainted Valor="false"/>
 <Texto>data_emissao</Texto>
 <Observacao/>
@@ -2939,8 +2939,8 @@
 <Largura Valor="1"/>
 <Ligacoes PontaA="328" PontaB="325"/>
 <Pontos>
-<Ponto Left="1089" Top="1006"/>
-<Ponto Left="1079" Top="1006"/>
+<Ponto Left="1089" Top="987"/>
+<Ponto Left="1079" Top="987"/>
 <Ponto Left="1079" Top="1146"/>
 </Pontos>
 </Ligacao>
@@ -3274,7 +3274,7 @@
 </Relacionamento>
 </EntidadeAssociativa>
 <Atributo ID="400">
-<Bounds Height="14" Left="1071" Top="945" Width="108"/>
+<Bounds Height="14" Left="1071" Top="926" Width="108"/>
 <DisablePainted Valor="false"/>
 <Texto>codigo_veiculo</Texto>
 <Observacao/>
@@ -3303,8 +3303,8 @@
 <Largura Valor="1"/>
 <Ligacoes PontaA="400" PontaB="325"/>
 <Pontos>
-<Ponto Left="1068" Top="949"/>
-<Ponto Left="1058" Top="949"/>
+<Ponto Left="1068" Top="930"/>
+<Ponto Left="1058" Top="930"/>
 <Ponto Left="1058" Top="1146"/>
 </Pontos>
 </Ligacao>
@@ -4155,7 +4155,7 @@
 </Pontos>
 </Ligacao>
 <Atributo ID="517">
-<Bounds Height="14" Left="1085" Top="983" Width="102"/>
+<Bounds Height="14" Left="1085" Top="964" Width="102"/>
 <DisablePainted Valor="false"/>
 <Texto>valor_total_os</Texto>
 <Observacao/>
@@ -4184,8 +4184,8 @@
 <Largura Valor="1"/>
 <Ligacoes PontaA="517" PontaB="325"/>
 <Pontos>
-<Ponto Left="1082" Top="987"/>
-<Ponto Left="1072" Top="987"/>
+<Ponto Left="1082" Top="968"/>
+<Ponto Left="1072" Top="968"/>
 <Ponto Left="1072" Top="1146"/>
 </Pontos>
 </Ligacao>
@@ -4260,5 +4260,40 @@
 <MovimentacaoManual Valor="false"/>
 <Papel Valor=""/>
 </Cardinalidade>
+</Ligacao>
+<Atributo ID="539">
+<Bounds Height="14" Left="1099" Top="1002" Width="137"/>
+<DisablePainted Valor="false"/>
+<Texto>codigo_tipo_servico</Texto>
+<Observacao/>
+<Dicionario/>
+<Fonte Estilo="1" Nome="Arial" Tamanho="12"/>
+<Ancorado Valor="false"/>
+<DirecaoFromInspector Valor="0"/>
+<Autosize Valor="true"/>
+<Identificador Valor="false"/>
+<Opcional Valor="false"/>
+<Multivalorado Valor="false"/>
+<CardMinFromString Valor="1"/>
+<CardMaxFromString Valor="n"/>
+<TipoAtributo Valor=""/>
+</Atributo>
+<Ligacao ID="540">
+<DisablePainted Valor="false"/>
+<Tag LinhaMestre="-1"/>
+<Dashed Valor="false"/>
+<Ancorado Valor="false"/>
+<TemSetaPontaA Valor="false"/>
+<TemSetaPontaB Valor="false"/>
+<SetaAberta Valor="true"/>
+<SetaLargura Valor="10"/>
+<Inteligente Valor="true"/>
+<Largura Valor="1"/>
+<Ligacoes PontaA="539" PontaB="325"/>
+<Pontos>
+<Ponto Left="1096" Top="1006"/>
+<Ponto Left="1086" Top="1006"/>
+<Ponto Left="1086" Top="1146"/>
+</Pontos>
 </Ligacao>
 </DIAGRAMA>
