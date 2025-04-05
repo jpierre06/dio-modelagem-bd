@@ -1,0 +1,51 @@
+codigo_cliente,razao_social,nome_fantasia,prazo_pagamento,cnpj
+151,Auto Peças Silva LTDA,Auto Silva,30,12345678000190
+152,Mecânica Rápida Santos LTDA,Mecânica Santos,45,23456789000191
+153,Distribuidora de Auto Peças Lima LTDA,Peças Lima,30,34567890000192
+154,Comércio de Acessórios Automotivos Costa LTDA,Acessórios Costa,60,45678901000193
+155,Retífica de Motores Souza EIRELI,Retífica Souza,45,56789012000194
+156,Autoelétrica Gomes LTDA,Autoelétrica Gomes,30,67890123000195
+157,Loja de Pneus Oliveira ME,Pneus Oliveira,15,78901234000196
+158,Martelinho de Ouro Ferreira LTDA,Martelinho Ferreira,30,89012345000197
+159,Centro Automotivo Dias LTDA,Centro Dias,45,90123456000198
+160,Vidros Automotivos Ribeiro EIRELI,Vidros Ribeiro,30,01234567000199
+161,Concessionária Moura LTDA,Moura Veículos,60,11223344000156
+162,Lava Rápido Gomes LTDA,Lava Gomes,15,22334455000167
+163,Borracharia Martins EIRELI,Borracharia Martins,30,33445566000178
+164,Oficina Mecânica Alves LTDA,Oficina Alves,45,44556677000189
+165,Auto Escola Souza ME,Auto Escola Souza,30,55667788000190
+166,Posto de Combustível Lima LTDA,Posto Lima,45,66778899000101
+167,Funilaria Ferreira EIRELI,Funilaria Ferreira,30,77889900000112
+168,Alinhamento e Balanceamento Machado LTDA,Alinhamento Machado,15,88990011000123
+169,Comércio de Óleo e Filtros Silva LTDA,Óleo e Filtros Silva,30,99001122000134
+170,Auto Peças Importadas Oliveira LTDA,Importados Oliveira,45,00112233000145
+171,Loja de Carros Costa LTDA,Carros Costa,60,11122233000156
+172,Oficina Especializada Santos LTDA,Especializada Santos,45,22233344000167
+173,Acessórios para Caminhões Ferreira EIRELI,Acessórios Ferreira,30,33344455000178
+174,Serviços de Reboque Martins LTDA,Reboque Martins,15,44455566000189
+175,Concessionária de Motos Alves LTDA,Motos Alves,45,55566677000190
+176,Auto Center Lima LTDA,Auto Center Lima,30,66677788000101
+177,Comércio de Peças Usadas Pereira EIRELI,Peças Usadas Pereira,30,77788899000112
+178,Loja de Acessórios Oliveira ME,Acessórios Oliveira,15,88899900000123
+179,Oficina Especializada em Freios Souza LTDA,Freios Souza,30,99900011000134
+180,Centro de Inspeção Veicular Ferreira LTDA,Inspeção Ferreira,45,00011122000145
+181,Auto Peças Multimarcas Gomes EIRELI,Multimarcas Gomes,30,11133344000156
+182,Oficina de Injeção Eletrônica Santos LTDA,Injeção Santos,45,22244455000167
+183,Loja de Baterias Lima ME,Baterias Lima,15,33355566000178
+184,Retífica de Cabeçotes Pereira LTDA,Retífica Pereira,30,44466677000189
+185,Auto Peças Importadas Costa LTDA,Importadas Costa,45,55577788000190
+186,Oficina Especializada em Câmbio Martins LTDA,Câmbio Martins,30,66688899000101
+187,Centro Automotivo Souza EIRELI,Centro Souza,60,77799900000112
+188,Loja de Rodas e Pneus Oliveira LTDA,Rodas Oliveira,30,88800011000123
+189,Comércio de Escapamentos Lima ME,Escapamentos Lima,15,99911122000134
+190,Auto Elétrica Ferreira LTDA,Elétrica Ferreira,30,00022233000145
+191,Posto de Lavagem Costa EIRELI,Lavagem Costa,15,11133344000157
+192,Concessionária de Caminhões Silva LTDA,Caminhões Silva,60,22244455000168
+193,Oficina de Motos Souza LTDA,Motos Souza,30,33355566000179
+194,Auto Peças para Tratores Oliveira EIRELI,Peças Tratores,45,44466677000180
+195,Loja de Som Automotivo Lima LTDA,Som Automotivo Lima,30,55577788000191
+196,Oficina de Pintura Ferreira ME,Pintura Ferreira,15,66688899000102
+197,Centro de Revisão Santos EIRELI,Revisão Santos,30,77799900000113
+198,Comércio de Vidros Automotivos Pereira LTDA,Vidros Pereira,45,88800011000124
+199,Auto Socorro Costa LTDA,Socorro Costa,30,99911122000135
+200,Oficina Especializada em Ar Condicionado Gomes LTDA,Ar Condicionado Gomes,45,00022233000146

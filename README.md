@@ -38,3 +38,12 @@
 
 > Para acessar diretamente o modelo lógico, click aqui ->
 [Modelo Lógico](oficina/Modelo_logico.md)
+
+> Para acessar diretamente o modelo físico, click aqui ->
+[Modelo Físico](oficina/Modelo_fisico.md)
+
+> Para informações sobre carga de dados de teste, click aqui ->
+[Carga de Dados para Teste](oficina/Base_dados.md)
+
+> Para acessar documentação sobre consultas ao banco de dados, click aqui ->
+[Exemplos consultas](oficina/Consultas_SQL.md)

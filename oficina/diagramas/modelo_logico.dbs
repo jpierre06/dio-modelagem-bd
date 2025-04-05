@@ -16,6 +16,9 @@
 			<index name="unq_tb_cliente_codigo_contato" unique="UNIQUE_KEY" >
 				<column name="codigo_contato" />
 			</index>
+			<fk name="fk_tb_cliente_tb_endereco" to_schema="curso_oficina" to_table="tb_endereco" options="" >
+				<fk_column name="codigo_endereco" pk="codigo_endereco" />
+			</fk>
 			<options><![CDATA[engine=InnoDB]]></options>
 		</table>
 		<table name="tb_contato" prior="tbl" >
@@ -54,6 +57,9 @@
 				<column name="codigo_os" />
 				<column name="codigo_peca" />
 			</index>
+			<index name="fk_tb_detalhamento_os_peca_tb_peca" unique="NORMAL" >
+				<column name="codigo_peca" />
+			</index>
 			<fk name="fk_tb_detalhamento_os_peca_tb_peca" to_schema="curso_oficina" to_table="tb_peca" >
 				<fk_column name="codigo_peca" pk="codigo_peca" />
 			</fk>
@@ -69,6 +75,9 @@
 			<column name="valor_servico_os" type="DECIMAL" length="8" decimal="2" jt="3" mandatory="y" unsigned="y" />
 			<index name="pk_tb_detalhamento_os_servico" unique="PRIMARY_KEY" >
 				<column name="codigo_os" />
+				<column name="codigo_servico" />
+			</index>
+			<index name="fk_tb_detalhamento_os_servico_tb_servico" unique="NORMAL" >
 				<column name="codigo_servico" />
 			</index>
 			<fk name="fk_tb_detalhamento_os_servico_tb_ordem_servico" to_schema="curso_oficina" to_table="tb_ordem_servico" >
@@ -93,12 +102,6 @@
 			<index name="pk_tb_endereco" unique="PRIMARY_KEY" >
 				<column name="codigo_endereco" />
 			</index>
-			<fk name="fk_tb_endereco_tb_cliente" to_schema="curso_oficina" to_table="tb_cliente" >
-				<fk_column name="codigo_endereco" pk="codigo_endereco" />
-			</fk>
-			<fk name="fk_tb_endereco_tb_mecanico" to_schema="curso_oficina" to_table="tb_mecanico" >
-				<fk_column name="codigo_endereco" pk="codigo_endereco" />
-			</fk>
 			<options><![CDATA[engine=InnoDB]]></options>
 		</table>
 		<table name="tb_equipe_atendimento" prior="tb_equipe_mecanico" >
@@ -134,6 +137,9 @@
 				<column name="codigo_especialidade" />
 				<column name="codigo_mecanico" />
 			</index>
+			<index name="fk_tb_especialidade_mecanico_tb_mecanico" unique="NORMAL" >
+				<column name="codigo_mecanico" />
+			</index>
 			<fk name="fk_tb_especialidade_mecanico_tb_especialidade" to_schema="curso_oficina" to_table="tb_especialidade" >
 				<fk_column name="codigo_especialidade" pk="codigo_especialidade" />
 			</fk>
@@ -164,6 +170,9 @@
 			<index name="unq_tb_mecanico_codigo_endereco" unique="UNIQUE_KEY" >
 				<column name="codigo_endereco" />
 			</index>
+			<fk name="fk_tb_mecanico_tb_endereco" to_schema="curso_oficina" to_table="tb_endereco" options="" >
+				<fk_column name="codigo_endereco" pk="codigo_endereco" />
+			</fk>
 			<options><![CDATA[engine=InnoDB]]></options>
 		</table>
 		<table name="tb_mecanico_equipe" prior="tbl" >
@@ -171,6 +180,9 @@
 			<column name="codigo_equipe" type="INT" jt="4" mandatory="y" unsigned="y" />
 			<index name="pk_tb_mecanico_equipe" unique="PRIMARY_KEY" >
 				<column name="codigo_mecanico" />
+				<column name="codigo_equipe" />
+			</index>
+			<index name="fk_tb_mecanico_equipe_tb_equipe_atendimento" unique="NORMAL" >
 				<column name="codigo_equipe" />
 			</index>
 			<fk name="fk_tb_mecanico_equipe_tb_mecanico" to_schema="curso_oficina" to_table="tb_mecanico" >
@@ -186,6 +198,9 @@
 			<column name="codigo_peca" type="INT" jt="4" mandatory="y" unsigned="y" />
 			<index name="pk_tb_modelo_peca" unique="PRIMARY_KEY" >
 				<column name="codigo_modelo" />
+				<column name="codigo_peca" />
+			</index>
+			<index name="fk_tb_modelo_peca_tb_peca" unique="NORMAL" >
 				<column name="codigo_peca" />
 			</index>
 			<fk name="fk_tb_modelo_peca_tb_modelo_veiculo" to_schema="curso_oficina" to_table="tb_modelo_veiculo" >
@@ -209,6 +224,9 @@
 			<index name="pk_tb_modelo_veiculo" unique="PRIMARY_KEY" >
 				<column name="codigo_modelo" />
 			</index>
+			<index name="fk_tb_modelo_veiculo_tb_fabricante" unique="NORMAL" >
+				<column name="codigo_fabricante" />
+			</index>
 			<fk name="fk_tb_modelo_veiculo_tb_fabricante" to_schema="curso_oficina" to_table="tb_fabricante" >
 				<fk_column name="codigo_fabricante" pk="codigo_fabricante" />
 			</fk>
@@ -222,7 +240,7 @@
 			<column name="codigo_veiculo" type="INT" jt="4" mandatory="y" unsigned="y" />
 			<column name="codigo_equipe" type="INT" jt="4" mandatory="y" unsigned="y" />
 			<column name="data_emissao" type="DATE" jt="91" mandatory="y" >
-				<defo><![CDATA[CURRENT_DATE]]></defo>
+				<defo><![CDATA[curdate()]]></defo>
 			</column>
 			<column name="data_conclusao" type="DATE" jt="91" mandatory="y" />
 			<column name="status_os" type="INT" jt="4" mandatory="y" unsigned="y" />
@@ -236,14 +254,20 @@
 			<index name="unq_tb_ordem_servico_codigo_equipe" unique="UNIQUE_KEY" >
 				<column name="codigo_equipe" />
 			</index>
+			<index name="fk_tb_ordem_servico_tb_tipo_servico" unique="NORMAL" >
+				<column name="codigo_tipo_servico" />
+			</index>
+			<index name="fk_tb_ordem_servico_tb_veiculo" unique="UNIQUE_KEY" >
+				<column name="codigo_veiculo" />
+			</index>
 			<fk name="fk_tb_ordem_servico_tb_tipo_servico" to_schema="curso_oficina" to_table="tb_tipo_servico" >
 				<fk_column name="codigo_tipo_servico" pk="codigo_tipo_servico" />
 			</fk>
-			<fk name="fk_tb_ordem_servico_tb_veiculo" to_schema="curso_oficina" to_table="tb_veiculo" >
-				<fk_column name="codigo_veiculo" pk="codigo_veiculo" />
-			</fk>
 			<fk name="fk_tb_ordem_servico_tb_equipe_atendimento" to_schema="curso_oficina" to_table="tb_equipe_atendimento" >
 				<fk_column name="codigo_equipe" pk="codigo_equipe" />
+			</fk>
+			<fk name="fk_tb_ordem_servico_tb_veiculo_0" to_schema="curso_oficina" to_table="tb_veiculo" >
+				<fk_column name="codigo_veiculo" pk="codigo_veiculo" />
 			</fk>
 			<options><![CDATA[engine=InnoDB]]></options>
 		</table>
@@ -267,6 +291,9 @@
 			<index name="pk_tb_pessoa_fisica" unique="PRIMARY_KEY" >
 				<column name="codigo_cliente" />
 			</index>
+			<index name="unq_tb_pessoa_fisica" unique="UNIQUE_KEY" >
+				<column name="cpf" />
+			</index>
 			<fk name="fk_tb_pessoa_fisica_tb_cliente" to_schema="curso_oficina" to_table="tb_cliente" >
 				<fk_column name="codigo_cliente" pk="codigo_cliente" />
 			</fk>
@@ -280,6 +307,9 @@
 			<column name="cnpj" type="CHAR" length="14" jt="1" mandatory="y" />
 			<index name="pk_tb_pessoa_juridica" unique="PRIMARY_KEY" >
 				<column name="codigo_cliente" />
+			</index>
+			<index name="unq_tb_pessoa_juridica" unique="UNIQUE_KEY" >
+				<column name="cnpj" />
 			</index>
 			<fk name="fk_tb_pessoa_juridica_tb_cliente" to_schema="curso_oficina" to_table="tb_cliente" >
 				<fk_column name="codigo_cliente" pk="codigo_cliente" />
@@ -305,7 +335,9 @@
 			<column name="codigo_tipo_servico" type="INT" jt="4" mandatory="y" unsigned="y" >
 				<identity><![CDATA[AUTO_INCREMENT ]]></identity>
 			</column>
-			<column name="descricao_tipo_servico" type="VARCHAR" length="32" jt="12" mandatory="y" />
+			<column name="descricao_tipo_servico" type="VARCHAR" length="40" jt="12" mandatory="y" >
+				<column_options><![CDATA[CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci]]></column_options>
+			</column>
 			<index name="pk_tb_tipo_servico" unique="PRIMARY_KEY" >
 				<column name="codigo_tipo_servico" />
 			</index>
@@ -317,7 +349,7 @@
 			</column>
 			<column name="codigo_cliente" type="INT" jt="4" mandatory="y" unsigned="y" />
 			<column name="placa" type="CHAR" length="7" jt="1" mandatory="y" />
-			<column name="renavan" type="VARCHAR" length="20" jt="12" mandatory="y" />
+			<column name="renavan" type="VARCHAR" length="16" jt="12" mandatory="y" />
 			<column name="codigo_modelo" type="INT" jt="4" mandatory="y" unsigned="y" />
 			<column name="codigo_cor" type="INT" jt="4" mandatory="y" unsigned="y" />
 			<column name="ano_fabricacao" type="INT" jt="4" mandatory="y" unsigned="y" />
@@ -333,6 +365,12 @@
 			<index name="unq_tb_veiculo_codigo_veiculo" unique="UNIQUE_KEY" >
 				<column name="codigo_veiculo" />
 			</index>
+			<index name="fk_tb_veiculo_tb_cor" unique="NORMAL" >
+				<column name="codigo_cor" />
+			</index>
+			<index name="fk_tb_veiculo_tb_modelo_veiculo" unique="NORMAL" >
+				<column name="codigo_modelo" />
+			</index>
 			<fk name="fk_tb_veiculo_tb_cor" to_schema="curso_oficina" to_table="tb_cor" >
 				<fk_column name="codigo_cor" pk="codigo_cor" />
 			</fk>
@@ -347,29 +385,60 @@
 	</schema>
 	<layout name="Main Diagram" id="Diagram-1f79" show_relation="columns" >
 		<comment><![CDATA[Diagrama Lógico - Oficina]]></comment>
-		<entity schema="curso_oficina" name="tb_cliente" color="C1D8EE" x="608" y="228" />
-		<entity schema="curso_oficina" name="tb_contato" color="C1D8EE" x="1121" y="475" />
-		<entity schema="curso_oficina" name="tb_cor" color="C1D8EE" x="57" y="228" />
-		<entity schema="curso_oficina" name="tb_detalhamento_os_peca" color="C1D8EE" x="779" y="874" />
-		<entity schema="curso_oficina" name="tb_detalhamento_os_servico" color="C1D8EE" x="931" y="1045" />
-		<entity schema="curso_oficina" name="tb_endereco" color="C1D8EE" x="1235" y="209" />
-		<entity schema="curso_oficina" name="tb_equipe_atendimento" color="C1D8EE" x="1653" y="988" />
-		<entity schema="curso_oficina" name="tb_especialidade" color="C1D8EE" x="1102" y="684" />
-		<entity schema="curso_oficina" name="tb_especialidade_mecanico" color="C1D8EE" x="1368" y="684" />
-		<entity schema="curso_oficina" name="tb_fabricante" color="C1D8EE" x="266" y="950" />
-		<entity schema="curso_oficina" name="tb_mecanico" color="C1D8EE" x="1634" y="684" />
-		<entity schema="curso_oficina" name="tb_mecanico_equipe" color="C1D8EE" x="1634" y="836" />
-		<entity schema="curso_oficina" name="tb_modelo_peca" color="C1D8EE" x="513" y="646" />
-		<entity schema="curso_oficina" name="tb_modelo_veiculo" color="C1D8EE" x="266" y="646" />
-		<entity schema="curso_oficina" name="tb_ordem_servico" color="C1D8EE" x="1216" y="988" />
-		<entity schema="curso_oficina" name="tb_peca" color="C1D8EE" x="760" y="646" />
-		<entity schema="curso_oficina" name="tb_pessoa_fisica" color="C1D8EE" x="551" y="399" />
-		<entity schema="curso_oficina" name="tb_pessoa_juridica" color="C1D8EE" x="779" y="399" />
-		<entity schema="curso_oficina" name="tb_servico" color="C1D8EE" x="646" y="1045" />
-		<entity schema="curso_oficina" name="tb_tipo_servico" color="C1D8EE" x="1197" y="836" />
-		<entity schema="curso_oficina" name="tb_veiculo" color="C1D8EE" x="266" y="228" />
-		<callout x="722" y="57" pointer="Round" >
+		<entity schema="curso_oficina" name="tb_cliente" color="008000" x="798" y="285" />
+		<entity schema="curso_oficina" name="tb_contato" color="008000" x="1159" y="380" />
+		<entity schema="curso_oficina" name="tb_cor" color="FF0000" x="266" y="361" />
+		<entity schema="curso_oficina" name="tb_detalhamento_os_peca" color="C1D8EE" x="798" y="684" />
+		<entity schema="curso_oficina" name="tb_detalhamento_os_servico" color="C1D8EE" x="798" y="931" />
+		<entity schema="curso_oficina" name="tb_endereco" color="800080" x="1444" y="285" />
+		<entity schema="curso_oficina" name="tb_equipe_atendimento" color="999900" x="1425" y="988" />
+		<entity schema="curso_oficina" name="tb_especialidade" color="999900" x="1900" y="684" />
+		<entity schema="curso_oficina" name="tb_especialidade_mecanico" color="999900" x="1653" y="684" />
+		<entity schema="curso_oficina" name="tb_fabricante" color="FF0000" x="57" y="1007" />
+		<entity schema="curso_oficina" name="tb_mecanico" color="999900" x="1425" y="684" />
+		<entity schema="curso_oficina" name="tb_mecanico_equipe" color="999900" x="1425" y="836" />
+		<entity schema="curso_oficina" name="tb_modelo_peca" color="FF0000" x="304" y="703" />
+		<entity schema="curso_oficina" name="tb_modelo_veiculo" color="FF0000" x="57" y="703" />
+		<entity schema="curso_oficina" name="tb_ordem_servico" color="C1D8EE" x="1121" y="836" />
+		<entity schema="curso_oficina" name="tb_peca" color="C1D8EE" x="589" y="684" />
+		<entity schema="curso_oficina" name="tb_pessoa_fisica" color="008000" x="608" y="475" />
+		<entity schema="curso_oficina" name="tb_pessoa_juridica" color="008000" x="836" y="456" />
+		<entity schema="curso_oficina" name="tb_servico" color="C1D8EE" x="589" y="931" />
+		<entity schema="curso_oficina" name="tb_tipo_servico" color="C1D8EE" x="1121" y="684" />
+		<entity schema="curso_oficina" name="tb_veiculo" color="FF0000" x="57" y="285" />
+		<callout x="513" y="95" pointer="Round" >
 			<comment><![CDATA[Modelagem Lógica para atividade de banco de dados de Oficina]]></comment>
 		</callout>
+		<group name="Tabelas Clientes" color="008000" >
+			<entity schema="curso_oficina" name="tb_cliente" />
+			<entity schema="curso_oficina" name="tb_pessoa_fisica" />
+			<entity schema="curso_oficina" name="tb_pessoa_juridica" />
+			<entity schema="curso_oficina" name="tb_contato" />
+		</group>
+		<group name="Tabelas de Veículo" color="FF0000" >
+			<entity schema="curso_oficina" name="tb_veiculo" />
+			<entity schema="curso_oficina" name="tb_cor" />
+			<entity schema="curso_oficina" name="tb_modelo_veiculo" />
+			<entity schema="curso_oficina" name="tb_modelo_peca" />
+			<entity schema="curso_oficina" name="tb_fabricante" />
+		</group>
+		<group name="Tabelas de Serviços da Oficina" color="C4E0F9" >
+			<entity schema="curso_oficina" name="tb_peca" />
+			<entity schema="curso_oficina" name="tb_detalhamento_os_peca" />
+			<entity schema="curso_oficina" name="tb_detalhamento_os_servico" />
+			<entity schema="curso_oficina" name="tb_servico" />
+			<entity schema="curso_oficina" name="tb_tipo_servico" />
+			<entity schema="curso_oficina" name="tb_ordem_servico" />
+		</group>
+		<group name="Tabelas de Equipes da Oficina" color="999900" >
+			<entity schema="curso_oficina" name="tb_equipe_atendimento" />
+			<entity schema="curso_oficina" name="tb_especialidade" />
+			<entity schema="curso_oficina" name="tb_especialidade_mecanico" />
+			<entity schema="curso_oficina" name="tb_mecanico_equipe" />
+			<entity schema="curso_oficina" name="tb_mecanico" />
+		</group>
+		<group name="Tabelas Gerais" color="800080" >
+			<entity schema="curso_oficina" name="tb_endereco" />
+		</group>
 	</layout>
 </project>

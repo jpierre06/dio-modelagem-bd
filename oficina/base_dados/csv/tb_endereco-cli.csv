@@ -1,0 +1,201 @@
+codigo_endereco,logradouro,numero,complemento,cep,bairro,cidade,estado
+1,Rua das Flores,123,Apto 101,12345678,Centro,São Paulo,São Paulo
+2,Avenida Paulista,1500,Sala 302,01310100,Bela Vista,São Paulo,São Paulo
+3,Rua Augusta,789,Casa,01305000,Consolação,São Paulo,São Paulo
+4,Avenida Brigadeiro Faria Lima,2500,Conjunto 45,04538132,Itaim Bibi,São Paulo,São Paulo
+5,Rua Oscar Freire,987,,01426001,Jardins,São Paulo,São Paulo
+6,Alameda Santos,456,Bloco B,01419000,Cerqueira César,São Paulo,São Paulo
+7,Rua da Consolação,1234,,01301000,Consolação,São Paulo,São Paulo
+8,Avenida Rebouças,3210,Apto 505,05401200,Pinheiros,São Paulo,São Paulo
+9,Rua Haddock Lobo,654,Casa 2,01414001,Cerqueira César,São Paulo,São Paulo
+10,Avenida São João,876,5º Andar,01035000,República,São Paulo,São Paulo
+11,Rua Barão de Itapetininga,345,,01042001,República,São Paulo,São Paulo
+12,Avenida Ipiranga,910,Apto 1001,01046010,República,São Paulo,São Paulo
+13,Rua Xavier de Toledo,111,Sala 25,01048000,República,São Paulo,São Paulo
+14,Avenida Angélica,2356,,01228200,Consolação,São Paulo,São Paulo
+15,Rua Peixoto Gomide,789,Bloco C,01409001,Jardim Paulista,São Paulo,São Paulo
+16,Avenida Nove de Julho,3456,Apto 801,01313001,Bela Vista,São Paulo,São Paulo
+17,Rua Pamplona,654,,01405000,Jardim Paulista,São Paulo,São Paulo
+18,Avenida Brigadeiro Luís Antônio,1978,Casa Fundos,01317001,Bela Vista,São Paulo,São Paulo
+19,Rua Frei Caneca,456,Apto 304,01307001,Consolação,São Paulo,São Paulo
+20,Avenida Paulista,2800,Sala 1501,01310100,Bela Vista,São Paulo,São Paulo
+21,Rua Itapeva,340,,01332000,Bela Vista,São Paulo,São Paulo
+22,Avenida Higienópolis,1200,Apto 102,01238000,Higienópolis,São Paulo,São Paulo
+23,Rua Alagoas,546,,01242001,Higienópolis,São Paulo,São Paulo
+24,Avenida Pacaembu,1543,Casa 3,01234000,Pacaembu,São Paulo,São Paulo
+25,Rua dos Ingleses,300,Apto 401,01329000,Morro dos Ingleses,São Paulo,São Paulo
+26,Avenida Brasil,768,,01430000,Jardim América,São Paulo,São Paulo
+27,Rua Augusta,1700,Loja 3,01305000,Cerqueira César,São Paulo,São Paulo
+28,Avenida Europa,432,,01449001,Jardim Europa,São Paulo,São Paulo
+29,Rua Estados Unidos,897,,01427000,Jardim América,São Paulo,São Paulo
+30,Avenida Santo Amaro,1245,Apto 605,04505002,Vila Nova Conceição,São Paulo,São Paulo
+31,Rua João Cachoeira,680,,04535001,Itaim Bibi,São Paulo,São Paulo
+32,Avenida Moema,950,Bloco D,04077000,Moema,São Paulo,São Paulo
+33,Rua Turiassú,734,,05005001,Perdizes,São Paulo,São Paulo
+34,Avenida Francisco Matarazzo,1500,Apto 708,05001100,Água Branca,São Paulo,São Paulo
+35,Rua Cardeal Arcoverde,432,,05407001,Pinheiros,São Paulo,São Paulo
+36,Avenida Sumaré,867,,01255090,Perdizes,São Paulo,São Paulo
+37,Rua Clélia,293,Casa 1,05042000,Pompeia,São Paulo,São Paulo
+38,Avenida Dr. Arnaldo,1890,,01255000,Sumaré,São Paulo,São Paulo
+39,Rua Heitor Penteado,540,Apto 302,05438000,Sumaré,São Paulo,São Paulo
+40,Avenida Pompeia,1765,,05023000,Pompeia,São Paulo,São Paulo
+41,Rua Coriolano,385,,05047000,Vila Romana,São Paulo,São Paulo
+42,Avenida Pedroso de Morais,997,,05420000,Pinheiros,São Paulo,São Paulo
+43,Rua dos Pinheiros,726,Sala 12,05422001,Pinheiros,São Paulo,São Paulo
+44,Avenida Brigadeiro Faria Lima,1234,11º Andar,01452001,Jardim Paulistano,São Paulo,São Paulo
+45,Rua Harmonia,123,,05435000,Vila Madalena,São Paulo,São Paulo
+46,Avenida Henrique Schaumann,546,,05413010,Pinheiros,São Paulo,São Paulo
+47,Rua Teodoro Sampaio,1020,Loja 2,05406000,Pinheiros,São Paulo,São Paulo
+48,Avenida Rebouças,2345,Conjunto 1203,05401200,Pinheiros,São Paulo,São Paulo
+49,Rua Mourato Coelho,780,,05417000,Pinheiros,São Paulo,São Paulo
+50,Avenida Paulo VI,432,,05657000,Sumaré,São Paulo,São Paulo
+51,Rua Apinajés,600,Casa 4,05017000,Perdizes,São Paulo,São Paulo
+52,Avenida Alfonso Bovero,890,Apto 507,05019010,Perdizes,São Paulo,São Paulo
+53,Rua Caio Graco,321,,05043050,Lapa,São Paulo,São Paulo
+54,Avenida São João,4321,Apto 1103,05003000,Água Branca,São Paulo,São Paulo
+55,Rua Aurélia,543,,05046000,Vila Romana,São Paulo,São Paulo
+56,Avenida Pompeia,2356,,05022000,Pompeia,São Paulo,São Paulo
+57,Rua Guaicurus,768,,05033001,Lapa,São Paulo,São Paulo
+58,Avenida Clélia,1290,Casa Fundos,05042000,Lapa,São Paulo,São Paulo
+59,Rua Faustolo,435,,05041000,Lapa,São Paulo,São Paulo
+60,Avenida Marquês de São Vicente,2100,Bloco A,05036000,Água Branca,São Paulo,São Paulo
+61,Rua Barra Funda,876,,01152000,Barra Funda,São Paulo,São Paulo
+62,Avenida Angélica,1654,Apto 805,01228200,Higienópolis,São Paulo,São Paulo
+63,Rua Maranhão,321,,01240001,Higienópolis,São Paulo,São Paulo
+64,Avenida Dr. Arnaldo,987,Sala 45,01255000,Cerqueira César,São Paulo,São Paulo
+65,Rua Piauí,654,,01241000,Higienópolis,São Paulo,São Paulo
+66,Avenida Rebouças,1876,Apto 503,01310100,Jardim Paulista,São Paulo,São Paulo
+67,Rua Haddock Lobo,432,,01414001,Cerqueira César,São Paulo,São Paulo
+68,Avenida Nove de Julho,5432,15º Andar,01407100,Jardim Paulista,São Paulo,São Paulo
+69,Rua Augusta,2345,Apto 701,01305000,Consolação,São Paulo,São Paulo
+70,Avenida Paulista,3210,Sala 2201,01310100,Bela Vista,São Paulo,São Paulo
+71,Rua da Consolação,2134,,01301000,Consolação,São Paulo,São Paulo
+72,Avenida São Luís,789,Apto 908,01046001,República,São Paulo,São Paulo
+73,Rua Bela Cintra,432,,01415000,Consolação,São Paulo,São Paulo
+74,Avenida Brigadeiro Luís Antônio,3210,Casa 2,01317001,Bela Vista,São Paulo,São Paulo
+75,Rua Major Sertório,765,,01222000,Vila Buarque,São Paulo,São Paulo
+76,Avenida Ipiranga,1234,Apto 1203,01046010,República,São Paulo,São Paulo
+77,Rua General Jardim,543,,01223010,Vila Buarque,São Paulo,São Paulo
+78,Avenida São João,1234,5º Andar,01035000,República,São Paulo,São Paulo
+79,Rua Amaral Gurgel,876,,01221001,Vila Buarque,São Paulo,São Paulo
+80,Avenida Paulista,1000,Conjunto 1502,01310100,Bela Vista,São Paulo,São Paulo
+81,Rua Augusta,3000,,01305000,Cerqueira César,São Paulo,São Paulo
+82,Avenida Rebouças,1111,Apto 607,05401200,Pinheiros,São Paulo,São Paulo
+83,Rua Oscar Freire,1500,,01426001,Jardins,São Paulo,São Paulo
+84,Avenida Brigadeiro Faria Lima,3210,Sala 405,04538132,Itaim Bibi,São Paulo,São Paulo
+85,Rua Haddock Lobo,1234,,01414001,Cerqueira César,São Paulo,São Paulo
+86,Avenida Paulista,4000,Apto 1805,01310100,Bela Vista,São Paulo,São Paulo
+87,Rua Pamplona,876,,01405000,Jardim Paulista,São Paulo,São Paulo
+88,Avenida Europa,1234,,01449001,Jardim Europa,São Paulo,São Paulo
+89,Rua Estados Unidos,543,,01427000,Jardim América,São Paulo,São Paulo
+90,Avenida Brasil,876,,01430000,Jardim América,São Paulo,São Paulo
+91,Rua João Cachoeira,432,,04535001,Itaim Bibi,São Paulo,São Paulo
+92,Avenida Santo Amaro,2345,Apto 304,04505002,Vila Nova Conceição,São Paulo,São Paulo
+93,Rua Joaquim Floriano,876,,04534011,Itaim Bibi,São Paulo,São Paulo
+94,Avenida Juscelino Kubitschek,1000,Conjunto 512,04543011,Vila Nova Conceição,São Paulo,São Paulo
+95,Rua Tabapuã,543,,04533001,Itaim Bibi,São Paulo,São Paulo
+96,Avenida Cidade Jardim,876,Apto 1101,01453000,Jardim Europa,São Paulo,São Paulo
+97,Rua Gabriel Monteiro da Silva,432,,01441000,Jardim América,São Paulo,São Paulo
+98,Avenida Higienópolis,765,Apto 906,01238000,Higienópolis,São Paulo,São Paulo
+99,Rua Maranhão,987,,01240001,Higienópolis,São Paulo,São Paulo
+100,Avenida Angélica,1500,Casa 3,01228200,Higienópolis,São Paulo,São Paulo
+101,Rua Sergipe,432,,01243000,Higienópolis,São Paulo,São Paulo
+102,Avenida Dr. Arnaldo,2345,Apto 504,01255000,Sumaré,São Paulo,São Paulo
+103,Rua Cardoso de Almeida,876,,05013000,Perdizes,São Paulo,São Paulo
+104,Avenida Sumaré,1500,,01255090,Perdizes,São Paulo,São Paulo
+105,Rua Turiassú,876,,05005001,Perdizes,São Paulo,São Paulo
+106,Avenida Francisco Matarazzo,2345,Apto 903,05001100,Água Branca,São Paulo,São Paulo
+107,Rua Carlos Weber,654,,05303000,Vila Leopoldina,São Paulo,São Paulo
+108,Avenida Imperatriz Leopoldina,876,,05305000,Vila Leopoldina,São Paulo,São Paulo
+109,Rua Guaipá,432,,05089000,Vila Leopoldina,São Paulo,São Paulo
+110,Avenida Queiroz Filho,1234,Apto 605,05319000,Alto de Pinheiros,São Paulo,São Paulo
+111,Rua Natingui,876,,05443000,Alto de Pinheiros,São Paulo,São Paulo
+112,Avenida São Gualter,432,,05455000,Alto de Pinheiros,São Paulo,São Paulo
+113,Rua Girassol,876,,05433001,Vila Madalena,São Paulo,São Paulo
+114,Avenida Professor Alfonso Bovero,1234,Apto 802,01254000,Sumaré,São Paulo,São Paulo
+115,Rua Heitor Penteado,876,,05438000,Sumaré,São Paulo,São Paulo
+116,Avenida Henrique Schaumann,1234,Sala 301,05413010,Pinheiros,São Paulo,São Paulo
+117,Rua dos Pinheiros,876,,05422001,Pinheiros,São Paulo,São Paulo
+118,Avenida Rebouças,4321,Apto 1206,05401200,Pinheiros,São Paulo,São Paulo
+119,Rua Teodoro Sampaio,1500,,05406000,Pinheiros,São Paulo,São Paulo
+120,Avenida Pedroso de Morais,876,Casa 2,05420000,Pinheiros,São Paulo,São Paulo
+121,Rua Fradique Coutinho,432,,05416000,Vila Madalena,São Paulo,São Paulo
+122,Avenida Brigadeiro Faria Lima,4300,Conjunto 1701,01452001,Itaim Bibi,São Paulo,São Paulo
+123,Rua Joaquim Floriano,987,,04534011,Itaim Bibi,São Paulo,São Paulo
+124,Avenida Juscelino Kubitschek,2345,Apto 1803,04543011,Vila Nova Conceição,São Paulo,São Paulo
+125,Rua Tabapuã,765,,04533001,Itaim Bibi,São Paulo,São Paulo
+126,Avenida Nove de Julho,4321,Sala 1201,01407100,Jardim Paulista,São Paulo,São Paulo
+127,Rua Augusta,4321,Apto 1403,01305000,Cerqueira César,São Paulo,São Paulo
+128,Avenida Paulista,5000,25º Andar,01310100,Bela Vista,São Paulo,São Paulo
+129,Rua Haddock Lobo,1500,,01414001,Cerqueira César,São Paulo,São Paulo
+130,Avenida Rebouças,3210,Apto 1105,05401200,Pinheiros,São Paulo,São Paulo
+131,Rua da Consolação,3456,,01301000,Consolação,São Paulo,São Paulo
+132,Avenida São João,2345,Apto 1502,01035000,República,São Paulo,São Paulo
+133,Rua Barão de Itapetininga,876,,01042001,República,São Paulo,São Paulo
+134,Avenida Ipiranga,2345,Conjunto 1101,01046010,República,São Paulo,São Paulo
+135,Rua Major Sertório,432,,01222000,Vila Buarque,São Paulo,São Paulo
+136,Avenida Higienópolis,2345,Apto 1203,01238000,Higienópolis,São Paulo,São Paulo
+137,Rua Maranhão,765,,01240001,Higienópolis,São Paulo,São Paulo
+138,Avenida Angélica,3456,Casa 1,01228200,Higienópolis,São Paulo,São Paulo
+139,Rua Augusta,5432,Apto 1704,01305000,Consolação,São Paulo,São Paulo
+140,Avenida Paulista,6000,30º Andar,01310100,Bela Vista,São Paulo,São Paulo
+141,Rua Oscar Freire,2345,,01426001,Jardins,São Paulo,São Paulo
+142,Avenida Brasil,1500,,01430000,Jardim América,São Paulo,São Paulo
+143,Rua Estados Unidos,1234,,01427000,Jardim América,São Paulo,São Paulo
+144,Avenida Europa,876,,01449001,Jardim Europa,São Paulo,São Paulo
+145,Rua Gabriel Monteiro da Silva,543,,01441000,Jardim América,São Paulo,São Paulo
+146,Avenida Cidade Jardim,1500,Apto 1405,01453000,Jardim Europa,São Paulo,São Paulo
+147,Rua Colômbia,876,,01438000,Jardim América,São Paulo,São Paulo
+148,Avenida Brigadeiro Faria Lima,5432,18º Andar,01452001,Jardim Paulistano,São Paulo,São Paulo
+149,Rua Professor Arthur Ramos,432,,01454010,Jardim Paulistano,São Paulo,São Paulo
+150,Avenida Nove de Julho,6789,Apto 1901,01407100,Jardim Paulista,São Paulo,São Paulo
+151,Rua General Artigas,435,Galpão,04163010,Vila Mariana,São Paulo,São Paulo
+152,Avenida Santo Amaro,3454,Loja,04506001,Campo Belo,São Paulo,São Paulo
+153,Rua Vergueiro,1234,Loja Térrea,04101000,Vila Mariana,São Paulo,São Paulo
+154,Avenida Ibirapuera,2345,Loja 3,04029200,Moema,São Paulo,São Paulo
+155,Rua Abílio Soares,876,Loja,04005001,Paraíso,São Paulo,São Paulo
+156,Avenida 23 de Maio,1000,Piso 2,04005000,Paraíso,São Paulo,São Paulo
+157,Rua Borges Lagoa,543,Loja,04038032,Vila Clementino,São Paulo,São Paulo
+158,Avenida Indianópolis,2345,Loja,04062000,Moema,São Paulo,São Paulo
+159,Rua França Pinto,765,Loja 2,04016001,Vila Mariana,São Paulo,São Paulo
+160,Avenida Lins de Vasconcelos,1234,Loja,01538001,Cambuci,São Paulo,São Paulo
+161,Rua da Mooca,876,Galpão 3,03104000,Mooca,São Paulo,São Paulo
+162,Avenida do Estado,2345,Loja,01516000,Ipiranga,São Paulo,São Paulo
+163,Rua Hipódromo,432,Loja,03051000,Mooca,São Paulo,São Paulo
+164,Avenida Paes de Barros,876,Loja 4,03114001,Mooca,São Paulo,São Paulo
+165,Rua Juventus,543,Galpão 2,03124000,Mooca,São Paulo,São Paulo
+166,Avenida Salim Farah Maluf,1234,Loja,03304000,Tatuapé,São Paulo,São Paulo
+167,Rua Tuiuti,876,Loja 5,03181000,Tatuapé,São Paulo,São Paulo
+168,Avenida Celso Garcia,2345,Loja Térrea,03014000,Brás,São Paulo,São Paulo
+169,Rua Bresser,765,Galpão,03017000,Brás,São Paulo,São Paulo
+170,Avenida Rangel Pestana,1234,Loja 2,03001000,Brás,São Paulo,São Paulo
+171,Rua Maria Marcolina,876,Loja,03009000,Brás,São Paulo,São Paulo
+172,Avenida Radial Leste,5432,Loja 10,03021000,Tatuapé,São Paulo,São Paulo
+173,Rua Barão de Ladário,432,Galpão 4,03040000,Brás,São Paulo,São Paulo
+174,Avenida Álvaro Ramos,876,Loja,03058000,Belenzinho,São Paulo,São Paulo
+175,Rua Catumbi,543,Loja 3,03021000,Belenzinho,São Paulo,São Paulo
+176,Avenida Aricanduva,4321,Loja 24,03527000,Vila Formosa,São Paulo,São Paulo
+177,Rua Serra de Jairé,876,Galpão 5,03175000,Quarta Parada,São Paulo,São Paulo
+178,Avenida Conselheiro Carrão,1234,Loja,03402000,Vila Carrão,São Paulo,São Paulo
+179,Rua Padre Adelino,765,Loja 6,03303000,Belenzinho,São Paulo,São Paulo
+180,Avenida Vereador Abel Ferreira,2345,Loja Térrea,03340000,Vila Regente Feijó,São Paulo,São Paulo
+181,Rua Vilela,432,Loja 8,03314000,Tatuapé,São Paulo,São Paulo
+182,Avenida Regente Feijó,876,Loja,03342000,Vila Regente Feijó,São Paulo,São Paulo
+183,Rua Apucarana,543,Loja 5,03311000,Tatuapé,São Paulo,São Paulo
+184,Avenida Itaquera,4321,Galpão 6,08210000,Vila Carmosina,São Paulo,São Paulo
+185,Rua Domingos Agostim,876,Loja 7,08050000,Vila Esperança,São Paulo,São Paulo
+186,Avenida Guilherme Giorgi,1234,Loja Térrea,03422000,Vila Carrão,São Paulo,São Paulo
+187,Rua Melo Freire,765,Loja 9,03164000,Tatuapé,São Paulo,São Paulo
+188,Avenida Sapopemba,2345,Loja 11,03345000,Vila Regente Feijó,São Paulo,São Paulo
+189,Rua dos Trilhos,432,Loja 2,03163000,Mooca,São Paulo,São Paulo
+190,Avenida São Miguel,876,Loja 12,03621000,Vila Marieta,São Paulo,São Paulo
+191,Rua Itinguçu,543,Loja Térrea,03350000,Vila Formosa,São Paulo,São Paulo
+192,Avenida Itaquera,1234,Galpão 7,08210000,Vila Carmosina,São Paulo,São Paulo
+193,Rua Ibitirama,765,Loja 13,03134000,Vila Prudente,São Paulo,São Paulo
+194,Avenida Professor Luiz Ignácio Anhaia Mello,2345,Loja 14,03155000,Vila Prudente,São Paulo,São Paulo
+195,Rua dos Patriotas,432,Loja 15,04207000,Ipiranga,São Paulo,São Paulo
+196,Avenida Teresa Cristina,876,Loja Térrea,04055010,Ipiranga,São Paulo,São Paulo
+197,Rua Cisplatina,543,Loja 16,04211000,Ipiranga,São Paulo,São Paulo
+198,Avenida Dr. Ricardo Jafet,4321,Loja 17,04260000,Vila Mariana,São Paulo,São Paulo
+199,Rua Vergueiro,876,Loja 18,04101000,Vila Mariana,São Paulo,São Paulo
+200,Avenida Jabaquara,1234,Loja 19,04046100,Mirandópolis,São Paulo,São Paulo
