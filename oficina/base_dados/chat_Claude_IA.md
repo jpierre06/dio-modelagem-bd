@@ -135,14 +135,14 @@ Agora preciso que seja gerado dados para as seguintes tabelas com as respectivas
 
 <br>
 
-* Entrada 9 - WIP pendente de execução
+* Entrada 9
 
 ```
 Agora preciso que seja gerado dados para as seguintes tabelas com as respectivas regras:
 
 1 - Gerar dados para a tabela tb_ordem_servico com 50 registros;
-2 - O campo codigo_veiculo deve ter valor entre 1 e 397 conforme arquivo tb_veiculo.csv anexo;
-3 - O campo codigo_equipe deve ser gerado em coerência com arquivo tb_equipe_atendimento.csv;
+2 - O campo codigo_veiculo deve ter valor entre 1 e 397;
+3 - O campo codigo_equipe deve ser gerado em coerência com arquivo tb_equipe_atendimento.csv anexo;
 4 - A campo data_emissao da tabela tb_ordem_servico deve ser igual ao campo data_equipe da tabela tb_equipe_atendimento;
 6 - O campo data_conclusao deve ser igual ou maior que data_emissao;
 7 - O campo codigo_tipo_servico deve considerar 3 tipos sendo eles:
@@ -151,11 +151,21 @@ Agora preciso que seja gerado dados para as seguintes tabelas com as respectivas
 	2	Revisão períodica na garantia
 	3	Revisão períodica fora da garantia
 	'''
-8 - Os campo total_valor_peca, total_valor_servico e total_valor_os devem ser 0. Esses campos serão atualizados posteriormente através de triggers;
-9 - Gerar dados para a tabela tb_detalahemnto_os_peca;
-10 - A tabela tb_detalahemnto_os_peca informa que pode existir mais de uma peça por ordem de serviço. É a relação entre a tabela tb_ordem_servico e a tabela tb_peca que está no arquivo anexo tb_peca.csv
-11 - Gerar dados para a tabela tb_detalahemnto_os_servico;
-12 - A tabela tb_detalahemnto_os_servico informa que pode existir mais de um serviço por ordem de serviço. É a relação entre a tabela tb_ordem_servico e a tabela tb_servico que está no arquivo anexo tb_servico.csv
+8 - Os campo total_valor_peca, total_valor_servico e total_valor_os devem ser 0. Esses campos serão atualizados posteriormente através de triggers. Gerar eventualmente valor para o campo valor_desconto;
+```
+
+<br>
+
+* Entrada 10
+
+```
+Agora preciso que seja gerado dados para as seguintes tabelas com as respectivas regras:
+
+1 - Gerar dados para a tabela tb_detalhamento_os_peca;
+2 - A tabela tb_detalhamento_os_peca informa que pode existir mais de uma peça por ordem de serviço. É a relação entre a tabela tb_ordem_servico e a tabela tb_peca que está no arquivo anexo tb_peca.csv
+3 - Gerar dados para a tabela tb_detalhamento_os_servico;
+4 - A tabela tb_detalhamento_os_servico informa que pode existir mais de um serviço por ordem de serviço. É a relação entre a tabela tb_ordem_servico e a tabela tb_servico que está no arquivo anexo tb_servico.csv;
+5 - Para ambas as tabelas geradas considerar codigo_os com valores entre 1 e 50;
 ```
 
 

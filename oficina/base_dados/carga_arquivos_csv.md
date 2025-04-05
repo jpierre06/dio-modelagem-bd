@@ -48,6 +48,12 @@ tb_equipe_atendimento.csv
 tb_mecanico_equipe.csv
 
 
+>tb_ordem_servico.csv
+<br>
+tb_detalhamento_os_peca.csv
+<br>
+tb_detalhamento_os_servico.csv
+
 
 <br>
 <br>
