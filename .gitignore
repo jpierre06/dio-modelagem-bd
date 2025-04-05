@@ -1,3 +1,5 @@
 # Ignorar arquivos de backuo de aplicativos
 e-commerce/diagramas/*.bak
 oficina/diagramas/*.bak
+
+temp/*
