@@ -1,0 +1,41 @@
+codigo_endereco,logradouro,numero,complemento,cep,bairro,cidade,estado
+201,Rua das Palmeiras,123,,13460000,Centro,Americana,São Paulo
+202,Avenida Brasil,456,Apto 101,13465200,Jardim Paulista,Campinas,São Paulo
+203,Rua dos Lírios,789,,13437890,Vila Nova,Piracicaba,São Paulo
+204,Avenida São Paulo,234,Casa 2,13456780,Centro,Limeira,São Paulo
+205,Rua XV de Novembro,567,,13890000,Jardim América,São Carlos,São Paulo
+206,Avenida Rebouças,891,Bloco A Apto 303,13478900,Vila Mariana,Ribeirão Preto,São Paulo
+207,Rua Dom Pedro II,321,,13546700,Centro,Araraquara,São Paulo
+208,Avenida Paulista,654,Sala 505,13234560,Jardim Europa,Santos,São Paulo
+209,Rua Barão de Mauá,987,,13124670,Vila Industrial,São José dos Campos,São Paulo
+210,Avenida Rio Branco,135,Casa 3,13567800,Centro,Sorocaba,São Paulo
+211,Rua Tiradentes,246,,13790000,Vila Operária,Jundiaí,São Paulo
+212,Avenida Getúlio Vargas,357,Apto 202,13346780,Jardim das Flores,Bauru,São Paulo
+213,Rua Duque de Caxias,468,,13234900,Centro,Franca,São Paulo
+214,Avenida Independência,579,Casa 4,13345670,Vila Santa Catarina,Marília,São Paulo
+215,Rua Marechal Deodoro,680,,13890340,Jardim Primavera,Taubaté,São Paulo
+216,Avenida Nove de Julho,791,Bloco B Apto 101,13678000,Centro,Presidente Prudente,São Paulo
+217,Rua Sete de Setembro,802,,13456000,Vila São José,Araçatuba,São Paulo
+218,Avenida Rui Barbosa,913,Casa 5,13760000,Jardim São Paulo,São José do Rio Preto,São Paulo
+219,Rua José Bonifácio,1024,,13470000,Centro,Guarulhos,São Paulo
+220,Avenida Princesa Isabel,1135,Apto 404,13567000,Vila Industrial,Osasco,São Paulo
+221,Rua Pedro Álvares Cabral,1246,,13278000,Jardim Alvorada,Santo André,São Paulo
+222,Avenida Santos Dumont,1357,Casa 6,13456790,Vila Operária,São Bernardo do Campo,São Paulo
+223,Rua Benjamin Constant,1468,,13234560,Centro,Diadema,São Paulo
+224,Avenida Dom Pedro I,1579,Bloco C Apto 505,13456000,Jardim Europa,Mauá,São Paulo
+225,Rua Campos Sales,1680,,13678000,Vila Mariana,Carapicuíba,São Paulo
+226,Avenida Juscelino Kubitschek,1791,Casa 7,13456700,Centro,Barueri,São Paulo
+227,Rua da Liberdade,1802,,13789000,Jardim Oriental,Taboão da Serra,São Paulo
+228,Avenida Engenheiro Luís Carlos Berrini,1913,Apto 606,13456000,Itaim Bibi,Embu das Artes,São Paulo
+229,Rua Oscar Freire,2024,,13678000,Jardim América,Cotia,São Paulo
+230,Avenida Brigadeiro Faria Lima,2135,Casa 8,13890000,Pinheiros,Valinhos,São Paulo
+231,Rua Augusta,2246,,13456000,Consolação,Vinhedo,São Paulo
+232,Avenida João Dias,2357,Bloco D Apto 707,13345000,Santo Amaro,Indaiatuba,São Paulo
+233,Rua da Consolação,2468,,13456000,Consolação,Hortolândia,São Paulo
+234,Avenida Paulista,2579,Casa 9,13890000,Bela Vista,Santa Bárbara d'Oeste,São Paulo
+235,Rua Pamplona,2680,,13456000,Jardim Paulista,Sumaré,São Paulo
+236,Avenida Ibirapuera,2791,Apto 808,13789000,Moema,Paulínia,São Paulo
+237,Rua Haddock Lobo,2802,,13456000,Cerqueira César,Nova Odessa,São Paulo
+238,Avenida Rebouças,2913,Casa 10,13789000,Pinheiros,Cosmópolis,São Paulo
+239,Rua dos Pinheiros,3024,,13456000,Pinheiros,Artur Nogueira,São Paulo
+240,Avenida Brigadeiro Luís Antônio,3135,Bloco E Apto 909,13789000,Bela Vista,Engenheiro Coelho,São Paulo

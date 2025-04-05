@@ -1,0 +1,201 @@
+codigo_peca,descricao_peca,valor_peca,custo_peca,garantia_dias
+1,Filtro de óleo básico,29.90,15.40,90
+2,Filtro de óleo premium,45.50,23.80,180
+3,Filtro de ar motor 1.0-1.6,35.80,18.90,90
+4,Filtro de ar motor 1.8-2.0,42.90,22.50,90
+5,Filtro de ar motor 2.2-3.0,58.70,31.20,90
+6,Filtro de ar motor 3.2-5.0,72.40,38.50,90
+7,Filtro de combustível universal,49.90,26.80,180
+8,Filtro de combustível injeção direta,78.50,42.30,180
+9,Filtro de ar condicionado básico,38.60,19.90,90
+10,Filtro de ar condicionado carvão ativado,65.90,34.80,180
+11,Óleo motor 5W30 sintético (1L),49.90,28.50,0
+12,Óleo motor 5W40 sintético (1L),54.90,31.20,0
+13,Óleo motor 10W40 semi-sintético (1L),39.90,21.80,0
+14,Óleo motor 15W40 mineral (1L),32.90,17.50,0
+15,Óleo motor 0W20 sintético (1L),62.90,35.40,0
+16,Correia dentada motor 1.0-1.6,125.80,68.90,365
+17,Correia dentada motor 1.8-2.0,145.90,79.40,365
+18,Correia dentada motor 2.2-3.0,189.90,102.50,365
+19,Correia dentada motor 3.2-5.0,245.70,132.80,365
+20,Kit correia dentada completo 1.0-1.6,320.50,175.80,365
+21,Kit correia dentada completo 1.8-2.0,380.90,208.40,365
+22,Kit correia dentada completo 2.2-3.0,495.80,269.90,365
+23,Kit correia dentada completo 3.2-5.0,620.50,340.20,365
+24,Correia do alternador/direção básica,52.80,28.90,180
+25,Correia do alternador/direção reforçada,78.90,43.20,365
+26,Kit correia alternador e tensionador,198.50,108.30,365
+27,Vela de ignição básica (unidade),28.90,15.80,180
+28,Vela de ignição de iridium (unidade),65.80,36.50,365
+29,Vela de ignição de platina (unidade),49.90,27.40,365
+30,Jogo de velas básicas (4 unidades),98.80,54.20,180
+31,Jogo de velas iridium (4 unidades),249.90,137.40,365
+32,Cabo de vela (unidade),42.90,23.50,180
+33,Jogo de cabos de vela (4 cilindros),168.90,92.80,365
+34,Jogo de cabos de vela (6 cilindros),245.80,135.20,365
+35,Bobina de ignição (unidade),189.90,104.40,365
+36,Jogo de bobinas (4 cilindros),720.80,395.40,365
+37,Jogo de bobinas (6 cilindros),1080.50,594.20,365
+38,Bomba de combustível completa,345.80,189.90,365
+39,Bomba de combustível elétrica universal,289.90,159.40,365
+40,Bico injetor gasolina/flex (unidade),198.80,109.50,365
+41,Sensor de oxigênio (sonda lambda) dianteiro,289.90,159.40,365
+42,Sensor de oxigênio (sonda lambda) traseiro,265.80,146.20,365
+43,Sensor de temperatura do motor,89.90,49.40,180
+44,Sensor de rotação,198.50,109.20,365
+45,Sensor de posição do virabrequim,175.40,96.50,365
+46,Sensor de posição do comando,165.80,91.20,365
+47,Sensor de detonação,145.90,80.20,365
+48,Sensor de pressão do óleo,95.80,52.60,180
+49,Sensor MAP (pressão do coletor),175.40,96.50,365
+50,Sensor TPS (posição borboleta),165.80,91.20,365
+51,Radiador de água motor 1.0-1.6,389.90,214.40,365
+52,Radiador de água motor 1.8-2.0,465.80,256.20,365
+53,Radiador de água motor 2.2-3.0,589.90,324.40,365
+54,Radiador de água motor 3.2-5.0,789.80,434.40,365
+55,Mangueira superior do radiador,65.80,36.20,180
+56,Mangueira inferior do radiador,69.90,38.40,180
+57,Kit mangueiras do radiador,145.80,80.20,180
+58,Bomba d'água motor 1.0-1.6,175.40,96.50,365
+59,Bomba d'água motor 1.8-2.0,198.90,109.40,365
+60,Bomba d'água motor 2.2-3.0,265.80,146.20,365
+61,Bomba d'água motor 3.2-5.0,345.90,190.20,365
+62,Válvula termostática,98.70,54.30,180
+63,Carcaça da válvula termostática,145.80,80.20,180
+64,Reservatório de água do radiador,75.40,41.50,180
+65,Tampa do radiador pressurizada,39.90,21.90,180
+66,Ventoinha do radiador completa,265.80,146.20,365
+67,Motor da ventoinha do radiador,198.90,109.40,365
+68,Interruptor térmico da ventoinha,85.80,47.20,180
+69,Pastilha de freio dianteiro (jogo) básica,98.70,54.30,180
+70,Pastilha de freio dianteiro (jogo) premium,165.80,91.20,365
+71,Pastilha de freio dianteiro (jogo) cerâmica,245.90,135.20,545
+72,Pastilha de freio traseiro (jogo) básica,85.70,47.10,180
+73,Pastilha de freio traseiro (jogo) premium,145.80,80.20,365
+74,Pastilha de freio traseiro (jogo) cerâmica,198.90,109.40,545
+75,Disco de freio dianteiro (unidade) básico,159.80,87.90,180
+76,Disco de freio dianteiro (unidade) premium,245.90,135.20,365
+77,Disco de freio dianteiro (unidade) ventilado,298.70,164.30,365
+78,Disco de freio traseiro (unidade) básico,135.80,74.70,180
+79,Disco de freio traseiro (unidade) premium,198.90,109.40,365
+80,Disco de freio traseiro (unidade) ventilado,265.70,146.10,365
+81,Pinça de freio dianteira (unidade),345.80,190.20,365
+82,Pinça de freio traseira (unidade),298.90,164.40,365
+83,Flexível de freio dianteiro,65.90,36.20,180
+84,Flexível de freio traseiro,59.80,32.90,180
+85,Cilindro mestre de freio,289.90,159.40,365
+86,Servo freio (hidrovácuo),345.80,190.20,365
+87,Cilindro de roda traseira,75.90,41.70,180
+88,Fluido de freio DOT 3 (500ml),24.90,13.70,0
+89,Fluido de freio DOT 4 (500ml),32.80,18.00,0
+90,Fluido de freio DOT 5 (500ml),49.90,27.40,0
+91,Amortecedor dianteiro (unidade) básico,245.80,135.20,365
+92,Amortecedor dianteiro (unidade) premium,389.90,214.40,545
+93,Amortecedor dianteiro (unidade) esportivo,498.70,274.30,545
+94,Amortecedor traseiro (unidade) básico,198.90,109.40,365
+95,Amortecedor traseiro (unidade) premium,345.80,190.20,545
+96,Amortecedor traseiro (unidade) esportivo,465.70,256.10,545
+97,Kit amortecedor dianteiro completo,589.90,324.40,545
+98,Kit amortecedor traseiro completo,498.70,274.30,545
+99,Mola dianteira (unidade),175.80,96.70,365
+100,Mola traseira (unidade),155.90,85.70,365
+101,Kit molas esportivas,745.80,410.20,545
+102,Batente do amortecedor dianteiro,45.90,25.20,180
+103,Batente do amortecedor traseiro,39.80,21.90,180
+104,Coifa do amortecedor dianteiro,58.70,32.30,180
+105,Coifa do amortecedor traseiro,52.80,29.00,180
+106,Barra estabilizadora dianteira,175.80,96.70,365
+107,Barra estabilizadora traseira,165.90,91.20,365
+108,Bucha da barra estabilizadora,35.80,19.70,180
+109,Bucha de bandeja dianteira,49.90,27.40,180
+110,Pivô da suspensão,89.70,49.30,365
+111,Terminal de direção,75.80,41.70,365
+112,Braço de suspensão (bandeja),298.70,164.30,365
+113,Caixa de direção mecânica,895.80,492.70,545
+114,Caixa de direção hidráulica,1250.90,688.00,545
+115,Caixa de direção elétrica,1890.80,1039.90,545
+116,Bomba da direção hidráulica,545.90,300.20,545
+117,Reservatório da direção hidráulica,65.80,36.20,180
+118,Óleo da direção hidráulica (1L),39.90,21.90,0
+119,Junta homocinética lado roda,198.70,109.30,365
+120,Junta homocinética lado câmbio,189.80,104.40,365
+121,Coifa da homocinética lado roda,49.90,27.40,180
+122,Coifa da homocinética lado câmbio,45.80,25.20,180
+123,Semi-eixo completo,345.90,190.20,365
+124,Cruzeta do cardã,98.70,54.30,365
+125,Cardã completo,685.80,377.20,545
+126,Rolamento de roda dianteira,145.90,80.20,365
+127,Rolamento de roda traseira,135.80,74.70,365
+128,Cubo de roda dianteira,198.70,109.30,365
+129,Cubo de roda traseira,189.80,104.40,365
+130,Retentor da roda dianteira,35.90,19.70,180
+131,Retentor da roda traseira,32.80,18.00,180
+132,Pneu 175/70 R13,289.90,159.40,90
+133,Pneu 175/65 R14,319.80,175.90,90
+134,Pneu 185/60 R14,345.70,190.10,90
+135,Pneu 185/65 R15,375.80,206.70,90
+136,Pneu 195/55 R15,398.90,219.40,90
+137,Pneu 195/65 R15,415.80,228.70,90
+138,Pneu 205/55 R16,465.90,256.20,90
+139,Pneu 205/45 R17,498.70,274.30,90
+140,Pneu 225/45 R17,535.80,294.70,90
+141,Pneu 225/40 R18,598.90,329.40,90
+142,Pneu 235/40 R18,645.70,355.10,90
+143,Pneu 245/45 R19,798.80,439.30,90
+144,Pneu 255/40 R19,845.90,465.20,90
+145,Pneu 265/35 R20,975.80,536.70,90
+146,Bateria 40Ah,298.70,164.30,365
+147,Bateria 60Ah,345.80,190.20,365
+148,Bateria 70Ah,398.90,219.40,365
+149,Bateria 90Ah,465.70,256.10,365
+150,Bateria 100Ah,535.80,294.70,365
+151,Alternador completo básico,565.90,311.20,365
+152,Alternador completo premium,745.80,410.20,545
+153,Regulador de voltagem,145.90,80.20,365
+154,Motor de arranque básico,498.70,274.30,365
+155,Motor de arranque premium,645.80,355.20,545
+156,Bendix do motor de arranque,85.90,47.20,180
+157,Automático do motor de arranque,95.80,52.70,180
+158,Farol dianteiro (unidade) básico,345.90,190.20,365
+159,Farol dianteiro (unidade) premium,565.80,311.20,545
+160,Farol de milha (kit),245.90,135.20,365
+161,Lanterna traseira (unidade) básica,198.70,109.30,365
+162,Lanterna traseira (unidade) premium,345.80,190.20,545
+163,Pisca dianteiro (unidade),75.90,41.70,180
+164,Pisca lateral (unidade),45.80,25.20,180
+165,Lâmpada do farol H4 (unidade),29.90,16.40,90
+166,Lâmpada do farol H7 (unidade),35.80,19.70,90
+167,Lâmpada do farol H11 (unidade),42.90,23.60,90
+168,Lâmpada do farol HB4 (unidade),39.80,21.90,90
+169,Lâmpada do pisca (par),12.90,7.10,90
+170,Lâmpada da lanterna (par),12.90,7.10,90
+171,Lâmpada da placa (par),9.90,5.40,90
+172,Kit lâmpadas LED internas,85.90,47.20,180
+173,Maçaneta externa porta (unidade),65.80,36.20,180
+174,Maçaneta interna porta (unidade),45.90,25.20,180
+175,Fechadura porta dianteira,145.80,80.20,365
+176,Fechadura porta traseira,135.90,74.70,365
+177,Fechadura tampa traseira/porta-malas,155.80,85.70,365
+178,Fechadura capô,125.90,69.20,365
+179,Cabo de abertura capô,58.70,32.30,180
+180,Cabo de abertura tampa traseira,55.80,30.70,180
+181,Interruptor de luz de freio (cebolinha),45.90,25.20,180
+182,Interruptor de luz de ré,49.80,27.40,180
+183,Interruptor vidro elétrico (unidade),75.90,41.70,180
+184,Interruptor do ar condicionado,85.80,47.20,180
+185,Motor do limpador para-brisa,165.90,91.20,365
+186,Palheta do limpador (par) básica,65.80,36.20,90
+187,Palheta do limpador (par) silicone,95.90,52.70,180
+188,Reservatório água do limpador,45.80,25.20,180
+189,Bomba água do limpador,55.90,30.70,180
+190,Bomba do combustível (refil),198.70,109.30,365
+191,Tanque de combustível,598.90,329.40,545
+192,Tampa do tanque combustível,29.80,16.40,90
+193,Bomba embreagem,175.90,96.70,365
+194,Cilindro embreagem,165.80,91.20,365
+195,Disco embreagem,245.90,135.20,365
+196,Platô embreagem,275.80,151.70,365
+197,Kit embreagem completo básico,498.70,274.30,365
+198,Kit embreagem completo premium,745.80,410.20,545
+199,Atuador embreagem,165.90,91.20,365
+200,Rolamento embreagem,98.70,54.30,180
