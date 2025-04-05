@@ -40,7 +40,7 @@ a { color: #3177c2; }
 <a name='layout1' style='position:sticky; top:0;'/><h4>Main Diagram</h4>
 <input type='text' placeholder='Highlight in Diagram' oninput='searchSVG(this.value)' class='text-start my-2'/>
 <div class='svgContainer'>
-<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'   width='2147' height='1307' viewBox='0 0 2147 1307' >
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'   width='2147' height='1858' viewBox='0 0 2147 1858' >
   <script type='text/ecmascript'>
   <![CDATA[
   function hghl(el) { for ( var i in el ){ var elem = document.getElementById(el[i]); if ( elem != null ) elem.setAttribute('class','highlight');  }  }
@@ -300,11 +300,19 @@ a { color: #3177c2; }
      <stop offset='0%' stop-color='#3C3C2C' /> 
      <stop offset='100%' stop-color='#303028' /> 
   </linearGradient>
+  <linearGradient id='tbg_FF00FF' x1='0%' y1='0%' x2='100%' y2='0%' >
+     <stop offset='0%' stop-color='#3C2C3C' /> 
+     <stop offset='100%' stop-color='#302830' /> 
+  </linearGradient>
+  <linearGradient id='tbg_808000' x1='0%' y1='0%' x2='100%' y2='0%' >
+     <stop offset='0%' stop-color='#3C3C2C' /> 
+     <stop offset='100%' stop-color='#303028' /> 
+  </linearGradient>
 </defs>
 
 <!-- == Shape Colors == -->
 <!-- == Desktop == -->
-<rect x='0' y='0' width='2147' height='1307' rx='9' ry='9' style='fill:url(#layoutBgA); stroke:#444444; stroke-width:.7px; cursor:move;' />
+<rect x='0' y='0' width='2147' height='1858' rx='9' ry='9' style='fill:url(#layoutBgA); stroke:#444444; stroke-width:.7px; cursor:move;' />
 
 <!-- == Legend == -->
 <g transform='translate(10,10)'>
@@ -333,6 +341,12 @@ DbSchema has a free Community Edition.</title></tspan></text></a>
 <!-- == Group 'Tabelas Gerais' == -->
 <rect class='grp' style='fill:#372837;stroke:#726372' x='1428' y='250' width='184' height='259' rx='8' ry='8' />
 <text x='1442' y='269' style='fill:#6C4C6C;'>Tabelas Gerais</text>
+<!-- == Group 'Views de Consolidação de Valores' == -->
+<rect class='grp' style='fill:#373728;stroke:#727263' x='155' y='1162' width='621' height='240' rx='8' ry='8' />
+<text x='169' y='1181' style='fill:#6C6C4C;'>Views de Consolidação de Valores</text>
+<!-- == Group 'Views de Consolidação de Dados' == -->
+<rect class='grp' style='fill:#372837;stroke:#726372' x='155' y='1447' width='203' height='221' rx='8' ry='8' />
+<text x='169' y='1466' style='fill:#6C4C6C;'>Views de Consolidação de Dados</text>
 <!-- == Fk 'tb_cliente_fk_tb_cliente_tb_endereco' == -->
 <path id='tb_cliente_fk_tb_cliente_tb_endereco'  onmouseover="hghl(['tb_cliente_fk_tb_cliente_tb_endereco','curso_oficina.tb_cliente.codigo_endereco','curso_oficina.tb_endereco.codigo_endereco'])" onmouseout="uhghl(['tb_cliente_fk_tb_cliente_tb_endereco','curso_oficina.tb_cliente.codigo_endereco','curso_oficina.tb_endereco.codigo_endereco'])" transform='translate(9,0)' class='unhighlight' d='M 950,304L 1425,304' >
 	<title>&#x1F517;  Foreign Key fk_tb_cliente_tb_endereco
@@ -904,6 +918,90 @@ Referred by tb_modelo_peca ( codigo_peca ) </title></a>
 <text x='206' y='441' text-anchor='end' class='colType'>&#35;</text>  <use x='58' y='452' xlink:href='#nn'/><a xlink:href='#curso_oficina.tb_veiculo.ano_modelo'><text id='curso&#95;oficina&#46;tb&#95;veiculo&#46;ano&#95;modelo' x='79' y='464'>ano&#95;modelo</text><title>&#10697;  ano_modelo
      * int</title></a>
 <text x='206' y='460' text-anchor='end' class='colType'>&#35;</text>
+<!-- == Table 'vw_clientes_consolidado' == -->
+<rect id='depict_curso&#95;oficina&#46;vw&#95;clientes&#95;consolidado' class='entity' style='stroke:#FCF9FC' x='171' y='1473' width='171' height='171' rx='4' ry='4' />
+<rect x='171' y='1473' width='171' height='8' rx='4' ry='4' style='stroke-width:0;fill:#8C1B8C'/>
+<rect x='171' y='1477' width='171' height='29' style='stroke-width:0;fill:#332733'/>
+<use x='323' y='1482' xlink:href='#view'/>
+<a xlink:href='#curso_oficina.vw_clientes_consolidado'><text id='depict&#45;curso&#95;oficina&#46;vw&#95;clientes&#95;consolidado' x='183' y='1494' class='tableHeader' style='fill:#EEB5EE;'>vw&#95;clientes&#95;consolidado</text><title>View curso_oficina.vw_clientes_consolidado
+ ⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+      VIEW</title></a>
+  <a xlink:href='#curso_oficina.vw_clientes_consolidado.codigo_cliente'><text id='curso&#95;oficina&#46;vw&#95;clientes&#95;consolidado&#46;codigo&#95;cliente' x='193' y='1528'>codigo&#95;cliente</text><title>&#10697;  codigo_cliente
+     int</title></a>
+<text x='339' y='1524' text-anchor='end' class='colType'>&#35;</text>  <a xlink:href='#curso_oficina.vw_clientes_consolidado.tipo_cliente'><text id='curso&#95;oficina&#46;vw&#95;clientes&#95;consolidado&#46;tipo&#95;cliente' x='193' y='1547'>tipo&#95;cliente</text><title>&#10697;  tipo_cliente
+     varchar(15)</title></a>
+<text x='339' y='1543' text-anchor='end' class='colType'>t</text>  <a xlink:href='#curso_oficina.vw_clientes_consolidado.codigo_tipo_cliente'><text id='curso&#95;oficina&#46;vw&#95;clientes&#95;consolidado&#46;codigo&#95;tipo&#95;cliente' x='193' y='1566'>codigo&#95;tipo&#95;cliente</text><title>&#10697;  codigo_tipo_cliente
+     int</title></a>
+<text x='339' y='1562' text-anchor='end' class='colType'>&#35;</text>  <a xlink:href='#curso_oficina.vw_clientes_consolidado.nome'><text id='curso&#95;oficina&#46;vw&#95;clientes&#95;consolidado&#46;nome' x='193' y='1585'>nome</text><title>&#10697;  nome
+     varchar(120)</title></a>
+<text x='339' y='1581' text-anchor='end' class='colType'>t</text>  <a xlink:href='#curso_oficina.vw_clientes_consolidado.codigo_endereco'><text id='curso&#95;oficina&#46;vw&#95;clientes&#95;consolidado&#46;codigo&#95;endereco' x='193' y='1604'>codigo&#95;endereco</text><title>&#10697;  codigo_endereco
+     int</title></a>
+<text x='339' y='1600' text-anchor='end' class='colType'>&#35;</text>  <a xlink:href='#curso_oficina.vw_clientes_consolidado.codigo_contato'><text id='curso&#95;oficina&#46;vw&#95;clientes&#95;consolidado&#46;codigo&#95;contato' x='193' y='1623'>codigo&#95;contato</text><title>&#10697;  codigo_contato
+     int</title></a>
+<text x='339' y='1619' text-anchor='end' class='colType'>&#35;</text>
+<!-- == Table 'vw_total_valor_os' == -->
+<rect id='depict_curso&#95;oficina&#46;vw&#95;total&#95;valor&#95;os' class='entity' style='stroke:#FCFCF9' x='171' y='1188' width='171' height='190' rx='4' ry='4' />
+<rect x='171' y='1188' width='171' height='8' rx='4' ry='4' style='stroke-width:0;fill:#8C8C1B'/>
+<rect x='171' y='1192' width='171' height='29' style='stroke-width:0;fill:#333327'/>
+<use x='323' y='1197' xlink:href='#view'/>
+<a xlink:href='#curso_oficina.vw_total_valor_os'><text id='depict&#45;curso&#95;oficina&#46;vw&#95;total&#95;valor&#95;os' x='203' y='1209' class='tableHeader' style='fill:#EEEEB5;'>vw&#95;total&#95;valor&#95;os</text><title>View curso_oficina.vw_total_valor_os
+ ⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+      VIEW</title></a>
+  <a xlink:href='#curso_oficina.vw_total_valor_os.codigo_cliente'><text id='curso&#95;oficina&#46;vw&#95;total&#95;valor&#95;os&#46;codigo&#95;cliente' x='193' y='1243'>codigo&#95;cliente</text><title>&#10697;  codigo_cliente
+     int</title></a>
+<text x='339' y='1239' text-anchor='end' class='colType'>&#35;</text>  <a xlink:href='#curso_oficina.vw_total_valor_os.nome'><text id='curso&#95;oficina&#46;vw&#95;total&#95;valor&#95;os&#46;nome' x='193' y='1262'>nome</text><title>&#10697;  nome
+     varchar(120)</title></a>
+<text x='339' y='1258' text-anchor='end' class='colType'>t</text>  <a xlink:href='#curso_oficina.vw_total_valor_os.codigo_tipo_cliente'><text id='curso&#95;oficina&#46;vw&#95;total&#95;valor&#95;os&#46;codigo&#95;tipo&#95;cliente' x='193' y='1281'>codigo&#95;tipo&#95;cliente</text><title>&#10697;  codigo_tipo_cliente
+     int</title></a>
+<text x='339' y='1277' text-anchor='end' class='colType'>&#35;</text>  <a xlink:href='#curso_oficina.vw_total_valor_os.tipo_cliente'><text id='curso&#95;oficina&#46;vw&#95;total&#95;valor&#95;os&#46;tipo&#95;cliente' x='193' y='1300'>tipo&#95;cliente</text><title>&#10697;  tipo_cliente
+     varchar(15)</title></a>
+<text x='339' y='1296' text-anchor='end' class='colType'>t</text>  <a xlink:href='#curso_oficina.vw_total_valor_os.placa'><text id='curso&#95;oficina&#46;vw&#95;total&#95;valor&#95;os&#46;placa' x='193' y='1319'>placa</text><title>&#10697;  placa
+     char(7)</title></a>
+<text x='339' y='1315' text-anchor='end' class='colType'>c</text>  <a xlink:href='#curso_oficina.vw_total_valor_os.codigo_os'><text id='curso&#95;oficina&#46;vw&#95;total&#95;valor&#95;os&#46;codigo&#95;os' x='193' y='1338'>codigo&#95;os</text><title>&#10697;  codigo_os
+     int</title></a>
+<text x='339' y='1334' text-anchor='end' class='colType'>&#35;</text>  <a xlink:href='#curso_oficina.vw_total_valor_os.total_valor_os'><text id='curso&#95;oficina&#46;vw&#95;total&#95;valor&#95;os&#46;total&#95;valor&#95;os' x='193' y='1357'>total&#95;valor&#95;os</text><title>&#10697;  total_valor_os
+     decimal(8,2)</title></a>
+<text x='339' y='1353' text-anchor='end' class='colType'>&#35;</text>
+<!-- == Table 'vw_total_valor_os_cliente' == -->
+<rect id='depict_curso&#95;oficina&#46;vw&#95;total&#95;valor&#95;os&#95;cliente' class='entity' style='stroke:#FCFCF9' x='589' y='1188' width='171' height='152' rx='4' ry='4' />
+<rect x='589' y='1188' width='171' height='8' rx='4' ry='4' style='stroke-width:0;fill:#8C8C1B'/>
+<rect x='589' y='1192' width='171' height='29' style='stroke-width:0;fill:#333327'/>
+<use x='741' y='1197' xlink:href='#view'/>
+<a xlink:href='#curso_oficina.vw_total_valor_os_cliente'><text id='depict&#45;curso&#95;oficina&#46;vw&#95;total&#95;valor&#95;os&#95;cliente' x='600' y='1209' class='tableHeader' style='fill:#EEEEB5;'>vw&#95;total&#95;valor&#95;os&#95;cliente</text><title>View curso_oficina.vw_total_valor_os_cliente
+ ⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+      VIEW</title></a>
+  <a xlink:href='#curso_oficina.vw_total_valor_os_cliente.codigo_cliente'><text id='curso&#95;oficina&#46;vw&#95;total&#95;valor&#95;os&#95;cliente&#46;codigo&#95;cliente' x='611' y='1243'>codigo&#95;cliente</text><title>&#10697;  codigo_cliente
+     int</title></a>
+<text x='757' y='1239' text-anchor='end' class='colType'>&#35;</text>  <a xlink:href='#curso_oficina.vw_total_valor_os_cliente.nome'><text id='curso&#95;oficina&#46;vw&#95;total&#95;valor&#95;os&#95;cliente&#46;nome' x='611' y='1262'>nome</text><title>&#10697;  nome
+     varchar(120)</title></a>
+<text x='757' y='1258' text-anchor='end' class='colType'>t</text>  <a xlink:href='#curso_oficina.vw_total_valor_os_cliente.codigo_tipo_cliente'><text id='curso&#95;oficina&#46;vw&#95;total&#95;valor&#95;os&#95;cliente&#46;codigo&#95;tipo&#95;cliente' x='611' y='1281'>codigo&#95;tipo&#95;cliente</text><title>&#10697;  codigo_tipo_cliente
+     int</title></a>
+<text x='757' y='1277' text-anchor='end' class='colType'>&#35;</text>  <a xlink:href='#curso_oficina.vw_total_valor_os_cliente.tipo_cliente'><text id='curso&#95;oficina&#46;vw&#95;total&#95;valor&#95;os&#95;cliente&#46;tipo&#95;cliente' x='611' y='1300'>tipo&#95;cliente</text><title>&#10697;  tipo_cliente
+     varchar(15)</title></a>
+<text x='757' y='1296' text-anchor='end' class='colType'>t</text>  <a xlink:href='#curso_oficina.vw_total_valor_os_cliente.total_valor_os'><text id='curso&#95;oficina&#46;vw&#95;total&#95;valor&#95;os&#95;cliente&#46;total&#95;valor&#95;os' x='611' y='1319'>total&#95;valor&#95;os</text><title>&#10697;  total_valor_os
+     decimal(30,2)</title></a>
+<text x='757' y='1315' text-anchor='end' class='colType'>&#35;</text>
+<!-- == Table 'vw_total_valor_os_veiculo' == -->
+<rect id='depict_curso&#95;oficina&#46;vw&#95;total&#95;valor&#95;os&#95;veiculo' class='entity' style='stroke:#FCFCF9' x='380' y='1188' width='171' height='171' rx='4' ry='4' />
+<rect x='380' y='1188' width='171' height='8' rx='4' ry='4' style='stroke-width:0;fill:#8C8C1B'/>
+<rect x='380' y='1192' width='171' height='29' style='stroke-width:0;fill:#333327'/>
+<use x='532' y='1197' xlink:href='#view'/>
+<a xlink:href='#curso_oficina.vw_total_valor_os_veiculo'><text id='depict&#45;curso&#95;oficina&#46;vw&#95;total&#95;valor&#95;os&#95;veiculo' x='390' y='1209' class='tableHeader' style='fill:#EEEEB5;'>vw&#95;total&#95;valor&#95;os&#95;veiculo</text><title>View curso_oficina.vw_total_valor_os_veiculo
+ ⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+      VIEW</title></a>
+  <a xlink:href='#curso_oficina.vw_total_valor_os_veiculo.codigo_cliente'><text id='curso&#95;oficina&#46;vw&#95;total&#95;valor&#95;os&#95;veiculo&#46;codigo&#95;cliente' x='402' y='1243'>codigo&#95;cliente</text><title>&#10697;  codigo_cliente
+     int</title></a>
+<text x='548' y='1239' text-anchor='end' class='colType'>&#35;</text>  <a xlink:href='#curso_oficina.vw_total_valor_os_veiculo.nome'><text id='curso&#95;oficina&#46;vw&#95;total&#95;valor&#95;os&#95;veiculo&#46;nome' x='402' y='1262'>nome</text><title>&#10697;  nome
+     varchar(120)</title></a>
+<text x='548' y='1258' text-anchor='end' class='colType'>t</text>  <a xlink:href='#curso_oficina.vw_total_valor_os_veiculo.codigo_tipo_cliente'><text id='curso&#95;oficina&#46;vw&#95;total&#95;valor&#95;os&#95;veiculo&#46;codigo&#95;tipo&#95;cliente' x='402' y='1281'>codigo&#95;tipo&#95;cliente</text><title>&#10697;  codigo_tipo_cliente
+     int</title></a>
+<text x='548' y='1277' text-anchor='end' class='colType'>&#35;</text>  <a xlink:href='#curso_oficina.vw_total_valor_os_veiculo.tipo_cliente'><text id='curso&#95;oficina&#46;vw&#95;total&#95;valor&#95;os&#95;veiculo&#46;tipo&#95;cliente' x='402' y='1300'>tipo&#95;cliente</text><title>&#10697;  tipo_cliente
+     varchar(15)</title></a>
+<text x='548' y='1296' text-anchor='end' class='colType'>t</text>  <a xlink:href='#curso_oficina.vw_total_valor_os_veiculo.placa'><text id='curso&#95;oficina&#46;vw&#95;total&#95;valor&#95;os&#95;veiculo&#46;placa' x='402' y='1319'>placa</text><title>&#10697;  placa
+     char(7)</title></a>
+<text x='548' y='1315' text-anchor='end' class='colType'>c</text>  <a xlink:href='#curso_oficina.vw_total_valor_os_veiculo.total_valor_os'><text id='curso&#95;oficina&#46;vw&#95;total&#95;valor&#95;os&#95;veiculo&#46;total&#95;valor&#95;os' x='402' y='1338'>total&#95;valor&#95;os</text><title>&#10697;  total_valor_os
+     decimal(30,2)</title></a>
+<text x='548' y='1334' text-anchor='end' class='colType'>&#35;</text>
 <!-- == Callout == -->
 <rect class='callout' x='513' y='76' width='399' height='38' rx='19' ry='19'  />
 <text x='541' y='76' class='callout'>
@@ -1030,6 +1128,15 @@ function searchSVG( searchValue) {
 <li><a href='#curso_oficina.tb_servico'/>tb_servico</a>
 <li><a href='#curso_oficina.tb_tipo_servico'/>tb_tipo_servico</a>
 <li><a href='#curso_oficina.tb_veiculo'/>tb_veiculo</a>
+</ul></ul>
+<h5 class='card-title'>Views</h5>
+<ul>
+<li>Schema <a href='#curso_oficina'/> curso_oficina</a><ul>
+
+<li><a href='#curso_oficina.vw_clientes_consolidado'/>vw_clientes_consolidado</a>
+<li><a href='#curso_oficina.vw_total_valor_os'/>vw_total_valor_os</a>
+<li><a href='#curso_oficina.vw_total_valor_os_cliente'/>vw_total_valor_os_cliente</a>
+<li><a href='#curso_oficina.vw_total_valor_os_veiculo'/>vw_total_valor_os_veiculo</a>
 </ul></ul>
 </div></div><br><br><br>
 <div class='card custom-card'><div class='card-body'><a name='curso_oficina' style='cursor:pointer;'><h5 class='card-title text-center'>Schema curso_oficina</h5></div></div>
@@ -1218,6 +1325,15 @@ function searchSVG( searchValue) {
 		<td><svg width='14' height='14'><use xlink:href='#fk'/></svg></td><td>fk_tb_detalhamento_os_peca_tb_ordem_servico</td>
 		<td > codigo&#95;os &#8599; <a href='#curso&#95;oficina&#46;tb&#95;ordem&#95;servico'  onclick="window.scrollTo(921, 836);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_curso_oficina.tb_ordem_servico').classList.add('palpable'); return false;">&#10063; tb&#95;ordem&#95;servico</a> </td>
 	</tr>
+<tr><th colspan='3'>Triggers</th></tr>
+	<tr>
+		<td>&nbsp;</td><td> trg_after_insert_tb_detalhamento_os_peca </td><td colspan='1'> <pre>CREATE TRIGGER &#36;&#123;nameWithSchemaName&#125; AFTER INSERT ON tb&#95;detalhamento&#95;os&#95;peca FOR EACH ROW BEGIN
+     CALL upsert&#95;tb&#95;ordem&#95;servico&#95;from&#95;peca&#40;NEW&#46;codigo&#95;os&#41;&#59;
+END</pre> </td>	</tr>
+	<tr>
+		<td>&nbsp;</td><td> trg_after_update_tb_detalhamento_os_peca </td><td colspan='1'> <pre>CREATE TRIGGER &#36;&#123;nameWithSchemaName&#125; AFTER UPDATE ON tb&#95;detalhamento&#95;os&#95;peca FOR EACH ROW BEGIN
+     CALL upsert&#95;tb&#95;ordem&#95;servico&#95;from&#95;peca&#40;NEW&#46;codigo&#95;os&#41;&#59;
+END</pre> </td>	</tr>
 <tr><th colspan='3'>Options</th></tr>
 <tr><td colspan='3'>engine&#61;InnoDB</td></tr>
 </tbody>
@@ -1266,6 +1382,15 @@ function searchSVG( searchValue) {
 		<td><svg width='14' height='14'><use xlink:href='#fk'/></svg></td><td>fk_tb_detalhamento_os_servico_tb_servico</td>
 		<td > codigo&#95;servico &#8599; <a href='#curso&#95;oficina&#46;tb&#95;servico'  onclick="window.scrollTo(389, 931);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_curso_oficina.tb_servico').classList.add('palpable'); return false;">&#10063; tb&#95;servico</a> </td>
 	</tr>
+<tr><th colspan='3'>Triggers</th></tr>
+	<tr>
+		<td>&nbsp;</td><td> trg_after_insert_tb_detalhamento_os_servico </td><td colspan='1'> <pre>CREATE TRIGGER &#36;&#123;nameWithSchemaName&#125; AFTER INSERT ON tb&#95;detalhamento&#95;os&#95;servico FOR EACH ROW BEGIN
+     CALL upsert&#95;tb&#95;ordem&#95;servico&#95;from&#95;servico&#40;NEW&#46;codigo&#95;os&#41;&#59;
+END</pre> </td>	</tr>
+	<tr>
+		<td>&nbsp;</td><td> trg_after_update_tb_detalhamento_os_servico </td><td colspan='1'> <pre>CREATE TRIGGER &#36;&#123;nameWithSchemaName&#125; AFTER UPDATE ON tb&#95;detalhamento&#95;os&#95;servico FOR EACH ROW BEGIN
+     CALL upsert&#95;tb&#95;ordem&#95;servico&#95;from&#95;servico&#40;NEW&#46;codigo&#95;os&#41;&#59;
+END</pre> </td>	</tr>
 <tr><th colspan='3'>Options</th></tr>
 <tr><td colspan='3'>engine&#61;InnoDB</td></tr>
 </tbody>
@@ -2074,5 +2199,280 @@ function searchSVG( searchValue) {
 </tbody>
 </table></div></div>
 
+<br><br>
+<div class='card custom-card'><div class='card-body'><a name='curso_oficina.vw_clientes_consolidado'  onclick="window.scrollTo(60, 1482);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_curso_oficina.vw_clientes_consolidado').classList.add('palpable'); return false;" style='cursor:pointer;'><h5 class='text-center'>View vw_clientes_consolidado</h5></a>
+<p class='text-muted'>VIEW<br>Tags: </p>
+<table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
+<thead>
+	<tr>
+		<th colspan='4'><a name='vw_clientes_consolidado'>Query</a></th></tr>
+</thead>
+<tbody>
+	<tr><td colspan='4'><pre style='white-space: pre-wrap;word-wrap: break-word;'>CREATE VIEW &#36;&#123;nameWithSchemaName&#125; AS select &#96;cli&#96;&#46;&#96;codigo&#95;cliente&#96; AS &#96;codigo&#95;cliente&#96;&#44;if&#40;&#40;&#96;pf&#96;&#46;&#96;nome&#95;cliente&#96; is null&#41;&#44;&#39;Pessoa Jurídica&#39;&#44;&#39;Pessoa Física&#39;&#41; AS &#96;tipo&#95;cliente&#96;&#44;if&#40;&#40;&#96;pf&#96;&#46;&#96;nome&#95;cliente&#96; is null&#41;&#44;2&#44;1&#41; AS &#96;codigo&#95;tipo&#95;cliente&#96;&#44;if&#40;&#40;&#96;pf&#96;&#46;&#96;nome&#95;cliente&#96; is null&#41;&#44;&#96;pj&#96;&#46;&#96;nome&#95;fantasia&#96;&#44;&#96;pf&#96;&#46;&#96;nome&#95;cliente&#96;&#41; AS &#96;nome&#96;&#44;&#96;cli&#96;&#46;&#96;codigo&#95;endereco&#96; AS &#96;codigo&#95;endereco&#96;&#44;&#96;cli&#96;&#46;&#96;codigo&#95;contato&#96; AS &#96;codigo&#95;contato&#96; from &#40;&#40;&#96;curso&#95;oficina&#96;&#46;&#96;tb&#95;cliente&#96; &#96;cli&#96; left join &#96;curso&#95;oficina&#96;&#46;&#96;tb&#95;pessoa&#95;fisica&#96; &#96;pf&#96; on&#40;&#40;&#96;cli&#96;&#46;&#96;codigo&#95;cliente&#96; &#61; &#96;pf&#96;&#46;&#96;codigo&#95;cliente&#96;&#41;&#41;&#41; left join &#96;curso&#95;oficina&#96;&#46;&#96;tb&#95;pessoa&#95;juridica&#96; &#96;pj&#96; on&#40;&#40;&#96;cli&#96;&#46;&#96;codigo&#95;cliente&#96; &#61; &#96;pj&#96;&#46;&#96;codigo&#95;cliente&#96;&#41;&#41;&#41;</pre></td></tr>
+<tr><th style='width:5%'>Idx</th><th style='width:20%'>Column Name</th><th style='width:23%'>Data Type</th><th style='width:52%'>Description</th></tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td><a name='curso_oficina.vw_clientes_consolidado.codigo_cliente'>codigo&#95;cliente</a></td>
+		<td class='dataType'> INT UNSIGNED  </td>
+		<td> <br>Tags:  </td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td><a name='curso_oficina.vw_clientes_consolidado.tipo_cliente'>tipo&#95;cliente</a></td>
+		<td class='dataType'> VARCHAR&#40;15&#41;  </td>
+		<td> <br>Tags:  </td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td><a name='curso_oficina.vw_clientes_consolidado.codigo_tipo_cliente'>codigo&#95;tipo&#95;cliente</a></td>
+		<td class='dataType'> INT  </td>
+		<td> <br>Tags:  </td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td><a name='curso_oficina.vw_clientes_consolidado.nome'>nome</a></td>
+		<td class='dataType'> VARCHAR&#40;120&#41;  </td>
+		<td> <br>Tags:  </td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td><a name='curso_oficina.vw_clientes_consolidado.codigo_endereco'>codigo&#95;endereco</a></td>
+		<td class='dataType'> INT UNSIGNED  </td>
+		<td> <br>Tags:  </td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td><a name='curso_oficina.vw_clientes_consolidado.codigo_contato'>codigo&#95;contato</a></td>
+		<td class='dataType'> INT UNSIGNED  </td>
+		<td> <br>Tags:  </td>
+	</tr>
+</tbody>
+</table></div></div>
+<br><br>
+<div class='card custom-card'><div class='card-body'><a name='curso_oficina.vw_total_valor_os'  onclick="window.scrollTo(60, 1197);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_curso_oficina.vw_total_valor_os').classList.add('palpable'); return false;" style='cursor:pointer;'><h5 class='text-center'>View vw_total_valor_os</h5></a>
+<p class='text-muted'>VIEW<br>Tags: </p>
+<table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
+<thead>
+	<tr>
+		<th colspan='4'><a name='vw_total_valor_os'>Query</a></th></tr>
+</thead>
+<tbody>
+	<tr><td colspan='4'><pre style='white-space: pre-wrap;word-wrap: break-word;'>CREATE VIEW &#36;&#123;nameWithSchemaName&#125; AS select &#96;curso&#95;oficina&#96;&#46;&#96;cli&#96;&#46;&#96;codigo&#95;cliente&#96; AS &#96;codigo&#95;cliente&#96;&#44;&#96;curso&#95;oficina&#96;&#46;&#96;cli&#96;&#46;&#96;nome&#96; AS &#96;nome&#96;&#44;&#96;curso&#95;oficina&#96;&#46;&#96;cli&#96;&#46;&#96;codigo&#95;tipo&#95;cliente&#96; AS &#96;codigo&#95;tipo&#95;cliente&#96;&#44;&#96;curso&#95;oficina&#96;&#46;&#96;cli&#96;&#46;&#96;tipo&#95;cliente&#96; AS &#96;tipo&#95;cliente&#96;&#44;&#96;tv&#96;&#46;&#96;placa&#96; AS &#96;placa&#96;&#44;&#96;tos&#96;&#46;&#96;codigo&#95;os&#96; AS &#96;codigo&#95;os&#96;&#44;&#96;tos&#96;&#46;&#96;total&#95;valor&#95;os&#96; AS &#96;total&#95;valor&#95;os&#96; from &#40;&#40;&#96;curso&#95;oficina&#96;&#46;&#96;vw&#95;clientes&#95;consolidado&#96; &#96;cli&#96; join &#96;curso&#95;oficina&#96;&#46;&#96;tb&#95;veiculo&#96; &#96;tv&#96; on&#40;&#40;&#96;curso&#95;oficina&#96;&#46;&#96;cli&#96;&#46;&#96;codigo&#95;cliente&#96; &#61; &#96;tv&#96;&#46;&#96;codigo&#95;cliente&#96;&#41;&#41;&#41; join &#96;curso&#95;oficina&#96;&#46;&#96;tb&#95;ordem&#95;servico&#96; &#96;tos&#96; on&#40;&#40;&#96;tv&#96;&#46;&#96;codigo&#95;veiculo&#96; &#61; &#96;tos&#96;&#46;&#96;codigo&#95;veiculo&#96;&#41;&#41;&#41; order by &#96;tos&#96;&#46;&#96;total&#95;valor&#95;os&#96; desc</pre></td></tr>
+<tr><th style='width:5%'>Idx</th><th style='width:20%'>Column Name</th><th style='width:23%'>Data Type</th><th style='width:52%'>Description</th></tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td><a name='curso_oficina.vw_total_valor_os.codigo_cliente'>codigo&#95;cliente</a></td>
+		<td class='dataType'> INT UNSIGNED  </td>
+		<td> <br>Tags:  </td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td><a name='curso_oficina.vw_total_valor_os.nome'>nome</a></td>
+		<td class='dataType'> VARCHAR&#40;120&#41;  </td>
+		<td> <br>Tags:  </td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td><a name='curso_oficina.vw_total_valor_os.codigo_tipo_cliente'>codigo&#95;tipo&#95;cliente</a></td>
+		<td class='dataType'> INT  </td>
+		<td> <br>Tags:  </td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td><a name='curso_oficina.vw_total_valor_os.tipo_cliente'>tipo&#95;cliente</a></td>
+		<td class='dataType'> VARCHAR&#40;15&#41;  </td>
+		<td> <br>Tags:  </td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td><a name='curso_oficina.vw_total_valor_os.placa'>placa</a></td>
+		<td class='dataType'> CHAR&#40;7&#41;  </td>
+		<td> <br>Tags:  </td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td><a name='curso_oficina.vw_total_valor_os.codigo_os'>codigo&#95;os</a></td>
+		<td class='dataType'> INT UNSIGNED  </td>
+		<td> <br>Tags:  </td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td><a name='curso_oficina.vw_total_valor_os.total_valor_os'>total&#95;valor&#95;os</a></td>
+		<td class='dataType'> DECIMAL&#40;8&#44;2&#41; UNSIGNED  </td>
+		<td> <br>Tags:  </td>
+	</tr>
+</tbody>
+</table></div></div>
+<br><br>
+<div class='card custom-card'><div class='card-body'><a name='curso_oficina.vw_total_valor_os_cliente'  onclick="window.scrollTo(389, 1197);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_curso_oficina.vw_total_valor_os_cliente').classList.add('palpable'); return false;" style='cursor:pointer;'><h5 class='text-center'>View vw_total_valor_os_cliente</h5></a>
+<p class='text-muted'>VIEW<br>Tags: </p>
+<table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
+<thead>
+	<tr>
+		<th colspan='4'><a name='vw_total_valor_os_cliente'>Query</a></th></tr>
+</thead>
+<tbody>
+	<tr><td colspan='4'><pre style='white-space: pre-wrap;word-wrap: break-word;'>CREATE VIEW &#36;&#123;nameWithSchemaName&#125; AS select &#96;curso&#95;oficina&#96;&#46;&#96;vw&#95;total&#95;valor&#95;os&#96;&#46;&#96;codigo&#95;cliente&#96; AS &#96;codigo&#95;cliente&#96;&#44;&#96;curso&#95;oficina&#96;&#46;&#96;vw&#95;total&#95;valor&#95;os&#96;&#46;&#96;nome&#96; AS &#96;nome&#96;&#44;&#96;curso&#95;oficina&#96;&#46;&#96;vw&#95;total&#95;valor&#95;os&#96;&#46;&#96;codigo&#95;tipo&#95;cliente&#96; AS &#96;codigo&#95;tipo&#95;cliente&#96;&#44;&#96;curso&#95;oficina&#96;&#46;&#96;vw&#95;total&#95;valor&#95;os&#96;&#46;&#96;tipo&#95;cliente&#96; AS &#96;tipo&#95;cliente&#96;&#44;sum&#40;&#96;curso&#95;oficina&#96;&#46;&#96;vw&#95;total&#95;valor&#95;os&#96;&#46;&#96;total&#95;valor&#95;os&#96;&#41; AS &#96;total&#95;valor&#95;os&#96; from &#96;curso&#95;oficina&#96;&#46;&#96;vw&#95;total&#95;valor&#95;os&#96; group by &#96;curso&#95;oficina&#96;&#46;&#96;vw&#95;total&#95;valor&#95;os&#96;&#46;&#96;codigo&#95;cliente&#96;&#44;&#96;curso&#95;oficina&#96;&#46;&#96;vw&#95;total&#95;valor&#95;os&#96;&#46;&#96;nome&#96;&#44;&#96;curso&#95;oficina&#96;&#46;&#96;vw&#95;total&#95;valor&#95;os&#96;&#46;&#96;codigo&#95;tipo&#95;cliente&#96;&#44;&#96;curso&#95;oficina&#96;&#46;&#96;vw&#95;total&#95;valor&#95;os&#96;&#46;&#96;tipo&#95;cliente&#96; order by &#96;total&#95;valor&#95;os&#96; desc</pre></td></tr>
+<tr><th style='width:5%'>Idx</th><th style='width:20%'>Column Name</th><th style='width:23%'>Data Type</th><th style='width:52%'>Description</th></tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td><a name='curso_oficina.vw_total_valor_os_cliente.codigo_cliente'>codigo&#95;cliente</a></td>
+		<td class='dataType'> INT UNSIGNED  </td>
+		<td> <br>Tags:  </td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td><a name='curso_oficina.vw_total_valor_os_cliente.nome'>nome</a></td>
+		<td class='dataType'> VARCHAR&#40;120&#41;  </td>
+		<td> <br>Tags:  </td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td><a name='curso_oficina.vw_total_valor_os_cliente.codigo_tipo_cliente'>codigo&#95;tipo&#95;cliente</a></td>
+		<td class='dataType'> INT  </td>
+		<td> <br>Tags:  </td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td><a name='curso_oficina.vw_total_valor_os_cliente.tipo_cliente'>tipo&#95;cliente</a></td>
+		<td class='dataType'> VARCHAR&#40;15&#41;  </td>
+		<td> <br>Tags:  </td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td><a name='curso_oficina.vw_total_valor_os_cliente.total_valor_os'>total&#95;valor&#95;os</a></td>
+		<td class='dataType'> DECIMAL&#40;30&#44;2&#41;  </td>
+		<td> <br>Tags:  </td>
+	</tr>
+</tbody>
+</table></div></div>
+<br><br>
+<div class='card custom-card'><div class='card-body'><a name='curso_oficina.vw_total_valor_os_veiculo'  onclick="window.scrollTo(180, 1197);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_curso_oficina.vw_total_valor_os_veiculo').classList.add('palpable'); return false;" style='cursor:pointer;'><h5 class='text-center'>View vw_total_valor_os_veiculo</h5></a>
+<p class='text-muted'>VIEW<br>Tags: </p>
+<table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
+<thead>
+	<tr>
+		<th colspan='4'><a name='vw_total_valor_os_veiculo'>Query</a></th></tr>
+</thead>
+<tbody>
+	<tr><td colspan='4'><pre style='white-space: pre-wrap;word-wrap: break-word;'>CREATE VIEW &#36;&#123;nameWithSchemaName&#125; AS select &#96;curso&#95;oficina&#96;&#46;&#96;vw&#95;total&#95;valor&#95;os&#96;&#46;&#96;codigo&#95;cliente&#96; AS &#96;codigo&#95;cliente&#96;&#44;&#96;curso&#95;oficina&#96;&#46;&#96;vw&#95;total&#95;valor&#95;os&#96;&#46;&#96;nome&#96; AS &#96;nome&#96;&#44;&#96;curso&#95;oficina&#96;&#46;&#96;vw&#95;total&#95;valor&#95;os&#96;&#46;&#96;codigo&#95;tipo&#95;cliente&#96; AS &#96;codigo&#95;tipo&#95;cliente&#96;&#44;&#96;curso&#95;oficina&#96;&#46;&#96;vw&#95;total&#95;valor&#95;os&#96;&#46;&#96;tipo&#95;cliente&#96; AS &#96;tipo&#95;cliente&#96;&#44;&#96;curso&#95;oficina&#96;&#46;&#96;vw&#95;total&#95;valor&#95;os&#96;&#46;&#96;placa&#96; AS &#96;placa&#96;&#44;sum&#40;&#96;curso&#95;oficina&#96;&#46;&#96;vw&#95;total&#95;valor&#95;os&#96;&#46;&#96;total&#95;valor&#95;os&#96;&#41; AS &#96;total&#95;valor&#95;os&#96; from &#96;curso&#95;oficina&#96;&#46;&#96;vw&#95;total&#95;valor&#95;os&#96; group by &#96;curso&#95;oficina&#96;&#46;&#96;vw&#95;total&#95;valor&#95;os&#96;&#46;&#96;codigo&#95;cliente&#96;&#44;&#96;curso&#95;oficina&#96;&#46;&#96;vw&#95;total&#95;valor&#95;os&#96;&#46;&#96;nome&#96;&#44;&#96;curso&#95;oficina&#96;&#46;&#96;vw&#95;total&#95;valor&#95;os&#96;&#46;&#96;codigo&#95;tipo&#95;cliente&#96;&#44;&#96;curso&#95;oficina&#96;&#46;&#96;vw&#95;total&#95;valor&#95;os&#96;&#46;&#96;tipo&#95;cliente&#96;&#44;&#96;curso&#95;oficina&#96;&#46;&#96;vw&#95;total&#95;valor&#95;os&#96;&#46;&#96;placa&#96; order by &#96;total&#95;valor&#95;os&#96; desc</pre></td></tr>
+<tr><th style='width:5%'>Idx</th><th style='width:20%'>Column Name</th><th style='width:23%'>Data Type</th><th style='width:52%'>Description</th></tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td><a name='curso_oficina.vw_total_valor_os_veiculo.codigo_cliente'>codigo&#95;cliente</a></td>
+		<td class='dataType'> INT UNSIGNED  </td>
+		<td> <br>Tags:  </td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td><a name='curso_oficina.vw_total_valor_os_veiculo.nome'>nome</a></td>
+		<td class='dataType'> VARCHAR&#40;120&#41;  </td>
+		<td> <br>Tags:  </td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td><a name='curso_oficina.vw_total_valor_os_veiculo.codigo_tipo_cliente'>codigo&#95;tipo&#95;cliente</a></td>
+		<td class='dataType'> INT  </td>
+		<td> <br>Tags:  </td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td><a name='curso_oficina.vw_total_valor_os_veiculo.tipo_cliente'>tipo&#95;cliente</a></td>
+		<td class='dataType'> VARCHAR&#40;15&#41;  </td>
+		<td> <br>Tags:  </td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td><a name='curso_oficina.vw_total_valor_os_veiculo.placa'>placa</a></td>
+		<td class='dataType'> CHAR&#40;7&#41;  </td>
+		<td> <br>Tags:  </td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td><a name='curso_oficina.vw_total_valor_os_veiculo.total_valor_os'>total&#95;valor&#95;os</a></td>
+		<td class='dataType'> DECIMAL&#40;30&#44;2&#41;  </td>
+		<td> <br>Tags:  </td>
+	</tr>
+</tbody>
+</table></div></div>
+<br><br>
+<br><br>
+<div class='card custom-card'><div class='card-body'><h5> Procedures </h5>
+<table class='table-sm'>
+	<tr><td> curso_oficina.upsert_tb_ordem_servico_from_peca </td><td> <br>Tags:  </td></tr><tr><td> <pre>CREATE PROCEDURE &#36;&#123;nameWithSchemaName&#125;&#40;IN p&#95;codigo&#95;os INT&#41;
+BEGIN
+    DECLARE v&#95;total&#95;pecas DECIMAL&#40;10&#44;2&#41;&#59;
+ 
+    &#45;&#45; Calcula o valor total das peças para a ordem de serviço
+    SELECT 
+        SUM&#40;quantidade &#42; valor&#95;peca&#95;os&#41;
+    INTO 
+        v&#95;total&#95;pecas
+    FROM 
+        tb&#95;detalhamento&#95;os&#95;peca
+    WHERE 
+        codigo&#95;os &#61; p&#95;codigo&#95;os&#59;
+
+    &#45;&#45; Se não houver itens&#44; define como zero
+    IF v&#95;total&#95;pecas IS NULL THEN
+        SET v&#95;total&#95;pecas &#61; 0&#59;
+    END IF&#59;
+
+    &#45;&#45; Atualiza o valor das peças
+    UPDATE tb&#95;ordem&#95;servico
+    SET total&#95;valor&#95;pecas &#61; v&#95;total&#95;pecas
+    WHERE codigo&#95;os &#61; p&#95;codigo&#95;os&#59;
+
+
+    &#45;&#45; Atualiza o valor total da ordem de serviço
+&#09;UPDATE tb&#95;ordem&#95;servico
+&#09;SET total&#95;valor&#95;os &#61; IF&#40;
+&#09;    CAST&#40;total&#95;valor&#95;pecas AS SIGNED&#41; &#43; 
+&#09;    CAST&#40;total&#95;valor&#95;servico AS SIGNED&#41; &#45; 
+&#09;    CAST&#40;valor&#95;desconto AS SIGNED&#41; &lt; 0&#44;
+&#09;    0&#44;
+&#09;    total&#95;valor&#95;pecas &#43; total&#95;valor&#95;servico &#45; valor&#95;desconto
+&#09;&#41;
+&#09;WHERE codigo&#95;os &#61; p&#95;codigo&#95;os&#59;
+&#09;    
+END</pre></td></tr>
+	<tr><td> curso_oficina.upsert_tb_ordem_servico_from_servico </td><td> <br>Tags:  </td></tr><tr><td> <pre>CREATE PROCEDURE &#36;&#123;nameWithSchemaName&#125;&#40;IN p&#95;codigo&#95;os INT&#41;
+BEGIN
+    DECLARE v&#95;total&#95;servico DECIMAL&#40;10&#44;2&#41;&#59;
+
+    &#45;&#45; Calcula o valor total dos serviços para a ordem de serviço
+    SELECT 
+        SUM&#40;quantidade &#42; valor&#95;servico&#95;os&#41;
+    INTO 
+        v&#95;total&#95;servico
+    FROM 
+        tb&#95;detalhamento&#95;os&#95;servico
+    WHERE 
+        codigo&#95;os &#61; p&#95;codigo&#95;os&#59;
+
+    &#45;&#45; Se não houver itens&#44; define como zero
+    IF v&#95;total&#95;servico IS NULL THEN
+        SET v&#95;total&#95;servico &#61; 0&#59;
+    END IF&#59;
+
+    &#45;&#45; Atualiza o valor dos serviços
+    UPDATE tb&#95;ordem&#95;servico
+    SET total&#95;valor&#95;servico &#61; v&#95;total&#95;servico
+    WHERE codigo&#95;os &#61; p&#95;codigo&#95;os&#59;
+
+
+    &#45;&#45; Atualiza o valor total da ordem de serviço
+&#09;UPDATE tb&#95;ordem&#95;servico
+&#09;SET total&#95;valor&#95;os &#61; IF&#40;
+&#09;    CAST&#40;total&#95;valor&#95;pecas AS SIGNED&#41; &#43; 
+&#09;    CAST&#40;total&#95;valor&#95;servico AS SIGNED&#41; &#45; 
+&#09;    CAST&#40;valor&#95;desconto AS SIGNED&#41; &lt; 0&#44;
+&#09;    0&#44;
+&#09;    total&#95;valor&#95;pecas &#43; total&#95;valor&#95;servico &#45; valor&#95;desconto
+&#09;&#41;
+&#09;WHERE codigo&#95;os &#61; p&#95;codigo&#95;os&#59;    
+    
+END</pre></td></tr>
+</table></div></div>
 </div>
 <br><br></body></html>

@@ -208,6 +208,106 @@ CREATE  TABLE curso_oficina.tb_detalhamento_os_servico (
 
 CREATE INDEX fk_tb_detalhamento_os_servico_tb_servico ON curso_oficina.tb_detalhamento_os_servico ( codigo_servico );
 
+CREATE VIEW curso_oficina.vw_clientes_consolidado AS select `cli`.`codigo_cliente` AS `codigo_cliente`,if((`pf`.`nome_cliente` is null),'Pessoa Jurídica','Pessoa Física') AS `tipo_cliente`,if((`pf`.`nome_cliente` is null),2,1) AS `codigo_tipo_cliente`,if((`pf`.`nome_cliente` is null),`pj`.`nome_fantasia`,`pf`.`nome_cliente`) AS `nome`,`cli`.`codigo_endereco` AS `codigo_endereco`,`cli`.`codigo_contato` AS `codigo_contato` from ((`curso_oficina`.`tb_cliente` `cli` left join `curso_oficina`.`tb_pessoa_fisica` `pf` on((`cli`.`codigo_cliente` = `pf`.`codigo_cliente`))) left join `curso_oficina`.`tb_pessoa_juridica` `pj` on((`cli`.`codigo_cliente` = `pj`.`codigo_cliente`)));
+
+CREATE VIEW curso_oficina.vw_total_valor_os AS select `curso_oficina`.`cli`.`codigo_cliente` AS `codigo_cliente`,`curso_oficina`.`cli`.`nome` AS `nome`,`curso_oficina`.`cli`.`codigo_tipo_cliente` AS `codigo_tipo_cliente`,`curso_oficina`.`cli`.`tipo_cliente` AS `tipo_cliente`,`tv`.`placa` AS `placa`,`tos`.`codigo_os` AS `codigo_os`,`tos`.`total_valor_os` AS `total_valor_os` from ((`curso_oficina`.`vw_clientes_consolidado` `cli` join `curso_oficina`.`tb_veiculo` `tv` on((`curso_oficina`.`cli`.`codigo_cliente` = `tv`.`codigo_cliente`))) join `curso_oficina`.`tb_ordem_servico` `tos` on((`tv`.`codigo_veiculo` = `tos`.`codigo_veiculo`))) order by `tos`.`total_valor_os` desc;
+
+CREATE VIEW curso_oficina.vw_total_valor_os_cliente AS select `curso_oficina`.`vw_total_valor_os`.`codigo_cliente` AS `codigo_cliente`,`curso_oficina`.`vw_total_valor_os`.`nome` AS `nome`,`curso_oficina`.`vw_total_valor_os`.`codigo_tipo_cliente` AS `codigo_tipo_cliente`,`curso_oficina`.`vw_total_valor_os`.`tipo_cliente` AS `tipo_cliente`,sum(`curso_oficina`.`vw_total_valor_os`.`total_valor_os`) AS `total_valor_os` from `curso_oficina`.`vw_total_valor_os` group by `curso_oficina`.`vw_total_valor_os`.`codigo_cliente`,`curso_oficina`.`vw_total_valor_os`.`nome`,`curso_oficina`.`vw_total_valor_os`.`codigo_tipo_cliente`,`curso_oficina`.`vw_total_valor_os`.`tipo_cliente` order by `total_valor_os` desc;
+
+CREATE VIEW curso_oficina.vw_total_valor_os_veiculo AS select `curso_oficina`.`vw_total_valor_os`.`codigo_cliente` AS `codigo_cliente`,`curso_oficina`.`vw_total_valor_os`.`nome` AS `nome`,`curso_oficina`.`vw_total_valor_os`.`codigo_tipo_cliente` AS `codigo_tipo_cliente`,`curso_oficina`.`vw_total_valor_os`.`tipo_cliente` AS `tipo_cliente`,`curso_oficina`.`vw_total_valor_os`.`placa` AS `placa`,sum(`curso_oficina`.`vw_total_valor_os`.`total_valor_os`) AS `total_valor_os` from `curso_oficina`.`vw_total_valor_os` group by `curso_oficina`.`vw_total_valor_os`.`codigo_cliente`,`curso_oficina`.`vw_total_valor_os`.`nome`,`curso_oficina`.`vw_total_valor_os`.`codigo_tipo_cliente`,`curso_oficina`.`vw_total_valor_os`.`tipo_cliente`,`curso_oficina`.`vw_total_valor_os`.`placa` order by `total_valor_os` desc;
+
+CREATE TRIGGER curso_oficina.trg_after_insert_tb_detalhamento_os_peca AFTER INSERT ON tb_detalhamento_os_peca FOR EACH ROW BEGIN
+     CALL upsert_tb_ordem_servico_from_peca(NEW.codigo_os);
+END;
+
+CREATE TRIGGER curso_oficina.trg_after_insert_tb_detalhamento_os_servico AFTER INSERT ON tb_detalhamento_os_servico FOR EACH ROW BEGIN
+     CALL upsert_tb_ordem_servico_from_servico(NEW.codigo_os);
+END;
+
+CREATE TRIGGER curso_oficina.trg_after_update_tb_detalhamento_os_peca AFTER UPDATE ON tb_detalhamento_os_peca FOR EACH ROW BEGIN
+     CALL upsert_tb_ordem_servico_from_peca(NEW.codigo_os);
+END;
+
+CREATE TRIGGER curso_oficina.trg_after_update_tb_detalhamento_os_servico AFTER UPDATE ON tb_detalhamento_os_servico FOR EACH ROW BEGIN
+     CALL upsert_tb_ordem_servico_from_servico(NEW.codigo_os);
+END;
+
+CREATE PROCEDURE curso_oficina.upsert_tb_ordem_servico_from_peca(IN p_codigo_os INT)
+BEGIN
+    DECLARE v_total_pecas DECIMAL(10,2);
+ 
+    -- Calcula o valor total das peças para a ordem de serviço
+    SELECT 
+        SUM(quantidade * valor_peca_os)
+    INTO 
+        v_total_pecas
+    FROM 
+        tb_detalhamento_os_peca
+    WHERE 
+        codigo_os = p_codigo_os;
+
+    -- Se não houver itens, define como zero
+    IF v_total_pecas IS NULL THEN
+        SET v_total_pecas = 0;
+    END IF;
+
+    -- Atualiza o valor das peças
+    UPDATE tb_ordem_servico
+    SET total_valor_pecas = v_total_pecas
+    WHERE codigo_os = p_codigo_os;
+
+
+    -- Atualiza o valor total da ordem de serviço
+	UPDATE tb_ordem_servico
+	SET total_valor_os = IF(
+	    CAST(total_valor_pecas AS SIGNED) + 
+	    CAST(total_valor_servico AS SIGNED) - 
+	    CAST(valor_desconto AS SIGNED) < 0,
+	    0,
+	    total_valor_pecas + total_valor_servico - valor_desconto
+	)
+	WHERE codigo_os = p_codigo_os;
+	    
+END;
+
+CREATE PROCEDURE curso_oficina.upsert_tb_ordem_servico_from_servico(IN p_codigo_os INT)
+BEGIN
+    DECLARE v_total_servico DECIMAL(10,2);
+
+    -- Calcula o valor total dos serviços para a ordem de serviço
+    SELECT 
+        SUM(quantidade * valor_servico_os)
+    INTO 
+        v_total_servico
+    FROM 
+        tb_detalhamento_os_servico
+    WHERE 
+        codigo_os = p_codigo_os;
+
+    -- Se não houver itens, define como zero
+    IF v_total_servico IS NULL THEN
+        SET v_total_servico = 0;
+    END IF;
+
+    -- Atualiza o valor dos serviços
+    UPDATE tb_ordem_servico
+    SET total_valor_servico = v_total_servico
+    WHERE codigo_os = p_codigo_os;
+
+
+    -- Atualiza o valor total da ordem de serviço
+	UPDATE tb_ordem_servico
+	SET total_valor_os = IF(
+	    CAST(total_valor_pecas AS SIGNED) + 
+	    CAST(total_valor_servico AS SIGNED) - 
+	    CAST(valor_desconto AS SIGNED) < 0,
+	    0,
+	    total_valor_pecas + total_valor_servico - valor_desconto
+	)
+	WHERE codigo_os = p_codigo_os;    
+    
+END;
+
 ALTER TABLE curso_oficina.tb_tipo_servico COMMENT 'Tipo de Serviços
 1 - Conserto
 2 - Revisão períodica na garantia
