@@ -382,6 +382,144 @@
 			</fk>
 			<options><![CDATA[engine=InnoDB]]></options>
 		</table>
+		<view name="vw_clientes_consolidado" >
+			<comment><![CDATA[VIEW]]></comment>
+			<view_script><![CDATA[CREATE VIEW ${nameWithSchemaName} AS select `cli`.`codigo_cliente` AS `codigo_cliente`,if((`pf`.`nome_cliente` is null),'Pessoa Jurídica','Pessoa Física') AS `tipo_cliente`,if((`pf`.`nome_cliente` is null),2,1) AS `codigo_tipo_cliente`,if((`pf`.`nome_cliente` is null),`pj`.`nome_fantasia`,`pf`.`nome_cliente`) AS `nome`,`cli`.`codigo_endereco` AS `codigo_endereco`,`cli`.`codigo_contato` AS `codigo_contato` from ((`curso_oficina`.`tb_cliente` `cli` left join `curso_oficina`.`tb_pessoa_fisica` `pf` on((`cli`.`codigo_cliente` = `pf`.`codigo_cliente`))) left join `curso_oficina`.`tb_pessoa_juridica` `pj` on((`cli`.`codigo_cliente` = `pj`.`codigo_cliente`)))]]></view_script>
+			<column name="codigo_cliente" type="INT" />
+			<column name="tipo_cliente" type="VARCHAR" />
+			<column name="codigo_tipo_cliente" type="INT" />
+			<column name="nome" type="VARCHAR" />
+			<column name="codigo_endereco" type="INT" />
+			<column name="codigo_contato" type="INT" />
+		</view>
+		<view name="vw_total_valor_os" >
+			<comment><![CDATA[VIEW]]></comment>
+			<view_script><![CDATA[CREATE VIEW ${nameWithSchemaName} AS select `curso_oficina`.`cli`.`codigo_cliente` AS `codigo_cliente`,`curso_oficina`.`cli`.`nome` AS `nome`,`curso_oficina`.`cli`.`codigo_tipo_cliente` AS `codigo_tipo_cliente`,`curso_oficina`.`cli`.`tipo_cliente` AS `tipo_cliente`,`tv`.`placa` AS `placa`,`tos`.`codigo_os` AS `codigo_os`,`tos`.`total_valor_os` AS `total_valor_os` from ((`curso_oficina`.`vw_clientes_consolidado` `cli` join `curso_oficina`.`tb_veiculo` `tv` on((`curso_oficina`.`cli`.`codigo_cliente` = `tv`.`codigo_cliente`))) join `curso_oficina`.`tb_ordem_servico` `tos` on((`tv`.`codigo_veiculo` = `tos`.`codigo_veiculo`))) order by `tos`.`total_valor_os` desc]]></view_script>
+			<column name="codigo_cliente" type="INT" />
+			<column name="nome" type="VARCHAR" />
+			<column name="codigo_tipo_cliente" type="INT" />
+			<column name="tipo_cliente" type="VARCHAR" />
+			<column name="placa" type="CHAR" />
+			<column name="codigo_os" type="INT" />
+			<column name="total_valor_os" type="DECIMAL" />
+		</view>
+		<view name="vw_total_valor_os_cliente" >
+			<comment><![CDATA[VIEW]]></comment>
+			<view_script><![CDATA[CREATE VIEW ${nameWithSchemaName} AS select `curso_oficina`.`vw_total_valor_os`.`codigo_cliente` AS `codigo_cliente`,`curso_oficina`.`vw_total_valor_os`.`nome` AS `nome`,`curso_oficina`.`vw_total_valor_os`.`codigo_tipo_cliente` AS `codigo_tipo_cliente`,`curso_oficina`.`vw_total_valor_os`.`tipo_cliente` AS `tipo_cliente`,sum(`curso_oficina`.`vw_total_valor_os`.`total_valor_os`) AS `total_valor_os` from `curso_oficina`.`vw_total_valor_os` group by `curso_oficina`.`vw_total_valor_os`.`codigo_cliente`,`curso_oficina`.`vw_total_valor_os`.`nome`,`curso_oficina`.`vw_total_valor_os`.`codigo_tipo_cliente`,`curso_oficina`.`vw_total_valor_os`.`tipo_cliente` order by `total_valor_os` desc]]></view_script>
+			<column name="codigo_cliente" type="INT" />
+			<column name="nome" type="VARCHAR" />
+			<column name="codigo_tipo_cliente" type="INT" />
+			<column name="tipo_cliente" type="VARCHAR" />
+			<column name="total_valor_os" type="DECIMAL" />
+		</view>
+		<view name="vw_total_valor_os_veiculo" >
+			<comment><![CDATA[VIEW]]></comment>
+			<view_script><![CDATA[CREATE VIEW ${nameWithSchemaName} AS select `curso_oficina`.`vw_total_valor_os`.`codigo_cliente` AS `codigo_cliente`,`curso_oficina`.`vw_total_valor_os`.`nome` AS `nome`,`curso_oficina`.`vw_total_valor_os`.`codigo_tipo_cliente` AS `codigo_tipo_cliente`,`curso_oficina`.`vw_total_valor_os`.`tipo_cliente` AS `tipo_cliente`,`curso_oficina`.`vw_total_valor_os`.`placa` AS `placa`,sum(`curso_oficina`.`vw_total_valor_os`.`total_valor_os`) AS `total_valor_os` from `curso_oficina`.`vw_total_valor_os` group by `curso_oficina`.`vw_total_valor_os`.`codigo_cliente`,`curso_oficina`.`vw_total_valor_os`.`nome`,`curso_oficina`.`vw_total_valor_os`.`codigo_tipo_cliente`,`curso_oficina`.`vw_total_valor_os`.`tipo_cliente`,`curso_oficina`.`vw_total_valor_os`.`placa` order by `total_valor_os` desc]]></view_script>
+			<column name="codigo_cliente" type="INT" />
+			<column name="nome" type="VARCHAR" />
+			<column name="codigo_tipo_cliente" type="INT" />
+			<column name="tipo_cliente" type="VARCHAR" />
+			<column name="placa" type="CHAR" />
+			<column name="total_valor_os" type="DECIMAL" />
+		</view>
+		<procedure name="upsert_tb_ordem_servico_from_peca" id="Procedure-82b" isSystem="false" params_known="n" >
+			<string><![CDATA[CREATE PROCEDURE ${nameWithSchemaName}(IN p_codigo_os INT)
+BEGIN
+    DECLARE v_total_pecas DECIMAL(10,2);
+ 
+    -- Calcula o valor total das peças para a ordem de serviço
+    SELECT 
+        SUM(quantidade * valor_peca_os)
+    INTO 
+        v_total_pecas
+    FROM 
+        tb_detalhamento_os_peca
+    WHERE 
+        codigo_os = p_codigo_os;
+
+    -- Se não houver itens, define como zero
+    IF v_total_pecas IS NULL THEN
+        SET v_total_pecas = 0;
+    END IF;
+
+    -- Atualiza o valor das peças
+    UPDATE tb_ordem_servico
+    SET total_valor_pecas = v_total_pecas
+    WHERE codigo_os = p_codigo_os;
+
+
+    -- Atualiza o valor total da ordem de serviço
+	UPDATE tb_ordem_servico
+	SET total_valor_os = IF(
+	    CAST(total_valor_pecas AS SIGNED) + 
+	    CAST(total_valor_servico AS SIGNED) - 
+	    CAST(valor_desconto AS SIGNED) < 0,
+	    0,
+	    total_valor_pecas + total_valor_servico - valor_desconto
+	)
+	WHERE codigo_os = p_codigo_os;
+	    
+END]]></string>
+		</procedure>
+		<procedure name="upsert_tb_ordem_servico_from_servico" id="Procedure-2606" isSystem="false" params_known="n" >
+			<string><![CDATA[CREATE PROCEDURE ${nameWithSchemaName}(IN p_codigo_os INT)
+BEGIN
+    DECLARE v_total_servico DECIMAL(10,2);
+
+    -- Calcula o valor total dos serviços para a ordem de serviço
+    SELECT 
+        SUM(quantidade * valor_servico_os)
+    INTO 
+        v_total_servico
+    FROM 
+        tb_detalhamento_os_servico
+    WHERE 
+        codigo_os = p_codigo_os;
+
+    -- Se não houver itens, define como zero
+    IF v_total_servico IS NULL THEN
+        SET v_total_servico = 0;
+    END IF;
+
+    -- Atualiza o valor dos serviços
+    UPDATE tb_ordem_servico
+    SET total_valor_servico = v_total_servico
+    WHERE codigo_os = p_codigo_os;
+
+
+    -- Atualiza o valor total da ordem de serviço
+	UPDATE tb_ordem_servico
+	SET total_valor_os = IF(
+	    CAST(total_valor_pecas AS SIGNED) + 
+	    CAST(total_valor_servico AS SIGNED) - 
+	    CAST(valor_desconto AS SIGNED) < 0,
+	    0,
+	    total_valor_pecas + total_valor_servico - valor_desconto
+	)
+	WHERE codigo_os = p_codigo_os;    
+    
+END]]></string>
+		</procedure>
+		<trigger name="trg_after_insert_tb_detalhamento_os_peca" table="tb_detalhamento_os_peca" id="Trigger-1b69" isSystem="false" >
+			<string><![CDATA[CREATE TRIGGER ${nameWithSchemaName} AFTER INSERT ON tb_detalhamento_os_peca FOR EACH ROW BEGIN
+     CALL upsert_tb_ordem_servico_from_peca(NEW.codigo_os);
+END]]></string>
+		</trigger>
+		<trigger name="trg_after_insert_tb_detalhamento_os_servico" table="tb_detalhamento_os_servico" id="Trigger-415" isSystem="false" >
+			<string><![CDATA[CREATE TRIGGER ${nameWithSchemaName} AFTER INSERT ON tb_detalhamento_os_servico FOR EACH ROW BEGIN
+     CALL upsert_tb_ordem_servico_from_servico(NEW.codigo_os);
+END]]></string>
+		</trigger>
+		<trigger name="trg_after_update_tb_detalhamento_os_peca" table="tb_detalhamento_os_peca" id="Trigger-23cc" isSystem="false" >
+			<string><![CDATA[CREATE TRIGGER ${nameWithSchemaName} AFTER UPDATE ON tb_detalhamento_os_peca FOR EACH ROW BEGIN
+     CALL upsert_tb_ordem_servico_from_peca(NEW.codigo_os);
+END]]></string>
+		</trigger>
+		<trigger name="trg_after_update_tb_detalhamento_os_servico" table="tb_detalhamento_os_servico" id="Trigger-2255" isSystem="false" >
+			<string><![CDATA[CREATE TRIGGER ${nameWithSchemaName} AFTER UPDATE ON tb_detalhamento_os_servico FOR EACH ROW BEGIN
+     CALL upsert_tb_ordem_servico_from_servico(NEW.codigo_os);
+END]]></string>
+		</trigger>
 	</schema>
 	<layout name="Main Diagram" id="Diagram-1f79" show_relation="columns" >
 		<comment><![CDATA[Diagrama Lógico - Oficina]]></comment>
@@ -406,6 +544,10 @@
 		<entity schema="curso_oficina" name="tb_servico" color="C1D8EE" x="589" y="931" />
 		<entity schema="curso_oficina" name="tb_tipo_servico" color="C1D8EE" x="1121" y="684" />
 		<entity schema="curso_oficina" name="tb_veiculo" color="FF0000" x="57" y="285" />
+		<entity schema="curso_oficina" name="vw_clientes_consolidado" color="FF00FF" x="171" y="1482" />
+		<entity schema="curso_oficina" name="vw_total_valor_os" color="808000" x="171" y="1197" />
+		<entity schema="curso_oficina" name="vw_total_valor_os_cliente" color="808000" x="589" y="1197" />
+		<entity schema="curso_oficina" name="vw_total_valor_os_veiculo" color="808000" x="380" y="1197" />
 		<callout x="513" y="95" pointer="Round" >
 			<comment><![CDATA[Modelagem Lógica para atividade de banco de dados de Oficina]]></comment>
 		</callout>
@@ -424,11 +566,11 @@
 		</group>
 		<group name="Tabelas de Serviços da Oficina" color="C4E0F9" >
 			<entity schema="curso_oficina" name="tb_peca" />
-			<entity schema="curso_oficina" name="tb_detalhamento_os_peca" />
 			<entity schema="curso_oficina" name="tb_detalhamento_os_servico" />
 			<entity schema="curso_oficina" name="tb_servico" />
 			<entity schema="curso_oficina" name="tb_tipo_servico" />
 			<entity schema="curso_oficina" name="tb_ordem_servico" />
+			<entity schema="curso_oficina" name="tb_detalhamento_os_peca" />
 		</group>
 		<group name="Tabelas de Equipes da Oficina" color="999900" >
 			<entity schema="curso_oficina" name="tb_equipe_atendimento" />
@@ -439,6 +581,14 @@
 		</group>
 		<group name="Tabelas Gerais" color="800080" >
 			<entity schema="curso_oficina" name="tb_endereco" />
+		</group>
+		<group name="Views de Consolidação de Valores" color="808000" >
+			<entity schema="curso_oficina" name="vw_total_valor_os" />
+			<entity schema="curso_oficina" name="vw_total_valor_os_cliente" />
+			<entity schema="curso_oficina" name="vw_total_valor_os_veiculo" />
+		</group>
+		<group name="Views de Consolidação de Dados" color="FF00FF" >
+			<entity schema="curso_oficina" name="vw_clientes_consolidado" />
 		</group>
 	</layout>
 </project>
