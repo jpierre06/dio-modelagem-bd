@@ -1,4 +1,4 @@
-# Arquivos gerados
+# Arquivos gerados para carga - e-commerce
 
 ## Durante a carga de dados através de arquivos CSV os arquivos foram carregado na seguinte ordem:
 
