@@ -47,3 +47,13 @@
 
 > Para acessar documentação sobre consultas ao banco de dados, click aqui ->
 [Exemplos consultas](oficina/Consultas_SQL.md)
+
+
+
+
+<br>
+
+## Script de atualização de arquivo .md e pre-commit hook
+
+> Para informações sobre a script de atualização de arquivo .md e pre-commit hook, click aqui -> 
+[Script de Atualização de Arquivo .md](Script_atualizacao_md.md)
