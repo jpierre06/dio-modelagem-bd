@@ -173,6 +173,14 @@ CREATE  TABLE curso_ecommerce.tb_detalhamento_pedido (
 
 CREATE INDEX fk_tb_detalhamento_pedido_tb_vendedor_produto ON curso_ecommerce.tb_detalhamento_pedido ( codigo_vendedor, codigo_produto );
 
+CREATE VIEW curso_ecommerce.vw_cliente_consolidado AS select `cli`.`codigo_cliente` AS `codigo_cliente`,ifnull(`pf`.`nome`,`tpj`.`nome_fantasia`) AS `nome`,(case when (`pf`.`nome` is not null) then 1 when (`tpj`.`nome_fantasia` is not null) then 2 else 0 end) AS `codigo_tipo_cliente`,(case when (`pf`.`nome` is not null) then 'Pessoa Física' when (`tpj`.`nome_fantasia` is not null) then 'Pessoa Jurídica' else 'Tipo não Identicado' end) AS `tipo_cliente`,`endr`.`codigo_endereco` AS `codigo_endereco`,`endr`.`logradouro` AS `logradouro`,`endr`.`numero` AS `numero`,`endr`.`complemento` AS `complemento`,`endr`.`bairro` AS `bairro`,`endr`.`cidade` AS `cidade`,`endr`.`estado` AS `estado`,`endr`.`cep` AS `cep` from ((((`curso_ecommerce`.`tb_cliente` `cli` left join `curso_ecommerce`.`tb_cliente_pessoa_fisica` `pf` on((`cli`.`codigo_cliente` = `pf`.`codigo_cliente`))) left join `curso_ecommerce`.`tb_cliente_pessoa_juridica` `pj` on((`cli`.`codigo_cliente` = `pj`.`codigo_cliente`))) left join `curso_ecommerce`.`tb_pessoa_juridica` `tpj` on((`pj`.`codigo_pessoa_juridica` = `tpj`.`codigo_pessoa_juridica`))) join `curso_ecommerce`.`tb_endereco` `endr` on((`cli`.`codigo_endereco` = `endr`.`codigo_endereco`)));
+
+CREATE VIEW curso_ecommerce.vw_total_vendas_vendedor_produto AS select `dped`.`codigo_vendedor` AS `codigo_vendedor`,`vpj`.`nome_fantasia` AS `vendedor`,`dped`.`codigo_produto` AS `codigo_produto`,`prod`.`descricao` AS `descricao_produto`,sum((`dped`.`preco_venda` * `dped`.`quantidade_produto`)) AS `total_venda_sem_desconto`,sum(`dped`.`valor_desconto`) AS `total_desconto`,sum(((`dped`.`preco_venda` * `dped`.`quantidade_produto`) - `dped`.`valor_desconto`)) AS `total_venda_com_desconto` from (((`curso_ecommerce`.`tb_detalhamento_pedido` `dped` left join `curso_ecommerce`.`tb_vendedor` `vend` on((`dped`.`codigo_vendedor` = `vend`.`codigo_vendedor`))) left join `curso_ecommerce`.`tb_pessoa_juridica` `vpj` on((`vend`.`codigo_pessoa_juridica` = `vpj`.`codigo_pessoa_juridica`))) left join `curso_ecommerce`.`tb_produto` `prod` on((`dped`.`codigo_produto` = `prod`.`codigo_produto`))) group by `dped`.`codigo_vendedor`,`vpj`.`nome_fantasia`,`dped`.`codigo_produto`,`prod`.`descricao` order by `dped`.`codigo_vendedor`,`dped`.`codigo_produto`;
+
+CREATE VIEW curso_ecommerce.vw_vendas_cliente AS select `curso_ecommerce`.`cc`.`codigo_cliente` AS `codigo_cliente`,`curso_ecommerce`.`cc`.`nome` AS `nome`,`curso_ecommerce`.`cc`.`codigo_tipo_cliente` AS `codigo_tipo_cliente`,`curso_ecommerce`.`cc`.`tipo_cliente` AS `tipo_cliente`,sum(`cpr`.`valor_total_compra`) AS `valor_total_compra` from (`curso_ecommerce`.`tb_compra` `cpr` join `curso_ecommerce`.`vw_cliente_consolidado` `cc` on((`cpr`.`codigo_cliente` = `curso_ecommerce`.`cc`.`codigo_cliente`))) group by `curso_ecommerce`.`cc`.`codigo_cliente`,`curso_ecommerce`.`cc`.`nome`,`curso_ecommerce`.`cc`.`codigo_tipo_cliente`,`curso_ecommerce`.`cc`.`tipo_cliente` order by `valor_total_compra` desc;
+
+CREATE VIEW curso_ecommerce.vw_total_vendas_produto AS select `curso_ecommerce`.`vp`.`codigo_produto` AS `codigo_produto`,`curso_ecommerce`.`vp`.`descricao_produto` AS `descricao_produto`,sum(`curso_ecommerce`.`vp`.`total_venda_sem_desconto`) AS `total_venda_sem_desconto`,sum(`curso_ecommerce`.`vp`.`total_desconto`) AS `total_desconto`,sum(`curso_ecommerce`.`vp`.`total_venda_com_desconto`) AS `total_venda_com_desconto` from `curso_ecommerce`.`vw_total_vendas_vendedor_produto` `vp` group by `curso_ecommerce`.`vp`.`codigo_produto`,`curso_ecommerce`.`vp`.`descricao_produto`;
+
 CREATE TRIGGER curso_ecommerce.trg_after_insert_detalhamento_pedido AFTER INSERT ON tb_detalhamento_pedido FOR EACH ROW BEGIN
     DECLARE v_total_produtos DECIMAL(10,2);
     
@@ -238,7 +246,6 @@ CREATE TRIGGER curso_ecommerce.trg_after_update_pedido AFTER UPDATE ON tb_pedido
     SET valor_total_compra = v_total_compra
     WHERE codigo_compra = NEW.codigo_compra;
 END;
-
 ```
  
 [Retornar README principal](../README.md)

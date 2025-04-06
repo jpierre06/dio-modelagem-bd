@@ -1,4 +1,4 @@
-# Geração de dados para teste com IA Generativa
+# Geração de dados para teste com IA Generativa - e-commerce
 
 ## Para geração de dados foi utilizado a Claude.AI
 
