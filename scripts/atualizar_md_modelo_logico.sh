@@ -9,9 +9,6 @@ fi
 
 # Primeiro parâmetro se refere ao arquivo com comandos SQL
 # Segundo parâmetro se refere ao arquivo markdown que precisa atualizar seu conteúdo 
-
-#arquivo_sql="./e-commerce/docs/modelo_fisico.sql"
-#arquivo_markdown="./e-commerce/Modelo_fisico.md"
 arquivo_sql=$1
 arquivo_markdown=$2
 
@@ -31,13 +28,13 @@ awk -v sql_content="$conteudo_sql" '
 BEGIN {
   in_block = 0;
 }
-/^```sql$/ {
+/^[[:space:]]*```sql[[:space:]]*$/ {
   in_block = 1;
   print;
   print sql_content;
   next;
 }
-/^```$/ {
+/^[[:space:]]*```[[:space:]]*$/ {
   if (in_block) {
     in_block = 0;
     print; # Adicionada a impressão do delimitador final
