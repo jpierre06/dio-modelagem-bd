@@ -1,6 +1,11 @@
 # Repositório de modelagem de dados
 
-## Desafios do curso Heineken - Inteligência Artificial Aplicada a Dados com Copilot em parceria da DIO e Heineken
+<div style="display: flex; align-items: center;">
+  <img src="imagens/logo_curso.png" alt="Logo" style="width: 150px; margin-right: 20px;">
+  <h2 style="margin: 0;">Desafios do curso Heineken - Inteligência Artificial Aplicada a Dados com Copilot em parceria da DIO e Heineken.</h2>
+</div>
+
+
 
 <br>
 
@@ -49,11 +54,70 @@
 [Exemplos consultas](oficina/Consultas_SQL.md)
 
 
-
-
 <br>
 
 ## Script de atualização de arquivo .md e pre-commit hook
 
 > Para informações sobre a script de atualização de arquivo .md e pre-commit hook, click aqui -> 
 [Script de Atualização de Arquivo .md](Script_atualizacao_md.md)
+
+
+<br>
+
+## Tecnologias utilizadas
+
+
+<div style="display: flex; align-items: center;">
+  <img src="imagens/icone_git.jpg" alt="Logo" style="width: 30; margin-right: 10px;">
+  <h2 style="margin: 0;">Git</h2>
+</div>
+
+<div style="display: flex; align-items: center;">
+  <img src="imagens/icone_github.jpg" alt="Logo" style="width: 30; margin-right: 10px;">
+  <h2 style="margin: 0;">Github</h2>
+</div>
+
+<div style="display: flex; align-items: center;">
+  <img src="imagens/icone_sublime.jpg" alt="Logo" style="width: 30; margin-right: 10px;">
+  <h2 style="margin: 0;">Sublime</h2>
+</div>
+
+<div style="display: flex; align-items: center;">
+  <img src="imagens/icone_vscode.jpg" alt="Logo" style="width: 30; margin-right: 10px;">
+  <h2 style="margin: 0;">VSCode</h2>
+</div>
+
+<div style="display: flex; align-items: center;">
+  <img src="imagens/icone_docker.jpg" alt="Logo" style="width: 30; margin-right: 10px;">
+  <h2 style="margin: 0;">Docker</h2>
+</div>
+
+<div style="display: flex; align-items: center;">
+  <img src="imagens/icone_mysql.jpg" alt="Logo" style="width: 30; margin-right: 10px;">
+  <h2 style="margin: 0;">MySQL</h2>
+</div>
+
+<div style="display: flex; align-items: center;">
+  <img src="imagens/icone_brmodelo.jpg" alt="Logo" style="width: 30; margin-right: 10px;">
+  <h2 style="margin: 0;">brModelo</h2>
+</div>
+
+<div style="display: flex; align-items: center;">
+  <img src="imagens/icone_dbeaver.jpg" alt="Logo" style="width: 30; margin-right: 10px;">
+  <h2 style="margin: 0;">DBeaver</h2>
+</div>
+
+<div style="display: flex; align-items: center;">
+  <img src="imagens/icone_dbschema.jpg" alt="Logo" style="width: 30; margin-right: 10px;">
+  <h2 style="margin: 0;">DbSchema</h2>
+</div>
+
+<div style="display: flex; align-items: center;">
+  <img src="imagens/icone_git_bash.jpg" alt="Logo" style="width: 30; margin-right: 10px;">
+  <h2 style="margin: 0;">Git Bash</h2>
+</div>
+
+<div style="display: flex; align-items: center;">
+  <img src="imagens/icone_claude_ai.jpg" alt="Logo" style="width: 30; margin-right: 10px;">
+  <h2 style="margin: 0;">Claude.AI</h2>
+</div>
