@@ -64,3 +64,61 @@
 
 <br>
 
+
+## Tecnologias utilizadas
+
+
+<div style="display: flex; align-items: center;">
+  <img src="imagens/icone_git-30x30.jpg" alt="Logo" style="width: 30; margin-right: 15px;">
+  <h2 style="margin: 0;">Git</h2>
+</div>
+
+<div style="display: flex; align-items: center;">
+  <img src="imagens/icone_github-30x30.jpg" alt="Logo" style="width: 30; margin-right: 15px;">
+  <h2 style="margin: 0;">Github</h2>
+</div>
+
+<div style="display: flex; align-items: center;">
+  <img src="imagens/icone_sublime-30x30.jpg" alt="Logo" style="width: 30; margin-right: 15px;">
+  <h2 style="margin: 0;">Sublime</h2>
+</div>
+
+<div style="display: flex; align-items: center;">
+  <img src="imagens/icone_vscode-30x30.jpg" alt="Logo" style="width: 30; margin-right: 15px;">
+  <h2 style="margin: 0;">VSCode</h2>
+</div>
+
+<div style="display: flex; align-items: center;">
+  <img src="imagens/icone_docker-30x30.jpg" alt="Logo" style="width: 30; margin-right: 15px;">
+  <h2 style="margin: 0;">Docker</h2>
+</div>
+
+<div style="display: flex; align-items: center;">
+  <img src="imagens/icone_mysql-30x30.jpg" alt="Logo" style="width: 30; margin-right: 15px;">
+  <h2 style="margin: 0;">MySQL</h2>
+</div>
+
+<div style="display: flex; align-items: center;">
+  <img src="imagens/icone_brmodelo-30x30.jpg" alt="Logo" style="width: 30; margin-right: 15px;">
+  <h2 style="margin: 0;">brModelo</h2>
+</div>
+
+<div style="display: flex; align-items: center;">
+  <img src="imagens/icone_dbeaver-30x30.jpg" alt="Logo" style="width: 30; margin-right: 15px;">
+  <h2 style="margin: 0;">DBeaver</h2>
+</div>
+
+<div style="display: flex; align-items: center;">
+  <img src="imagens/icone_dbschema-30x30.jpg" alt="Logo" style="width: 30; margin-right: 15px;">
+  <h2 style="margin: 0;">DbSchema</h2>
+</div>
+
+<div style="display: flex; align-items: center;">
+  <img src="imagens/icone_git_bash-30x30.jpg" alt="Logo" style="width: 30; margin-right: 15px;">
+  <h2 style="margin: 0;">Git Bash</h2>
+</div>
+
+<div style="display: flex; align-items: center;">
+  <img src="imagens/icone_claude_ai-30x30.jpg" alt="Logo" style="width: 30; margin-right: 15px;">
+  <h2 style="margin: 0;">Claude.AI</h2>
+</div>
